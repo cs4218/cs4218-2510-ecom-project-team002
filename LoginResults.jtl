@@ -1,0 +1,19 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1762414955994,99,01 - User Registration,201,Created,Login Load Test Thread Group 1-1,text,true,,653,387,1,1,http://localhost:6060/api/v1/auth/register,99,0,12
+1762414957113,93,02 - User Login,200,OK,Login Load Test Thread Group 1-1,text,true,,648,279,2,2,http://localhost:6060/api/v1/auth/login,93,0,0
+1762414957599,89,01 - User Registration,201,Created,Login Load Test Thread Group 1-2,text,true,,655,389,2,2,http://localhost:6060/api/v1/auth/register,89,0,1
+1762414958213,94,04 - Admin Login,200,OK,Login Load Test Thread Group 1-1,text,true,,642,276,3,3,http://localhost:6060/api/v1/auth/login,94,0,0
+1762414958692,88,02 - User Login,200,OK,Login Load Test Thread Group 1-2,text,true,,648,279,3,3,http://localhost:6060/api/v1/auth/login,88,0,0
+1762414959313,8,05 - Admin Protected Route,200,OK,Login Load Test Thread Group 1-1,text,true,,277,385,3,3,http://localhost:6060/api/v1/auth/admin-auth,8,0,0
+1762414959273,102,01 - User Registration,201,Created,Login Load Test Thread Group 1-3,text,true,,654,388,3,3,http://localhost:6060/api/v1/auth/register,102,0,3
+1762414959786,93,04 - Admin Login,200,OK,Login Load Test Thread Group 1-2,text,true,,642,276,3,3,http://localhost:6060/api/v1/auth/login,93,0,0
+1762414960328,12,07 - Invalid Login,404,Not Found,Login Load Test Thread Group 1-1,text,true,,326,279,3,3,http://localhost:6060/api/v1/auth/login,11,0,0
+1762414960379,91,02 - User Login,200,OK,Login Load Test Thread Group 1-3,text,true,,648,279,3,3,http://localhost:6060/api/v1/auth/login,91,0,0
+1762414960885,15,05 - Admin Protected Route,200,OK,Login Load Test Thread Group 1-2,text,true,,277,385,3,3,http://localhost:6060/api/v1/auth/admin-auth,15,0,0
+1762414961347,3,08 - Access Protected Route,200,OK,Login Load Test Thread Group 1-1,text,true,,277,384,3,3,http://localhost:6060/api/v1/auth/user-auth,3,0,0
+1762414961476,89,04 - Admin Login,200,OK,Login Load Test Thread Group 1-3,text,true,,642,276,2,2,http://localhost:6060/api/v1/auth/login,89,0,0
+1762414961907,10,07 - Invalid Login,404,Not Found,Login Load Test Thread Group 1-2,text,true,,326,279,2,2,http://localhost:6060/api/v1/auth/login,10,0,0
+1762414962572,10,05 - Admin Protected Route,200,OK,Login Load Test Thread Group 1-3,text,true,,277,385,2,2,http://localhost:6060/api/v1/auth/admin-auth,9,0,0
+1762414962920,2,08 - Access Protected Route,200,OK,Login Load Test Thread Group 1-2,text,true,,277,384,2,2,http://localhost:6060/api/v1/auth/user-auth,2,0,0
+1762414963588,14,07 - Invalid Login,404,Not Found,Login Load Test Thread Group 1-3,text,true,,326,279,1,1,http://localhost:6060/api/v1/auth/login,13,0,0
+1762414964618,14,08 - Access Protected Route,200,OK,Login Load Test Thread Group 1-3,text,true,,277,384,1,1,http://localhost:6060/api/v1/auth/user-auth,14,0,0

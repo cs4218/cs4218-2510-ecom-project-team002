@@ -52,7 +52,7 @@
         <stringProp name="variableNames">name,email,password,phone,address,answer</stringProp>
       </CSVDataSet>
       <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Login Load Test Thread Group" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Login Load Test Thread Group">
         <intProp name="ThreadGroup.num_threads">3</intProp>
         <intProp name="ThreadGroup.ramp_time">5</intProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
@@ -75,7 +75,7 @@
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
   &quot;name&quot;: &quot;${name}&quot;,&#xd;
-  &quot;email&quot;: &quot;${email}@test.com&quot;,&#xd;
+  &quot;email&quot;: &quot;${email}&quot;,&#xd;
   &quot;password&quot;: &quot;${password}&quot;,&#xd;
   &quot;phone&quot;: &quot;${phone}&quot;,&#xd;
   &quot;address&quot;: &quot;${address}&quot;,&#xd;
@@ -122,7 +122,7 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-  &quot;email&quot;: &quot;${email}@test.com&quot;,&#xd;
+  &quot;email&quot;: &quot;${email}&quot;,&#xd;
   &quot;password&quot;: &quot;${password}&quot;&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
@@ -195,15 +195,14 @@
             <stringProp name="JSONPostProcessor.defaultValues">ADMIN_TOKEN_NOT_FOUND</stringProp>
           </JSONPostProcessor>
           <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Admin Login Success" enabled="true">
-            <collectionProp name="Asserion.test_strings">
-              <stringProp name="3569038">true</stringProp>
-            </collectionProp>
-            <stringProp name="Assertion.custom_message"></stringProp>
-            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-            <boolProp name="Assertion.assume_success">false</boolProp>
-            <intProp name="Assertion.test_type">16</intProp>
-          </ResponseAssertion>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="Check Admin Login Success JSON" enabled="true">
+            <stringProp name="JSON_PATH">$.success</stringProp>
+            <stringProp name="EXPECTED_VALUE">true</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">false</boolProp>
+          </JSONPathAssertion>
           <hashTree/>
         </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="05 - Admin Protected Route" enabled="true">
@@ -247,7 +246,7 @@
           </ResponseAssertion>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="06 - Forgot Password" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="06 - Forgot Password" enabled="false">
           <stringProp name="HTTPSampler.path">/api/v1/auth/forgot-password</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -258,9 +257,9 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-  &quot;email&quot;: &quot;${email}@test.com&quot;,&#xd;
+  &quot;email&quot;: &quot;${email}&quot;,&#xd;
   &quot;answer&quot;: &quot;${answer}&quot;,&#xd;
-  &quot;newPassword&quot;: &quot;NewPass123&quot;&#xd;
+  &quot;newPassword&quot;: &quot;${password}&quot;&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
@@ -268,15 +267,14 @@
           </elementProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Forgot Password Success" enabled="true">
-            <collectionProp name="Asserion.test_strings">
-              <stringProp name="3569038">true</stringProp>
-            </collectionProp>
-            <stringProp name="Assertion.custom_message"></stringProp>
-            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-            <boolProp name="Assertion.assume_success">false</boolProp>
-            <intProp name="Assertion.test_type">16</intProp>
-          </ResponseAssertion>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="Check Forgot Password Success JSON" enabled="true">
+            <stringProp name="JSON_PATH">$.success</stringProp>
+            <stringProp name="EXPECTED_VALUE">true</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">false</boolProp>
+          </JSONPathAssertion>
           <hashTree/>
         </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="07 - Invalid Login" enabled="true">

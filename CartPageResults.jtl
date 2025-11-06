@@ -1,0 +1,4 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1762415098462,90,01 - User Login,200,OK,Cart and Checkout Load Test Thread Group 1-1,text,true,,642,276,1,1,http://localhost:6060/api/v1/auth/login,90,0,12
+1762415099572,23,02 - Get Products,200,OK,Cart and Checkout Load Test Thread Group 1-1,text,true,,2083,203,1,1,http://localhost:6060/api/v1/product/product-list/1,23,0,0
+1762415100602,995,03 - Checkout,200,OK,Cart and Checkout Load Test Thread Group 1-1,text,true,,277,557,1,1,http://localhost:6060/api/v1/product/braintree/payment,995,0,0
