@@ -1,0 +1,127 @@
+title = "Repo Secret Policy"
+
+# Redact secret values in CLI/report output
+redact = true
+
+[allowlist]
+description = "Ignore generated artifacts and caches"
+paths = [
+  '''(^|[\\/])(dist|build|coverage)([\\/]|$)''',
+  '''(^|[\\/])\.next([\\/]|$)''',
+  '''(^|[\\/])\.cache([\\/]|$)''',
+  # Lockfiles and vendored code often trip entropy; keep only if you accept the risk.
+  '''(^|[\\/])(vendor|third_party)([\\/]|$)''',
+  '''(^|[\\/])(pnpm-lock\.yaml|yarn\.lock|package-lock\.json)$''',
+  # Test directories
+  '''(^|[\\/])(__tests__|__integration__|playwright-report|tests?|spec|e2e|integration)([\\/]|$)''',
+  # Test assets that are often noisy
+  '''(^|[\\/])(__snapshots__|fixtures?|cassettes|recordings|mocks?|mock-data)([\\/]|$)''',
+  '''(?i)\.test\.js$'''
+
+]
+# Known non-secret placeholders
+regexes = [
+  '''(?i)\b(dummy|example|sample|test|placeholder|changeme|notasecret|abcdef|000000)\b'''
+]
+
+# ======================
+# High-value specific rules
+# ======================
+
+[[rules]]
+id = "aws-access-key-id"
+description = "AWS Access Key ID"
+regex = '''\b(A3T|AKIA|ASIA)[0-9A-Z]{16}\b'''
+tags = ["aws","cred","keyid"]
+
+[[rules]]
+id = "aws-secret-access-key"
+description = "AWS Secret Access Key (40 base64 chars)"
+# Looks for context words then a 40-char base64-ish token
+regex = '''(?i)\baws(.{0,20})?(secret|access)[^A-Za-z0-9/+]{0,20}([A-Za-z0-9/+=]{40})\b'''
+secretGroup = 3
+tags = ["aws","cred","secret"]
+
+[[rules]]
+id = "private-key-pem"
+description = "PEM private keys"
+regex = '''-----BEGIN (?:RSA|DSA|EC|OPENSSH|PRIVATE) KEY-----'''
+tags = ["key","pem","private"]
+
+[[rules]]
+id = "github-token"
+description = "GitHub personal/fine-grained tokens"
+regex = '''\bgh[pous]_[A-Za-z0-9_]{36,255}\b'''
+tags = ["github","token"]
+
+[[rules]]
+id = "google-api-key"
+description = "Google API key"
+regex = '''\bAIza[0-9A-Za-z\-_]{35}\b'''
+tags = ["google","api","token"]
+
+[[rules]]
+id = "slack-token"
+description = "Slack tokens"
+regex = '''\bxox[abprs]-[0-9]{11,}-[0-9]{11,}-[A-Za-z0-9]{24,}\b'''
+tags = ["slack","token"]
+
+[[rules]]
+id = "stripe-secret-key"
+description = "Stripe secret key"
+regex = '''\bsk_(live|test)_[A-Za-z0-9]{24,}\b'''
+tags = ["stripe","token"]
+
+[[rules]]
+id = "sendgrid-key"
+description = "SendGrid API key"
+regex = '''\bSG\.[A-Za-z0-9_\-]{66}\b'''
+tags = ["sendgrid","token"]
+
+[[rules]]
+id = "twilio-sid"
+description = "Twilio Account SID"
+regex = '''\bAC[a-f0-9]{32}\b'''
+tags = ["twilio","sid"]
+
+[[rules]]
+id = "openai-key"
+description = "OpenAI API key"
+regex = '''\bsk-[A-Za-z0-9]{20,}\b'''
+tags = ["openai","token"]
+
+[[rules]]
+id = "db-uri-postgres"
+description = "Postgres connection URI"
+regex = '''\bpostgres(?:ql)?://[^:\s]+:[^@\s]+@[^/\s]+/[^\s'"]+\b'''
+tags = ["db","postgres","uri"]
+
+[[rules]]
+id = "db-uri-mongo"
+description = "MongoDB connection URI"
+regex = '''\bmongodb(?:\+srv)?:\/\/[^:\s]+:[^@\s]+@[^/\s]+/[^\s'"]*\b'''
+tags = ["db","mongo","uri"]
+
+# ======================
+# JWT (tightened)
+# ======================
+[[rules]]
+id = "jwt"
+description = "Likely JWT (base64url.header.payload.signature)"
+# 3 base64url segments separated by dots, reasonable lengths, word boundaries
+regex = '''\beyJ[A-Za-z0-9_\-]{10,}\.[A-Za-z0-9_\-]{10,}\.[A-Za-z0-9_\-]{10,}\b'''
+tags = ["jwt","token"]
+# Helpful to reduce false positives in snapshots/fixtures
+[rules.allowlist]
+paths = [
+  '''(^|[\\/])(__snapshots__|fixtures?|tests?|cassettes)([\\/]|$)'''
+]
+
+# ======================
+# Generic "password = ..." patterns (use carefully)
+# ======================
+[[rules]]
+id = "generic-credential-assignment"
+description = "password/secret assignment"
+regex = '''(?i)\b(pass(word)?|pwd|secret|token|api[_-]?key)\b\s*[:=]\s*['"][^'"]{6,}['"]'''
+tags = ["generic","secret"]

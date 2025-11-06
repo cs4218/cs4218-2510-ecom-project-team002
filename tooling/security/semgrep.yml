@@ -1,0 +1,66 @@
+rules:
+  # 1) Ban eval / new Function
+  - id: js-dangerous-eval
+    message: "Avoid eval/new Function; use safe parsing or whitelists"
+    severity: ERROR
+    languages: [javascript, typescript]
+    patterns:
+      - pattern-either:
+          - pattern: "eval($X)"
+          - pattern: "new Function($ARGS)"
+    metadata:
+      cwe: "CWE-95"
+      owasp: "A03:2021 - Injection"
+
+  # 2) child_process with shell=true or exec()
+  - id: node-shell-true-or-exec
+    message: "Avoid shell=true/exec; prefer spawn with args & shell:false"
+    severity: ERROR
+    languages: [javascript, typescript]
+    patterns:
+      - pattern-either:
+          - pattern: "child_process.exec($CMD, ...)"
+          - pattern: "exec($CMD, ...)"
+          - pattern: "child_process.spawn($CMD, $ARGS, { ..., shell: true, ... })"
+          - pattern: "spawn($CMD, $ARGS, { ..., shell: true, ... })"
+    metadata:
+      cwe: "CWE-78"
+      owasp: "A03:2021 - Injection"
+
+  # 3) Hardcoded JWT secret
+  - id: jwt-hardcoded-secret
+    message: "Hardcoded JWT secret detected; use env/secret manager"
+    severity: ERROR
+    languages: [javascript, typescript]
+    patterns:
+      - pattern: "jwt.sign($PAYLOAD, \"$SECRET\", ...)"
+    metadata:
+      cwe: "CWE-259"
+      owasp: "A02:2021 - Cryptographic Failures"
+
+  # 4) Express: wildcard route (review)
+  - id: express-wildcard-route
+    message: "Wildcard route catches all paths; ensure this is intentional and ordered last"
+    severity: WARNING
+    languages: [javascript, typescript]
+    patterns:
+      - pattern-either:
+          - pattern: 'app.use("*", ...)'
+          - pattern: 'app.get("*", ...)'
+          - pattern: 'app.post("*", ...)'
+    metadata:
+      category: "correctness"
+
+  # 5) Express: missing x-powered-by hardening (advisory)
+  - id: express-x-powered-by-enabled
+    message: 'Consider app.disable("x-powered-by") to avoid framework disclosure'
+    severity: WARNING
+    languages: [javascript, typescript]
+    patterns:
+      - pattern-not: 'app.disable("x-powered-by")'
+      - pattern: |
+          const app = require('express')(...);
+      - pattern-inside: |
+          $S
+    metadata:
+      category: "hardening"
