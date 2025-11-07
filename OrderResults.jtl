@@ -1,0 +1,87 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1762458273697,8,01 - User Role Assignment,200,OK,Mixed Admin and Member Order Operations 1-1,text,true,,120,0,1,1,null,0,0,0
+1762458273750,99,02 - User Login,200,OK,Mixed Admin and Member Order Operations 1-1,text,true,,642,295,1,1,http://localhost:6060/api/v1/auth/login,96,0,11
+1762458273928,36,04 - Admin Get All Orders,200,OK,Mixed Admin and Member Order Operations 1-1,text,true,,20174,414,1,1,http://localhost:6060/api/v1/auth/all-orders,36,0,0
+1762458273966,2,06 - Admin Order Management Summary,200,OK,Mixed Admin and Member Order Operations 1-1,text,true,,168,0,1,1,null,0,0,0
+1762458273970,4,03 - Order Load Test Report,200,OK,Mixed Admin and Member Order Operations 1-1,text,true,,452,0,1,1,null,0,0,0
+1762458274453,9,01 - User Role Assignment,200,OK,Mixed Admin and Member Order Operations 1-2,text,true,,120,0,1,1,null,0,0,0
+1762458274465,94,02 - User Login,200,OK,Mixed Admin and Member Order Operations 1-2,text,true,,642,295,1,1,http://localhost:6060/api/v1/auth/login,94,0,2
+1762458274561,30,04 - Admin Get All Orders,200,OK,Mixed Admin and Member Order Operations 1-2,text,true,,20174,414,1,1,http://localhost:6060/api/v1/auth/all-orders,30,0,0
+1762458274592,2,06 - Admin Order Management Summary,200,OK,Mixed Admin and Member Order Operations 1-2,text,true,,168,0,1,1,null,0,0,0
+1762458274595,2,03 - Order Load Test Report,200,OK,Mixed Admin and Member Order Operations 1-2,text,true,,452,0,1,1,null,0,0,0
+1762458275217,4,01 - User Role Assignment,200,OK,Mixed Admin and Member Order Operations 1-3,text,true,,120,0,1,1,null,0,0,0
+1762458275223,79,02 - User Login,200,OK,Mixed Admin and Member Order Operations 1-3,text,true,,642,295,1,1,http://localhost:6060/api/v1/auth/login,79,0,1
+1762458275304,36,04 - Admin Get All Orders,200,OK,Mixed Admin and Member Order Operations 1-3,text,true,,20174,414,1,1,http://localhost:6060/api/v1/auth/all-orders,36,0,0
+1762458275342,1,06 - Admin Order Management Summary,200,OK,Mixed Admin and Member Order Operations 1-3,text,true,,168,0,1,1,null,0,0,0
+1762458275344,2,03 - Order Load Test Report,200,OK,Mixed Admin and Member Order Operations 1-3,text,true,,452,0,1,1,null,0,0,0
+1762458275955,4,01 - User Role Assignment,200,OK,Mixed Admin and Member Order Operations 1-4,text,true,,120,0,1,1,null,0,0,0
+1762458275961,84,02 - User Login,200,OK,Mixed Admin and Member Order Operations 1-4,text,true,,642,295,1,1,http://localhost:6060/api/v1/auth/login,84,0,1
+1762458276047,33,04 - Admin Get All Orders,200,OK,Mixed Admin and Member Order Operations 1-4,text,true,,20174,414,1,1,http://localhost:6060/api/v1/auth/all-orders,33,0,0
+1762458276081,1,06 - Admin Order Management Summary,200,OK,Mixed Admin and Member Order Operations 1-4,text,true,,168,0,1,1,null,0,0,0
+1762458276083,2,03 - Order Load Test Report,200,OK,Mixed Admin and Member Order Operations 1-4,text,true,,452,0,1,1,null,0,0,0
+1762458276705,5,01 - User Role Assignment,200,OK,Mixed Admin and Member Order Operations 1-5,text,true,,120,0,1,1,null,0,0,0
+1762458276711,83,02 - User Login,200,OK,Mixed Admin and Member Order Operations 1-5,text,true,,642,295,1,1,http://localhost:6060/api/v1/auth/login,83,0,1
+1762458276796,42,04 - Admin Get All Orders,200,OK,Mixed Admin and Member Order Operations 1-5,text,true,,20174,414,1,1,http://localhost:6060/api/v1/auth/all-orders,42,0,0
+1762458276840,1,06 - Admin Order Management Summary,200,OK,Mixed Admin and Member Order Operations 1-5,text,true,,168,0,1,1,null,0,0,0
+1762458276843,4,03 - Order Load Test Report,200,OK,Mixed Admin and Member Order Operations 1-5,text,true,,452,0,1,1,null,0,0,0
+1762458277452,1,01 - User Role Assignment,200,OK,Mixed Admin and Member Order Operations 1-6,text,true,,120,0,1,1,null,0,0,0
+1762458277454,64,02 - User Login,200,OK,Mixed Admin and Member Order Operations 1-6,text,true,,642,295,1,1,http://localhost:6060/api/v1/auth/login,64,0,0
+1762458277524,45,04 - Admin Get All Orders,200,OK,Mixed Admin and Member Order Operations 1-6,text,true,,20174,414,1,1,http://localhost:6060/api/v1/auth/all-orders,43,0,0
+1762458277572,2,06 - Admin Order Management Summary,200,OK,Mixed Admin and Member Order Operations 1-6,text,true,,168,0,1,1,null,0,0,0
+1762458277577,4,03 - Order Load Test Report,200,OK,Mixed Admin and Member Order Operations 1-6,text,true,,452,0,1,1,null,0,0,0
+1762458278199,1,01 - User Role Assignment,200,OK,Mixed Admin and Member Order Operations 1-7,text,true,,123,0,1,1,null,0,0,0
+1762458278201,73,02 - User Login,200,OK,Mixed Admin and Member Order Operations 1-7,text,true,,648,298,1,1,http://localhost:6060/api/v1/auth/login,72,0,1
+1762458278282,90,05 - Member Get Own Orders,200,OK,Mixed Admin and Member Order Operations 1-7,text,true,,6352,410,1,1,http://localhost:6060/api/v1/auth/orders,90,0,0
+1762458278372,5,03 - Order Load Test Report,200,OK,Mixed Admin and Member Order Operations 1-7,text,true,,394,0,1,1,null,0,0,0
+1762458278950,4,01 - User Role Assignment,200,OK,Mixed Admin and Member Order Operations 1-8,text,true,,123,0,1,1,null,0,0,0
+1762458278956,88,02 - User Login,200,OK,Mixed Admin and Member Order Operations 1-8,text,true,,648,298,1,1,http://localhost:6060/api/v1/auth/login,88,0,1
+1762458279047,15,05 - Member Get Own Orders,200,OK,Mixed Admin and Member Order Operations 1-8,text,true,,6352,410,1,1,http://localhost:6060/api/v1/auth/orders,15,0,0
+1762458279063,1,03 - Order Load Test Report,200,OK,Mixed Admin and Member Order Operations 1-8,text,true,,394,0,1,1,null,0,0,0
+1762458279698,3,01 - User Role Assignment,200,OK,Mixed Admin and Member Order Operations 1-9,text,true,,123,0,1,1,null,0,0,0
+1762458279701,90,02 - User Login,200,OK,Mixed Admin and Member Order Operations 1-9,text,true,,648,298,1,1,http://localhost:6060/api/v1/auth/login,90,0,2
+1762458279793,17,05 - Member Get Own Orders,200,OK,Mixed Admin and Member Order Operations 1-9,text,true,,6352,410,1,1,http://localhost:6060/api/v1/auth/orders,17,0,0
+1762458279811,1,03 - Order Load Test Report,200,OK,Mixed Admin and Member Order Operations 1-9,text,true,,394,0,1,1,null,0,0,0
+1762458280448,3,01 - User Role Assignment,200,OK,Mixed Admin and Member Order Operations 1-10,text,true,,125,0,1,1,null,0,0,0
+1762458280452,75,02 - User Login,200,OK,Mixed Admin and Member Order Operations 1-10,text,true,,648,298,1,1,http://localhost:6060/api/v1/auth/login,75,0,0
+1762458280530,15,05 - Member Get Own Orders,200,OK,Mixed Admin and Member Order Operations 1-10,text,true,,6352,410,1,1,http://localhost:6060/api/v1/auth/orders,15,0,0
+1762458280545,1,03 - Order Load Test Report,200,OK,Mixed Admin and Member Order Operations 1-10,text,true,,397,0,1,1,null,0,0,0
+1762458281197,2,01 - User Role Assignment,200,OK,Mixed Admin and Member Order Operations 1-11,text,true,,125,0,1,1,null,0,0,0
+1762458281200,81,02 - User Login,200,OK,Mixed Admin and Member Order Operations 1-11,text,true,,648,298,1,1,http://localhost:6060/api/v1/auth/login,81,0,1
+1762458281284,30,05 - Member Get Own Orders,200,OK,Mixed Admin and Member Order Operations 1-11,text,true,,6352,410,1,1,http://localhost:6060/api/v1/auth/orders,30,0,0
+1762458281314,2,03 - Order Load Test Report,200,OK,Mixed Admin and Member Order Operations 1-11,text,true,,397,0,1,1,null,0,0,0
+1762458281951,4,01 - User Role Assignment,200,OK,Mixed Admin and Member Order Operations 1-12,text,true,,125,0,1,1,null,0,0,0
+1762458281958,86,02 - User Login,200,OK,Mixed Admin and Member Order Operations 1-12,text,true,,648,298,1,1,http://localhost:6060/api/v1/auth/login,86,0,3
+1762458282047,15,05 - Member Get Own Orders,200,OK,Mixed Admin and Member Order Operations 1-12,text,true,,6352,410,1,1,http://localhost:6060/api/v1/auth/orders,15,0,0
+1762458282062,2,03 - Order Load Test Report,200,OK,Mixed Admin and Member Order Operations 1-12,text,true,,397,0,1,1,null,0,0,0
+1762458282693,1,01 - User Role Assignment,200,OK,Mixed Admin and Member Order Operations 1-13,text,true,,125,0,1,1,null,0,0,0
+1762458282695,73,02 - User Login,200,OK,Mixed Admin and Member Order Operations 1-13,text,true,,648,298,1,1,http://localhost:6060/api/v1/auth/login,73,0,0
+1762458282771,32,05 - Member Get Own Orders,200,OK,Mixed Admin and Member Order Operations 1-13,text,true,,6352,410,1,1,http://localhost:6060/api/v1/auth/orders,32,0,0
+1762458282803,1,03 - Order Load Test Report,200,OK,Mixed Admin and Member Order Operations 1-13,text,true,,397,0,1,1,null,0,0,0
+1762458283458,6,01 - User Role Assignment,200,OK,Mixed Admin and Member Order Operations 1-14,text,true,,125,0,1,1,null,0,0,0
+1762458283465,66,02 - User Login,200,OK,Mixed Admin and Member Order Operations 1-14,text,true,,648,298,1,1,http://localhost:6060/api/v1/auth/login,66,0,0
+1762458283535,15,05 - Member Get Own Orders,200,OK,Mixed Admin and Member Order Operations 1-14,text,true,,6352,410,1,1,http://localhost:6060/api/v1/auth/orders,15,0,0
+1762458283551,1,03 - Order Load Test Report,200,OK,Mixed Admin and Member Order Operations 1-14,text,true,,397,0,1,1,null,0,0,0
+1762458284207,1,01 - User Role Assignment,200,OK,Mixed Admin and Member Order Operations 1-15,text,true,,125,0,1,1,null,0,0,0
+1762458284209,95,02 - User Login,200,OK,Mixed Admin and Member Order Operations 1-15,text,true,,648,298,1,1,http://localhost:6060/api/v1/auth/login,95,0,1
+1762458284307,20,05 - Member Get Own Orders,200,OK,Mixed Admin and Member Order Operations 1-15,text,true,,6352,410,1,1,http://localhost:6060/api/v1/auth/orders,20,0,0
+1762458284328,1,03 - Order Load Test Report,200,OK,Mixed Admin and Member Order Operations 1-15,text,true,,397,0,1,1,null,0,0,0
+1762458284951,4,01 - User Role Assignment,200,OK,Mixed Admin and Member Order Operations 1-16,text,true,,125,0,1,1,null,0,0,0
+1762458284956,79,02 - User Login,200,OK,Mixed Admin and Member Order Operations 1-16,text,true,,648,298,1,1,http://localhost:6060/api/v1/auth/login,79,0,2
+1762458285037,16,05 - Member Get Own Orders,200,OK,Mixed Admin and Member Order Operations 1-16,text,true,,6352,410,1,1,http://localhost:6060/api/v1/auth/orders,16,0,0
+1762458285053,2,03 - Order Load Test Report,200,OK,Mixed Admin and Member Order Operations 1-16,text,true,,397,0,1,1,null,0,0,0
+1762458285703,3,01 - User Role Assignment,200,OK,Mixed Admin and Member Order Operations 1-17,text,true,,125,0,1,1,null,0,0,0
+1762458285708,87,02 - User Login,200,OK,Mixed Admin and Member Order Operations 1-17,text,true,,648,298,1,1,http://localhost:6060/api/v1/auth/login,87,0,1
+1762458285798,15,05 - Member Get Own Orders,200,OK,Mixed Admin and Member Order Operations 1-17,text,true,,6352,410,1,1,http://localhost:6060/api/v1/auth/orders,15,0,0
+1762458285814,1,03 - Order Load Test Report,200,OK,Mixed Admin and Member Order Operations 1-17,text,true,,397,0,1,1,null,0,0,0
+1762458286472,3,01 - User Role Assignment,200,OK,Mixed Admin and Member Order Operations 1-18,text,true,,125,0,1,1,null,0,0,0
+1762458286477,84,02 - User Login,200,OK,Mixed Admin and Member Order Operations 1-18,text,true,,648,298,1,1,http://localhost:6060/api/v1/auth/login,84,0,1
+1762458286563,14,05 - Member Get Own Orders,200,OK,Mixed Admin and Member Order Operations 1-18,text,true,,6352,410,1,1,http://localhost:6060/api/v1/auth/orders,14,0,0
+1762458286577,2,03 - Order Load Test Report,200,OK,Mixed Admin and Member Order Operations 1-18,text,true,,397,0,1,1,null,0,0,0
+1762458287215,2,01 - User Role Assignment,200,OK,Mixed Admin and Member Order Operations 1-19,text,true,,125,0,1,1,null,0,0,0
+1762458287217,64,02 - User Login,200,OK,Mixed Admin and Member Order Operations 1-19,text,true,,648,298,1,1,http://localhost:6060/api/v1/auth/login,64,0,1
+1762458287283,22,05 - Member Get Own Orders,200,OK,Mixed Admin and Member Order Operations 1-19,text,true,,6352,410,1,1,http://localhost:6060/api/v1/auth/orders,21,0,0
+1762458287305,1,03 - Order Load Test Report,200,OK,Mixed Admin and Member Order Operations 1-19,text,true,,397,0,1,1,null,0,0,0
+1762458287961,2,01 - User Role Assignment,200,OK,Mixed Admin and Member Order Operations 1-20,text,true,,125,0,1,1,null,0,0,0
+1762458287964,80,02 - User Login,200,OK,Mixed Admin and Member Order Operations 1-20,text,true,,648,298,1,1,http://localhost:6060/api/v1/auth/login,80,0,1
+1762458288046,16,05 - Member Get Own Orders,200,OK,Mixed Admin and Member Order Operations 1-20,text,true,,6352,410,1,1,http://localhost:6060/api/v1/auth/orders,16,0,0
+1762458288062,1,03 - Order Load Test Report,200,OK,Mixed Admin and Member Order Operations 1-20,text,true,,397,0,1,1,null,0,0,0
