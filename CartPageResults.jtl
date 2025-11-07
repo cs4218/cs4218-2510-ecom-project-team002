@@ -1,4 +1,226 @@
 timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
-1762415098462,90,01 - User Login,200,OK,Cart and Checkout Load Test Thread Group 1-1,text,true,,642,276,1,1,http://localhost:6060/api/v1/auth/login,90,0,12
-1762415099572,23,02 - Get Products,200,OK,Cart and Checkout Load Test Thread Group 1-1,text,true,,2083,203,1,1,http://localhost:6060/api/v1/product/product-list/1,23,0,0
-1762415100602,995,03 - Checkout,200,OK,Cart and Checkout Load Test Thread Group 1-1,text,true,,277,557,1,1,http://localhost:6060/api/v1/product/braintree/payment,995,0,0
+1762517253060,92,01 - User Login,200,OK,Cart and Checkout Load Test Thread Group 1-1,text,true,,666,276,3,3,http://localhost:6060/api/v1/auth/login,92,0,12
+1762517253403,60,01 - User Login,200,OK,Cart and Checkout Load Test Thread Group 1-2,text,true,,666,276,4,4,http://localhost:6060/api/v1/auth/login,60,0,1
+1762517253804,61,01 - User Login,200,OK,Cart and Checkout Load Test Thread Group 1-3,text,true,,666,276,5,5,http://localhost:6060/api/v1/auth/login,61,0,0
+1762517254172,13,02 - Get Products,200,OK,Cart and Checkout Load Test Thread Group 1-1,text,true,,2083,203,6,6,http://localhost:6060/api/v1/product/product-list/1,13,0,0
+1762517254198,61,01 - User Login,200,OK,Cart and Checkout Load Test Thread Group 1-4,text,true,,666,276,6,6,http://localhost:6060/api/v1/auth/login,61,0,1
+1762517254466,8,02 - Get Products,200,OK,Cart and Checkout Load Test Thread Group 1-2,text,true,,2083,203,7,7,http://localhost:6060/api/v1/product/product-list/1,7,0,0
+1762517254597,78,01 - User Login,200,OK,Cart and Checkout Load Test Thread Group 1-5,text,true,,666,276,7,7,http://localhost:6060/api/v1/auth/login,78,0,1
+1762517254871,14,02 - Get Products,200,OK,Cart and Checkout Load Test Thread Group 1-3,text,true,,2083,203,8,8,http://localhost:6060/api/v1/product/product-list/1,14,0,0
+1762517255002,91,01 - User Login,200,OK,Cart and Checkout Load Test Thread Group 1-6,text,true,,666,276,8,8,http://localhost:6060/api/v1/auth/login,91,0,1
+1762517255264,8,02 - Get Products,200,OK,Cart and Checkout Load Test Thread Group 1-4,text,true,,2083,203,9,9,http://localhost:6060/api/v1/product/product-list/1,8,0,0
+1762517255402,91,01 - User Login,200,OK,Cart and Checkout Load Test Thread Group 1-7,text,true,,666,276,9,9,http://localhost:6060/api/v1/auth/login,91,0,2
+1762517255680,9,02 - Get Products,200,OK,Cart and Checkout Load Test Thread Group 1-5,text,true,,2083,203,10,10,http://localhost:6060/api/v1/product/product-list/1,9,0,0
+1762517255803,91,01 - User Login,200,OK,Cart and Checkout Load Test Thread Group 1-8,text,true,,666,276,10,10,http://localhost:6060/api/v1/auth/login,91,0,2
+1762517256095,11,02 - Get Products,200,OK,Cart and Checkout Load Test Thread Group 1-6,text,true,,2083,203,11,11,http://localhost:6060/api/v1/product/product-list/1,11,0,0
+1762517256201,92,01 - User Login,200,OK,Cart and Checkout Load Test Thread Group 1-9,text,true,,666,276,11,11,http://localhost:6060/api/v1/auth/login,92,0,2
+1762517256499,15,02 - Get Products,200,OK,Cart and Checkout Load Test Thread Group 1-7,text,true,,2083,203,12,12,http://localhost:6060/api/v1/product/product-list/1,15,0,0
+1762517256602,93,01 - User Login,200,OK,Cart and Checkout Load Test Thread Group 1-10,text,true,,666,276,12,12,http://localhost:6060/api/v1/auth/login,93,0,3
+1762517256900,14,02 - Get Products,200,OK,Cart and Checkout Load Test Thread Group 1-8,text,true,,2083,203,13,13,http://localhost:6060/api/v1/product/product-list/1,14,0,0
+1762517257002,93,01 - User Login,200,OK,Cart and Checkout Load Test Thread Group 1-11,text,true,,666,276,13,13,http://localhost:6060/api/v1/auth/login,93,0,2
+1762517257299,12,02 - Get Products,200,OK,Cart and Checkout Load Test Thread Group 1-9,text,true,,2083,203,14,14,http://localhost:6060/api/v1/product/product-list/1,12,0,0
+1762517257402,94,01 - User Login,200,OK,Cart and Checkout Load Test Thread Group 1-12,text,true,,666,276,14,14,http://localhost:6060/api/v1/auth/login,94,0,2
+1762517257701,15,02 - Get Products,200,OK,Cart and Checkout Load Test Thread Group 1-10,text,true,,2083,203,15,15,http://localhost:6060/api/v1/product/product-list/1,15,0,0
+1762517257802,95,01 - User Login,200,OK,Cart and Checkout Load Test Thread Group 1-13,text,true,,666,276,15,15,http://localhost:6060/api/v1/auth/login,95,0,3
+1762517258100,19,02 - Get Products,200,OK,Cart and Checkout Load Test Thread Group 1-11,text,true,,2083,203,16,16,http://localhost:6060/api/v1/product/product-list/1,19,0,0
+1762517258195,61,01 - User Login,200,OK,Cart and Checkout Load Test Thread Group 1-14,text,true,,666,276,16,16,http://localhost:6060/api/v1/auth/login,61,0,1
+1762517258500,8,02 - Get Products,200,OK,Cart and Checkout Load Test Thread Group 1-12,text,true,,2083,203,17,17,http://localhost:6060/api/v1/product/product-list/1,8,0,0
+1762517258601,63,01 - User Login,200,OK,Cart and Checkout Load Test Thread Group 1-15,text,true,,666,276,17,17,http://localhost:6060/api/v1/auth/login,63,0,1
+1762517258901,9,02 - Get Products,200,OK,Cart and Checkout Load Test Thread Group 1-13,text,true,,2083,203,18,18,http://localhost:6060/api/v1/product/product-list/1,9,0,0
+1762517258999,84,01 - User Login,200,OK,Cart and Checkout Load Test Thread Group 1-16,text,true,,666,276,18,18,http://localhost:6060/api/v1/auth/login,84,0,1
+1762517259262,6,02 - Get Products,200,OK,Cart and Checkout Load Test Thread Group 1-14,text,true,,2083,203,19,19,http://localhost:6060/api/v1/product/product-list/1,6,0,0
+1762517259398,91,01 - User Login,200,OK,Cart and Checkout Load Test Thread Group 1-17,text,true,,666,276,19,19,http://localhost:6060/api/v1/auth/login,91,0,2
+1762517259670,11,02 - Get Products,200,OK,Cart and Checkout Load Test Thread Group 1-15,text,true,,2083,203,20,20,http://localhost:6060/api/v1/product/product-list/1,11,0,0
+1762517259798,87,01 - User Login,200,OK,Cart and Checkout Load Test Thread Group 1-18,text,true,,666,276,20,20,http://localhost:6060/api/v1/auth/login,87,0,2
+1762517260087,6,02 - Get Products,200,OK,Cart and Checkout Load Test Thread Group 1-16,text,true,,2083,203,21,21,http://localhost:6060/api/v1/product/product-list/1,6,0,0
+1762517260196,81,01 - User Login,200,OK,Cart and Checkout Load Test Thread Group 1-19,text,true,,666,276,21,21,http://localhost:6060/api/v1/auth/login,81,0,1
+1762517260494,7,02 - Get Products,200,OK,Cart and Checkout Load Test Thread Group 1-17,text,true,,2083,203,22,22,http://localhost:6060/api/v1/product/product-list/1,7,0,0
+1762517260599,74,01 - User Login,200,OK,Cart and Checkout Load Test Thread Group 1-20,text,true,,666,276,22,22,http://localhost:6060/api/v1/auth/login,74,0,1
+1762517260699,8,03 - Initialize Cart,200,OK,Cart and Checkout Load Test Thread Group 1-2,text,true,,77,0,22,22,null,0,0,0
+1762517260891,11,02 - Get Products,200,OK,Cart and Checkout Load Test Thread Group 1-18,text,true,,2083,203,23,23,http://localhost:6060/api/v1/product/product-list/1,11,0,0
+1762517260994,94,01 - User Login,200,OK,Cart and Checkout Load Test Thread Group 1-21,text,true,,666,276,23,23,http://localhost:6060/api/v1/auth/login,94,0,1
+1762517261283,10,02 - Get Products,200,OK,Cart and Checkout Load Test Thread Group 1-19,text,true,,2083,203,24,24,http://localhost:6060/api/v1/product/product-list/1,10,0,0
+1762517261399,82,01 - User Login,200,OK,Cart and Checkout Load Test Thread Group 1-22,text,true,,666,276,24,24,http://localhost:6060/api/v1/auth/login,82,0,2
+1762517261675,12,02 - Get Products,200,OK,Cart and Checkout Load Test Thread Group 1-20,text,true,,2083,203,25,25,http://localhost:6060/api/v1/product/product-list/1,12,0,0
+1762517261801,94,01 - User Login,200,OK,Cart and Checkout Load Test Thread Group 1-23,text,true,,666,276,25,25,http://localhost:6060/api/v1/auth/login,94,0,2
+1762517262003,5,03 - Initialize Cart,200,OK,Cart and Checkout Load Test Thread Group 1-6,text,true,,77,0,25,25,null,0,0,0
+1762517262091,8,02 - Get Products,200,OK,Cart and Checkout Load Test Thread Group 1-21,text,true,,2083,203,25,25,http://localhost:6060/api/v1/product/product-list/1,8,0,0
+1762517262316,2,03 - Initialize Cart,200,OK,Cart and Checkout Load Test Thread Group 1-3,text,true,,77,0,25,25,null,0,0,0
+1762517262198,149,01 - User Login,200,OK,Cart and Checkout Load Test Thread Group 1-24,text,true,,666,276,25,25,http://localhost:6060/api/v1/auth/login,149,0,2
+1762517262486,6,02 - Get Products,200,OK,Cart and Checkout Load Test Thread Group 1-22,text,true,,2083,203,25,25,http://localhost:6060/api/v1/product/product-list/1,6,0,0
+1762517262600,71,01 - User Login,200,OK,Cart and Checkout Load Test Thread Group 1-25,text,true,,666,276,25,25,http://localhost:6060/api/v1/auth/login,71,0,1
+1762517262740,2,03 - Initialize Cart,200,OK,Cart and Checkout Load Test Thread Group 1-1,text,true,,77,0,25,25,null,0,0,0
+1762517262900,7,02 - Get Products,200,OK,Cart and Checkout Load Test Thread Group 1-23,text,true,,2083,203,25,25,http://localhost:6060/api/v1/product/product-list/1,7,0,0
+1762517263103,1,03 - Initialize Cart,200,OK,Cart and Checkout Load Test Thread Group 1-4,text,true,,77,0,25,25,null,0,0,0
+1762517263221,2,03 - Initialize Cart,200,OK,Cart and Checkout Load Test Thread Group 1-7,text,true,,77,0,25,25,null,0,0,0
+1762517263358,9,02 - Get Products,200,OK,Cart and Checkout Load Test Thread Group 1-24,text,true,,2083,203,25,25,http://localhost:6060/api/v1/product/product-list/1,9,0,0
+1762517263578,2,03 - Initialize Cart,200,OK,Cart and Checkout Load Test Thread Group 1-5,text,true,,77,0,25,25,null,0,0,0
+1762517263676,7,02 - Get Products,200,OK,Cart and Checkout Load Test Thread Group 1-25,text,true,,2083,203,25,25,http://localhost:6060/api/v1/product/product-list/1,7,0,0
+1762517263991,1,03 - Initialize Cart,200,OK,Cart and Checkout Load Test Thread Group 1-10,text,true,,78,0,25,25,null,0,0,0
+1762517264640,3,03 - Initialize Cart,200,OK,Cart and Checkout Load Test Thread Group 1-11,text,true,,78,0,25,25,null,0,0,0
+1762517264782,5,03 - Initialize Cart,200,OK,Cart and Checkout Load Test Thread Group 1-8,text,true,,77,0,25,25,null,0,0,0
+1762517264971,6,03 - Initialize Cart,200,OK,Cart and Checkout Load Test Thread Group 1-14,text,true,,78,0,25,25,null,0,0,0
+1762517265774,3,03 - Initialize Cart,200,OK,Cart and Checkout Load Test Thread Group 1-12,text,true,,78,0,25,25,null,0,0,0
+1762517265948,4,03 - Initialize Cart,200,OK,Cart and Checkout Load Test Thread Group 1-16,text,true,,78,0,25,25,null,0,0,0
+1762517266161,6,03 - Initialize Cart,200,OK,Cart and Checkout Load Test Thread Group 1-9,text,true,,77,0,25,25,null,0,0,0
+1762517266939,5,03 - Initialize Cart,200,OK,Cart and Checkout Load Test Thread Group 1-19,text,true,,78,0,25,25,null,0,0,0
+1762517266976,2,03 - Initialize Cart,200,OK,Cart and Checkout Load Test Thread Group 1-13,text,true,,78,0,25,25,null,0,0,0
+1762517267124,22,04 - Add Products to Cart,200,OK,Cart and Checkout Load Test Thread Group 1-2,text,true,,205,0,25,25,null,0,0,0
+1762517267165,1,03 - Initialize Cart,200,OK,Cart and Checkout Load Test Thread Group 1-18,text,true,,78,0,25,25,null,0,0,0
+1762517267928,5,03 - Initialize Cart,200,OK,Cart and Checkout Load Test Thread Group 1-17,text,true,,78,0,25,25,null,0,0,0
+1762517267941,3,03 - Initialize Cart,200,OK,Cart and Checkout Load Test Thread Group 1-15,text,true,,78,0,25,25,null,0,0,0
+1762517268062,4,03 - Initialize Cart,200,OK,Cart and Checkout Load Test Thread Group 1-22,text,true,,78,0,25,25,null,0,0,0
+1762517268177,10,04 - Add Products to Cart,200,OK,Cart and Checkout Load Test Thread Group 1-1,text,true,,205,0,25,25,null,0,0,0
+1762517268427,10,04 - Add Products to Cart,200,OK,Cart and Checkout Load Test Thread Group 1-3,text,true,,205,0,25,25,null,0,0,0
+1762517268921,9,04 - Add Products to Cart,200,OK,Cart and Checkout Load Test Thread Group 1-7,text,true,,205,0,25,25,null,0,0,0
+1762517269018,1,03 - Initialize Cart,200,OK,Cart and Checkout Load Test Thread Group 1-21,text,true,,78,0,25,25,null,0,0,0
+1762517269050,2,03 - Initialize Cart,200,OK,Cart and Checkout Load Test Thread Group 1-24,text,true,,78,0,25,25,null,0,0,0
+1762517269166,3,04 - Add Products to Cart,200,OK,Cart and Checkout Load Test Thread Group 1-6,text,true,,205,0,25,25,null,0,0,0
+1762517269301,1,03 - Initialize Cart,200,OK,Cart and Checkout Load Test Thread Group 1-23,text,true,,78,0,25,25,null,0,0,0
+1762517269312,1,03 - Initialize Cart,200,OK,Cart and Checkout Load Test Thread Group 1-20,text,true,,78,0,25,25,null,0,0,0
+1762517270926,9,04 - Add Products to Cart,200,OK,Cart and Checkout Load Test Thread Group 1-5,text,true,,205,0,25,25,null,0,0,0
+1762517271409,11,04 - Add Products to Cart,200,OK,Cart and Checkout Load Test Thread Group 1-4,text,true,,205,0,25,25,null,0,0,0
+1762517271660,5,04 - Add Products to Cart,200,OK,Cart and Checkout Load Test Thread Group 1-10,text,true,,206,0,25,25,null,0,0,0
+1762517271711,3,04 - Add Products to Cart,200,OK,Cart and Checkout Load Test Thread Group 1-8,text,true,,205,0,25,25,null,0,0,0
+1762517272344,5,04 - Add Products to Cart,200,OK,Cart and Checkout Load Test Thread Group 1-14,text,true,,206,0,25,25,null,0,0,0
+1762517272423,3,04 - Add Products to Cart,200,OK,Cart and Checkout Load Test Thread Group 1-11,text,true,,206,0,25,25,null,0,0,0
+1762517272596,4,03 - Initialize Cart,200,OK,Cart and Checkout Load Test Thread Group 1-25,text,true,,78,0,25,25,null,0,0,0
+1762517272744,4,04 - Add Products to Cart,200,OK,Cart and Checkout Load Test Thread Group 1-12,text,true,,206,0,25,25,null,0,0,0
+1762517273106,4,04 - Add Products to Cart,200,OK,Cart and Checkout Load Test Thread Group 1-9,text,true,,205,0,25,25,null,0,0,0
+1762517273187,2,04 - Add Products to Cart,200,OK,Cart and Checkout Load Test Thread Group 1-15,text,true,,206,0,25,25,null,0,0,0
+1762517273777,7,05 - Reduce Item Quantity in Cart,200,OK,Cart and Checkout Load Test Thread Group 1-1,text,true,,145,0,25,25,null,0,0,0
+1762517273899,6,04 - Add Products to Cart,200,OK,Cart and Checkout Load Test Thread Group 1-17,text,true,,206,0,25,25,null,0,0,0
+1762517273993,5,04 - Add Products to Cart,200,OK,Cart and Checkout Load Test Thread Group 1-18,text,true,,206,0,25,25,null,0,0,0
+1762517274112,6,04 - Add Products to Cart,200,OK,Cart and Checkout Load Test Thread Group 1-19,text,true,,206,0,25,25,null,0,0,0
+1762517274160,8,04 - Add Products to Cart,200,OK,Cart and Checkout Load Test Thread Group 1-16,text,true,,206,0,25,25,null,0,0,0
+1762517274239,1,05 - Reduce Item Quantity in Cart,200,OK,Cart and Checkout Load Test Thread Group 1-3,text,true,,145,0,25,25,null,0,0,0
+1762517274555,16,05 - Reduce Item Quantity in Cart,200,OK,Cart and Checkout Load Test Thread Group 1-2,text,true,,145,0,25,25,null,0,0,0
+1762517274809,4,04 - Add Products to Cart,200,OK,Cart and Checkout Load Test Thread Group 1-13,text,true,,206,0,25,25,null,0,0,0
+1762517275184,5,04 - Add Products to Cart,200,OK,Cart and Checkout Load Test Thread Group 1-22,text,true,,206,0,25,25,null,0,0,0
+1762517275578,4,04 - Add Products to Cart,200,OK,Cart and Checkout Load Test Thread Group 1-23,text,true,,206,0,25,25,null,0,0,0
+1762517275690,8,04 - Add Products to Cart,200,OK,Cart and Checkout Load Test Thread Group 1-20,text,true,,206,0,25,25,null,0,0,0
+1762517276064,4,05 - Reduce Item Quantity in Cart,200,OK,Cart and Checkout Load Test Thread Group 1-7,text,true,,145,0,25,25,null,0,0,0
+1762517276469,4,05 - Reduce Item Quantity in Cart,200,OK,Cart and Checkout Load Test Thread Group 1-6,text,true,,145,0,25,25,null,0,0,0
+1762517276576,8,04 - Add Products to Cart,200,OK,Cart and Checkout Load Test Thread Group 1-24,text,true,,206,0,25,25,null,0,0,0
+1762517277673,2,05 - Reduce Item Quantity in Cart,200,OK,Cart and Checkout Load Test Thread Group 1-10,text,true,,146,0,25,25,null,0,0,0
+1762517277764,3,05 - Reduce Item Quantity in Cart,200,OK,Cart and Checkout Load Test Thread Group 1-5,text,true,,145,0,25,25,null,0,0,0
+1762517277777,1,05 - Reduce Item Quantity in Cart,200,OK,Cart and Checkout Load Test Thread Group 1-15,text,true,,146,0,25,25,null,0,0,0
+1762517278227,3,05 - Reduce Item Quantity in Cart,200,OK,Cart and Checkout Load Test Thread Group 1-4,text,true,,145,0,25,25,null,0,0,0
+1762517278359,2,04 - Add Products to Cart,200,OK,Cart and Checkout Load Test Thread Group 1-21,text,true,,206,0,25,25,null,0,0,0
+1762517278384,1,04 - Add Products to Cart,200,OK,Cart and Checkout Load Test Thread Group 1-25,text,true,,206,0,25,25,null,0,0,0
+1762517278550,2,05 - Reduce Item Quantity in Cart,200,OK,Cart and Checkout Load Test Thread Group 1-9,text,true,,145,0,25,25,null,0,0,0
+1762517279450,2,05 - Reduce Item Quantity in Cart,200,OK,Cart and Checkout Load Test Thread Group 1-18,text,true,,146,0,25,25,null,0,0,0
+1762517279631,3,05 - Reduce Item Quantity in Cart,200,OK,Cart and Checkout Load Test Thread Group 1-12,text,true,,146,0,25,25,null,0,0,0
+1762517279692,3,05 - Reduce Item Quantity in Cart,200,OK,Cart and Checkout Load Test Thread Group 1-16,text,true,,146,0,25,25,null,0,0,0
+1762517279996,3,05 - Reduce Item Quantity in Cart,200,OK,Cart and Checkout Load Test Thread Group 1-14,text,true,,146,0,25,25,null,0,0,0
+1762517280450,3,05 - Reduce Item Quantity in Cart,200,OK,Cart and Checkout Load Test Thread Group 1-8,text,true,,145,0,25,25,null,0,0,0
+1762517280485,5,05 - Reduce Item Quantity in Cart,200,OK,Cart and Checkout Load Test Thread Group 1-11,text,true,,146,0,25,25,null,0,0,0
+1762517280774,8,06 - Remove Item Completely from Cart,200,OK,Cart and Checkout Load Test Thread Group 1-1,text,true,,350,0,25,25,null,0,0,0
+1762517280864,3,06 - Remove Item Completely from Cart,200,OK,Cart and Checkout Load Test Thread Group 1-3,text,true,,350,0,25,25,null,0,0,0
+1762517281460,2,06 - Remove Item Completely from Cart,200,OK,Cart and Checkout Load Test Thread Group 1-2,text,true,,350,0,25,25,null,0,0,0
+1762517281477,1,05 - Reduce Item Quantity in Cart,200,OK,Cart and Checkout Load Test Thread Group 1-22,text,true,,146,0,25,25,null,0,0,0
+1762517281665,4,05 - Reduce Item Quantity in Cart,200,OK,Cart and Checkout Load Test Thread Group 1-19,text,true,,146,0,25,25,null,0,0,0
+1762517281916,4,05 - Reduce Item Quantity in Cart,200,OK,Cart and Checkout Load Test Thread Group 1-17,text,true,,146,0,25,25,null,0,0,0
+1762517282413,6,05 - Reduce Item Quantity in Cart,200,OK,Cart and Checkout Load Test Thread Group 1-24,text,true,,146,0,25,25,null,0,0,0
+1762517283030,19,05 - Reduce Item Quantity in Cart,200,OK,Cart and Checkout Load Test Thread Group 1-23,text,true,,146,0,25,25,null,0,0,0
+1762517283418,4,06 - Remove Item Completely from Cart,200,OK,Cart and Checkout Load Test Thread Group 1-7,text,true,,350,0,25,25,null,0,0,0
+1762517283704,3,05 - Reduce Item Quantity in Cart,200,OK,Cart and Checkout Load Test Thread Group 1-13,text,true,,146,0,25,25,null,0,0,0
+1762517283821,5,06 - Remove Item Completely from Cart,200,OK,Cart and Checkout Load Test Thread Group 1-6,text,true,,350,0,25,25,null,0,0,0
+1762517283996,24,06 - Remove Item Completely from Cart,200,OK,Cart and Checkout Load Test Thread Group 1-15,text,true,,351,0,25,25,null,0,0,0
+1762517284276,5,06 - Remove Item Completely from Cart,200,OK,Cart and Checkout Load Test Thread Group 1-10,text,true,,351,0,25,25,null,0,0,0
+1762517284979,6,05 - Reduce Item Quantity in Cart,200,OK,Cart and Checkout Load Test Thread Group 1-25,text,true,,146,0,25,25,null,0,0,0
+1762517285034,1,05 - Reduce Item Quantity in Cart,200,OK,Cart and Checkout Load Test Thread Group 1-20,text,true,,146,0,25,25,null,0,0,0
+1762517285311,5,06 - Remove Item Completely from Cart,200,OK,Cart and Checkout Load Test Thread Group 1-9,text,true,,350,0,25,25,null,0,0,0
+1762517285967,6,05 - Reduce Item Quantity in Cart,200,OK,Cart and Checkout Load Test Thread Group 1-21,text,true,,146,0,25,25,null,0,0,0
+1762517286025,5,06 - Remove Item Completely from Cart,200,OK,Cart and Checkout Load Test Thread Group 1-14,text,true,,351,0,25,25,null,0,0,0
+1762517286145,6,06 - Remove Item Completely from Cart,200,OK,Cart and Checkout Load Test Thread Group 1-16,text,true,,351,0,25,25,null,0,0,0
+1762517286577,6,06 - Remove Item Completely from Cart,200,OK,Cart and Checkout Load Test Thread Group 1-12,text,true,,351,0,25,25,null,0,0,0
+1762517286635,4,06 - Remove Item Completely from Cart,200,OK,Cart and Checkout Load Test Thread Group 1-18,text,true,,351,0,25,25,null,0,0,0
+1762517286660,4,06 - Remove Item Completely from Cart,200,OK,Cart and Checkout Load Test Thread Group 1-8,text,true,,350,0,25,25,null,0,0,0
+1762517286968,5,06 - Remove Item Completely from Cart,200,OK,Cart and Checkout Load Test Thread Group 1-4,text,true,,350,0,25,25,null,0,0,0
+1762517287168,7,06 - Remove Item Completely from Cart,200,OK,Cart and Checkout Load Test Thread Group 1-5,text,true,,350,0,25,25,null,0,0,0
+1762517287297,4,06 - Remove Item Completely from Cart,200,OK,Cart and Checkout Load Test Thread Group 1-17,text,true,,351,0,25,25,null,0,0,0
+1762517287831,6,06 - Remove Item Completely from Cart,200,OK,Cart and Checkout Load Test Thread Group 1-11,text,true,,351,0,25,25,null,0,0,0
+1762517288707,6,06 - Remove Item Completely from Cart,200,OK,Cart and Checkout Load Test Thread Group 1-24,text,true,,351,0,25,25,null,0,0,0
+1762517288715,2,07 - Final Cart Summary,200,OK,Cart and Checkout Load Test Thread Group 1-3,text,true,,340,0,25,25,null,0,0,0
+1762517288981,3,07 - Final Cart Summary,200,OK,Cart and Checkout Load Test Thread Group 1-1,text,true,,340,0,25,25,null,0,0,0
+1762517289027,4,06 - Remove Item Completely from Cart,200,OK,Cart and Checkout Load Test Thread Group 1-23,text,true,,351,0,25,25,null,0,0,0
+1762517289251,4,07 - Final Cart Summary,200,OK,Cart and Checkout Load Test Thread Group 1-10,text,true,,341,0,25,25,null,0,0,0
+1762517289291,3,07 - Final Cart Summary,200,OK,Cart and Checkout Load Test Thread Group 1-2,text,true,,340,0,25,25,null,0,0,0
+1762517289513,6,06 - Remove Item Completely from Cart,200,OK,Cart and Checkout Load Test Thread Group 1-19,text,true,,351,0,25,25,null,0,0,0
+1762517290614,4,07 - Final Cart Summary,200,OK,Cart and Checkout Load Test Thread Group 1-15,text,true,,341,0,25,25,null,0,0,0
+1762517290633,4,06 - Remove Item Completely from Cart,200,OK,Cart and Checkout Load Test Thread Group 1-22,text,true,,351,0,25,25,null,0,0,0
+1762517290859,3,07 - Final Cart Summary,200,OK,Cart and Checkout Load Test Thread Group 1-9,text,true,,340,0,25,25,null,0,0,0
+1762517289990,943,08 - Checkout with Updated Cart,200,OK,Cart and Checkout Load Test Thread Group 1-1,text,true,,277,632,25,25,http://localhost:6060/api/v1/product/braintree/payment,943,0,3
+1762517290256,749,08 - Checkout with Updated Cart,400,Bad Request,Cart and Checkout Load Test Thread Group 1-10,text,false,Checkout must be successful with updated cart,342,632,25,25,http://localhost:6060/api/v1/product/braintree/payment,749,0,3
+1762517289725,1284,08 - Checkout with Updated Cart,400,Bad Request,Cart and Checkout Load Test Thread Group 1-3,text,false,Checkout must be successful with updated cart,342,632,25,25,http://localhost:6060/api/v1/product/braintree/payment,1284,0,8
+1762517290301,752,08 - Checkout with Updated Cart,400,Bad Request,Cart and Checkout Load Test Thread Group 1-2,text,false,Checkout must be successful with updated cart,342,632,25,25,http://localhost:6060/api/v1/product/braintree/payment,752,0,2
+1762517291391,4,07 - Final Cart Summary,200,OK,Cart and Checkout Load Test Thread Group 1-16,text,true,,341,0,25,25,null,0,0,0
+1762517291653,4,07 - Final Cart Summary,200,OK,Cart and Checkout Load Test Thread Group 1-7,text,true,,340,0,25,25,null,0,0,0
+1762517291939,5,09 - Cart Operations Summary,200,OK,Cart and Checkout Load Test Thread Group 1-1,text,true,,563,0,25,25,null,0,0,0
+1762517292012,1,09 - Cart Operations Summary,200,OK,Cart and Checkout Load Test Thread Group 1-10,text,true,,564,0,24,24,null,0,0,0
+1762517292015,1,09 - Cart Operations Summary,200,OK,Cart and Checkout Load Test Thread Group 1-3,text,true,,563,0,23,23,null,0,0,0
+1762517292058,0,09 - Cart Operations Summary,200,OK,Cart and Checkout Load Test Thread Group 1-2,text,true,,563,0,22,22,null,0,0,0
+1762517291623,490,08 - Checkout with Updated Cart,400,Bad Request,Cart and Checkout Load Test Thread Group 1-15,text,false,Checkout must be successful with updated cart,342,632,21,21,http://localhost:6060/api/v1/product/braintree/payment,490,0,2
+1762517292123,1,07 - Final Cart Summary,200,OK,Cart and Checkout Load Test Thread Group 1-6,text,true,,340,0,21,21,null,0,0,0
+1762517292282,2,06 - Remove Item Completely from Cart,200,OK,Cart and Checkout Load Test Thread Group 1-25,text,true,,351,0,21,21,null,0,0,0
+1762517291868,495,08 - Checkout with Updated Cart,400,Bad Request,Cart and Checkout Load Test Thread Group 1-9,text,false,Checkout must be successful with updated cart,342,632,21,21,http://localhost:6060/api/v1/product/braintree/payment,495,0,3
+1762517292504,6,06 - Remove Item Completely from Cart,200,OK,Cart and Checkout Load Test Thread Group 1-21,text,true,,351,0,21,21,null,0,0,0
+1762517292522,3,06 - Remove Item Completely from Cart,200,OK,Cart and Checkout Load Test Thread Group 1-13,text,true,,351,0,21,21,null,0,0,0
+1762517292550,1,07 - Final Cart Summary,200,OK,Cart and Checkout Load Test Thread Group 1-14,text,true,,341,0,21,21,null,0,0,0
+1762517292401,453,08 - Checkout with Updated Cart,400,Bad Request,Cart and Checkout Load Test Thread Group 1-16,text,false,Checkout must be successful with updated cart,342,632,21,21,http://localhost:6060/api/v1/product/braintree/payment,453,0,3
+1762517292875,3,06 - Remove Item Completely from Cart,200,OK,Cart and Checkout Load Test Thread Group 1-20,text,true,,351,0,21,21,null,0,0,0
+1762517293023,4,07 - Final Cart Summary,200,OK,Cart and Checkout Load Test Thread Group 1-8,text,true,,340,0,21,21,null,0,0,0
+1762517292662,419,08 - Checkout with Updated Cart,400,Bad Request,Cart and Checkout Load Test Thread Group 1-7,text,false,Checkout must be successful with updated cart,342,632,21,21,http://localhost:6060/api/v1/product/braintree/payment,419,0,1
+1762517293119,3,09 - Cart Operations Summary,200,OK,Cart and Checkout Load Test Thread Group 1-15,text,true,,564,0,21,21,null,0,0,0
+1762517293369,5,09 - Cart Operations Summary,200,OK,Cart and Checkout Load Test Thread Group 1-9,text,true,,563,0,20,20,null,0,0,0
+1762517293129,481,08 - Checkout with Updated Cart,400,Bad Request,Cart and Checkout Load Test Thread Group 1-6,text,false,Checkout must be successful with updated cart,342,632,19,19,http://localhost:6060/api/v1/product/braintree/payment,480,0,2
+1762517293861,3,09 - Cart Operations Summary,200,OK,Cart and Checkout Load Test Thread Group 1-16,text,true,,564,0,19,19,null,0,0,0
+1762517293964,2,07 - Final Cart Summary,200,OK,Cart and Checkout Load Test Thread Group 1-24,text,true,,341,0,18,18,null,0,0,0
+1762517293556,441,08 - Checkout with Updated Cart,400,Bad Request,Cart and Checkout Load Test Thread Group 1-14,text,false,Checkout must be successful with updated cart,342,632,18,18,http://localhost:6060/api/v1/product/braintree/payment,441,0,3
+1762517294083,3,09 - Cart Operations Summary,200,OK,Cart and Checkout Load Test Thread Group 1-7,text,true,,563,0,18,18,null,0,0,0
+1762517294130,3,07 - Final Cart Summary,200,OK,Cart and Checkout Load Test Thread Group 1-5,text,true,,340,0,17,17,null,0,0,0
+1762517294402,3,07 - Final Cart Summary,200,OK,Cart and Checkout Load Test Thread Group 1-18,text,true,,341,0,17,17,null,0,0,0
+1762517294422,2,07 - Final Cart Summary,200,OK,Cart and Checkout Load Test Thread Group 1-12,text,true,,341,0,17,17,null,0,0,0
+1762517294033,410,08 - Checkout with Updated Cart,400,Bad Request,Cart and Checkout Load Test Thread Group 1-8,text,false,Checkout must be successful with updated cart,342,632,17,17,http://localhost:6060/api/v1/product/braintree/payment,410,0,2
+1762517294612,4,09 - Cart Operations Summary,200,OK,Cart and Checkout Load Test Thread Group 1-6,text,true,,563,0,17,17,null,0,0,0
+1762517294727,3,07 - Final Cart Summary,200,OK,Cart and Checkout Load Test Thread Group 1-4,text,true,,340,0,16,16,null,0,0,0
+1762517294873,4,07 - Final Cart Summary,200,OK,Cart and Checkout Load Test Thread Group 1-17,text,true,,341,0,16,16,null,0,0,0
+1762517295003,3,09 - Cart Operations Summary,200,OK,Cart and Checkout Load Test Thread Group 1-14,text,true,,564,0,16,16,null,0,0,0
+1762517294972,452,08 - Checkout with Updated Cart,400,Bad Request,Cart and Checkout Load Test Thread Group 1-24,text,false,Checkout must be successful with updated cart,342,632,15,15,http://localhost:6060/api/v1/product/braintree/payment,451,0,2
+1762517295447,4,09 - Cart Operations Summary,200,OK,Cart and Checkout Load Test Thread Group 1-8,text,true,,563,0,15,15,null,0,0,0
+1762517295139,411,08 - Checkout with Updated Cart,400,Bad Request,Cart and Checkout Load Test Thread Group 1-5,text,false,Checkout must be successful with updated cart,342,632,14,14,http://localhost:6060/api/v1/product/braintree/payment,411,0,1
+1762517295739,3,07 - Final Cart Summary,200,OK,Cart and Checkout Load Test Thread Group 1-11,text,true,,341,0,14,14,null,0,0,0
+1762517295407,471,08 - Checkout with Updated Cart,400,Bad Request,Cart and Checkout Load Test Thread Group 1-18,text,false,Checkout must be successful with updated cart,342,632,14,14,http://localhost:6060/api/v1/product/braintree/payment,470,0,3
+1762517295430,587,08 - Checkout with Updated Cart,400,Bad Request,Cart and Checkout Load Test Thread Group 1-12,text,false,Checkout must be successful with updated cart,342,632,14,14,http://localhost:6060/api/v1/product/braintree/payment,587,0,2
+1762517296065,3,07 - Final Cart Summary,200,OK,Cart and Checkout Load Test Thread Group 1-22,text,true,,341,0,14,14,null,0,0,0
+1762517295736,409,08 - Checkout with Updated Cart,400,Bad Request,Cart and Checkout Load Test Thread Group 1-4,text,false,Checkout must be successful with updated cart,342,632,14,14,http://localhost:6060/api/v1/product/braintree/payment,409,0,3
+1762517295883,410,08 - Checkout with Updated Cart,400,Bad Request,Cart and Checkout Load Test Thread Group 1-17,text,false,Checkout must be successful with updated cart,342,632,14,14,http://localhost:6060/api/v1/product/braintree/payment,410,0,2
+1762517296430,1,09 - Cart Operations Summary,200,OK,Cart and Checkout Load Test Thread Group 1-24,text,true,,564,0,14,14,null,0,0,0
+1762517296545,3,07 - Final Cart Summary,200,OK,Cart and Checkout Load Test Thread Group 1-23,text,true,,341,0,13,13,null,0,0,0
+1762517296556,1,09 - Cart Operations Summary,200,OK,Cart and Checkout Load Test Thread Group 1-5,text,true,,563,0,13,13,null,0,0,0
+1762517296754,2,07 - Final Cart Summary,200,OK,Cart and Checkout Load Test Thread Group 1-19,text,true,,341,0,12,12,null,0,0,0
+1762517296881,3,09 - Cart Operations Summary,200,OK,Cart and Checkout Load Test Thread Group 1-18,text,true,,564,0,12,12,null,0,0,0
+1762517297023,4,09 - Cart Operations Summary,200,OK,Cart and Checkout Load Test Thread Group 1-12,text,true,,564,0,11,11,null,0,0,0
+1762517297151,2,09 - Cart Operations Summary,200,OK,Cart and Checkout Load Test Thread Group 1-4,text,true,,563,0,10,10,null,0,0,0
+1762517296748,451,08 - Checkout with Updated Cart,400,Bad Request,Cart and Checkout Load Test Thread Group 1-11,text,false,Checkout must be successful with updated cart,342,632,9,9,http://localhost:6060/api/v1/product/braintree/payment,450,0,3
+1762517297299,3,09 - Cart Operations Summary,200,OK,Cart and Checkout Load Test Thread Group 1-17,text,true,,564,0,9,9,null,0,0,0
+1762517297074,468,08 - Checkout with Updated Cart,400,Bad Request,Cart and Checkout Load Test Thread Group 1-22,text,false,Checkout must be successful with updated cart,342,632,8,8,http://localhost:6060/api/v1/product/braintree/payment,468,0,0
+1762517297762,425,08 - Checkout with Updated Cart,400,Bad Request,Cart and Checkout Load Test Thread Group 1-19,text,false,Checkout must be successful with updated cart,342,632,8,8,http://localhost:6060/api/v1/product/braintree/payment,425,0,3
+1762517297552,636,08 - Checkout with Updated Cart,400,Bad Request,Cart and Checkout Load Test Thread Group 1-23,text,false,Checkout must be successful with updated cart,342,632,8,8,http://localhost:6060/api/v1/product/braintree/payment,636,0,2
+1762517298204,3,09 - Cart Operations Summary,200,OK,Cart and Checkout Load Test Thread Group 1-11,text,true,,564,0,8,8,null,0,0,0
+1762517298548,1,09 - Cart Operations Summary,200,OK,Cart and Checkout Load Test Thread Group 1-22,text,true,,564,0,7,7,null,0,0,0
+1762517299005,3,07 - Final Cart Summary,200,OK,Cart and Checkout Load Test Thread Group 1-21,text,true,,341,0,6,6,null,0,0,0
+1762517299191,3,09 - Cart Operations Summary,200,OK,Cart and Checkout Load Test Thread Group 1-19,text,true,,564,0,6,6,null,0,0,0
+1762517299194,1,09 - Cart Operations Summary,200,OK,Cart and Checkout Load Test Thread Group 1-23,text,true,,564,0,5,5,null,0,0,0
+1762517299471,3,07 - Final Cart Summary,200,OK,Cart and Checkout Load Test Thread Group 1-25,text,true,,341,0,4,4,null,0,0,0
+1762517300052,2,07 - Final Cart Summary,200,OK,Cart and Checkout Load Test Thread Group 1-13,text,true,,341,0,4,4,null,0,0,0
+1762517300014,434,08 - Checkout with Updated Cart,400,Bad Request,Cart and Checkout Load Test Thread Group 1-21,text,false,Checkout must be successful with updated cart,342,632,4,4,http://localhost:6060/api/v1/product/braintree/payment,434,0,2
+1762517300476,386,08 - Checkout with Updated Cart,400,Bad Request,Cart and Checkout Load Test Thread Group 1-25,text,false,Checkout must be successful with updated cart,342,632,4,4,http://localhost:6060/api/v1/product/braintree/payment,386,0,1
+1762517300956,3,07 - Final Cart Summary,200,OK,Cart and Checkout Load Test Thread Group 1-20,text,true,,341,0,4,4,null,0,0,0
+1762517301453,4,09 - Cart Operations Summary,200,OK,Cart and Checkout Load Test Thread Group 1-21,text,true,,564,0,4,4,null,0,0,0
+1762517301058,611,08 - Checkout with Updated Cart,400,Bad Request,Cart and Checkout Load Test Thread Group 1-13,text,false,Checkout must be successful with updated cart,342,632,3,3,http://localhost:6060/api/v1/product/braintree/payment,610,0,2
+1762517301868,4,09 - Cart Operations Summary,200,OK,Cart and Checkout Load Test Thread Group 1-25,text,true,,564,0,3,3,null,0,0,0
+1762517301965,478,08 - Checkout with Updated Cart,400,Bad Request,Cart and Checkout Load Test Thread Group 1-20,text,false,Checkout must be successful with updated cart,342,632,2,2,http://localhost:6060/api/v1/product/braintree/payment,478,0,1
+1762517302675,4,09 - Cart Operations Summary,200,OK,Cart and Checkout Load Test Thread Group 1-13,text,true,,564,0,2,2,null,0,0,0
+1762517303449,4,09 - Cart Operations Summary,200,OK,Cart and Checkout Load Test Thread Group 1-20,text,true,,564,0,1,1,null,0,0,0

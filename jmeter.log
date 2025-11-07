@@ -1,591 +1,1033 @@
-2025-11-07 17:03:49,928 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
-2025-11-07 17:03:49,940 INFO o.a.j.JMeter: Loading user properties from: /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/user.properties
-2025-11-07 17:03:49,940 INFO o.a.j.JMeter: Loading system properties from: /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/system.properties
-2025-11-07 17:03:49,943 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
-2025-11-07 17:03:49,943 INFO o.a.j.JMeter: Version 5.6.3
-2025-11-07 17:03:49,943 INFO o.a.j.JMeter: java.version=21.0.9
-2025-11-07 17:03:49,944 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
-2025-11-07 17:03:49,944 INFO o.a.j.JMeter: os.name=Mac OS X
-2025-11-07 17:03:49,944 INFO o.a.j.JMeter: os.arch=aarch64
-2025-11-07 17:03:49,944 INFO o.a.j.JMeter: os.version=26.0.1
-2025-11-07 17:03:49,944 INFO o.a.j.JMeter: file.encoding=UTF-8
-2025-11-07 17:03:49,944 INFO o.a.j.JMeter: java.awt.headless=true
-2025-11-07 17:03:49,944 INFO o.a.j.JMeter: Max memory     =1073741824
-2025-11-07 17:03:49,944 INFO o.a.j.JMeter: Available Processors =8
-2025-11-07 17:03:49,951 INFO o.a.j.JMeter: Default Locale=English (EN)
-2025-11-07 17:03:49,951 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
-2025-11-07 17:03:49,951 INFO o.a.j.JMeter: JMeterHome=/opt/homebrew/Cellar/jmeter/5.6.3/libexec
-2025-11-07 17:03:49,951 INFO o.a.j.JMeter: user.dir  =/Users/nishenghan/cs4218-2510-ecom-project-team002
-2025-11-07 17:03:49,951 INFO o.a.j.JMeter: PWD       =/Users/nishenghan/cs4218-2510-ecom-project-team002
-2025-11-07 17:03:49,953 INFO o.a.j.JMeter: IP: 127.0.0.1 Name: Nis-MacBook-Air.local FullName: localhost
-2025-11-07 17:03:49,961 INFO o.a.j.JMeter: Setting property 'jmeter.reportgenerator.outputdir' to:'/Users/nishenghan/cs4218-2510-ecom-project-team002/profilereport'
-2025-11-07 17:03:49,962 INFO o.a.j.s.FileServer: Default base='/Users/nishenghan/cs4218-2510-ecom-project-team002'
-2025-11-07 17:03:49,963 INFO o.a.j.s.FileServer: Set new base='/Users/nishenghan/cs4218-2510-ecom-project-team002'
-2025-11-07 17:03:50,068 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
-2025-11-07 17:03:50,093 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
-2025-11-07 17:03:50,095 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
-2025-11-07 17:03:50,096 INFO o.a.j.s.SaveService: Loading file: ProfileManagementGroup.jmx
-2025-11-07 17:03:50,148 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2025-11-07 17:03:50,148 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2025-11-07 17:03:50,149 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2025-11-07 17:03:50,149 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2025-11-07 17:03:50,149 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
-2025-11-07 17:03:50,149 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
-2025-11-07 17:03:50,191 INFO o.a.j.JMeter: Creating summariser <summary>
-2025-11-07 17:03:50,194 INFO o.a.j.r.d.ReportGenerator: ReportGenerator will use for Parsing the separator: ','
-2025-11-07 17:03:50,194 INFO o.a.j.r.d.ReportGenerator: Will generate report at end of test from  results file: ProfileResults.jtl
-2025-11-07 17:03:50,194 INFO o.a.j.r.d.ReportGenerator: Reading report generator properties from: /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/reportgenerator.properties
-2025-11-07 17:03:50,194 INFO o.a.j.r.d.ReportGenerator: Merging with JMeter properties
-2025-11-07 17:03:50,196 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.temp_dir' not found, using default value 'temp' instead.
-2025-11-07 17:03:50,197 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.apdex_per_transaction' not found, using default value 'null' instead.
-2025-11-07 17:03:50,197 INFO o.a.j.r.c.ReportGeneratorConfiguration: apdex_per_transaction is empty, not APDEX per transaction customization
-2025-11-07 17:03:50,197 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.sample_filter' not found, using default value 'null' instead.
-2025-11-07 17:03:50,197 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.report_title' not found, using default value 'null' instead.
-2025-11-07 17:03:50,197 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.start_date' not found, using default value 'null' instead.
-2025-11-07 17:03:50,197 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.end_date' not found, using default value 'null' instead.
-2025-11-07 17:03:50,197 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.date_format' not found, using default value 'null' instead.
-2025-11-07 17:03:50,197 INFO o.a.j.r.c.ReportGeneratorConfiguration: Will use date range start date: null, end date: null
-2025-11-07 17:03:50,199 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.totalTPS.exclude_controllers' not found, using default value 'false' instead.
-2025-11-07 17:03:50,199 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.activeThreadsOverTime.exclude_controllers' not found, using default value 'false' instead.
-2025-11-07 17:03:50,199 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.timeVsThreads.exclude_controllers' not found, using default value 'false' instead.
-2025-11-07 17:03:50,199 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimeDistribution.exclude_controllers' not found, using default value 'false' instead.
-2025-11-07 17:03:50,199 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.transactionsPerSecond.exclude_controllers' not found, using default value 'false' instead.
-2025-11-07 17:03:50,199 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentiles.exclude_controllers' not found, using default value 'false' instead.
-2025-11-07 17:03:50,199 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentilesOverTime.exclude_controllers' not found, using default value 'false' instead.
-2025-11-07 17:03:50,199 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimesOverTime.exclude_controllers' not found, using default value 'false' instead.
-2025-11-07 17:03:50,199 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.connectTimeOverTime.exclude_controllers' not found, using default value 'false' instead.
-2025-11-07 17:03:50,199 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.latenciesOverTime.exclude_controllers' not found, using default value 'false' instead.
-2025-11-07 17:03:50,200 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.filters_only_sample_series' not found, using default value 'true' instead.
-2025-11-07 17:03:50,200 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.series_filter' not found, using default value '' instead.
-2025-11-07 17:03:50,200 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.show_controllers_only' not found, using default value 'false' instead.
-2025-11-07 17:03:50,200 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.filters_only_sample_series' not found, using default value 'true' instead.
-2025-11-07 17:03:50,200 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.series_filter' not found, using default value '' instead.
-2025-11-07 17:03:50,200 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.show_controllers_only' not found, using default value 'false' instead.
-2025-11-07 17:03:50,208 INFO o.a.j.e.StandardJMeterEngine: Running the test!
-2025-11-07 17:03:50,209 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2025-11-07 17:03:50,209 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2025-11-07 17:03:50,211 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
-2025-11-07 17:03:50,211 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
-2025-11-07 17:03:50,235 INFO o.a.j.r.ClassFinder: Will scan jar /opt/homebrew/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2025-11-07 17:03:50,316 INFO o.a.j.JMeter: Running test (1762506230316)
-2025-11-07 17:03:50,325 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Mixed Admin and User Profile Management
-2025-11-07 17:03:50,326 INFO o.a.j.e.StandardJMeterEngine: Starting 15 threads for group Mixed Admin and User Profile Management.
-2025-11-07 17:03:50,326 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
-2025-11-07 17:03:50,326 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=15 ramp-up=10 delayedStart=false
-2025-11-07 17:03:50,339 INFO o.a.j.t.JMeterThread: Thread started: Mixed Admin and User Profile Management 1-1
-2025-11-07 17:03:50,341 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
-2025-11-07 17:03:50,341 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
-2025-11-07 17:03:50,341 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
-2025-11-07 17:03:50,341 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
-2025-11-07 17:03:50,348 INFO o.a.j.u.BeanShellTestElement: Thread 1 assigned ADMIN role: david123@gmail.com
-2025-11-07 17:03:50,349 INFO o.a.j.u.BeanShellTestElement:    Profile Access: Cart Page > Update Address
-2025-11-07 17:03:50,361 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = Nis-MacBook-Air.local
-2025-11-07 17:03:50,371 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
-2025-11-07 17:03:50,543 INFO o.a.j.t.ThreadGroup: Started thread group number 1
-2025-11-07 17:03:50,543 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
-2025-11-07 17:03:50,552 INFO o.a.j.u.BeanShellTestElement: 🛒 ADMIN CART PAGE NAVIGATION - Thread 1
-2025-11-07 17:03:50,552 INFO o.a.j.u.BeanShellTestElement:    Action: Admin navigated to /cart page
-2025-11-07 17:03:50,552 INFO o.a.j.u.BeanShellTestElement:    Page: Cart page loaded (frontend React route)
-2025-11-07 17:03:50,554 INFO o.a.j.u.BeanShellTestElement: 🖱️ ADMIN UPDATE ADDRESS CLICK - Thread 1
-2025-11-07 17:03:50,554 INFO o.a.j.u.BeanShellTestElement:    Action: Admin clicked 'Update Address' button on cart page
-2025-11-07 17:03:50,554 INFO o.a.j.u.BeanShellTestElement:    Navigation: Cart Page → /dashboard/user/profile
-2025-11-07 17:03:50,554 INFO o.a.j.u.BeanShellTestElement:    Target: Profile management page
-2025-11-07 17:03:50,558 INFO o.a.j.u.BeanShellTestElement: 📋 PROFILE INFO FROM LOGIN - Thread 1 (ADMIN)
-2025-11-07 17:03:50,558 INFO o.a.j.u.BeanShellTestElement:    Name: davidn
-2025-11-07 17:03:50,558 INFO o.a.j.u.BeanShellTestElement:    Email: david123@gmail.com
-2025-11-07 17:03:50,558 INFO o.a.j.u.BeanShellTestElement:    Current Phone: 88888888
-2025-11-07 17:03:50,558 INFO o.a.j.u.BeanShellTestElement:    Current Address: sims avenue 908
-2025-11-07 17:03:50,561 INFO o.a.j.u.BeanShellTestElement: 📝 PROFILE UPDATE PREPARATION - Thread 1 (ADMIN)
-2025-11-07 17:03:50,561 INFO o.a.j.u.BeanShellTestElement:    Update Type: Phone Number
-2025-11-07 17:03:50,562 INFO o.a.j.u.BeanShellTestElement:    Current Phone: 88888888
-2025-11-07 17:03:50,562 INFO o.a.j.u.BeanShellTestElement:    New Phone: +65 8765 4321
-2025-11-07 17:03:50,562 INFO o.a.j.u.BeanShellTestElement:    Current Address: sims avenue 908
-2025-11-07 17:03:50,562 INFO o.a.j.u.BeanShellTestElement:    New Address: sims avenue 908
-2025-11-07 17:03:50,580 INFO o.a.j.u.BeanShellTestElement: ✅ PROFILE UPDATE COMPLETED - Thread 1 (ADMIN)
-2025-11-07 17:03:50,580 INFO o.a.j.u.BeanShellTestElement:    Access Path: cart_update_address
-2025-11-07 17:03:50,580 INFO o.a.j.u.BeanShellTestElement:    Updated Field: Phone Number
-2025-11-07 17:03:50,581 INFO o.a.j.u.BeanShellTestElement:    New Phone: +65 8765 4321
-2025-11-07 17:03:50,581 INFO o.a.j.u.BeanShellTestElement:    Status: Profile update API call completed successfully
-2025-11-07 17:03:50,584 INFO o.a.j.u.BeanShellTestElement: === PROFILE LOAD TEST COMPLETE ===
-2025-11-07 17:03:50,584 INFO o.a.j.u.BeanShellTestElement: Thread 1 (ADMIN) finished successfully
-2025-11-07 17:03:50,584 INFO o.a.j.u.BeanShellTestElement: Access Path: cart_update_address | Update: Phone Number | Verified: true
-2025-11-07 17:03:50,584 INFO o.a.j.t.JMeterThread: Thread is done: Mixed Admin and User Profile Management 1-1
-2025-11-07 17:03:50,584 INFO o.a.j.t.JMeterThread: Thread finished: Mixed Admin and User Profile Management 1-1
-2025-11-07 17:03:51,014 INFO o.a.j.t.JMeterThread: Thread started: Mixed Admin and User Profile Management 1-2
-2025-11-07 17:03:51,016 INFO o.a.j.u.BeanShellTestElement: Thread 2 assigned ADMIN role: david123@gmail.com
-2025-11-07 17:03:51,017 INFO o.a.j.u.BeanShellTestElement:    Profile Access: Cart Page > Update Address
-2025-11-07 17:03:51,088 INFO o.a.j.u.BeanShellTestElement: 🛒 ADMIN CART PAGE NAVIGATION - Thread 2
-2025-11-07 17:03:51,088 INFO o.a.j.u.BeanShellTestElement:    Action: Admin navigated to /cart page
-2025-11-07 17:03:51,088 INFO o.a.j.u.BeanShellTestElement:    Page: Cart page loaded (frontend React route)
-2025-11-07 17:03:51,088 INFO o.a.j.u.BeanShellTestElement: 🖱️ ADMIN UPDATE ADDRESS CLICK - Thread 2
-2025-11-07 17:03:51,089 INFO o.a.j.u.BeanShellTestElement:    Action: Admin clicked 'Update Address' button on cart page
-2025-11-07 17:03:51,089 INFO o.a.j.u.BeanShellTestElement:    Navigation: Cart Page → /dashboard/user/profile
-2025-11-07 17:03:51,089 INFO o.a.j.u.BeanShellTestElement:    Target: Profile management page
-2025-11-07 17:03:51,091 INFO o.a.j.u.BeanShellTestElement: 📋 PROFILE INFO FROM LOGIN - Thread 2 (ADMIN)
-2025-11-07 17:03:51,091 INFO o.a.j.u.BeanShellTestElement:    Name: davidn
-2025-11-07 17:03:51,091 INFO o.a.j.u.BeanShellTestElement:    Email: david123@gmail.com
-2025-11-07 17:03:51,091 INFO o.a.j.u.BeanShellTestElement:    Current Phone: +65 8765 4321
-2025-11-07 17:03:51,091 INFO o.a.j.u.BeanShellTestElement:    Current Address: sims avenue 908
-2025-11-07 17:03:51,093 INFO o.a.j.u.BeanShellTestElement: 📝 PROFILE UPDATE PREPARATION - Thread 2 (ADMIN)
-2025-11-07 17:03:51,093 INFO o.a.j.u.BeanShellTestElement:    Update Type: Home Address
-2025-11-07 17:03:51,093 INFO o.a.j.u.BeanShellTestElement:    Current Phone: +65 8765 4321
-2025-11-07 17:03:51,093 INFO o.a.j.u.BeanShellTestElement:    New Phone: +65 8765 4321
-2025-11-07 17:03:51,093 INFO o.a.j.u.BeanShellTestElement:    Current Address: sims avenue 908
-2025-11-07 17:03:51,093 INFO o.a.j.u.BeanShellTestElement:    New Address: 789 Clementi Avenue, Singapore 129834
-2025-11-07 17:03:51,107 INFO o.a.j.u.BeanShellTestElement: ✅ PROFILE UPDATE COMPLETED - Thread 2 (ADMIN)
-2025-11-07 17:03:51,107 INFO o.a.j.u.BeanShellTestElement:    Access Path: cart_update_address
-2025-11-07 17:03:51,107 INFO o.a.j.u.BeanShellTestElement:    Updated Field: Home Address
-2025-11-07 17:03:51,107 INFO o.a.j.u.BeanShellTestElement:    New Address: 789 Clementi Avenue, Singapore 129834
-2025-11-07 17:03:51,107 INFO o.a.j.u.BeanShellTestElement:    Status: Profile update API call completed successfully
-2025-11-07 17:03:51,109 INFO o.a.j.u.BeanShellTestElement: === PROFILE LOAD TEST COMPLETE ===
-2025-11-07 17:03:51,109 INFO o.a.j.u.BeanShellTestElement: Thread 2 (ADMIN) finished successfully
-2025-11-07 17:03:51,109 INFO o.a.j.u.BeanShellTestElement: Access Path: cart_update_address | Update: Home Address | Verified: true
-2025-11-07 17:03:51,109 INFO o.a.j.t.JMeterThread: Thread is done: Mixed Admin and User Profile Management 1-2
-2025-11-07 17:03:51,109 INFO o.a.j.t.JMeterThread: Thread finished: Mixed Admin and User Profile Management 1-2
-2025-11-07 17:03:51,700 INFO o.a.j.t.JMeterThread: Thread started: Mixed Admin and User Profile Management 1-3
-2025-11-07 17:03:51,704 INFO o.a.j.u.BeanShellTestElement: Thread 3 assigned ADMIN role: david123@gmail.com
-2025-11-07 17:03:51,704 INFO o.a.j.u.BeanShellTestElement:    Profile Access: Cart Page > Update Address
-2025-11-07 17:03:51,790 INFO o.a.j.u.BeanShellTestElement: 🛒 ADMIN CART PAGE NAVIGATION - Thread 3
-2025-11-07 17:03:51,790 INFO o.a.j.u.BeanShellTestElement:    Action: Admin navigated to /cart page
-2025-11-07 17:03:51,790 INFO o.a.j.u.BeanShellTestElement:    Page: Cart page loaded (frontend React route)
-2025-11-07 17:03:51,791 INFO o.a.j.u.BeanShellTestElement: 🖱️ ADMIN UPDATE ADDRESS CLICK - Thread 3
-2025-11-07 17:03:51,791 INFO o.a.j.u.BeanShellTestElement:    Action: Admin clicked 'Update Address' button on cart page
-2025-11-07 17:03:51,791 INFO o.a.j.u.BeanShellTestElement:    Navigation: Cart Page → /dashboard/user/profile
-2025-11-07 17:03:51,791 INFO o.a.j.u.BeanShellTestElement:    Target: Profile management page
-2025-11-07 17:03:51,793 INFO o.a.j.u.BeanShellTestElement: 📋 PROFILE INFO FROM LOGIN - Thread 3 (ADMIN)
-2025-11-07 17:03:51,793 INFO o.a.j.u.BeanShellTestElement:    Name: davidn
-2025-11-07 17:03:51,793 INFO o.a.j.u.BeanShellTestElement:    Email: david123@gmail.com
-2025-11-07 17:03:51,793 INFO o.a.j.u.BeanShellTestElement:    Current Phone: +65 8765 4321
-2025-11-07 17:03:51,793 INFO o.a.j.u.BeanShellTestElement:    Current Address: 789 Clementi Avenue, Singapore 129834
-2025-11-07 17:03:51,794 INFO o.a.j.u.BeanShellTestElement: 📝 PROFILE UPDATE PREPARATION - Thread 3 (ADMIN)
-2025-11-07 17:03:51,794 INFO o.a.j.u.BeanShellTestElement:    Update Type: Phone Number
-2025-11-07 17:03:51,794 INFO o.a.j.u.BeanShellTestElement:    Current Phone: +65 8765 4321
-2025-11-07 17:03:51,794 INFO o.a.j.u.BeanShellTestElement:    New Phone: +65 8234 5678
-2025-11-07 17:03:51,794 INFO o.a.j.u.BeanShellTestElement:    Current Address: 789 Clementi Avenue, Singapore 129834
-2025-11-07 17:03:51,794 INFO o.a.j.u.BeanShellTestElement:    New Address: 789 Clementi Avenue, Singapore 129834
-2025-11-07 17:03:51,808 INFO o.a.j.u.BeanShellTestElement: ✅ PROFILE UPDATE COMPLETED - Thread 3 (ADMIN)
-2025-11-07 17:03:51,808 INFO o.a.j.u.BeanShellTestElement:    Access Path: cart_update_address
-2025-11-07 17:03:51,808 INFO o.a.j.u.BeanShellTestElement:    Updated Field: Phone Number
-2025-11-07 17:03:51,808 INFO o.a.j.u.BeanShellTestElement:    New Phone: +65 8234 5678
-2025-11-07 17:03:51,808 INFO o.a.j.u.BeanShellTestElement:    Status: Profile update API call completed successfully
-2025-11-07 17:03:51,809 INFO o.a.j.u.BeanShellTestElement: === PROFILE LOAD TEST COMPLETE ===
-2025-11-07 17:03:51,809 INFO o.a.j.u.BeanShellTestElement: Thread 3 (ADMIN) finished successfully
-2025-11-07 17:03:51,809 INFO o.a.j.u.BeanShellTestElement: Access Path: cart_update_address | Update: Phone Number | Verified: true
-2025-11-07 17:03:51,810 INFO o.a.j.t.JMeterThread: Thread is done: Mixed Admin and User Profile Management 1-3
-2025-11-07 17:03:51,810 INFO o.a.j.t.JMeterThread: Thread finished: Mixed Admin and User Profile Management 1-3
-2025-11-07 17:03:52,350 INFO o.a.j.t.JMeterThread: Thread started: Mixed Admin and User Profile Management 1-4
-2025-11-07 17:03:52,351 INFO o.a.j.u.BeanShellTestElement: Thread 4 assigned ADMIN role: david123@gmail.com
-2025-11-07 17:03:52,351 INFO o.a.j.u.BeanShellTestElement:    Profile Access: Cart Page > Update Address
-2025-11-07 17:03:52,463 INFO o.a.j.u.BeanShellTestElement: 🛒 ADMIN CART PAGE NAVIGATION - Thread 4
-2025-11-07 17:03:52,463 INFO o.a.j.u.BeanShellTestElement:    Action: Admin navigated to /cart page
-2025-11-07 17:03:52,463 INFO o.a.j.u.BeanShellTestElement:    Page: Cart page loaded (frontend React route)
-2025-11-07 17:03:52,464 INFO o.a.j.u.BeanShellTestElement: 🖱️ ADMIN UPDATE ADDRESS CLICK - Thread 4
-2025-11-07 17:03:52,464 INFO o.a.j.u.BeanShellTestElement:    Action: Admin clicked 'Update Address' button on cart page
-2025-11-07 17:03:52,464 INFO o.a.j.u.BeanShellTestElement:    Navigation: Cart Page → /dashboard/user/profile
-2025-11-07 17:03:52,464 INFO o.a.j.u.BeanShellTestElement:    Target: Profile management page
-2025-11-07 17:03:52,466 INFO o.a.j.u.BeanShellTestElement: 📋 PROFILE INFO FROM LOGIN - Thread 4 (ADMIN)
-2025-11-07 17:03:52,466 INFO o.a.j.u.BeanShellTestElement:    Name: davidn
-2025-11-07 17:03:52,466 INFO o.a.j.u.BeanShellTestElement:    Email: david123@gmail.com
-2025-11-07 17:03:52,466 INFO o.a.j.u.BeanShellTestElement:    Current Phone: +65 8234 5678
-2025-11-07 17:03:52,466 INFO o.a.j.u.BeanShellTestElement:    Current Address: 789 Clementi Avenue, Singapore 129834
-2025-11-07 17:03:52,467 INFO o.a.j.u.BeanShellTestElement: 📝 PROFILE UPDATE PREPARATION - Thread 4 (ADMIN)
-2025-11-07 17:03:52,467 INFO o.a.j.u.BeanShellTestElement:    Update Type: Home Address
-2025-11-07 17:03:52,467 INFO o.a.j.u.BeanShellTestElement:    Current Phone: +65 8234 5678
-2025-11-07 17:03:52,467 INFO o.a.j.u.BeanShellTestElement:    New Phone: +65 8234 5678
-2025-11-07 17:03:52,467 INFO o.a.j.u.BeanShellTestElement:    Current Address: 789 Clementi Avenue, Singapore 129834
-2025-11-07 17:03:52,467 INFO o.a.j.u.BeanShellTestElement:    New Address: 654 Tampines Central, Singapore 529509
-2025-11-07 17:03:52,481 INFO o.a.j.u.BeanShellTestElement: ✅ PROFILE UPDATE COMPLETED - Thread 4 (ADMIN)
-2025-11-07 17:03:52,481 INFO o.a.j.u.BeanShellTestElement:    Access Path: cart_update_address
-2025-11-07 17:03:52,481 INFO o.a.j.u.BeanShellTestElement:    Updated Field: Home Address
-2025-11-07 17:03:52,481 INFO o.a.j.u.BeanShellTestElement:    New Address: 654 Tampines Central, Singapore 529509
-2025-11-07 17:03:52,481 INFO o.a.j.u.BeanShellTestElement:    Status: Profile update API call completed successfully
-2025-11-07 17:03:52,482 INFO o.a.j.u.BeanShellTestElement: === PROFILE LOAD TEST COMPLETE ===
-2025-11-07 17:03:52,482 INFO o.a.j.u.BeanShellTestElement: Thread 4 (ADMIN) finished successfully
-2025-11-07 17:03:52,482 INFO o.a.j.u.BeanShellTestElement: Access Path: cart_update_address | Update: Home Address | Verified: true
-2025-11-07 17:03:52,483 INFO o.a.j.t.JMeterThread: Thread is done: Mixed Admin and User Profile Management 1-4
-2025-11-07 17:03:52,483 INFO o.a.j.t.JMeterThread: Thread finished: Mixed Admin and User Profile Management 1-4
-2025-11-07 17:03:53,012 INFO o.a.j.t.JMeterThread: Thread started: Mixed Admin and User Profile Management 1-5
-2025-11-07 17:03:53,013 INFO o.a.j.u.BeanShellTestElement: Thread 5 assigned ADMIN role: david123@gmail.com
-2025-11-07 17:03:53,013 INFO o.a.j.u.BeanShellTestElement:    Profile Access: Cart Page > Update Address
-2025-11-07 17:03:53,093 INFO o.a.j.u.BeanShellTestElement: 🛒 ADMIN CART PAGE NAVIGATION - Thread 5
-2025-11-07 17:03:53,093 INFO o.a.j.u.BeanShellTestElement:    Action: Admin navigated to /cart page
-2025-11-07 17:03:53,093 INFO o.a.j.u.BeanShellTestElement:    Page: Cart page loaded (frontend React route)
-2025-11-07 17:03:53,094 INFO o.a.j.u.BeanShellTestElement: 🖱️ ADMIN UPDATE ADDRESS CLICK - Thread 5
-2025-11-07 17:03:53,094 INFO o.a.j.u.BeanShellTestElement:    Action: Admin clicked 'Update Address' button on cart page
-2025-11-07 17:03:53,094 INFO o.a.j.u.BeanShellTestElement:    Navigation: Cart Page → /dashboard/user/profile
-2025-11-07 17:03:53,094 INFO o.a.j.u.BeanShellTestElement:    Target: Profile management page
-2025-11-07 17:03:53,096 INFO o.a.j.u.BeanShellTestElement: 📋 PROFILE INFO FROM LOGIN - Thread 5 (ADMIN)
-2025-11-07 17:03:53,096 INFO o.a.j.u.BeanShellTestElement:    Name: davidn
-2025-11-07 17:03:53,096 INFO o.a.j.u.BeanShellTestElement:    Email: david123@gmail.com
-2025-11-07 17:03:53,096 INFO o.a.j.u.BeanShellTestElement:    Current Phone: +65 8234 5678
-2025-11-07 17:03:53,096 INFO o.a.j.u.BeanShellTestElement:    Current Address: 654 Tampines Central, Singapore 529509
-2025-11-07 17:03:53,096 INFO o.a.j.u.BeanShellTestElement: 📝 PROFILE UPDATE PREPARATION - Thread 5 (ADMIN)
-2025-11-07 17:03:53,097 INFO o.a.j.u.BeanShellTestElement:    Update Type: Phone Number
-2025-11-07 17:03:53,097 INFO o.a.j.u.BeanShellTestElement:    Current Phone: +65 8234 5678
-2025-11-07 17:03:53,097 INFO o.a.j.u.BeanShellTestElement:    New Phone: +65 8456 7890
-2025-11-07 17:03:53,097 INFO o.a.j.u.BeanShellTestElement:    Current Address: 654 Tampines Central, Singapore 529509
-2025-11-07 17:03:53,097 INFO o.a.j.u.BeanShellTestElement:    New Address: 654 Tampines Central, Singapore 529509
-2025-11-07 17:03:53,112 INFO o.a.j.u.BeanShellTestElement: ✅ PROFILE UPDATE COMPLETED - Thread 5 (ADMIN)
-2025-11-07 17:03:53,112 INFO o.a.j.u.BeanShellTestElement:    Access Path: cart_update_address
-2025-11-07 17:03:53,112 INFO o.a.j.u.BeanShellTestElement:    Updated Field: Phone Number
-2025-11-07 17:03:53,113 INFO o.a.j.u.BeanShellTestElement:    New Phone: +65 8456 7890
-2025-11-07 17:03:53,113 INFO o.a.j.u.BeanShellTestElement:    Status: Profile update API call completed successfully
-2025-11-07 17:03:53,114 INFO o.a.j.u.BeanShellTestElement: === PROFILE LOAD TEST COMPLETE ===
-2025-11-07 17:03:53,114 INFO o.a.j.u.BeanShellTestElement: Thread 5 (ADMIN) finished successfully
-2025-11-07 17:03:53,114 INFO o.a.j.u.BeanShellTestElement: Access Path: cart_update_address | Update: Phone Number | Verified: true
-2025-11-07 17:03:53,114 INFO o.a.j.t.JMeterThread: Thread is done: Mixed Admin and User Profile Management 1-5
-2025-11-07 17:03:53,114 INFO o.a.j.t.JMeterThread: Thread finished: Mixed Admin and User Profile Management 1-5
-2025-11-07 17:03:53,675 INFO o.a.j.t.JMeterThread: Thread started: Mixed Admin and User Profile Management 1-6
-2025-11-07 17:03:53,676 INFO o.a.j.u.BeanShellTestElement: Thread 6 assigned ADMIN role: david123@gmail.com
-2025-11-07 17:03:53,676 INFO o.a.j.u.BeanShellTestElement:    Profile Access: Cart Page > Update Address
-2025-11-07 17:03:53,803 INFO o.a.j.u.BeanShellTestElement: 🛒 ADMIN CART PAGE NAVIGATION - Thread 6
-2025-11-07 17:03:53,803 INFO o.a.j.u.BeanShellTestElement:    Action: Admin navigated to /cart page
-2025-11-07 17:03:53,803 INFO o.a.j.u.BeanShellTestElement:    Page: Cart page loaded (frontend React route)
-2025-11-07 17:03:53,804 INFO o.a.j.u.BeanShellTestElement: 🖱️ ADMIN UPDATE ADDRESS CLICK - Thread 6
-2025-11-07 17:03:53,804 INFO o.a.j.u.BeanShellTestElement:    Action: Admin clicked 'Update Address' button on cart page
-2025-11-07 17:03:53,804 INFO o.a.j.u.BeanShellTestElement:    Navigation: Cart Page → /dashboard/user/profile
-2025-11-07 17:03:53,804 INFO o.a.j.u.BeanShellTestElement:    Target: Profile management page
-2025-11-07 17:03:53,805 INFO o.a.j.u.BeanShellTestElement: 📋 PROFILE INFO FROM LOGIN - Thread 6 (ADMIN)
-2025-11-07 17:03:53,806 INFO o.a.j.u.BeanShellTestElement:    Name: davidn
-2025-11-07 17:03:53,806 INFO o.a.j.u.BeanShellTestElement:    Email: david123@gmail.com
-2025-11-07 17:03:53,806 INFO o.a.j.u.BeanShellTestElement:    Current Phone: +65 8456 7890
-2025-11-07 17:03:53,806 INFO o.a.j.u.BeanShellTestElement:    Current Address: 654 Tampines Central, Singapore 529509
-2025-11-07 17:03:53,806 INFO o.a.j.u.BeanShellTestElement: 📝 PROFILE UPDATE PREPARATION - Thread 6 (ADMIN)
-2025-11-07 17:03:53,806 INFO o.a.j.u.BeanShellTestElement:    Update Type: Home Address
-2025-11-07 17:03:53,806 INFO o.a.j.u.BeanShellTestElement:    Current Phone: +65 8456 7890
-2025-11-07 17:03:53,806 INFO o.a.j.u.BeanShellTestElement:    New Phone: +65 8456 7890
-2025-11-07 17:03:53,807 INFO o.a.j.u.BeanShellTestElement:    Current Address: 654 Tampines Central, Singapore 529509
-2025-11-07 17:03:53,807 INFO o.a.j.u.BeanShellTestElement:    New Address: 123 Orchard Road, Singapore 238873
-2025-11-07 17:03:53,821 INFO o.a.j.u.BeanShellTestElement: ✅ PROFILE UPDATE COMPLETED - Thread 6 (ADMIN)
-2025-11-07 17:03:53,821 INFO o.a.j.u.BeanShellTestElement:    Access Path: cart_update_address
-2025-11-07 17:03:53,821 INFO o.a.j.u.BeanShellTestElement:    Updated Field: Home Address
-2025-11-07 17:03:53,821 INFO o.a.j.u.BeanShellTestElement:    New Address: 123 Orchard Road, Singapore 238873
-2025-11-07 17:03:53,821 INFO o.a.j.u.BeanShellTestElement:    Status: Profile update API call completed successfully
-2025-11-07 17:03:53,822 INFO o.a.j.u.BeanShellTestElement: === PROFILE LOAD TEST COMPLETE ===
-2025-11-07 17:03:53,822 INFO o.a.j.u.BeanShellTestElement: Thread 6 (ADMIN) finished successfully
-2025-11-07 17:03:53,822 INFO o.a.j.u.BeanShellTestElement: Access Path: cart_update_address | Update: Home Address | Verified: true
-2025-11-07 17:03:53,822 INFO o.a.j.t.JMeterThread: Thread is done: Mixed Admin and User Profile Management 1-6
-2025-11-07 17:03:53,822 INFO o.a.j.t.JMeterThread: Thread finished: Mixed Admin and User Profile Management 1-6
-2025-11-07 17:03:54,342 INFO o.a.j.t.JMeterThread: Thread started: Mixed Admin and User Profile Management 1-7
-2025-11-07 17:03:54,343 INFO o.a.j.u.BeanShellTestElement: Thread 7 assigned NORMAL USER role: loadtest1@test.com
-2025-11-07 17:03:54,344 INFO o.a.j.u.BeanShellTestElement:    Profile Access: Dashboard > Profile
-2025-11-07 17:03:54,407 INFO o.a.j.u.BeanShellTestElement: 📊 USER DASHBOARD NAVIGATION - Thread 7
-2025-11-07 17:03:54,407 INFO o.a.j.u.BeanShellTestElement:    Action: User navigated to /dashboard page
-2025-11-07 17:03:54,407 INFO o.a.j.u.BeanShellTestElement:    Page: Dashboard loaded (frontend React route)
-2025-11-07 17:03:54,407 INFO o.a.j.u.BeanShellTestElement: 👤 USER PROFILE CLICK - Thread 7
-2025-11-07 17:03:54,407 INFO o.a.j.u.BeanShellTestElement:    Action: User clicked 'Profile' menu on dashboard
-2025-11-07 17:03:54,407 INFO o.a.j.u.BeanShellTestElement:    Navigation: Dashboard → /dashboard/user/profile
-2025-11-07 17:03:54,407 INFO o.a.j.u.BeanShellTestElement:    Target: Profile management page
-2025-11-07 17:03:54,408 INFO o.a.j.u.BeanShellTestElement: 📋 PROFILE INFO FROM LOGIN - Thread 7 (NORMAL_USER)
-2025-11-07 17:03:54,408 INFO o.a.j.u.BeanShellTestElement:    Name: LoadTestUser1
-2025-11-07 17:03:54,408 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest1@test.com
-2025-11-07 17:03:54,408 INFO o.a.j.u.BeanShellTestElement:    Current Phone: +65 8234 5678
-2025-11-07 17:03:54,408 INFO o.a.j.u.BeanShellTestElement:    Current Address: 789 Clementi Avenue, Singapore 129834
-2025-11-07 17:03:54,408 INFO o.a.j.u.BeanShellTestElement: 📝 PROFILE UPDATE PREPARATION - Thread 7 (NORMAL_USER)
-2025-11-07 17:03:54,408 INFO o.a.j.u.BeanShellTestElement:    Update Type: Phone Number
-2025-11-07 17:03:54,409 INFO o.a.j.u.BeanShellTestElement:    Current Phone: +65 8234 5678
-2025-11-07 17:03:54,409 INFO o.a.j.u.BeanShellTestElement:    New Phone: +65 8765 4321
-2025-11-07 17:03:54,409 INFO o.a.j.u.BeanShellTestElement:    Current Address: 789 Clementi Avenue, Singapore 129834
-2025-11-07 17:03:54,409 INFO o.a.j.u.BeanShellTestElement:    New Address: 789 Clementi Avenue, Singapore 129834
-2025-11-07 17:03:54,422 INFO o.a.j.u.BeanShellTestElement: ✅ PROFILE UPDATE COMPLETED - Thread 7 (NORMAL_USER)
-2025-11-07 17:03:54,422 INFO o.a.j.u.BeanShellTestElement:    Access Path: dashboard_profile
-2025-11-07 17:03:54,422 INFO o.a.j.u.BeanShellTestElement:    Updated Field: Phone Number
-2025-11-07 17:03:54,422 INFO o.a.j.u.BeanShellTestElement:    New Phone: +65 8765 4321
-2025-11-07 17:03:54,422 INFO o.a.j.u.BeanShellTestElement:    Status: Profile update API call completed successfully
-2025-11-07 17:03:54,423 INFO o.a.j.u.BeanShellTestElement: === PROFILE LOAD TEST COMPLETE ===
-2025-11-07 17:03:54,423 INFO o.a.j.u.BeanShellTestElement: Thread 7 (NORMAL_USER) finished successfully
-2025-11-07 17:03:54,423 INFO o.a.j.u.BeanShellTestElement: Access Path: dashboard_profile | Update: Phone Number | Verified: true
-2025-11-07 17:03:54,423 INFO o.a.j.t.JMeterThread: Thread is done: Mixed Admin and User Profile Management 1-7
-2025-11-07 17:03:54,423 INFO o.a.j.t.JMeterThread: Thread finished: Mixed Admin and User Profile Management 1-7
-2025-11-07 17:03:55,009 INFO o.a.j.t.JMeterThread: Thread started: Mixed Admin and User Profile Management 1-8
-2025-11-07 17:03:55,014 INFO o.a.j.u.BeanShellTestElement: Thread 8 assigned NORMAL USER role: loadtest1@test.com
-2025-11-07 17:03:55,014 INFO o.a.j.u.BeanShellTestElement:    Profile Access: Dashboard > Profile
-2025-11-07 17:03:55,105 INFO o.a.j.u.BeanShellTestElement: 📊 USER DASHBOARD NAVIGATION - Thread 8
-2025-11-07 17:03:55,105 INFO o.a.j.u.BeanShellTestElement:    Action: User navigated to /dashboard page
-2025-11-07 17:03:55,105 INFO o.a.j.u.BeanShellTestElement:    Page: Dashboard loaded (frontend React route)
-2025-11-07 17:03:55,106 INFO o.a.j.u.BeanShellTestElement: 👤 USER PROFILE CLICK - Thread 8
-2025-11-07 17:03:55,106 INFO o.a.j.u.BeanShellTestElement:    Action: User clicked 'Profile' menu on dashboard
-2025-11-07 17:03:55,106 INFO o.a.j.u.BeanShellTestElement:    Navigation: Dashboard → /dashboard/user/profile
-2025-11-07 17:03:55,106 INFO o.a.j.u.BeanShellTestElement:    Target: Profile management page
-2025-11-07 17:03:55,106 INFO o.a.j.u.BeanShellTestElement: 📋 PROFILE INFO FROM LOGIN - Thread 8 (NORMAL_USER)
-2025-11-07 17:03:55,106 INFO o.a.j.u.BeanShellTestElement:    Name: LoadTestUser1
-2025-11-07 17:03:55,106 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest1@test.com
-2025-11-07 17:03:55,106 INFO o.a.j.u.BeanShellTestElement:    Current Phone: +65 8765 4321
-2025-11-07 17:03:55,106 INFO o.a.j.u.BeanShellTestElement:    Current Address: 789 Clementi Avenue, Singapore 129834
-2025-11-07 17:03:55,107 INFO o.a.j.u.BeanShellTestElement: 📝 PROFILE UPDATE PREPARATION - Thread 8 (NORMAL_USER)
-2025-11-07 17:03:55,107 INFO o.a.j.u.BeanShellTestElement:    Update Type: Home Address
-2025-11-07 17:03:55,107 INFO o.a.j.u.BeanShellTestElement:    Current Phone: +65 8765 4321
-2025-11-07 17:03:55,107 INFO o.a.j.u.BeanShellTestElement:    New Phone: +65 8765 4321
-2025-11-07 17:03:55,107 INFO o.a.j.u.BeanShellTestElement:    Current Address: 789 Clementi Avenue, Singapore 129834
-2025-11-07 17:03:55,107 INFO o.a.j.u.BeanShellTestElement:    New Address: 789 Clementi Avenue, Singapore 129834
-2025-11-07 17:03:55,121 INFO o.a.j.u.BeanShellTestElement: ✅ PROFILE UPDATE COMPLETED - Thread 8 (NORMAL_USER)
-2025-11-07 17:03:55,121 INFO o.a.j.u.BeanShellTestElement:    Access Path: dashboard_profile
-2025-11-07 17:03:55,121 INFO o.a.j.u.BeanShellTestElement:    Updated Field: Home Address
-2025-11-07 17:03:55,121 INFO o.a.j.u.BeanShellTestElement:    New Address: 789 Clementi Avenue, Singapore 129834
-2025-11-07 17:03:55,121 INFO o.a.j.u.BeanShellTestElement:    Status: Profile update API call completed successfully
-2025-11-07 17:03:55,122 INFO o.a.j.u.BeanShellTestElement: === PROFILE LOAD TEST COMPLETE ===
-2025-11-07 17:03:55,122 INFO o.a.j.u.BeanShellTestElement: Thread 8 (NORMAL_USER) finished successfully
-2025-11-07 17:03:55,122 INFO o.a.j.u.BeanShellTestElement: Access Path: dashboard_profile | Update: Home Address | Verified: true
-2025-11-07 17:03:55,122 INFO o.a.j.t.JMeterThread: Thread is done: Mixed Admin and User Profile Management 1-8
-2025-11-07 17:03:55,122 INFO o.a.j.t.JMeterThread: Thread finished: Mixed Admin and User Profile Management 1-8
-2025-11-07 17:03:55,676 INFO o.a.j.t.JMeterThread: Thread started: Mixed Admin and User Profile Management 1-9
-2025-11-07 17:03:55,677 INFO o.a.j.u.BeanShellTestElement: Thread 9 assigned NORMAL USER role: loadtest1@test.com
-2025-11-07 17:03:55,677 INFO o.a.j.u.BeanShellTestElement:    Profile Access: Dashboard > Profile
-2025-11-07 17:03:55,747 INFO o.a.j.u.BeanShellTestElement: 📊 USER DASHBOARD NAVIGATION - Thread 9
-2025-11-07 17:03:55,747 INFO o.a.j.u.BeanShellTestElement:    Action: User navigated to /dashboard page
-2025-11-07 17:03:55,747 INFO o.a.j.u.BeanShellTestElement:    Page: Dashboard loaded (frontend React route)
-2025-11-07 17:03:55,748 INFO o.a.j.u.BeanShellTestElement: 👤 USER PROFILE CLICK - Thread 9
-2025-11-07 17:03:55,748 INFO o.a.j.u.BeanShellTestElement:    Action: User clicked 'Profile' menu on dashboard
-2025-11-07 17:03:55,748 INFO o.a.j.u.BeanShellTestElement:    Navigation: Dashboard → /dashboard/user/profile
-2025-11-07 17:03:55,748 INFO o.a.j.u.BeanShellTestElement:    Target: Profile management page
-2025-11-07 17:03:55,748 INFO o.a.j.u.BeanShellTestElement: 📋 PROFILE INFO FROM LOGIN - Thread 9 (NORMAL_USER)
-2025-11-07 17:03:55,748 INFO o.a.j.u.BeanShellTestElement:    Name: LoadTestUser1
-2025-11-07 17:03:55,748 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest1@test.com
-2025-11-07 17:03:55,748 INFO o.a.j.u.BeanShellTestElement:    Current Phone: +65 8765 4321
-2025-11-07 17:03:55,748 INFO o.a.j.u.BeanShellTestElement:    Current Address: 789 Clementi Avenue, Singapore 129834
-2025-11-07 17:03:55,749 INFO o.a.j.u.BeanShellTestElement: 📝 PROFILE UPDATE PREPARATION - Thread 9 (NORMAL_USER)
-2025-11-07 17:03:55,749 INFO o.a.j.u.BeanShellTestElement:    Update Type: Phone Number
-2025-11-07 17:03:55,749 INFO o.a.j.u.BeanShellTestElement:    Current Phone: +65 8765 4321
-2025-11-07 17:03:55,749 INFO o.a.j.u.BeanShellTestElement:    New Phone: +65 8234 5678
-2025-11-07 17:03:55,749 INFO o.a.j.u.BeanShellTestElement:    Current Address: 789 Clementi Avenue, Singapore 129834
-2025-11-07 17:03:55,749 INFO o.a.j.u.BeanShellTestElement:    New Address: 789 Clementi Avenue, Singapore 129834
-2025-11-07 17:03:55,762 INFO o.a.j.u.BeanShellTestElement: ✅ PROFILE UPDATE COMPLETED - Thread 9 (NORMAL_USER)
-2025-11-07 17:03:55,762 INFO o.a.j.u.BeanShellTestElement:    Access Path: dashboard_profile
-2025-11-07 17:03:55,762 INFO o.a.j.u.BeanShellTestElement:    Updated Field: Phone Number
-2025-11-07 17:03:55,762 INFO o.a.j.u.BeanShellTestElement:    New Phone: +65 8234 5678
-2025-11-07 17:03:55,762 INFO o.a.j.u.BeanShellTestElement:    Status: Profile update API call completed successfully
-2025-11-07 17:03:55,763 INFO o.a.j.u.BeanShellTestElement: === PROFILE LOAD TEST COMPLETE ===
-2025-11-07 17:03:55,763 INFO o.a.j.u.BeanShellTestElement: Thread 9 (NORMAL_USER) finished successfully
-2025-11-07 17:03:55,763 INFO o.a.j.u.BeanShellTestElement: Access Path: dashboard_profile | Update: Phone Number | Verified: true
-2025-11-07 17:03:55,764 INFO o.a.j.t.JMeterThread: Thread is done: Mixed Admin and User Profile Management 1-9
-2025-11-07 17:03:55,764 INFO o.a.j.t.JMeterThread: Thread finished: Mixed Admin and User Profile Management 1-9
-2025-11-07 17:03:56,345 INFO o.a.j.t.JMeterThread: Thread started: Mixed Admin and User Profile Management 1-10
-2025-11-07 17:03:56,347 INFO o.a.j.u.BeanShellTestElement: Thread 10 assigned NORMAL USER role: loadtest1@test.com
-2025-11-07 17:03:56,347 INFO o.a.j.u.BeanShellTestElement:    Profile Access: Dashboard > Profile
-2025-11-07 17:03:56,431 INFO o.a.j.u.BeanShellTestElement: 📊 USER DASHBOARD NAVIGATION - Thread 10
-2025-11-07 17:03:56,431 INFO o.a.j.u.BeanShellTestElement:    Action: User navigated to /dashboard page
-2025-11-07 17:03:56,431 INFO o.a.j.u.BeanShellTestElement:    Page: Dashboard loaded (frontend React route)
-2025-11-07 17:03:56,432 INFO o.a.j.u.BeanShellTestElement: 👤 USER PROFILE CLICK - Thread 10
-2025-11-07 17:03:56,432 INFO o.a.j.u.BeanShellTestElement:    Action: User clicked 'Profile' menu on dashboard
-2025-11-07 17:03:56,432 INFO o.a.j.u.BeanShellTestElement:    Navigation: Dashboard → /dashboard/user/profile
-2025-11-07 17:03:56,432 INFO o.a.j.u.BeanShellTestElement:    Target: Profile management page
-2025-11-07 17:03:56,432 INFO o.a.j.u.BeanShellTestElement: 📋 PROFILE INFO FROM LOGIN - Thread 10 (NORMAL_USER)
-2025-11-07 17:03:56,432 INFO o.a.j.u.BeanShellTestElement:    Name: LoadTestUser1
-2025-11-07 17:03:56,432 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest1@test.com
-2025-11-07 17:03:56,432 INFO o.a.j.u.BeanShellTestElement:    Current Phone: +65 8234 5678
-2025-11-07 17:03:56,432 INFO o.a.j.u.BeanShellTestElement:    Current Address: 789 Clementi Avenue, Singapore 129834
-2025-11-07 17:03:56,433 INFO o.a.j.u.BeanShellTestElement: 📝 PROFILE UPDATE PREPARATION - Thread 10 (NORMAL_USER)
-2025-11-07 17:03:56,433 INFO o.a.j.u.BeanShellTestElement:    Update Type: Home Address
-2025-11-07 17:03:56,433 INFO o.a.j.u.BeanShellTestElement:    Current Phone: +65 8234 5678
-2025-11-07 17:03:56,433 INFO o.a.j.u.BeanShellTestElement:    New Phone: +65 8234 5678
-2025-11-07 17:03:56,433 INFO o.a.j.u.BeanShellTestElement:    Current Address: 789 Clementi Avenue, Singapore 129834
-2025-11-07 17:03:56,433 INFO o.a.j.u.BeanShellTestElement:    New Address: 654 Tampines Central, Singapore 529509
-2025-11-07 17:03:56,458 INFO o.a.j.u.BeanShellTestElement: ✅ PROFILE UPDATE COMPLETED - Thread 10 (NORMAL_USER)
-2025-11-07 17:03:56,458 INFO o.a.j.u.BeanShellTestElement:    Access Path: dashboard_profile
-2025-11-07 17:03:56,458 INFO o.a.j.u.BeanShellTestElement:    Updated Field: Home Address
-2025-11-07 17:03:56,458 INFO o.a.j.u.BeanShellTestElement:    New Address: 654 Tampines Central, Singapore 529509
-2025-11-07 17:03:56,458 INFO o.a.j.u.BeanShellTestElement:    Status: Profile update API call completed successfully
-2025-11-07 17:03:56,459 INFO o.a.j.u.BeanShellTestElement: === PROFILE LOAD TEST COMPLETE ===
-2025-11-07 17:03:56,459 INFO o.a.j.u.BeanShellTestElement: Thread 10 (NORMAL_USER) finished successfully
-2025-11-07 17:03:56,459 INFO o.a.j.u.BeanShellTestElement: Access Path: dashboard_profile | Update: Home Address | Verified: true
-2025-11-07 17:03:56,459 INFO o.a.j.t.JMeterThread: Thread is done: Mixed Admin and User Profile Management 1-10
-2025-11-07 17:03:56,459 INFO o.a.j.t.JMeterThread: Thread finished: Mixed Admin and User Profile Management 1-10
-2025-11-07 17:03:57,012 INFO o.a.j.t.JMeterThread: Thread started: Mixed Admin and User Profile Management 1-11
-2025-11-07 17:03:57,013 INFO o.a.j.u.BeanShellTestElement: Thread 11 assigned NORMAL USER role: loadtest1@test.com
-2025-11-07 17:03:57,013 INFO o.a.j.u.BeanShellTestElement:    Profile Access: Dashboard > Profile
-2025-11-07 17:03:57,108 INFO o.a.j.u.BeanShellTestElement: 📊 USER DASHBOARD NAVIGATION - Thread 11
-2025-11-07 17:03:57,108 INFO o.a.j.u.BeanShellTestElement:    Action: User navigated to /dashboard page
-2025-11-07 17:03:57,108 INFO o.a.j.u.BeanShellTestElement:    Page: Dashboard loaded (frontend React route)
-2025-11-07 17:03:57,110 INFO o.a.j.u.BeanShellTestElement: 👤 USER PROFILE CLICK - Thread 11
-2025-11-07 17:03:57,110 INFO o.a.j.u.BeanShellTestElement:    Action: User clicked 'Profile' menu on dashboard
-2025-11-07 17:03:57,110 INFO o.a.j.u.BeanShellTestElement:    Navigation: Dashboard → /dashboard/user/profile
-2025-11-07 17:03:57,110 INFO o.a.j.u.BeanShellTestElement:    Target: Profile management page
-2025-11-07 17:03:57,111 INFO o.a.j.u.BeanShellTestElement: 📋 PROFILE INFO FROM LOGIN - Thread 11 (NORMAL_USER)
-2025-11-07 17:03:57,111 INFO o.a.j.u.BeanShellTestElement:    Name: LoadTestUser1
-2025-11-07 17:03:57,111 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest1@test.com
-2025-11-07 17:03:57,111 INFO o.a.j.u.BeanShellTestElement:    Current Phone: +65 8234 5678
-2025-11-07 17:03:57,111 INFO o.a.j.u.BeanShellTestElement:    Current Address: 654 Tampines Central, Singapore 529509
-2025-11-07 17:03:57,112 INFO o.a.j.u.BeanShellTestElement: 📝 PROFILE UPDATE PREPARATION - Thread 11 (NORMAL_USER)
-2025-11-07 17:03:57,112 INFO o.a.j.u.BeanShellTestElement:    Update Type: Phone Number
-2025-11-07 17:03:57,112 INFO o.a.j.u.BeanShellTestElement:    Current Phone: +65 8234 5678
-2025-11-07 17:03:57,112 INFO o.a.j.u.BeanShellTestElement:    New Phone: +65 8456 7890
-2025-11-07 17:03:57,112 INFO o.a.j.u.BeanShellTestElement:    Current Address: 654 Tampines Central, Singapore 529509
-2025-11-07 17:03:57,112 INFO o.a.j.u.BeanShellTestElement:    New Address: 654 Tampines Central, Singapore 529509
-2025-11-07 17:03:57,125 INFO o.a.j.u.BeanShellTestElement: ✅ PROFILE UPDATE COMPLETED - Thread 11 (NORMAL_USER)
-2025-11-07 17:03:57,125 INFO o.a.j.u.BeanShellTestElement:    Access Path: dashboard_profile
-2025-11-07 17:03:57,125 INFO o.a.j.u.BeanShellTestElement:    Updated Field: Phone Number
-2025-11-07 17:03:57,125 INFO o.a.j.u.BeanShellTestElement:    New Phone: +65 8456 7890
-2025-11-07 17:03:57,125 INFO o.a.j.u.BeanShellTestElement:    Status: Profile update API call completed successfully
-2025-11-07 17:03:57,126 INFO o.a.j.u.BeanShellTestElement: === PROFILE LOAD TEST COMPLETE ===
-2025-11-07 17:03:57,126 INFO o.a.j.u.BeanShellTestElement: Thread 11 (NORMAL_USER) finished successfully
-2025-11-07 17:03:57,126 INFO o.a.j.u.BeanShellTestElement: Access Path: dashboard_profile | Update: Phone Number | Verified: true
-2025-11-07 17:03:57,126 INFO o.a.j.t.JMeterThread: Thread is done: Mixed Admin and User Profile Management 1-11
-2025-11-07 17:03:57,126 INFO o.a.j.t.JMeterThread: Thread finished: Mixed Admin and User Profile Management 1-11
-2025-11-07 17:03:57,675 INFO o.a.j.t.JMeterThread: Thread started: Mixed Admin and User Profile Management 1-12
-2025-11-07 17:03:57,678 INFO o.a.j.u.BeanShellTestElement: Thread 12 assigned NORMAL USER role: loadtest1@test.com
-2025-11-07 17:03:57,678 INFO o.a.j.u.BeanShellTestElement:    Profile Access: Dashboard > Profile
-2025-11-07 17:03:57,766 INFO o.a.j.u.BeanShellTestElement: 📊 USER DASHBOARD NAVIGATION - Thread 12
-2025-11-07 17:03:57,766 INFO o.a.j.u.BeanShellTestElement:    Action: User navigated to /dashboard page
-2025-11-07 17:03:57,766 INFO o.a.j.u.BeanShellTestElement:    Page: Dashboard loaded (frontend React route)
-2025-11-07 17:03:57,766 INFO o.a.j.u.BeanShellTestElement: 👤 USER PROFILE CLICK - Thread 12
-2025-11-07 17:03:57,766 INFO o.a.j.u.BeanShellTestElement:    Action: User clicked 'Profile' menu on dashboard
-2025-11-07 17:03:57,766 INFO o.a.j.u.BeanShellTestElement:    Navigation: Dashboard → /dashboard/user/profile
-2025-11-07 17:03:57,766 INFO o.a.j.u.BeanShellTestElement:    Target: Profile management page
-2025-11-07 17:03:57,767 INFO o.a.j.u.BeanShellTestElement: 📋 PROFILE INFO FROM LOGIN - Thread 12 (NORMAL_USER)
-2025-11-07 17:03:57,767 INFO o.a.j.u.BeanShellTestElement:    Name: LoadTestUser1
-2025-11-07 17:03:57,767 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest1@test.com
-2025-11-07 17:03:57,767 INFO o.a.j.u.BeanShellTestElement:    Current Phone: +65 8456 7890
-2025-11-07 17:03:57,767 INFO o.a.j.u.BeanShellTestElement:    Current Address: 654 Tampines Central, Singapore 529509
-2025-11-07 17:03:57,767 INFO o.a.j.u.BeanShellTestElement: 📝 PROFILE UPDATE PREPARATION - Thread 12 (NORMAL_USER)
-2025-11-07 17:03:57,767 INFO o.a.j.u.BeanShellTestElement:    Update Type: Home Address
-2025-11-07 17:03:57,767 INFO o.a.j.u.BeanShellTestElement:    Current Phone: +65 8456 7890
-2025-11-07 17:03:57,767 INFO o.a.j.u.BeanShellTestElement:    New Phone: +65 8456 7890
-2025-11-07 17:03:57,767 INFO o.a.j.u.BeanShellTestElement:    Current Address: 654 Tampines Central, Singapore 529509
-2025-11-07 17:03:57,767 INFO o.a.j.u.BeanShellTestElement:    New Address: 123 Orchard Road, Singapore 238873
-2025-11-07 17:03:57,780 INFO o.a.j.u.BeanShellTestElement: ✅ PROFILE UPDATE COMPLETED - Thread 12 (NORMAL_USER)
-2025-11-07 17:03:57,780 INFO o.a.j.u.BeanShellTestElement:    Access Path: dashboard_profile
-2025-11-07 17:03:57,780 INFO o.a.j.u.BeanShellTestElement:    Updated Field: Home Address
-2025-11-07 17:03:57,780 INFO o.a.j.u.BeanShellTestElement:    New Address: 123 Orchard Road, Singapore 238873
-2025-11-07 17:03:57,780 INFO o.a.j.u.BeanShellTestElement:    Status: Profile update API call completed successfully
-2025-11-07 17:03:57,781 INFO o.a.j.u.BeanShellTestElement: === PROFILE LOAD TEST COMPLETE ===
-2025-11-07 17:03:57,781 INFO o.a.j.u.BeanShellTestElement: Thread 12 (NORMAL_USER) finished successfully
-2025-11-07 17:03:57,781 INFO o.a.j.u.BeanShellTestElement: Access Path: dashboard_profile | Update: Home Address | Verified: true
-2025-11-07 17:03:57,781 INFO o.a.j.t.JMeterThread: Thread is done: Mixed Admin and User Profile Management 1-12
-2025-11-07 17:03:57,781 INFO o.a.j.t.JMeterThread: Thread finished: Mixed Admin and User Profile Management 1-12
-2025-11-07 17:03:58,343 INFO o.a.j.t.JMeterThread: Thread started: Mixed Admin and User Profile Management 1-13
-2025-11-07 17:03:58,345 INFO o.a.j.u.BeanShellTestElement: Thread 13 assigned NORMAL USER role: loadtest1@test.com
-2025-11-07 17:03:58,345 INFO o.a.j.u.BeanShellTestElement:    Profile Access: Dashboard > Profile
-2025-11-07 17:03:58,430 INFO o.a.j.u.BeanShellTestElement: 📊 USER DASHBOARD NAVIGATION - Thread 13
-2025-11-07 17:03:58,430 INFO o.a.j.u.BeanShellTestElement:    Action: User navigated to /dashboard page
-2025-11-07 17:03:58,430 INFO o.a.j.u.BeanShellTestElement:    Page: Dashboard loaded (frontend React route)
-2025-11-07 17:03:58,430 INFO o.a.j.u.BeanShellTestElement: 👤 USER PROFILE CLICK - Thread 13
-2025-11-07 17:03:58,430 INFO o.a.j.u.BeanShellTestElement:    Action: User clicked 'Profile' menu on dashboard
-2025-11-07 17:03:58,430 INFO o.a.j.u.BeanShellTestElement:    Navigation: Dashboard → /dashboard/user/profile
-2025-11-07 17:03:58,430 INFO o.a.j.u.BeanShellTestElement:    Target: Profile management page
-2025-11-07 17:03:58,430 INFO o.a.j.u.BeanShellTestElement: 📋 PROFILE INFO FROM LOGIN - Thread 13 (NORMAL_USER)
-2025-11-07 17:03:58,430 INFO o.a.j.u.BeanShellTestElement:    Name: LoadTestUser1
-2025-11-07 17:03:58,430 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest1@test.com
-2025-11-07 17:03:58,430 INFO o.a.j.u.BeanShellTestElement:    Current Phone: +65 8456 7890
-2025-11-07 17:03:58,430 INFO o.a.j.u.BeanShellTestElement:    Current Address: 123 Orchard Road, Singapore 238873
-2025-11-07 17:03:58,431 INFO o.a.j.u.BeanShellTestElement: 📝 PROFILE UPDATE PREPARATION - Thread 13 (NORMAL_USER)
-2025-11-07 17:03:58,431 INFO o.a.j.u.BeanShellTestElement:    Update Type: Phone Number
-2025-11-07 17:03:58,431 INFO o.a.j.u.BeanShellTestElement:    Current Phone: +65 8456 7890
-2025-11-07 17:03:58,431 INFO o.a.j.u.BeanShellTestElement:    New Phone: +65 8765 4321
-2025-11-07 17:03:58,431 INFO o.a.j.u.BeanShellTestElement:    Current Address: 123 Orchard Road, Singapore 238873
-2025-11-07 17:03:58,431 INFO o.a.j.u.BeanShellTestElement:    New Address: 123 Orchard Road, Singapore 238873
-2025-11-07 17:03:58,444 INFO o.a.j.u.BeanShellTestElement: ✅ PROFILE UPDATE COMPLETED - Thread 13 (NORMAL_USER)
-2025-11-07 17:03:58,444 INFO o.a.j.u.BeanShellTestElement:    Access Path: dashboard_profile
-2025-11-07 17:03:58,444 INFO o.a.j.u.BeanShellTestElement:    Updated Field: Phone Number
-2025-11-07 17:03:58,444 INFO o.a.j.u.BeanShellTestElement:    New Phone: +65 8765 4321
-2025-11-07 17:03:58,444 INFO o.a.j.u.BeanShellTestElement:    Status: Profile update API call completed successfully
-2025-11-07 17:03:58,445 INFO o.a.j.u.BeanShellTestElement: === PROFILE LOAD TEST COMPLETE ===
-2025-11-07 17:03:58,445 INFO o.a.j.u.BeanShellTestElement: Thread 13 (NORMAL_USER) finished successfully
-2025-11-07 17:03:58,445 INFO o.a.j.u.BeanShellTestElement: Access Path: dashboard_profile | Update: Phone Number | Verified: true
-2025-11-07 17:03:58,445 INFO o.a.j.t.JMeterThread: Thread is done: Mixed Admin and User Profile Management 1-13
-2025-11-07 17:03:58,445 INFO o.a.j.t.JMeterThread: Thread finished: Mixed Admin and User Profile Management 1-13
-2025-11-07 17:03:59,036 INFO o.a.j.t.JMeterThread: Thread started: Mixed Admin and User Profile Management 1-14
-2025-11-07 17:03:59,041 INFO o.a.j.u.BeanShellTestElement: Thread 14 assigned NORMAL USER role: loadtest1@test.com
-2025-11-07 17:03:59,041 INFO o.a.j.u.BeanShellTestElement:    Profile Access: Dashboard > Profile
-2025-11-07 17:03:59,139 INFO o.a.j.u.BeanShellTestElement: 📊 USER DASHBOARD NAVIGATION - Thread 14
-2025-11-07 17:03:59,139 INFO o.a.j.u.BeanShellTestElement:    Action: User navigated to /dashboard page
-2025-11-07 17:03:59,139 INFO o.a.j.u.BeanShellTestElement:    Page: Dashboard loaded (frontend React route)
-2025-11-07 17:03:59,140 INFO o.a.j.u.BeanShellTestElement: 👤 USER PROFILE CLICK - Thread 14
-2025-11-07 17:03:59,140 INFO o.a.j.u.BeanShellTestElement:    Action: User clicked 'Profile' menu on dashboard
-2025-11-07 17:03:59,140 INFO o.a.j.u.BeanShellTestElement:    Navigation: Dashboard → /dashboard/user/profile
-2025-11-07 17:03:59,140 INFO o.a.j.u.BeanShellTestElement:    Target: Profile management page
-2025-11-07 17:03:59,140 INFO o.a.j.u.BeanShellTestElement: 📋 PROFILE INFO FROM LOGIN - Thread 14 (NORMAL_USER)
-2025-11-07 17:03:59,140 INFO o.a.j.u.BeanShellTestElement:    Name: LoadTestUser1
-2025-11-07 17:03:59,140 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest1@test.com
-2025-11-07 17:03:59,140 INFO o.a.j.u.BeanShellTestElement:    Current Phone: +65 8765 4321
-2025-11-07 17:03:59,140 INFO o.a.j.u.BeanShellTestElement:    Current Address: 123 Orchard Road, Singapore 238873
-2025-11-07 17:03:59,141 INFO o.a.j.u.BeanShellTestElement: 📝 PROFILE UPDATE PREPARATION - Thread 14 (NORMAL_USER)
-2025-11-07 17:03:59,141 INFO o.a.j.u.BeanShellTestElement:    Update Type: Home Address
-2025-11-07 17:03:59,141 INFO o.a.j.u.BeanShellTestElement:    Current Phone: +65 8765 4321
-2025-11-07 17:03:59,141 INFO o.a.j.u.BeanShellTestElement:    New Phone: +65 8765 4321
-2025-11-07 17:03:59,141 INFO o.a.j.u.BeanShellTestElement:    Current Address: 123 Orchard Road, Singapore 238873
-2025-11-07 17:03:59,141 INFO o.a.j.u.BeanShellTestElement:    New Address: 789 Clementi Avenue, Singapore 129834
-2025-11-07 17:03:59,154 INFO o.a.j.u.BeanShellTestElement: ✅ PROFILE UPDATE COMPLETED - Thread 14 (NORMAL_USER)
-2025-11-07 17:03:59,154 INFO o.a.j.u.BeanShellTestElement:    Access Path: dashboard_profile
-2025-11-07 17:03:59,154 INFO o.a.j.u.BeanShellTestElement:    Updated Field: Home Address
-2025-11-07 17:03:59,154 INFO o.a.j.u.BeanShellTestElement:    New Address: 789 Clementi Avenue, Singapore 129834
-2025-11-07 17:03:59,155 INFO o.a.j.u.BeanShellTestElement:    Status: Profile update API call completed successfully
-2025-11-07 17:03:59,155 INFO o.a.j.u.BeanShellTestElement: === PROFILE LOAD TEST COMPLETE ===
-2025-11-07 17:03:59,155 INFO o.a.j.u.BeanShellTestElement: Thread 14 (NORMAL_USER) finished successfully
-2025-11-07 17:03:59,155 INFO o.a.j.u.BeanShellTestElement: Access Path: dashboard_profile | Update: Home Address | Verified: true
-2025-11-07 17:03:59,155 INFO o.a.j.t.JMeterThread: Thread is done: Mixed Admin and User Profile Management 1-14
-2025-11-07 17:03:59,155 INFO o.a.j.t.JMeterThread: Thread finished: Mixed Admin and User Profile Management 1-14
-2025-11-07 17:03:59,691 INFO o.a.j.t.JMeterThread: Thread started: Mixed Admin and User Profile Management 1-15
-2025-11-07 17:03:59,692 INFO o.a.j.u.BeanShellTestElement: Thread 15 assigned NORMAL USER role: loadtest1@test.com
-2025-11-07 17:03:59,692 INFO o.a.j.u.BeanShellTestElement:    Profile Access: Dashboard > Profile
-2025-11-07 17:03:59,766 INFO o.a.j.u.BeanShellTestElement: 📊 USER DASHBOARD NAVIGATION - Thread 15
-2025-11-07 17:03:59,766 INFO o.a.j.u.BeanShellTestElement:    Action: User navigated to /dashboard page
-2025-11-07 17:03:59,766 INFO o.a.j.u.BeanShellTestElement:    Page: Dashboard loaded (frontend React route)
-2025-11-07 17:03:59,766 INFO o.a.j.u.BeanShellTestElement: 👤 USER PROFILE CLICK - Thread 15
-2025-11-07 17:03:59,766 INFO o.a.j.u.BeanShellTestElement:    Action: User clicked 'Profile' menu on dashboard
-2025-11-07 17:03:59,766 INFO o.a.j.u.BeanShellTestElement:    Navigation: Dashboard → /dashboard/user/profile
-2025-11-07 17:03:59,766 INFO o.a.j.u.BeanShellTestElement:    Target: Profile management page
-2025-11-07 17:03:59,766 INFO o.a.j.u.BeanShellTestElement: 📋 PROFILE INFO FROM LOGIN - Thread 15 (NORMAL_USER)
-2025-11-07 17:03:59,766 INFO o.a.j.u.BeanShellTestElement:    Name: LoadTestUser1
-2025-11-07 17:03:59,766 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest1@test.com
-2025-11-07 17:03:59,766 INFO o.a.j.u.BeanShellTestElement:    Current Phone: +65 8765 4321
-2025-11-07 17:03:59,766 INFO o.a.j.u.BeanShellTestElement:    Current Address: 789 Clementi Avenue, Singapore 129834
-2025-11-07 17:03:59,767 INFO o.a.j.u.BeanShellTestElement: 📝 PROFILE UPDATE PREPARATION - Thread 15 (NORMAL_USER)
-2025-11-07 17:03:59,767 INFO o.a.j.u.BeanShellTestElement:    Update Type: Phone Number
-2025-11-07 17:03:59,767 INFO o.a.j.u.BeanShellTestElement:    Current Phone: +65 8765 4321
-2025-11-07 17:03:59,767 INFO o.a.j.u.BeanShellTestElement:    New Phone: +65 8234 5678
-2025-11-07 17:03:59,767 INFO o.a.j.u.BeanShellTestElement:    Current Address: 789 Clementi Avenue, Singapore 129834
-2025-11-07 17:03:59,767 INFO o.a.j.u.BeanShellTestElement:    New Address: 789 Clementi Avenue, Singapore 129834
-2025-11-07 17:03:59,779 INFO o.a.j.u.BeanShellTestElement: ✅ PROFILE UPDATE COMPLETED - Thread 15 (NORMAL_USER)
-2025-11-07 17:03:59,779 INFO o.a.j.u.BeanShellTestElement:    Access Path: dashboard_profile
-2025-11-07 17:03:59,779 INFO o.a.j.u.BeanShellTestElement:    Updated Field: Phone Number
-2025-11-07 17:03:59,779 INFO o.a.j.u.BeanShellTestElement:    New Phone: +65 8234 5678
-2025-11-07 17:03:59,779 INFO o.a.j.u.BeanShellTestElement:    Status: Profile update API call completed successfully
-2025-11-07 17:03:59,780 INFO o.a.j.u.BeanShellTestElement: === PROFILE LOAD TEST COMPLETE ===
-2025-11-07 17:03:59,780 INFO o.a.j.u.BeanShellTestElement: Thread 15 (NORMAL_USER) finished successfully
-2025-11-07 17:03:59,780 INFO o.a.j.u.BeanShellTestElement: Access Path: dashboard_profile | Update: Phone Number | Verified: true
-2025-11-07 17:03:59,780 INFO o.a.j.t.JMeterThread: Thread is done: Mixed Admin and User Profile Management 1-15
-2025-11-07 17:03:59,780 INFO o.a.j.t.JMeterThread: Thread finished: Mixed Admin and User Profile Management 1-15
-2025-11-07 17:03:59,780 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
-2025-11-07 17:03:59,782 INFO o.a.j.r.Summariser: summary =    135 in 00:00:09 =   14.3/s Avg:    11 Min:     0 Max:   116 Err:     0 (0.00%)
-2025-11-07 17:03:59,782 INFO o.a.j.JMeter: Generating Dashboard
-2025-11-07 17:03:59,782 INFO o.a.j.r.d.ReportGenerator: Flushing result collector before report Generation
-2025-11-07 17:03:59,786 INFO o.a.j.r.p.NormalizerSampleConsumer: Using format, 'ms', to parse timeStamp field
-2025-11-07 17:03:59,820 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): beginDate produced 0 samples
-2025-11-07 17:03:59,821 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): endDate produced 0 samples
-2025-11-07 17:03:59,822 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ApdexSummaryConsumer#stopProducing(): apdexSummary produced 0 samples
-2025-11-07 17:03:59,822 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.RequestsSummaryConsumer#stopProducing(): requestsSummary produced 0 samples
-2025-11-07 17:03:59,824 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.StatisticsSummaryConsumer#stopProducing(): statisticsSummary produced 0 samples
-2025-11-07 17:03:59,825 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.Top5ErrorsBySamplerConsumer#stopProducing(): top5ErrorsBySampler produced 0 samples
-2025-11-07 17:03:59,825 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ErrorsSummaryConsumer#stopProducing(): errorsSummary produced 0 samples
-2025-11-07 17:03:59,825 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.HitsPerSecondGraphConsumer#stopProducing(): hitsPerSecond produced 0 samples
-2025-11-07 17:03:59,832 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyVSRequestGraphConsumer#stopProducing(): latencyVsRequest produced 0 samples
-2025-11-07 17:03:59,833 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.SyntheticResponseTimeDistributionGraphConsumer#stopProducing(): syntheticResponseTimeDistribution produced 0 samples
-2025-11-07 17:03:59,833 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.BytesThroughputGraphConsumer#stopProducing(): bytesThroughputOverTime produced 0 samples
-2025-11-07 17:03:59,833 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.CodesPerSecondGraphConsumer#stopProducing(): codesPerSecond produced 0 samples
-2025-11-07 17:03:59,834 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeVSRequestGraphConsumer#stopProducing(): responseTimeVsRequest produced 0 samples
-2025-11-07 17:03:59,834 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): startIntervalControlerFilter produced 945 samples
-2025-11-07 17:03:59,834 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TotalTPSGraphConsumer#stopProducing(): totalTPS produced 0 samples
-2025-11-07 17:03:59,835 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ActiveThreadsGraphConsumer#stopProducing(): activeThreadsOverTime produced 0 samples
-2025-11-07 17:03:59,835 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TimeVSThreadGraphConsumer#stopProducing(): timeVsThreads produced 0 samples
-2025-11-07 17:03:59,835 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeDistributionGraphConsumer#stopProducing(): responseTimeDistribution produced 0 samples
-2025-11-07 17:03:59,835 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TransactionsPerSecondGraphConsumer#stopProducing(): transactionsPerSecond produced 0 samples
-2025-11-07 17:03:59,835 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesGraphConsumer#stopProducing(): responseTimePercentiles produced 0 samples
-2025-11-07 17:03:59,837 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesOverTimeGraphConsumer#stopProducing(): responseTimePercentilesOverTime produced 0 samples
-2025-11-07 17:03:59,837 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeOverTimeGraphConsumer#stopProducing(): responseTimesOverTime produced 0 samples
-2025-11-07 17:03:59,837 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ConnectTimeOverTimeGraphConsumer#stopProducing(): connectTimeOverTime produced 0 samples
-2025-11-07 17:03:59,837 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyOverTimeGraphConsumer#stopProducing(): latenciesOverTime produced 0 samples
-2025-11-07 17:03:59,837 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): nameFilter produced 2025 samples
-2025-11-07 17:03:59,837 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): dateRangeFilter produced 405 samples
-2025-11-07 17:03:59,837 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.NormalizerSampleConsumer#stopProducing(): normalizer produced 135 samples
-2025-11-07 17:03:59,837 INFO o.a.j.r.p.CsvFileSampleSource: produce(): 135 samples produced in 41ms on channel 0
-2025-11-07 17:03:59,837 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'json' of className:'org.apache.jmeter.report.dashboard.JsonExporter'
-2025-11-07 17:03:59,877 INFO o.a.j.r.d.JsonExporter: Found data for consumer statisticsSummary in context
-2025-11-07 17:03:59,877 INFO o.a.j.r.d.JsonExporter: Creating statistics for overall
-2025-11-07 17:03:59,877 INFO o.a.j.r.d.JsonExporter: Creating statistics for other transactions
-2025-11-07 17:03:59,877 INFO o.a.j.r.d.JsonExporter: Checking output folder
-2025-11-07 17:03:59,878 INFO o.a.j.r.d.JsonExporter: Writing statistics JSON to /Users/nishenghan/cs4218-2510-ecom-project-team002/profilereport/statistics.json
-2025-11-07 17:03:59,895 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'html' of className:'org.apache.jmeter.report.dashboard.HtmlTemplateExporter'
-2025-11-07 17:03:59,896 INFO o.a.j.r.d.HtmlTemplateExporter: Will generate dashboard in folder: /Users/nishenghan/cs4218-2510-ecom-project-team002/profilereport
-2025-11-07 17:03:59,954 INFO o.a.j.r.d.HtmlTemplateExporter: Report will be generated in: /Users/nishenghan/cs4218-2510-ecom-project-team002/profilereport, creating folder structure
-2025-11-07 17:03:59,955 INFO o.a.j.r.d.TemplateVisitor: Copying folder from '/opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/report-template' to '/Users/nishenghan/cs4218-2510-ecom-project-team002/profilereport', got message: /Users/nishenghan/cs4218-2510-ecom-project-team002/profilereport, found non empty folder with following content [/Users/nishenghan/cs4218-2510-ecom-project-team002/profilereport/statistics.json], will be ignored
-2025-11-07 17:04:00,096 INFO o.a.j.JMeter: Dashboard generated
+2025-11-07 20:07:31,573 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2025-11-07 20:07:31,586 INFO o.a.j.JMeter: Loading user properties from: /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/user.properties
+2025-11-07 20:07:31,586 INFO o.a.j.JMeter: Loading system properties from: /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/system.properties
+2025-11-07 20:07:31,589 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2025-11-07 20:07:31,589 INFO o.a.j.JMeter: Version 5.6.3
+2025-11-07 20:07:31,589 INFO o.a.j.JMeter: java.version=21.0.9
+2025-11-07 20:07:31,589 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2025-11-07 20:07:31,589 INFO o.a.j.JMeter: os.name=Mac OS X
+2025-11-07 20:07:31,589 INFO o.a.j.JMeter: os.arch=aarch64
+2025-11-07 20:07:31,589 INFO o.a.j.JMeter: os.version=26.0.1
+2025-11-07 20:07:31,589 INFO o.a.j.JMeter: file.encoding=UTF-8
+2025-11-07 20:07:31,589 INFO o.a.j.JMeter: java.awt.headless=true
+2025-11-07 20:07:31,589 INFO o.a.j.JMeter: Max memory     =1073741824
+2025-11-07 20:07:31,590 INFO o.a.j.JMeter: Available Processors =8
+2025-11-07 20:07:31,598 INFO o.a.j.JMeter: Default Locale=English (EN)
+2025-11-07 20:07:31,598 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2025-11-07 20:07:31,598 INFO o.a.j.JMeter: JMeterHome=/opt/homebrew/Cellar/jmeter/5.6.3/libexec
+2025-11-07 20:07:31,598 INFO o.a.j.JMeter: user.dir  =/Users/nishenghan/cs4218-2510-ecom-project-team002
+2025-11-07 20:07:31,598 INFO o.a.j.JMeter: PWD       =/Users/nishenghan/cs4218-2510-ecom-project-team002
+2025-11-07 20:07:31,600 INFO o.a.j.JMeter: IP: 127.0.0.1 Name: Nis-MacBook-Air.local FullName: localhost
+2025-11-07 20:07:31,608 INFO o.a.j.JMeter: Setting property 'jmeter.reportgenerator.outputdir' to:'/Users/nishenghan/cs4218-2510-ecom-project-team002/cartpagereport'
+2025-11-07 20:07:31,609 INFO o.a.j.s.FileServer: Default base='/Users/nishenghan/cs4218-2510-ecom-project-team002'
+2025-11-07 20:07:31,610 INFO o.a.j.s.FileServer: Set new base='/Users/nishenghan/cs4218-2510-ecom-project-team002'
+2025-11-07 20:07:31,722 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2025-11-07 20:07:31,746 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2025-11-07 20:07:31,748 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2025-11-07 20:07:31,749 INFO o.a.j.s.SaveService: Loading file: CartPageGroup.jmx
+2025-11-07 20:07:31,767 INFO o.a.j.p.h.c.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_
+2025-11-07 20:07:31,783 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-11-07 20:07:31,783 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-11-07 20:07:31,783 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-11-07 20:07:31,783 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-11-07 20:07:31,783 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2025-11-07 20:07:31,783 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2025-11-07 20:07:31,833 INFO o.a.j.JMeter: Creating summariser <summary>
+2025-11-07 20:07:31,835 INFO o.a.j.r.d.ReportGenerator: ReportGenerator will use for Parsing the separator: ','
+2025-11-07 20:07:31,835 INFO o.a.j.r.d.ReportGenerator: Will generate report at end of test from  results file: CartPageResults.jtl
+2025-11-07 20:07:31,835 INFO o.a.j.r.d.ReportGenerator: Reading report generator properties from: /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/reportgenerator.properties
+2025-11-07 20:07:31,836 INFO o.a.j.r.d.ReportGenerator: Merging with JMeter properties
+2025-11-07 20:07:31,837 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.temp_dir' not found, using default value 'temp' instead.
+2025-11-07 20:07:31,838 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.apdex_per_transaction' not found, using default value 'null' instead.
+2025-11-07 20:07:31,838 INFO o.a.j.r.c.ReportGeneratorConfiguration: apdex_per_transaction is empty, not APDEX per transaction customization
+2025-11-07 20:07:31,838 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.sample_filter' not found, using default value 'null' instead.
+2025-11-07 20:07:31,838 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.report_title' not found, using default value 'null' instead.
+2025-11-07 20:07:31,838 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.start_date' not found, using default value 'null' instead.
+2025-11-07 20:07:31,838 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.end_date' not found, using default value 'null' instead.
+2025-11-07 20:07:31,838 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.date_format' not found, using default value 'null' instead.
+2025-11-07 20:07:31,839 INFO o.a.j.r.c.ReportGeneratorConfiguration: Will use date range start date: null, end date: null
+2025-11-07 20:07:31,840 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.totalTPS.exclude_controllers' not found, using default value 'false' instead.
+2025-11-07 20:07:31,840 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.activeThreadsOverTime.exclude_controllers' not found, using default value 'false' instead.
+2025-11-07 20:07:31,840 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.timeVsThreads.exclude_controllers' not found, using default value 'false' instead.
+2025-11-07 20:07:31,840 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimeDistribution.exclude_controllers' not found, using default value 'false' instead.
+2025-11-07 20:07:31,840 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.transactionsPerSecond.exclude_controllers' not found, using default value 'false' instead.
+2025-11-07 20:07:31,841 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentiles.exclude_controllers' not found, using default value 'false' instead.
+2025-11-07 20:07:31,841 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentilesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2025-11-07 20:07:31,841 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2025-11-07 20:07:31,841 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.connectTimeOverTime.exclude_controllers' not found, using default value 'false' instead.
+2025-11-07 20:07:31,841 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.latenciesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2025-11-07 20:07:31,841 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.filters_only_sample_series' not found, using default value 'true' instead.
+2025-11-07 20:07:31,841 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.series_filter' not found, using default value '' instead.
+2025-11-07 20:07:31,841 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.show_controllers_only' not found, using default value 'false' instead.
+2025-11-07 20:07:31,841 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.filters_only_sample_series' not found, using default value 'true' instead.
+2025-11-07 20:07:31,841 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.series_filter' not found, using default value '' instead.
+2025-11-07 20:07:31,841 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.show_controllers_only' not found, using default value 'false' instead.
+2025-11-07 20:07:31,848 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2025-11-07 20:07:31,848 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-11-07 20:07:31,848 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-11-07 20:07:31,850 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2025-11-07 20:07:31,850 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2025-11-07 20:07:31,878 INFO o.a.j.r.ClassFinder: Will scan jar /opt/homebrew/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-11-07 20:07:31,972 INFO o.a.j.JMeter: Running test (1762517251972)
+2025-11-07 20:07:31,982 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Cart and Checkout Load Test Thread Group
+2025-11-07 20:07:31,982 INFO o.a.j.e.StandardJMeterEngine: Starting 25 threads for group Cart and Checkout Load Test Thread Group.
+2025-11-07 20:07:31,982 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-11-07 20:07:31,982 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=25 ramp-up=10 delayedStart=false
+2025-11-07 20:07:31,996 INFO o.a.j.t.JMeterThread: Thread started: Cart and Checkout Load Test Thread Group 1-1
+2025-11-07 20:07:31,996 INFO o.a.j.s.FileServer: Stored: login_users.csv
+2025-11-07 20:07:32,149 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2025-11-07 20:07:32,149 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2025-11-07 20:07:32,396 INFO o.a.j.t.JMeterThread: Thread started: Cart and Checkout Load Test Thread Group 1-2
+2025-11-07 20:07:32,794 INFO o.a.j.t.JMeterThread: Thread started: Cart and Checkout Load Test Thread Group 1-3
+2025-11-07 20:07:33,029 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = Nis-MacBook-Air.local
+2025-11-07 20:07:33,033 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2025-11-07 20:07:33,034 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2025-11-07 20:07:33,034 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2025-11-07 20:07:33,034 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2025-11-07 20:07:33,035 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2025-11-07 20:07:33,166 INFO o.a.j.r.Summariser: summary +      1 in 00:00:01 =    0.8/s Avg:    92 Min:    92 Max:    92 Err:     0 (0.00%) Active: 3 Started: 3 Finished: 0
+2025-11-07 20:07:33,194 INFO o.a.j.t.JMeterThread: Thread started: Cart and Checkout Load Test Thread Group 1-4
+2025-11-07 20:07:33,593 INFO o.a.j.t.JMeterThread: Thread started: Cart and Checkout Load Test Thread Group 1-5
+2025-11-07 20:07:33,993 INFO o.a.j.t.JMeterThread: Thread started: Cart and Checkout Load Test Thread Group 1-6
+2025-11-07 20:07:34,393 INFO o.a.j.t.JMeterThread: Thread started: Cart and Checkout Load Test Thread Group 1-7
+2025-11-07 20:07:34,794 INFO o.a.j.t.JMeterThread: Thread started: Cart and Checkout Load Test Thread Group 1-8
+2025-11-07 20:07:35,193 INFO o.a.j.t.JMeterThread: Thread started: Cart and Checkout Load Test Thread Group 1-9
+2025-11-07 20:07:35,593 INFO o.a.j.t.JMeterThread: Thread started: Cart and Checkout Load Test Thread Group 1-10
+2025-11-07 20:07:35,993 INFO o.a.j.t.JMeterThread: Thread started: Cart and Checkout Load Test Thread Group 1-11
+2025-11-07 20:07:36,393 INFO o.a.j.t.JMeterThread: Thread started: Cart and Checkout Load Test Thread Group 1-12
+2025-11-07 20:07:36,794 INFO o.a.j.t.JMeterThread: Thread started: Cart and Checkout Load Test Thread Group 1-13
+2025-11-07 20:07:37,193 INFO o.a.j.t.JMeterThread: Thread started: Cart and Checkout Load Test Thread Group 1-14
+2025-11-07 20:07:37,594 INFO o.a.j.t.JMeterThread: Thread started: Cart and Checkout Load Test Thread Group 1-15
+2025-11-07 20:07:37,993 INFO o.a.j.t.JMeterThread: Thread started: Cart and Checkout Load Test Thread Group 1-16
+2025-11-07 20:07:38,391 INFO o.a.j.t.JMeterThread: Thread started: Cart and Checkout Load Test Thread Group 1-17
+2025-11-07 20:07:38,793 INFO o.a.j.t.JMeterThread: Thread started: Cart and Checkout Load Test Thread Group 1-18
+2025-11-07 20:07:39,195 INFO o.a.j.t.JMeterThread: Thread started: Cart and Checkout Load Test Thread Group 1-19
+2025-11-07 20:07:39,594 INFO o.a.j.t.JMeterThread: Thread started: Cart and Checkout Load Test Thread Group 1-20
+2025-11-07 20:07:39,990 INFO o.a.j.t.JMeterThread: Thread started: Cart and Checkout Load Test Thread Group 1-21
+2025-11-07 20:07:40,393 INFO o.a.j.t.JMeterThread: Thread started: Cart and Checkout Load Test Thread Group 1-22
+2025-11-07 20:07:40,705 INFO o.a.j.u.BeanShellTestElement: 🛒 CART INITIALIZED - Thread 2
+2025-11-07 20:07:40,705 INFO o.a.j.u.BeanShellTestElement:    Cart Items: []
+2025-11-07 20:07:40,706 INFO o.a.j.u.BeanShellTestElement:    Cart Count: 0
+2025-11-07 20:07:40,794 INFO o.a.j.t.JMeterThread: Thread started: Cart and Checkout Load Test Thread Group 1-23
+2025-11-07 20:07:41,193 INFO o.a.j.t.JMeterThread: Thread started: Cart and Checkout Load Test Thread Group 1-24
+2025-11-07 20:07:41,593 INFO o.a.j.t.JMeterThread: Thread started: Cart and Checkout Load Test Thread Group 1-25
+2025-11-07 20:07:42,006 INFO o.a.j.u.BeanShellTestElement: 🛒 CART INITIALIZED - Thread 6
+2025-11-07 20:07:42,006 INFO o.a.j.u.BeanShellTestElement:    Cart Items: []
+2025-11-07 20:07:42,006 INFO o.a.j.u.BeanShellTestElement:    Cart Count: 0
+2025-11-07 20:07:42,317 INFO o.a.j.u.BeanShellTestElement: 🛒 CART INITIALIZED - Thread 3
+2025-11-07 20:07:42,317 INFO o.a.j.u.BeanShellTestElement:    Cart Items: []
+2025-11-07 20:07:42,318 INFO o.a.j.u.BeanShellTestElement:    Cart Count: 0
+2025-11-07 20:07:42,741 INFO o.a.j.u.BeanShellTestElement: 🛒 CART INITIALIZED - Thread 1
+2025-11-07 20:07:42,741 INFO o.a.j.u.BeanShellTestElement:    Cart Items: []
+2025-11-07 20:07:42,741 INFO o.a.j.u.BeanShellTestElement:    Cart Count: 0
+2025-11-07 20:07:43,104 INFO o.a.j.u.BeanShellTestElement: 🛒 CART INITIALIZED - Thread 4
+2025-11-07 20:07:43,104 INFO o.a.j.u.BeanShellTestElement:    Cart Items: []
+2025-11-07 20:07:43,104 INFO o.a.j.u.BeanShellTestElement:    Cart Count: 0
+2025-11-07 20:07:43,222 INFO o.a.j.u.BeanShellTestElement: 🛒 CART INITIALIZED - Thread 7
+2025-11-07 20:07:43,222 INFO o.a.j.u.BeanShellTestElement:    Cart Items: []
+2025-11-07 20:07:43,223 INFO o.a.j.u.BeanShellTestElement:    Cart Count: 0
+2025-11-07 20:07:43,579 INFO o.a.j.u.BeanShellTestElement: 🛒 CART INITIALIZED - Thread 5
+2025-11-07 20:07:43,579 INFO o.a.j.u.BeanShellTestElement:    Cart Items: []
+2025-11-07 20:07:43,580 INFO o.a.j.u.BeanShellTestElement:    Cart Count: 0
+2025-11-07 20:07:43,992 INFO o.a.j.u.BeanShellTestElement: 🛒 CART INITIALIZED - Thread 10
+2025-11-07 20:07:43,992 INFO o.a.j.u.BeanShellTestElement:    Cart Items: []
+2025-11-07 20:07:43,992 INFO o.a.j.u.BeanShellTestElement:    Cart Count: 0
+2025-11-07 20:07:44,643 INFO o.a.j.u.BeanShellTestElement: 🛒 CART INITIALIZED - Thread 11
+2025-11-07 20:07:44,643 INFO o.a.j.u.BeanShellTestElement:    Cart Items: []
+2025-11-07 20:07:44,643 INFO o.a.j.u.BeanShellTestElement:    Cart Count: 0
+2025-11-07 20:07:44,785 INFO o.a.j.u.BeanShellTestElement: 🛒 CART INITIALIZED - Thread 8
+2025-11-07 20:07:44,785 INFO o.a.j.u.BeanShellTestElement:    Cart Items: []
+2025-11-07 20:07:44,786 INFO o.a.j.u.BeanShellTestElement:    Cart Count: 0
+2025-11-07 20:07:44,975 INFO o.a.j.u.BeanShellTestElement: 🛒 CART INITIALIZED - Thread 14
+2025-11-07 20:07:44,976 INFO o.a.j.u.BeanShellTestElement:    Cart Items: []
+2025-11-07 20:07:44,976 INFO o.a.j.u.BeanShellTestElement:    Cart Count: 0
+2025-11-07 20:07:45,775 INFO o.a.j.u.BeanShellTestElement: 🛒 CART INITIALIZED - Thread 12
+2025-11-07 20:07:45,776 INFO o.a.j.u.BeanShellTestElement:    Cart Items: []
+2025-11-07 20:07:45,776 INFO o.a.j.u.BeanShellTestElement:    Cart Count: 0
+2025-11-07 20:07:45,951 INFO o.a.j.u.BeanShellTestElement: 🛒 CART INITIALIZED - Thread 16
+2025-11-07 20:07:45,951 INFO o.a.j.u.BeanShellTestElement:    Cart Items: []
+2025-11-07 20:07:45,951 INFO o.a.j.u.BeanShellTestElement:    Cart Count: 0
+2025-11-07 20:07:46,165 INFO o.a.j.u.BeanShellTestElement: 🛒 CART INITIALIZED - Thread 9
+2025-11-07 20:07:46,166 INFO o.a.j.u.BeanShellTestElement:    Cart Items: []
+2025-11-07 20:07:46,166 INFO o.a.j.u.BeanShellTestElement:    Cart Count: 0
+2025-11-07 20:07:46,942 INFO o.a.j.u.BeanShellTestElement: 🛒 CART INITIALIZED - Thread 19
+2025-11-07 20:07:46,943 INFO o.a.j.u.BeanShellTestElement:    Cart Items: []
+2025-11-07 20:07:46,943 INFO o.a.j.u.BeanShellTestElement:    Cart Count: 0
+2025-11-07 20:07:46,978 INFO o.a.j.u.BeanShellTestElement: 🛒 CART INITIALIZED - Thread 13
+2025-11-07 20:07:46,978 INFO o.a.j.u.BeanShellTestElement:    Cart Items: []
+2025-11-07 20:07:46,978 INFO o.a.j.u.BeanShellTestElement:    Cart Count: 0
+2025-11-07 20:07:47,145 INFO o.a.j.u.BeanShellTestElement: 🛒 PRODUCTS ADDED TO CART - Thread 2
+2025-11-07 20:07:47,146 INFO o.a.j.u.BeanShellTestElement:    Product 1: Novel x2 ($25.0 each)
+2025-11-07 20:07:47,146 INFO o.a.j.u.BeanShellTestElement:    Product 2: NUS T-Shirt x1 ($35.0 each)
+2025-11-07 20:07:47,146 INFO o.a.j.u.BeanShellTestElement:    Product 3: Test Product x3 ($45.0 each)
+2025-11-07 20:07:47,146 INFO o.a.j.u.BeanShellTestElement:    Total Items: 6
+2025-11-07 20:07:47,146 INFO o.a.j.u.BeanShellTestElement:    Total Price: $220.0
+2025-11-07 20:07:47,166 INFO o.a.j.u.BeanShellTestElement: 🛒 CART INITIALIZED - Thread 18
+2025-11-07 20:07:47,166 INFO o.a.j.u.BeanShellTestElement:    Cart Items: []
+2025-11-07 20:07:47,166 INFO o.a.j.u.BeanShellTestElement:    Cart Count: 0
+2025-11-07 20:07:47,931 INFO o.a.j.u.BeanShellTestElement: 🛒 CART INITIALIZED - Thread 17
+2025-11-07 20:07:47,931 INFO o.a.j.u.BeanShellTestElement:    Cart Items: []
+2025-11-07 20:07:47,932 INFO o.a.j.u.BeanShellTestElement:    Cart Count: 0
+2025-11-07 20:07:47,943 INFO o.a.j.u.BeanShellTestElement: 🛒 CART INITIALIZED - Thread 15
+2025-11-07 20:07:47,943 INFO o.a.j.u.BeanShellTestElement:    Cart Items: []
+2025-11-07 20:07:47,944 INFO o.a.j.u.BeanShellTestElement:    Cart Count: 0
+2025-11-07 20:07:48,064 INFO o.a.j.u.BeanShellTestElement: 🛒 CART INITIALIZED - Thread 22
+2025-11-07 20:07:48,065 INFO o.a.j.u.BeanShellTestElement:    Cart Items: []
+2025-11-07 20:07:48,065 INFO o.a.j.u.BeanShellTestElement:    Cart Count: 0
+2025-11-07 20:07:48,185 INFO o.a.j.u.BeanShellTestElement: 🛒 PRODUCTS ADDED TO CART - Thread 1
+2025-11-07 20:07:48,186 INFO o.a.j.u.BeanShellTestElement:    Product 1: Novel x2 ($25.0 each)
+2025-11-07 20:07:48,186 INFO o.a.j.u.BeanShellTestElement:    Product 2: NUS T-Shirt x1 ($35.0 each)
+2025-11-07 20:07:48,186 INFO o.a.j.u.BeanShellTestElement:    Product 3: Test Product x3 ($45.0 each)
+2025-11-07 20:07:48,186 INFO o.a.j.u.BeanShellTestElement:    Total Items: 6
+2025-11-07 20:07:48,186 INFO o.a.j.u.BeanShellTestElement:    Total Price: $220.0
+2025-11-07 20:07:48,435 INFO o.a.j.u.BeanShellTestElement: 🛒 PRODUCTS ADDED TO CART - Thread 3
+2025-11-07 20:07:48,435 INFO o.a.j.u.BeanShellTestElement:    Product 1: Novel x2 ($25.0 each)
+2025-11-07 20:07:48,435 INFO o.a.j.u.BeanShellTestElement:    Product 2: NUS T-Shirt x1 ($35.0 each)
+2025-11-07 20:07:48,436 INFO o.a.j.u.BeanShellTestElement:    Product 3: Test Product x3 ($45.0 each)
+2025-11-07 20:07:48,436 INFO o.a.j.u.BeanShellTestElement:    Total Items: 6
+2025-11-07 20:07:48,436 INFO o.a.j.u.BeanShellTestElement:    Total Price: $220.0
+2025-11-07 20:07:48,928 INFO o.a.j.u.BeanShellTestElement: 🛒 PRODUCTS ADDED TO CART - Thread 7
+2025-11-07 20:07:48,928 INFO o.a.j.u.BeanShellTestElement:    Product 1: Novel x2 ($25.0 each)
+2025-11-07 20:07:48,929 INFO o.a.j.u.BeanShellTestElement:    Product 2: NUS T-Shirt x1 ($35.0 each)
+2025-11-07 20:07:48,929 INFO o.a.j.u.BeanShellTestElement:    Product 3: Test Product x3 ($45.0 each)
+2025-11-07 20:07:48,929 INFO o.a.j.u.BeanShellTestElement:    Total Items: 6
+2025-11-07 20:07:48,929 INFO o.a.j.u.BeanShellTestElement:    Total Price: $220.0
+2025-11-07 20:07:49,019 INFO o.a.j.u.BeanShellTestElement: 🛒 CART INITIALIZED - Thread 21
+2025-11-07 20:07:49,019 INFO o.a.j.u.BeanShellTestElement:    Cart Items: []
+2025-11-07 20:07:49,019 INFO o.a.j.u.BeanShellTestElement:    Cart Count: 0
+2025-11-07 20:07:49,051 INFO o.a.j.u.BeanShellTestElement: 🛒 CART INITIALIZED - Thread 24
+2025-11-07 20:07:49,051 INFO o.a.j.u.BeanShellTestElement:    Cart Items: []
+2025-11-07 20:07:49,051 INFO o.a.j.u.BeanShellTestElement:    Cart Count: 0
+2025-11-07 20:07:49,168 INFO o.a.j.u.BeanShellTestElement: 🛒 PRODUCTS ADDED TO CART - Thread 6
+2025-11-07 20:07:49,168 INFO o.a.j.u.BeanShellTestElement:    Product 1: Novel x2 ($25.0 each)
+2025-11-07 20:07:49,169 INFO o.a.j.u.BeanShellTestElement:    Product 2: NUS T-Shirt x1 ($35.0 each)
+2025-11-07 20:07:49,169 INFO o.a.j.u.BeanShellTestElement:    Product 3: Test Product x3 ($45.0 each)
+2025-11-07 20:07:49,169 INFO o.a.j.u.BeanShellTestElement:    Total Items: 6
+2025-11-07 20:07:49,169 INFO o.a.j.u.BeanShellTestElement:    Total Price: $220.0
+2025-11-07 20:07:49,302 INFO o.a.j.u.BeanShellTestElement: 🛒 CART INITIALIZED - Thread 23
+2025-11-07 20:07:49,302 INFO o.a.j.u.BeanShellTestElement:    Cart Items: []
+2025-11-07 20:07:49,302 INFO o.a.j.u.BeanShellTestElement:    Cart Count: 0
+2025-11-07 20:07:49,313 INFO o.a.j.u.BeanShellTestElement: 🛒 CART INITIALIZED - Thread 20
+2025-11-07 20:07:49,313 INFO o.a.j.u.BeanShellTestElement:    Cart Items: []
+2025-11-07 20:07:49,313 INFO o.a.j.u.BeanShellTestElement:    Cart Count: 0
+2025-11-07 20:07:50,933 INFO o.a.j.u.BeanShellTestElement: 🛒 PRODUCTS ADDED TO CART - Thread 5
+2025-11-07 20:07:50,933 INFO o.a.j.u.BeanShellTestElement:    Product 1: Novel x2 ($25.0 each)
+2025-11-07 20:07:50,934 INFO o.a.j.u.BeanShellTestElement:    Product 2: NUS T-Shirt x1 ($35.0 each)
+2025-11-07 20:07:50,934 INFO o.a.j.u.BeanShellTestElement:    Product 3: Test Product x3 ($45.0 each)
+2025-11-07 20:07:50,934 INFO o.a.j.u.BeanShellTestElement:    Total Items: 6
+2025-11-07 20:07:50,934 INFO o.a.j.u.BeanShellTestElement:    Total Price: $220.0
+2025-11-07 20:07:51,417 INFO o.a.j.u.BeanShellTestElement: 🛒 PRODUCTS ADDED TO CART - Thread 4
+2025-11-07 20:07:51,418 INFO o.a.j.u.BeanShellTestElement:    Product 1: Novel x2 ($25.0 each)
+2025-11-07 20:07:51,418 INFO o.a.j.u.BeanShellTestElement:    Product 2: NUS T-Shirt x1 ($35.0 each)
+2025-11-07 20:07:51,419 INFO o.a.j.u.BeanShellTestElement:    Product 3: Test Product x3 ($45.0 each)
+2025-11-07 20:07:51,419 INFO o.a.j.u.BeanShellTestElement:    Total Items: 6
+2025-11-07 20:07:51,419 INFO o.a.j.u.BeanShellTestElement:    Total Price: $220.0
+2025-11-07 20:07:51,664 INFO o.a.j.u.BeanShellTestElement: 🛒 PRODUCTS ADDED TO CART - Thread 10
+2025-11-07 20:07:51,664 INFO o.a.j.u.BeanShellTestElement:    Product 1: Novel x2 ($25.0 each)
+2025-11-07 20:07:51,664 INFO o.a.j.u.BeanShellTestElement:    Product 2: NUS T-Shirt x1 ($35.0 each)
+2025-11-07 20:07:51,664 INFO o.a.j.u.BeanShellTestElement:    Product 3: Test Product x3 ($45.0 each)
+2025-11-07 20:07:51,664 INFO o.a.j.u.BeanShellTestElement:    Total Items: 6
+2025-11-07 20:07:51,664 INFO o.a.j.u.BeanShellTestElement:    Total Price: $220.0
+2025-11-07 20:07:51,713 INFO o.a.j.u.BeanShellTestElement: 🛒 PRODUCTS ADDED TO CART - Thread 8
+2025-11-07 20:07:51,714 INFO o.a.j.u.BeanShellTestElement:    Product 1: Novel x2 ($25.0 each)
+2025-11-07 20:07:51,714 INFO o.a.j.u.BeanShellTestElement:    Product 2: NUS T-Shirt x1 ($35.0 each)
+2025-11-07 20:07:51,714 INFO o.a.j.u.BeanShellTestElement:    Product 3: Test Product x3 ($45.0 each)
+2025-11-07 20:07:51,714 INFO o.a.j.u.BeanShellTestElement:    Total Items: 6
+2025-11-07 20:07:51,714 INFO o.a.j.u.BeanShellTestElement:    Total Price: $220.0
+2025-11-07 20:07:52,347 INFO o.a.j.u.BeanShellTestElement: 🛒 PRODUCTS ADDED TO CART - Thread 14
+2025-11-07 20:07:52,348 INFO o.a.j.u.BeanShellTestElement:    Product 1: Novel x2 ($25.0 each)
+2025-11-07 20:07:52,348 INFO o.a.j.u.BeanShellTestElement:    Product 2: NUS T-Shirt x1 ($35.0 each)
+2025-11-07 20:07:52,348 INFO o.a.j.u.BeanShellTestElement:    Product 3: Test Product x3 ($45.0 each)
+2025-11-07 20:07:52,348 INFO o.a.j.u.BeanShellTestElement:    Total Items: 6
+2025-11-07 20:07:52,349 INFO o.a.j.u.BeanShellTestElement:    Total Price: $220.0
+2025-11-07 20:07:52,424 INFO o.a.j.u.BeanShellTestElement: 🛒 PRODUCTS ADDED TO CART - Thread 11
+2025-11-07 20:07:52,425 INFO o.a.j.u.BeanShellTestElement:    Product 1: Novel x2 ($25.0 each)
+2025-11-07 20:07:52,425 INFO o.a.j.u.BeanShellTestElement:    Product 2: NUS T-Shirt x1 ($35.0 each)
+2025-11-07 20:07:52,425 INFO o.a.j.u.BeanShellTestElement:    Product 3: Test Product x3 ($45.0 each)
+2025-11-07 20:07:52,425 INFO o.a.j.u.BeanShellTestElement:    Total Items: 6
+2025-11-07 20:07:52,426 INFO o.a.j.u.BeanShellTestElement:    Total Price: $220.0
+2025-11-07 20:07:52,598 INFO o.a.j.u.BeanShellTestElement: 🛒 CART INITIALIZED - Thread 25
+2025-11-07 20:07:52,599 INFO o.a.j.u.BeanShellTestElement:    Cart Items: []
+2025-11-07 20:07:52,599 INFO o.a.j.u.BeanShellTestElement:    Cart Count: 0
+2025-11-07 20:07:52,747 INFO o.a.j.u.BeanShellTestElement: 🛒 PRODUCTS ADDED TO CART - Thread 12
+2025-11-07 20:07:52,747 INFO o.a.j.u.BeanShellTestElement:    Product 1: Novel x2 ($25.0 each)
+2025-11-07 20:07:52,747 INFO o.a.j.u.BeanShellTestElement:    Product 2: NUS T-Shirt x1 ($35.0 each)
+2025-11-07 20:07:52,747 INFO o.a.j.u.BeanShellTestElement:    Product 3: Test Product x3 ($45.0 each)
+2025-11-07 20:07:52,747 INFO o.a.j.u.BeanShellTestElement:    Total Items: 6
+2025-11-07 20:07:52,748 INFO o.a.j.u.BeanShellTestElement:    Total Price: $220.0
+2025-11-07 20:07:53,109 INFO o.a.j.u.BeanShellTestElement: 🛒 PRODUCTS ADDED TO CART - Thread 9
+2025-11-07 20:07:53,109 INFO o.a.j.u.BeanShellTestElement:    Product 1: Novel x2 ($25.0 each)
+2025-11-07 20:07:53,109 INFO o.a.j.u.BeanShellTestElement:    Product 2: NUS T-Shirt x1 ($35.0 each)
+2025-11-07 20:07:53,109 INFO o.a.j.u.BeanShellTestElement:    Product 3: Test Product x3 ($45.0 each)
+2025-11-07 20:07:53,109 INFO o.a.j.u.BeanShellTestElement:    Total Items: 6
+2025-11-07 20:07:53,109 INFO o.a.j.u.BeanShellTestElement:    Total Price: $220.0
+2025-11-07 20:07:53,188 INFO o.a.j.u.BeanShellTestElement: 🛒 PRODUCTS ADDED TO CART - Thread 15
+2025-11-07 20:07:53,188 INFO o.a.j.u.BeanShellTestElement:    Product 1: Novel x2 ($25.0 each)
+2025-11-07 20:07:53,188 INFO o.a.j.u.BeanShellTestElement:    Product 2: NUS T-Shirt x1 ($35.0 each)
+2025-11-07 20:07:53,188 INFO o.a.j.u.BeanShellTestElement:    Product 3: Test Product x3 ($45.0 each)
+2025-11-07 20:07:53,188 INFO o.a.j.u.BeanShellTestElement:    Total Items: 6
+2025-11-07 20:07:53,188 INFO o.a.j.u.BeanShellTestElement:    Total Price: $220.0
+2025-11-07 20:07:53,783 INFO o.a.j.u.BeanShellTestElement: 📉 ITEM QUANTITY REDUCED - Thread 1
+2025-11-07 20:07:53,784 INFO o.a.j.u.BeanShellTestElement:    Product: Novel
+2025-11-07 20:07:53,784 INFO o.a.j.u.BeanShellTestElement:    Quantity: 2 → 1
+2025-11-07 20:07:53,784 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 5
+2025-11-07 20:07:53,784 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $195.0
+2025-11-07 20:07:53,903 INFO o.a.j.u.BeanShellTestElement: 🛒 PRODUCTS ADDED TO CART - Thread 17
+2025-11-07 20:07:53,904 INFO o.a.j.u.BeanShellTestElement:    Product 1: Novel x2 ($25.0 each)
+2025-11-07 20:07:53,904 INFO o.a.j.u.BeanShellTestElement:    Product 2: NUS T-Shirt x1 ($35.0 each)
+2025-11-07 20:07:53,904 INFO o.a.j.u.BeanShellTestElement:    Product 3: Test Product x3 ($45.0 each)
+2025-11-07 20:07:53,904 INFO o.a.j.u.BeanShellTestElement:    Total Items: 6
+2025-11-07 20:07:53,904 INFO o.a.j.u.BeanShellTestElement:    Total Price: $220.0
+2025-11-07 20:07:53,997 INFO o.a.j.u.BeanShellTestElement: 🛒 PRODUCTS ADDED TO CART - Thread 18
+2025-11-07 20:07:53,997 INFO o.a.j.u.BeanShellTestElement:    Product 1: Novel x2 ($25.0 each)
+2025-11-07 20:07:53,997 INFO o.a.j.u.BeanShellTestElement:    Product 2: NUS T-Shirt x1 ($35.0 each)
+2025-11-07 20:07:53,997 INFO o.a.j.u.BeanShellTestElement:    Product 3: Test Product x3 ($45.0 each)
+2025-11-07 20:07:53,997 INFO o.a.j.u.BeanShellTestElement:    Total Items: 6
+2025-11-07 20:07:53,997 INFO o.a.j.u.BeanShellTestElement:    Total Price: $220.0
+2025-11-07 20:07:54,116 INFO o.a.j.u.BeanShellTestElement: 🛒 PRODUCTS ADDED TO CART - Thread 19
+2025-11-07 20:07:54,116 INFO o.a.j.u.BeanShellTestElement:    Product 1: Novel x2 ($25.0 each)
+2025-11-07 20:07:54,116 INFO o.a.j.u.BeanShellTestElement:    Product 2: NUS T-Shirt x1 ($35.0 each)
+2025-11-07 20:07:54,117 INFO o.a.j.u.BeanShellTestElement:    Product 3: Test Product x3 ($45.0 each)
+2025-11-07 20:07:54,117 INFO o.a.j.u.BeanShellTestElement:    Total Items: 6
+2025-11-07 20:07:54,117 INFO o.a.j.u.BeanShellTestElement:    Total Price: $220.0
+2025-11-07 20:07:54,165 INFO o.a.j.u.BeanShellTestElement: 🛒 PRODUCTS ADDED TO CART - Thread 16
+2025-11-07 20:07:54,165 INFO o.a.j.u.BeanShellTestElement:    Product 1: Novel x2 ($25.0 each)
+2025-11-07 20:07:54,166 INFO o.a.j.u.BeanShellTestElement:    Product 2: NUS T-Shirt x1 ($35.0 each)
+2025-11-07 20:07:54,166 INFO o.a.j.u.BeanShellTestElement:    Product 3: Test Product x3 ($45.0 each)
+2025-11-07 20:07:54,166 INFO o.a.j.u.BeanShellTestElement:    Total Items: 6
+2025-11-07 20:07:54,167 INFO o.a.j.u.BeanShellTestElement:    Total Price: $220.0
+2025-11-07 20:07:54,240 INFO o.a.j.u.BeanShellTestElement: 📉 ITEM QUANTITY REDUCED - Thread 3
+2025-11-07 20:07:54,240 INFO o.a.j.u.BeanShellTestElement:    Product: Novel
+2025-11-07 20:07:54,240 INFO o.a.j.u.BeanShellTestElement:    Quantity: 2 → 1
+2025-11-07 20:07:54,240 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 5
+2025-11-07 20:07:54,240 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $195.0
+2025-11-07 20:07:54,570 INFO o.a.j.u.BeanShellTestElement: 📉 ITEM QUANTITY REDUCED - Thread 2
+2025-11-07 20:07:54,570 INFO o.a.j.u.BeanShellTestElement:    Product: Novel
+2025-11-07 20:07:54,571 INFO o.a.j.u.BeanShellTestElement:    Quantity: 2 → 1
+2025-11-07 20:07:54,571 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 5
+2025-11-07 20:07:54,571 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $195.0
+2025-11-07 20:07:54,812 INFO o.a.j.u.BeanShellTestElement: 🛒 PRODUCTS ADDED TO CART - Thread 13
+2025-11-07 20:07:54,813 INFO o.a.j.u.BeanShellTestElement:    Product 1: Novel x2 ($25.0 each)
+2025-11-07 20:07:54,813 INFO o.a.j.u.BeanShellTestElement:    Product 2: NUS T-Shirt x1 ($35.0 each)
+2025-11-07 20:07:54,813 INFO o.a.j.u.BeanShellTestElement:    Product 3: Test Product x3 ($45.0 each)
+2025-11-07 20:07:54,813 INFO o.a.j.u.BeanShellTestElement:    Total Items: 6
+2025-11-07 20:07:54,813 INFO o.a.j.u.BeanShellTestElement:    Total Price: $220.0
+2025-11-07 20:07:55,188 INFO o.a.j.u.BeanShellTestElement: 🛒 PRODUCTS ADDED TO CART - Thread 22
+2025-11-07 20:07:55,188 INFO o.a.j.u.BeanShellTestElement:    Product 1: Novel x2 ($25.0 each)
+2025-11-07 20:07:55,189 INFO o.a.j.u.BeanShellTestElement:    Product 2: NUS T-Shirt x1 ($35.0 each)
+2025-11-07 20:07:55,189 INFO o.a.j.u.BeanShellTestElement:    Product 3: Test Product x3 ($45.0 each)
+2025-11-07 20:07:55,189 INFO o.a.j.u.BeanShellTestElement:    Total Items: 6
+2025-11-07 20:07:55,189 INFO o.a.j.u.BeanShellTestElement:    Total Price: $220.0
+2025-11-07 20:07:55,581 INFO o.a.j.u.BeanShellTestElement: 🛒 PRODUCTS ADDED TO CART - Thread 23
+2025-11-07 20:07:55,581 INFO o.a.j.u.BeanShellTestElement:    Product 1: Novel x2 ($25.0 each)
+2025-11-07 20:07:55,581 INFO o.a.j.u.BeanShellTestElement:    Product 2: NUS T-Shirt x1 ($35.0 each)
+2025-11-07 20:07:55,581 INFO o.a.j.u.BeanShellTestElement:    Product 3: Test Product x3 ($45.0 each)
+2025-11-07 20:07:55,581 INFO o.a.j.u.BeanShellTestElement:    Total Items: 6
+2025-11-07 20:07:55,582 INFO o.a.j.u.BeanShellTestElement:    Total Price: $220.0
+2025-11-07 20:07:55,697 INFO o.a.j.u.BeanShellTestElement: 🛒 PRODUCTS ADDED TO CART - Thread 20
+2025-11-07 20:07:55,697 INFO o.a.j.u.BeanShellTestElement:    Product 1: Novel x2 ($25.0 each)
+2025-11-07 20:07:55,698 INFO o.a.j.u.BeanShellTestElement:    Product 2: NUS T-Shirt x1 ($35.0 each)
+2025-11-07 20:07:55,698 INFO o.a.j.u.BeanShellTestElement:    Product 3: Test Product x3 ($45.0 each)
+2025-11-07 20:07:55,698 INFO o.a.j.u.BeanShellTestElement:    Total Items: 6
+2025-11-07 20:07:55,698 INFO o.a.j.u.BeanShellTestElement:    Total Price: $220.0
+2025-11-07 20:07:56,067 INFO o.a.j.u.BeanShellTestElement: 📉 ITEM QUANTITY REDUCED - Thread 7
+2025-11-07 20:07:56,067 INFO o.a.j.u.BeanShellTestElement:    Product: Novel
+2025-11-07 20:07:56,067 INFO o.a.j.u.BeanShellTestElement:    Quantity: 2 → 1
+2025-11-07 20:07:56,067 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 5
+2025-11-07 20:07:56,067 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $195.0
+2025-11-07 20:07:56,471 INFO o.a.j.u.BeanShellTestElement: 📉 ITEM QUANTITY REDUCED - Thread 6
+2025-11-07 20:07:56,472 INFO o.a.j.u.BeanShellTestElement:    Product: Novel
+2025-11-07 20:07:56,472 INFO o.a.j.u.BeanShellTestElement:    Quantity: 2 → 1
+2025-11-07 20:07:56,472 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 5
+2025-11-07 20:07:56,472 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $195.0
+2025-11-07 20:07:56,581 INFO o.a.j.u.BeanShellTestElement: 🛒 PRODUCTS ADDED TO CART - Thread 24
+2025-11-07 20:07:56,581 INFO o.a.j.u.BeanShellTestElement:    Product 1: Novel x2 ($25.0 each)
+2025-11-07 20:07:56,581 INFO o.a.j.u.BeanShellTestElement:    Product 2: NUS T-Shirt x1 ($35.0 each)
+2025-11-07 20:07:56,581 INFO o.a.j.u.BeanShellTestElement:    Product 3: Test Product x3 ($45.0 each)
+2025-11-07 20:07:56,581 INFO o.a.j.u.BeanShellTestElement:    Total Items: 6
+2025-11-07 20:07:56,582 INFO o.a.j.u.BeanShellTestElement:    Total Price: $220.0
+2025-11-07 20:07:57,674 INFO o.a.j.u.BeanShellTestElement: 📉 ITEM QUANTITY REDUCED - Thread 10
+2025-11-07 20:07:57,675 INFO o.a.j.u.BeanShellTestElement:    Product: Novel
+2025-11-07 20:07:57,675 INFO o.a.j.u.BeanShellTestElement:    Quantity: 2 → 1
+2025-11-07 20:07:57,675 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 5
+2025-11-07 20:07:57,675 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $195.0
+2025-11-07 20:07:57,765 INFO o.a.j.u.BeanShellTestElement: 📉 ITEM QUANTITY REDUCED - Thread 5
+2025-11-07 20:07:57,765 INFO o.a.j.u.BeanShellTestElement:    Product: Novel
+2025-11-07 20:07:57,765 INFO o.a.j.u.BeanShellTestElement:    Quantity: 2 → 1
+2025-11-07 20:07:57,766 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 5
+2025-11-07 20:07:57,766 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $195.0
+2025-11-07 20:07:57,778 INFO o.a.j.u.BeanShellTestElement: 📉 ITEM QUANTITY REDUCED - Thread 15
+2025-11-07 20:07:57,778 INFO o.a.j.u.BeanShellTestElement:    Product: Novel
+2025-11-07 20:07:57,778 INFO o.a.j.u.BeanShellTestElement:    Quantity: 2 → 1
+2025-11-07 20:07:57,778 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 5
+2025-11-07 20:07:57,778 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $195.0
+2025-11-07 20:07:58,229 INFO o.a.j.u.BeanShellTestElement: 📉 ITEM QUANTITY REDUCED - Thread 4
+2025-11-07 20:07:58,229 INFO o.a.j.u.BeanShellTestElement:    Product: Novel
+2025-11-07 20:07:58,230 INFO o.a.j.u.BeanShellTestElement:    Quantity: 2 → 1
+2025-11-07 20:07:58,230 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 5
+2025-11-07 20:07:58,230 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $195.0
+2025-11-07 20:07:58,361 INFO o.a.j.u.BeanShellTestElement: 🛒 PRODUCTS ADDED TO CART - Thread 21
+2025-11-07 20:07:58,361 INFO o.a.j.u.BeanShellTestElement:    Product 1: Novel x2 ($25.0 each)
+2025-11-07 20:07:58,361 INFO o.a.j.u.BeanShellTestElement:    Product 2: NUS T-Shirt x1 ($35.0 each)
+2025-11-07 20:07:58,361 INFO o.a.j.u.BeanShellTestElement:    Product 3: Test Product x3 ($45.0 each)
+2025-11-07 20:07:58,361 INFO o.a.j.u.BeanShellTestElement:    Total Items: 6
+2025-11-07 20:07:58,361 INFO o.a.j.u.BeanShellTestElement:    Total Price: $220.0
+2025-11-07 20:07:58,385 INFO o.a.j.u.BeanShellTestElement: 🛒 PRODUCTS ADDED TO CART - Thread 25
+2025-11-07 20:07:58,385 INFO o.a.j.u.BeanShellTestElement:    Product 1: Novel x2 ($25.0 each)
+2025-11-07 20:07:58,385 INFO o.a.j.u.BeanShellTestElement:    Product 2: NUS T-Shirt x1 ($35.0 each)
+2025-11-07 20:07:58,385 INFO o.a.j.u.BeanShellTestElement:    Product 3: Test Product x3 ($45.0 each)
+2025-11-07 20:07:58,385 INFO o.a.j.u.BeanShellTestElement:    Total Items: 6
+2025-11-07 20:07:58,385 INFO o.a.j.u.BeanShellTestElement:    Total Price: $220.0
+2025-11-07 20:07:58,551 INFO o.a.j.u.BeanShellTestElement: 📉 ITEM QUANTITY REDUCED - Thread 9
+2025-11-07 20:07:58,551 INFO o.a.j.u.BeanShellTestElement:    Product: Novel
+2025-11-07 20:07:58,551 INFO o.a.j.u.BeanShellTestElement:    Quantity: 2 → 1
+2025-11-07 20:07:58,551 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 5
+2025-11-07 20:07:58,551 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $195.0
+2025-11-07 20:07:59,451 INFO o.a.j.u.BeanShellTestElement: 📉 ITEM QUANTITY REDUCED - Thread 18
+2025-11-07 20:07:59,452 INFO o.a.j.u.BeanShellTestElement:    Product: Novel
+2025-11-07 20:07:59,452 INFO o.a.j.u.BeanShellTestElement:    Quantity: 2 → 1
+2025-11-07 20:07:59,452 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 5
+2025-11-07 20:07:59,452 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $195.0
+2025-11-07 20:07:59,633 INFO o.a.j.u.BeanShellTestElement: 📉 ITEM QUANTITY REDUCED - Thread 12
+2025-11-07 20:07:59,633 INFO o.a.j.u.BeanShellTestElement:    Product: Novel
+2025-11-07 20:07:59,633 INFO o.a.j.u.BeanShellTestElement:    Quantity: 2 → 1
+2025-11-07 20:07:59,633 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 5
+2025-11-07 20:07:59,633 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $195.0
+2025-11-07 20:07:59,694 INFO o.a.j.u.BeanShellTestElement: 📉 ITEM QUANTITY REDUCED - Thread 16
+2025-11-07 20:07:59,695 INFO o.a.j.u.BeanShellTestElement:    Product: Novel
+2025-11-07 20:07:59,695 INFO o.a.j.u.BeanShellTestElement:    Quantity: 2 → 1
+2025-11-07 20:07:59,695 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 5
+2025-11-07 20:07:59,695 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $195.0
+2025-11-07 20:07:59,998 INFO o.a.j.u.BeanShellTestElement: 📉 ITEM QUANTITY REDUCED - Thread 14
+2025-11-07 20:07:59,998 INFO o.a.j.u.BeanShellTestElement:    Product: Novel
+2025-11-07 20:07:59,998 INFO o.a.j.u.BeanShellTestElement:    Quantity: 2 → 1
+2025-11-07 20:07:59,999 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 5
+2025-11-07 20:07:59,999 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $195.0
+2025-11-07 20:08:00,000 INFO o.a.j.r.Summariser: summary +    113 in 00:00:27 =    4.2/s Avg:    22 Min:     1 Max:   149 Err:     0 (0.00%) Active: 25 Started: 25 Finished: 0
+2025-11-07 20:08:00,001 INFO o.a.j.r.Summariser: summary =    114 in 00:00:28 =    4.1/s Avg:    23 Min:     1 Max:   149 Err:     0 (0.00%)
+2025-11-07 20:08:00,452 INFO o.a.j.u.BeanShellTestElement: 📉 ITEM QUANTITY REDUCED - Thread 8
+2025-11-07 20:08:00,453 INFO o.a.j.u.BeanShellTestElement:    Product: Novel
+2025-11-07 20:08:00,453 INFO o.a.j.u.BeanShellTestElement:    Quantity: 2 → 1
+2025-11-07 20:08:00,453 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 5
+2025-11-07 20:08:00,453 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $195.0
+2025-11-07 20:08:00,488 INFO o.a.j.u.BeanShellTestElement: 📉 ITEM QUANTITY REDUCED - Thread 11
+2025-11-07 20:08:00,489 INFO o.a.j.u.BeanShellTestElement:    Product: Novel
+2025-11-07 20:08:00,489 INFO o.a.j.u.BeanShellTestElement:    Quantity: 2 → 1
+2025-11-07 20:08:00,489 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 5
+2025-11-07 20:08:00,489 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $195.0
+2025-11-07 20:08:00,780 INFO o.a.j.u.BeanShellTestElement: 🗑️ ITEM COMPLETELY REMOVED - Thread 1
+2025-11-07 20:08:00,780 INFO o.a.j.u.BeanShellTestElement:    Removed Product: NUS T-Shirt
+2025-11-07 20:08:00,781 INFO o.a.j.u.BeanShellTestElement:    Removed Quantity: 1
+2025-11-07 20:08:00,781 INFO o.a.j.u.BeanShellTestElement:    Amount Removed: $35.0
+2025-11-07 20:08:00,781 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 4
+2025-11-07 20:08:00,781 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $160.0
+2025-11-07 20:08:00,866 INFO o.a.j.u.BeanShellTestElement: 🗑️ ITEM COMPLETELY REMOVED - Thread 3
+2025-11-07 20:08:00,866 INFO o.a.j.u.BeanShellTestElement:    Removed Product: NUS T-Shirt
+2025-11-07 20:08:00,866 INFO o.a.j.u.BeanShellTestElement:    Removed Quantity: 1
+2025-11-07 20:08:00,866 INFO o.a.j.u.BeanShellTestElement:    Amount Removed: $35.0
+2025-11-07 20:08:00,866 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 4
+2025-11-07 20:08:00,866 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $160.0
+2025-11-07 20:08:01,461 INFO o.a.j.u.BeanShellTestElement: 🗑️ ITEM COMPLETELY REMOVED - Thread 2
+2025-11-07 20:08:01,462 INFO o.a.j.u.BeanShellTestElement:    Removed Product: NUS T-Shirt
+2025-11-07 20:08:01,462 INFO o.a.j.u.BeanShellTestElement:    Removed Quantity: 1
+2025-11-07 20:08:01,462 INFO o.a.j.u.BeanShellTestElement:    Amount Removed: $35.0
+2025-11-07 20:08:01,462 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 4
+2025-11-07 20:08:01,462 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $160.0
+2025-11-07 20:08:01,478 INFO o.a.j.u.BeanShellTestElement: 📉 ITEM QUANTITY REDUCED - Thread 22
+2025-11-07 20:08:01,478 INFO o.a.j.u.BeanShellTestElement:    Product: Novel
+2025-11-07 20:08:01,478 INFO o.a.j.u.BeanShellTestElement:    Quantity: 2 → 1
+2025-11-07 20:08:01,478 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 5
+2025-11-07 20:08:01,478 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $195.0
+2025-11-07 20:08:01,667 INFO o.a.j.u.BeanShellTestElement: 📉 ITEM QUANTITY REDUCED - Thread 19
+2025-11-07 20:08:01,668 INFO o.a.j.u.BeanShellTestElement:    Product: Novel
+2025-11-07 20:08:01,668 INFO o.a.j.u.BeanShellTestElement:    Quantity: 2 → 1
+2025-11-07 20:08:01,668 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 5
+2025-11-07 20:08:01,668 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $195.0
+2025-11-07 20:08:01,919 INFO o.a.j.u.BeanShellTestElement: 📉 ITEM QUANTITY REDUCED - Thread 17
+2025-11-07 20:08:01,920 INFO o.a.j.u.BeanShellTestElement:    Product: Novel
+2025-11-07 20:08:01,920 INFO o.a.j.u.BeanShellTestElement:    Quantity: 2 → 1
+2025-11-07 20:08:01,920 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 5
+2025-11-07 20:08:01,920 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $195.0
+2025-11-07 20:08:02,418 INFO o.a.j.u.BeanShellTestElement: 📉 ITEM QUANTITY REDUCED - Thread 24
+2025-11-07 20:08:02,419 INFO o.a.j.u.BeanShellTestElement:    Product: Novel
+2025-11-07 20:08:02,419 INFO o.a.j.u.BeanShellTestElement:    Quantity: 2 → 1
+2025-11-07 20:08:02,419 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 5
+2025-11-07 20:08:02,419 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $195.0
+2025-11-07 20:08:03,033 INFO o.a.j.u.BeanShellTestElement: 📉 ITEM QUANTITY REDUCED - Thread 23
+2025-11-07 20:08:03,034 INFO o.a.j.u.BeanShellTestElement:    Product: Novel
+2025-11-07 20:08:03,034 INFO o.a.j.u.BeanShellTestElement:    Quantity: 2 → 1
+2025-11-07 20:08:03,034 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 5
+2025-11-07 20:08:03,034 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $195.0
+2025-11-07 20:08:03,420 INFO o.a.j.u.BeanShellTestElement: 🗑️ ITEM COMPLETELY REMOVED - Thread 7
+2025-11-07 20:08:03,421 INFO o.a.j.u.BeanShellTestElement:    Removed Product: NUS T-Shirt
+2025-11-07 20:08:03,421 INFO o.a.j.u.BeanShellTestElement:    Removed Quantity: 1
+2025-11-07 20:08:03,421 INFO o.a.j.u.BeanShellTestElement:    Amount Removed: $35.0
+2025-11-07 20:08:03,421 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 4
+2025-11-07 20:08:03,421 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $160.0
+2025-11-07 20:08:03,705 INFO o.a.j.u.BeanShellTestElement: 📉 ITEM QUANTITY REDUCED - Thread 13
+2025-11-07 20:08:03,705 INFO o.a.j.u.BeanShellTestElement:    Product: Novel
+2025-11-07 20:08:03,706 INFO o.a.j.u.BeanShellTestElement:    Quantity: 2 → 1
+2025-11-07 20:08:03,706 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 5
+2025-11-07 20:08:03,706 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $195.0
+2025-11-07 20:08:03,823 INFO o.a.j.u.BeanShellTestElement: 🗑️ ITEM COMPLETELY REMOVED - Thread 6
+2025-11-07 20:08:03,824 INFO o.a.j.u.BeanShellTestElement:    Removed Product: NUS T-Shirt
+2025-11-07 20:08:03,824 INFO o.a.j.u.BeanShellTestElement:    Removed Quantity: 1
+2025-11-07 20:08:03,825 INFO o.a.j.u.BeanShellTestElement:    Amount Removed: $35.0
+2025-11-07 20:08:03,825 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 4
+2025-11-07 20:08:03,825 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $160.0
+2025-11-07 20:08:04,003 INFO o.a.j.u.BeanShellTestElement: 🗑️ ITEM COMPLETELY REMOVED - Thread 15
+2025-11-07 20:08:04,003 INFO o.a.j.u.BeanShellTestElement:    Removed Product: NUS T-Shirt
+2025-11-07 20:08:04,004 INFO o.a.j.u.BeanShellTestElement:    Removed Quantity: 1
+2025-11-07 20:08:04,005 INFO o.a.j.u.BeanShellTestElement:    Amount Removed: $35.0
+2025-11-07 20:08:04,018 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 4
+2025-11-07 20:08:04,019 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $160.0
+2025-11-07 20:08:04,278 INFO o.a.j.u.BeanShellTestElement: 🗑️ ITEM COMPLETELY REMOVED - Thread 10
+2025-11-07 20:08:04,279 INFO o.a.j.u.BeanShellTestElement:    Removed Product: NUS T-Shirt
+2025-11-07 20:08:04,279 INFO o.a.j.u.BeanShellTestElement:    Removed Quantity: 1
+2025-11-07 20:08:04,279 INFO o.a.j.u.BeanShellTestElement:    Amount Removed: $35.0
+2025-11-07 20:08:04,279 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 4
+2025-11-07 20:08:04,279 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $160.0
+2025-11-07 20:08:04,981 INFO o.a.j.u.BeanShellTestElement: 📉 ITEM QUANTITY REDUCED - Thread 25
+2025-11-07 20:08:04,982 INFO o.a.j.u.BeanShellTestElement:    Product: Novel
+2025-11-07 20:08:04,982 INFO o.a.j.u.BeanShellTestElement:    Quantity: 2 → 1
+2025-11-07 20:08:04,983 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 5
+2025-11-07 20:08:04,983 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $195.0
+2025-11-07 20:08:05,034 INFO o.a.j.u.BeanShellTestElement: 📉 ITEM QUANTITY REDUCED - Thread 20
+2025-11-07 20:08:05,034 INFO o.a.j.u.BeanShellTestElement:    Product: Novel
+2025-11-07 20:08:05,034 INFO o.a.j.u.BeanShellTestElement:    Quantity: 2 → 1
+2025-11-07 20:08:05,034 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 5
+2025-11-07 20:08:05,034 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $195.0
+2025-11-07 20:08:05,313 INFO o.a.j.u.BeanShellTestElement: 🗑️ ITEM COMPLETELY REMOVED - Thread 9
+2025-11-07 20:08:05,314 INFO o.a.j.u.BeanShellTestElement:    Removed Product: NUS T-Shirt
+2025-11-07 20:08:05,314 INFO o.a.j.u.BeanShellTestElement:    Removed Quantity: 1
+2025-11-07 20:08:05,314 INFO o.a.j.u.BeanShellTestElement:    Amount Removed: $35.0
+2025-11-07 20:08:05,314 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 4
+2025-11-07 20:08:05,314 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $160.0
+2025-11-07 20:08:05,970 INFO o.a.j.u.BeanShellTestElement: 📉 ITEM QUANTITY REDUCED - Thread 21
+2025-11-07 20:08:05,970 INFO o.a.j.u.BeanShellTestElement:    Product: Novel
+2025-11-07 20:08:05,971 INFO o.a.j.u.BeanShellTestElement:    Quantity: 2 → 1
+2025-11-07 20:08:05,971 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 5
+2025-11-07 20:08:05,971 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $195.0
+2025-11-07 20:08:06,027 INFO o.a.j.u.BeanShellTestElement: 🗑️ ITEM COMPLETELY REMOVED - Thread 14
+2025-11-07 20:08:06,028 INFO o.a.j.u.BeanShellTestElement:    Removed Product: NUS T-Shirt
+2025-11-07 20:08:06,028 INFO o.a.j.u.BeanShellTestElement:    Removed Quantity: 1
+2025-11-07 20:08:06,029 INFO o.a.j.u.BeanShellTestElement:    Amount Removed: $35.0
+2025-11-07 20:08:06,029 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 4
+2025-11-07 20:08:06,029 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $160.0
+2025-11-07 20:08:06,148 INFO o.a.j.u.BeanShellTestElement: 🗑️ ITEM COMPLETELY REMOVED - Thread 16
+2025-11-07 20:08:06,149 INFO o.a.j.u.BeanShellTestElement:    Removed Product: NUS T-Shirt
+2025-11-07 20:08:06,149 INFO o.a.j.u.BeanShellTestElement:    Removed Quantity: 1
+2025-11-07 20:08:06,149 INFO o.a.j.u.BeanShellTestElement:    Amount Removed: $35.0
+2025-11-07 20:08:06,149 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 4
+2025-11-07 20:08:06,149 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $160.0
+2025-11-07 20:08:06,581 INFO o.a.j.u.BeanShellTestElement: 🗑️ ITEM COMPLETELY REMOVED - Thread 12
+2025-11-07 20:08:06,581 INFO o.a.j.u.BeanShellTestElement:    Removed Product: NUS T-Shirt
+2025-11-07 20:08:06,581 INFO o.a.j.u.BeanShellTestElement:    Removed Quantity: 1
+2025-11-07 20:08:06,581 INFO o.a.j.u.BeanShellTestElement:    Amount Removed: $35.0
+2025-11-07 20:08:06,581 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 4
+2025-11-07 20:08:06,581 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $160.0
+2025-11-07 20:08:06,637 INFO o.a.j.u.BeanShellTestElement: 🗑️ ITEM COMPLETELY REMOVED - Thread 18
+2025-11-07 20:08:06,637 INFO o.a.j.u.BeanShellTestElement:    Removed Product: NUS T-Shirt
+2025-11-07 20:08:06,637 INFO o.a.j.u.BeanShellTestElement:    Removed Quantity: 1
+2025-11-07 20:08:06,637 INFO o.a.j.u.BeanShellTestElement:    Amount Removed: $35.0
+2025-11-07 20:08:06,637 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 4
+2025-11-07 20:08:06,638 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $160.0
+2025-11-07 20:08:06,661 INFO o.a.j.u.BeanShellTestElement: 🗑️ ITEM COMPLETELY REMOVED - Thread 8
+2025-11-07 20:08:06,662 INFO o.a.j.u.BeanShellTestElement:    Removed Product: NUS T-Shirt
+2025-11-07 20:08:06,662 INFO o.a.j.u.BeanShellTestElement:    Removed Quantity: 1
+2025-11-07 20:08:06,662 INFO o.a.j.u.BeanShellTestElement:    Amount Removed: $35.0
+2025-11-07 20:08:06,662 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 4
+2025-11-07 20:08:06,662 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $160.0
+2025-11-07 20:08:06,971 INFO o.a.j.u.BeanShellTestElement: 🗑️ ITEM COMPLETELY REMOVED - Thread 4
+2025-11-07 20:08:06,971 INFO o.a.j.u.BeanShellTestElement:    Removed Product: NUS T-Shirt
+2025-11-07 20:08:06,971 INFO o.a.j.u.BeanShellTestElement:    Removed Quantity: 1
+2025-11-07 20:08:06,972 INFO o.a.j.u.BeanShellTestElement:    Amount Removed: $35.0
+2025-11-07 20:08:06,972 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 4
+2025-11-07 20:08:06,972 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $160.0
+2025-11-07 20:08:07,172 INFO o.a.j.u.BeanShellTestElement: 🗑️ ITEM COMPLETELY REMOVED - Thread 5
+2025-11-07 20:08:07,173 INFO o.a.j.u.BeanShellTestElement:    Removed Product: NUS T-Shirt
+2025-11-07 20:08:07,173 INFO o.a.j.u.BeanShellTestElement:    Removed Quantity: 1
+2025-11-07 20:08:07,173 INFO o.a.j.u.BeanShellTestElement:    Amount Removed: $35.0
+2025-11-07 20:08:07,173 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 4
+2025-11-07 20:08:07,173 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $160.0
+2025-11-07 20:08:07,299 INFO o.a.j.u.BeanShellTestElement: 🗑️ ITEM COMPLETELY REMOVED - Thread 17
+2025-11-07 20:08:07,299 INFO o.a.j.u.BeanShellTestElement:    Removed Product: NUS T-Shirt
+2025-11-07 20:08:07,299 INFO o.a.j.u.BeanShellTestElement:    Removed Quantity: 1
+2025-11-07 20:08:07,299 INFO o.a.j.u.BeanShellTestElement:    Amount Removed: $35.0
+2025-11-07 20:08:07,299 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 4
+2025-11-07 20:08:07,299 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $160.0
+2025-11-07 20:08:07,834 INFO o.a.j.u.BeanShellTestElement: 🗑️ ITEM COMPLETELY REMOVED - Thread 11
+2025-11-07 20:08:07,835 INFO o.a.j.u.BeanShellTestElement:    Removed Product: NUS T-Shirt
+2025-11-07 20:08:07,835 INFO o.a.j.u.BeanShellTestElement:    Removed Quantity: 1
+2025-11-07 20:08:07,835 INFO o.a.j.u.BeanShellTestElement:    Amount Removed: $35.0
+2025-11-07 20:08:07,835 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 4
+2025-11-07 20:08:07,835 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $160.0
+2025-11-07 20:08:08,712 INFO o.a.j.u.BeanShellTestElement: 🗑️ ITEM COMPLETELY REMOVED - Thread 24
+2025-11-07 20:08:08,712 INFO o.a.j.u.BeanShellTestElement:    Removed Product: NUS T-Shirt
+2025-11-07 20:08:08,712 INFO o.a.j.u.BeanShellTestElement:    Removed Quantity: 1
+2025-11-07 20:08:08,713 INFO o.a.j.u.BeanShellTestElement:    Amount Removed: $35.0
+2025-11-07 20:08:08,713 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 4
+2025-11-07 20:08:08,713 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $160.0
+2025-11-07 20:08:08,716 INFO o.a.j.u.BeanShellTestElement: 🛒 FINAL CART SUMMARY - Thread 3
+2025-11-07 20:08:08,716 INFO o.a.j.u.BeanShellTestElement:    Remaining Items:
+2025-11-07 20:08:08,717 INFO o.a.j.u.BeanShellTestElement:    - Novel x1 ($25.0 each)
+2025-11-07 20:08:08,717 INFO o.a.j.u.BeanShellTestElement:    - Test Product x3 ($45.0 each)
+2025-11-07 20:08:08,717 INFO o.a.j.u.BeanShellTestElement:    Total Items: 4
+2025-11-07 20:08:08,717 INFO o.a.j.u.BeanShellTestElement:    Total Price: $160.0
+2025-11-07 20:08:08,983 INFO o.a.j.u.BeanShellTestElement: 🛒 FINAL CART SUMMARY - Thread 1
+2025-11-07 20:08:08,983 INFO o.a.j.u.BeanShellTestElement:    Remaining Items:
+2025-11-07 20:08:08,983 INFO o.a.j.u.BeanShellTestElement:    - Novel x1 ($25.0 each)
+2025-11-07 20:08:08,983 INFO o.a.j.u.BeanShellTestElement:    - Test Product x3 ($45.0 each)
+2025-11-07 20:08:08,983 INFO o.a.j.u.BeanShellTestElement:    Total Items: 4
+2025-11-07 20:08:08,983 INFO o.a.j.u.BeanShellTestElement:    Total Price: $160.0
+2025-11-07 20:08:09,029 INFO o.a.j.u.BeanShellTestElement: 🗑️ ITEM COMPLETELY REMOVED - Thread 23
+2025-11-07 20:08:09,030 INFO o.a.j.u.BeanShellTestElement:    Removed Product: NUS T-Shirt
+2025-11-07 20:08:09,030 INFO o.a.j.u.BeanShellTestElement:    Removed Quantity: 1
+2025-11-07 20:08:09,030 INFO o.a.j.u.BeanShellTestElement:    Amount Removed: $35.0
+2025-11-07 20:08:09,030 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 4
+2025-11-07 20:08:09,030 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $160.0
+2025-11-07 20:08:09,253 INFO o.a.j.u.BeanShellTestElement: 🛒 FINAL CART SUMMARY - Thread 10
+2025-11-07 20:08:09,253 INFO o.a.j.u.BeanShellTestElement:    Remaining Items:
+2025-11-07 20:08:09,253 INFO o.a.j.u.BeanShellTestElement:    - Novel x1 ($25.0 each)
+2025-11-07 20:08:09,253 INFO o.a.j.u.BeanShellTestElement:    - Test Product x3 ($45.0 each)
+2025-11-07 20:08:09,254 INFO o.a.j.u.BeanShellTestElement:    Total Items: 4
+2025-11-07 20:08:09,254 INFO o.a.j.u.BeanShellTestElement:    Total Price: $160.0
+2025-11-07 20:08:09,292 INFO o.a.j.u.BeanShellTestElement: 🛒 FINAL CART SUMMARY - Thread 2
+2025-11-07 20:08:09,293 INFO o.a.j.u.BeanShellTestElement:    Remaining Items:
+2025-11-07 20:08:09,293 INFO o.a.j.u.BeanShellTestElement:    - Novel x1 ($25.0 each)
+2025-11-07 20:08:09,293 INFO o.a.j.u.BeanShellTestElement:    - Test Product x3 ($45.0 each)
+2025-11-07 20:08:09,293 INFO o.a.j.u.BeanShellTestElement:    Total Items: 4
+2025-11-07 20:08:09,293 INFO o.a.j.u.BeanShellTestElement:    Total Price: $160.0
+2025-11-07 20:08:09,517 INFO o.a.j.u.BeanShellTestElement: 🗑️ ITEM COMPLETELY REMOVED - Thread 19
+2025-11-07 20:08:09,517 INFO o.a.j.u.BeanShellTestElement:    Removed Product: NUS T-Shirt
+2025-11-07 20:08:09,517 INFO o.a.j.u.BeanShellTestElement:    Removed Quantity: 1
+2025-11-07 20:08:09,517 INFO o.a.j.u.BeanShellTestElement:    Amount Removed: $35.0
+2025-11-07 20:08:09,517 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 4
+2025-11-07 20:08:09,518 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $160.0
+2025-11-07 20:08:10,616 INFO o.a.j.u.BeanShellTestElement: 🛒 FINAL CART SUMMARY - Thread 15
+2025-11-07 20:08:10,616 INFO o.a.j.u.BeanShellTestElement:    Remaining Items:
+2025-11-07 20:08:10,617 INFO o.a.j.u.BeanShellTestElement:    - Novel x1 ($25.0 each)
+2025-11-07 20:08:10,617 INFO o.a.j.u.BeanShellTestElement:    - Test Product x3 ($45.0 each)
+2025-11-07 20:08:10,617 INFO o.a.j.u.BeanShellTestElement:    Total Items: 4
+2025-11-07 20:08:10,617 INFO o.a.j.u.BeanShellTestElement:    Total Price: $160.0
+2025-11-07 20:08:10,635 INFO o.a.j.u.BeanShellTestElement: 🗑️ ITEM COMPLETELY REMOVED - Thread 22
+2025-11-07 20:08:10,636 INFO o.a.j.u.BeanShellTestElement:    Removed Product: NUS T-Shirt
+2025-11-07 20:08:10,636 INFO o.a.j.u.BeanShellTestElement:    Removed Quantity: 1
+2025-11-07 20:08:10,636 INFO o.a.j.u.BeanShellTestElement:    Amount Removed: $35.0
+2025-11-07 20:08:10,636 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 4
+2025-11-07 20:08:10,636 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $160.0
+2025-11-07 20:08:10,861 INFO o.a.j.u.BeanShellTestElement: 🛒 FINAL CART SUMMARY - Thread 9
+2025-11-07 20:08:10,861 INFO o.a.j.u.BeanShellTestElement:    Remaining Items:
+2025-11-07 20:08:10,861 INFO o.a.j.u.BeanShellTestElement:    - Novel x1 ($25.0 each)
+2025-11-07 20:08:10,861 INFO o.a.j.u.BeanShellTestElement:    - Test Product x3 ($45.0 each)
+2025-11-07 20:08:10,861 INFO o.a.j.u.BeanShellTestElement:    Total Items: 4
+2025-11-07 20:08:10,861 INFO o.a.j.u.BeanShellTestElement:    Total Price: $160.0
+2025-11-07 20:08:11,393 INFO o.a.j.u.BeanShellTestElement: 🛒 FINAL CART SUMMARY - Thread 16
+2025-11-07 20:08:11,393 INFO o.a.j.u.BeanShellTestElement:    Remaining Items:
+2025-11-07 20:08:11,394 INFO o.a.j.u.BeanShellTestElement:    - Novel x1 ($25.0 each)
+2025-11-07 20:08:11,394 INFO o.a.j.u.BeanShellTestElement:    - Test Product x3 ($45.0 each)
+2025-11-07 20:08:11,394 INFO o.a.j.u.BeanShellTestElement:    Total Items: 4
+2025-11-07 20:08:11,394 INFO o.a.j.u.BeanShellTestElement:    Total Price: $160.0
+2025-11-07 20:08:11,655 INFO o.a.j.u.BeanShellTestElement: 🛒 FINAL CART SUMMARY - Thread 7
+2025-11-07 20:08:11,656 INFO o.a.j.u.BeanShellTestElement:    Remaining Items:
+2025-11-07 20:08:11,656 INFO o.a.j.u.BeanShellTestElement:    - Novel x1 ($25.0 each)
+2025-11-07 20:08:11,656 INFO o.a.j.u.BeanShellTestElement:    - Test Product x3 ($45.0 each)
+2025-11-07 20:08:11,656 INFO o.a.j.u.BeanShellTestElement:    Total Items: 4
+2025-11-07 20:08:11,656 INFO o.a.j.u.BeanShellTestElement:    Total Price: $160.0
+2025-11-07 20:08:11,941 INFO o.a.j.u.BeanShellTestElement: 📊 CART OPERATIONS SUMMARY - Thread 1
+2025-11-07 20:08:11,942 INFO o.a.j.u.BeanShellTestElement:    Operations performed:
+2025-11-07 20:08:11,942 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Added 3 products to cart
+2025-11-07 20:08:11,942 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Reduced Novel quantity: 2 → 1
+2025-11-07 20:08:11,942 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Completely removed: NUS T-Shirt
+2025-11-07 20:08:11,943 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Checkout completed with final cart
+2025-11-07 20:08:11,943 INFO o.a.j.u.BeanShellTestElement:    Final cart value: $160.0
+2025-11-07 20:08:11,945 INFO o.a.j.t.JMeterThread: Thread is done: Cart and Checkout Load Test Thread Group 1-1
+2025-11-07 20:08:11,945 INFO o.a.j.t.JMeterThread: Thread finished: Cart and Checkout Load Test Thread Group 1-1
+2025-11-07 20:08:12,012 INFO o.a.j.u.BeanShellTestElement: 📊 CART OPERATIONS SUMMARY - Thread 10
+2025-11-07 20:08:12,012 INFO o.a.j.u.BeanShellTestElement:    Operations performed:
+2025-11-07 20:08:12,012 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Added 3 products to cart
+2025-11-07 20:08:12,012 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Reduced Novel quantity: 2 → 1
+2025-11-07 20:08:12,012 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Completely removed: NUS T-Shirt
+2025-11-07 20:08:12,012 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Checkout completed with final cart
+2025-11-07 20:08:12,013 INFO o.a.j.u.BeanShellTestElement:    Final cart value: $160.0
+2025-11-07 20:08:12,013 INFO o.a.j.t.JMeterThread: Thread is done: Cart and Checkout Load Test Thread Group 1-10
+2025-11-07 20:08:12,013 INFO o.a.j.t.JMeterThread: Thread finished: Cart and Checkout Load Test Thread Group 1-10
+2025-11-07 20:08:12,015 INFO o.a.j.u.BeanShellTestElement: 📊 CART OPERATIONS SUMMARY - Thread 3
+2025-11-07 20:08:12,015 INFO o.a.j.u.BeanShellTestElement:    Operations performed:
+2025-11-07 20:08:12,015 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Added 3 products to cart
+2025-11-07 20:08:12,015 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Reduced Novel quantity: 2 → 1
+2025-11-07 20:08:12,015 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Completely removed: NUS T-Shirt
+2025-11-07 20:08:12,015 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Checkout completed with final cart
+2025-11-07 20:08:12,015 INFO o.a.j.u.BeanShellTestElement:    Final cart value: $160.0
+2025-11-07 20:08:12,016 INFO o.a.j.t.JMeterThread: Thread is done: Cart and Checkout Load Test Thread Group 1-3
+2025-11-07 20:08:12,016 INFO o.a.j.t.JMeterThread: Thread finished: Cart and Checkout Load Test Thread Group 1-3
+2025-11-07 20:08:12,058 INFO o.a.j.u.BeanShellTestElement: 📊 CART OPERATIONS SUMMARY - Thread 2
+2025-11-07 20:08:12,058 INFO o.a.j.u.BeanShellTestElement:    Operations performed:
+2025-11-07 20:08:12,058 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Added 3 products to cart
+2025-11-07 20:08:12,058 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Reduced Novel quantity: 2 → 1
+2025-11-07 20:08:12,058 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Completely removed: NUS T-Shirt
+2025-11-07 20:08:12,058 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Checkout completed with final cart
+2025-11-07 20:08:12,058 INFO o.a.j.u.BeanShellTestElement:    Final cart value: $160.0
+2025-11-07 20:08:12,058 INFO o.a.j.t.JMeterThread: Thread is done: Cart and Checkout Load Test Thread Group 1-2
+2025-11-07 20:08:12,058 INFO o.a.j.t.JMeterThread: Thread finished: Cart and Checkout Load Test Thread Group 1-2
+2025-11-07 20:08:12,123 INFO o.a.j.u.BeanShellTestElement: 🛒 FINAL CART SUMMARY - Thread 6
+2025-11-07 20:08:12,123 INFO o.a.j.u.BeanShellTestElement:    Remaining Items:
+2025-11-07 20:08:12,123 INFO o.a.j.u.BeanShellTestElement:    - Novel x1 ($25.0 each)
+2025-11-07 20:08:12,123 INFO o.a.j.u.BeanShellTestElement:    - Test Product x3 ($45.0 each)
+2025-11-07 20:08:12,123 INFO o.a.j.u.BeanShellTestElement:    Total Items: 4
+2025-11-07 20:08:12,123 INFO o.a.j.u.BeanShellTestElement:    Total Price: $160.0
+2025-11-07 20:08:12,284 INFO o.a.j.u.BeanShellTestElement: 🗑️ ITEM COMPLETELY REMOVED - Thread 25
+2025-11-07 20:08:12,284 INFO o.a.j.u.BeanShellTestElement:    Removed Product: NUS T-Shirt
+2025-11-07 20:08:12,284 INFO o.a.j.u.BeanShellTestElement:    Removed Quantity: 1
+2025-11-07 20:08:12,284 INFO o.a.j.u.BeanShellTestElement:    Amount Removed: $35.0
+2025-11-07 20:08:12,284 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 4
+2025-11-07 20:08:12,284 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $160.0
+2025-11-07 20:08:12,509 INFO o.a.j.u.BeanShellTestElement: 🗑️ ITEM COMPLETELY REMOVED - Thread 21
+2025-11-07 20:08:12,509 INFO o.a.j.u.BeanShellTestElement:    Removed Product: NUS T-Shirt
+2025-11-07 20:08:12,509 INFO o.a.j.u.BeanShellTestElement:    Removed Quantity: 1
+2025-11-07 20:08:12,509 INFO o.a.j.u.BeanShellTestElement:    Amount Removed: $35.0
+2025-11-07 20:08:12,509 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 4
+2025-11-07 20:08:12,509 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $160.0
+2025-11-07 20:08:12,524 INFO o.a.j.u.BeanShellTestElement: 🗑️ ITEM COMPLETELY REMOVED - Thread 13
+2025-11-07 20:08:12,524 INFO o.a.j.u.BeanShellTestElement:    Removed Product: NUS T-Shirt
+2025-11-07 20:08:12,524 INFO o.a.j.u.BeanShellTestElement:    Removed Quantity: 1
+2025-11-07 20:08:12,524 INFO o.a.j.u.BeanShellTestElement:    Amount Removed: $35.0
+2025-11-07 20:08:12,524 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 4
+2025-11-07 20:08:12,525 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $160.0
+2025-11-07 20:08:12,550 INFO o.a.j.u.BeanShellTestElement: 🛒 FINAL CART SUMMARY - Thread 14
+2025-11-07 20:08:12,551 INFO o.a.j.u.BeanShellTestElement:    Remaining Items:
+2025-11-07 20:08:12,551 INFO o.a.j.u.BeanShellTestElement:    - Novel x1 ($25.0 each)
+2025-11-07 20:08:12,551 INFO o.a.j.u.BeanShellTestElement:    - Test Product x3 ($45.0 each)
+2025-11-07 20:08:12,551 INFO o.a.j.u.BeanShellTestElement:    Total Items: 4
+2025-11-07 20:08:12,551 INFO o.a.j.u.BeanShellTestElement:    Total Price: $160.0
+2025-11-07 20:08:12,877 INFO o.a.j.u.BeanShellTestElement: 🗑️ ITEM COMPLETELY REMOVED - Thread 20
+2025-11-07 20:08:12,877 INFO o.a.j.u.BeanShellTestElement:    Removed Product: NUS T-Shirt
+2025-11-07 20:08:12,877 INFO o.a.j.u.BeanShellTestElement:    Removed Quantity: 1
+2025-11-07 20:08:12,877 INFO o.a.j.u.BeanShellTestElement:    Amount Removed: $35.0
+2025-11-07 20:08:12,878 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Items: 4
+2025-11-07 20:08:12,878 INFO o.a.j.u.BeanShellTestElement:    New Cart Total Price: $160.0
+2025-11-07 20:08:13,026 INFO o.a.j.u.BeanShellTestElement: 🛒 FINAL CART SUMMARY - Thread 8
+2025-11-07 20:08:13,026 INFO o.a.j.u.BeanShellTestElement:    Remaining Items:
+2025-11-07 20:08:13,026 INFO o.a.j.u.BeanShellTestElement:    - Novel x1 ($25.0 each)
+2025-11-07 20:08:13,026 INFO o.a.j.u.BeanShellTestElement:    - Test Product x3 ($45.0 each)
+2025-11-07 20:08:13,026 INFO o.a.j.u.BeanShellTestElement:    Total Items: 4
+2025-11-07 20:08:13,027 INFO o.a.j.u.BeanShellTestElement:    Total Price: $160.0
+2025-11-07 20:08:13,121 INFO o.a.j.u.BeanShellTestElement: 📊 CART OPERATIONS SUMMARY - Thread 15
+2025-11-07 20:08:13,121 INFO o.a.j.u.BeanShellTestElement:    Operations performed:
+2025-11-07 20:08:13,121 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Added 3 products to cart
+2025-11-07 20:08:13,121 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Reduced Novel quantity: 2 → 1
+2025-11-07 20:08:13,121 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Completely removed: NUS T-Shirt
+2025-11-07 20:08:13,121 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Checkout completed with final cart
+2025-11-07 20:08:13,121 INFO o.a.j.u.BeanShellTestElement:    Final cart value: $160.0
+2025-11-07 20:08:13,122 INFO o.a.j.t.JMeterThread: Thread is done: Cart and Checkout Load Test Thread Group 1-15
+2025-11-07 20:08:13,122 INFO o.a.j.t.JMeterThread: Thread finished: Cart and Checkout Load Test Thread Group 1-15
+2025-11-07 20:08:13,372 INFO o.a.j.u.BeanShellTestElement: 📊 CART OPERATIONS SUMMARY - Thread 9
+2025-11-07 20:08:13,372 INFO o.a.j.u.BeanShellTestElement:    Operations performed:
+2025-11-07 20:08:13,372 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Added 3 products to cart
+2025-11-07 20:08:13,372 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Reduced Novel quantity: 2 → 1
+2025-11-07 20:08:13,372 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Completely removed: NUS T-Shirt
+2025-11-07 20:08:13,373 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Checkout completed with final cart
+2025-11-07 20:08:13,373 INFO o.a.j.u.BeanShellTestElement:    Final cart value: $160.0
+2025-11-07 20:08:13,374 INFO o.a.j.t.JMeterThread: Thread is done: Cart and Checkout Load Test Thread Group 1-9
+2025-11-07 20:08:13,374 INFO o.a.j.t.JMeterThread: Thread finished: Cart and Checkout Load Test Thread Group 1-9
+2025-11-07 20:08:13,862 INFO o.a.j.u.BeanShellTestElement: 📊 CART OPERATIONS SUMMARY - Thread 16
+2025-11-07 20:08:13,863 INFO o.a.j.u.BeanShellTestElement:    Operations performed:
+2025-11-07 20:08:13,863 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Added 3 products to cart
+2025-11-07 20:08:13,863 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Reduced Novel quantity: 2 → 1
+2025-11-07 20:08:13,863 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Completely removed: NUS T-Shirt
+2025-11-07 20:08:13,863 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Checkout completed with final cart
+2025-11-07 20:08:13,863 INFO o.a.j.u.BeanShellTestElement:    Final cart value: $160.0
+2025-11-07 20:08:13,865 INFO o.a.j.t.JMeterThread: Thread is done: Cart and Checkout Load Test Thread Group 1-16
+2025-11-07 20:08:13,865 INFO o.a.j.t.JMeterThread: Thread finished: Cart and Checkout Load Test Thread Group 1-16
+2025-11-07 20:08:13,965 INFO o.a.j.u.BeanShellTestElement: 🛒 FINAL CART SUMMARY - Thread 24
+2025-11-07 20:08:13,965 INFO o.a.j.u.BeanShellTestElement:    Remaining Items:
+2025-11-07 20:08:13,965 INFO o.a.j.u.BeanShellTestElement:    - Novel x1 ($25.0 each)
+2025-11-07 20:08:13,965 INFO o.a.j.u.BeanShellTestElement:    - Test Product x3 ($45.0 each)
+2025-11-07 20:08:13,965 INFO o.a.j.u.BeanShellTestElement:    Total Items: 4
+2025-11-07 20:08:13,965 INFO o.a.j.u.BeanShellTestElement:    Total Price: $160.0
+2025-11-07 20:08:14,084 INFO o.a.j.u.BeanShellTestElement: 📊 CART OPERATIONS SUMMARY - Thread 7
+2025-11-07 20:08:14,085 INFO o.a.j.u.BeanShellTestElement:    Operations performed:
+2025-11-07 20:08:14,085 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Added 3 products to cart
+2025-11-07 20:08:14,085 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Reduced Novel quantity: 2 → 1
+2025-11-07 20:08:14,085 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Completely removed: NUS T-Shirt
+2025-11-07 20:08:14,085 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Checkout completed with final cart
+2025-11-07 20:08:14,085 INFO o.a.j.u.BeanShellTestElement:    Final cart value: $160.0
+2025-11-07 20:08:14,087 INFO o.a.j.t.JMeterThread: Thread is done: Cart and Checkout Load Test Thread Group 1-7
+2025-11-07 20:08:14,087 INFO o.a.j.t.JMeterThread: Thread finished: Cart and Checkout Load Test Thread Group 1-7
+2025-11-07 20:08:14,132 INFO o.a.j.u.BeanShellTestElement: 🛒 FINAL CART SUMMARY - Thread 5
+2025-11-07 20:08:14,132 INFO o.a.j.u.BeanShellTestElement:    Remaining Items:
+2025-11-07 20:08:14,132 INFO o.a.j.u.BeanShellTestElement:    - Novel x1 ($25.0 each)
+2025-11-07 20:08:14,132 INFO o.a.j.u.BeanShellTestElement:    - Test Product x3 ($45.0 each)
+2025-11-07 20:08:14,132 INFO o.a.j.u.BeanShellTestElement:    Total Items: 4
+2025-11-07 20:08:14,132 INFO o.a.j.u.BeanShellTestElement:    Total Price: $160.0
+2025-11-07 20:08:14,403 INFO o.a.j.u.BeanShellTestElement: 🛒 FINAL CART SUMMARY - Thread 18
+2025-11-07 20:08:14,404 INFO o.a.j.u.BeanShellTestElement:    Remaining Items:
+2025-11-07 20:08:14,404 INFO o.a.j.u.BeanShellTestElement:    - Novel x1 ($25.0 each)
+2025-11-07 20:08:14,404 INFO o.a.j.u.BeanShellTestElement:    - Test Product x3 ($45.0 each)
+2025-11-07 20:08:14,404 INFO o.a.j.u.BeanShellTestElement:    Total Items: 4
+2025-11-07 20:08:14,404 INFO o.a.j.u.BeanShellTestElement:    Total Price: $160.0
+2025-11-07 20:08:14,423 INFO o.a.j.u.BeanShellTestElement: 🛒 FINAL CART SUMMARY - Thread 12
+2025-11-07 20:08:14,424 INFO o.a.j.u.BeanShellTestElement:    Remaining Items:
+2025-11-07 20:08:14,424 INFO o.a.j.u.BeanShellTestElement:    - Novel x1 ($25.0 each)
+2025-11-07 20:08:14,424 INFO o.a.j.u.BeanShellTestElement:    - Test Product x3 ($45.0 each)
+2025-11-07 20:08:14,424 INFO o.a.j.u.BeanShellTestElement:    Total Items: 4
+2025-11-07 20:08:14,424 INFO o.a.j.u.BeanShellTestElement:    Total Price: $160.0
+2025-11-07 20:08:14,614 INFO o.a.j.u.BeanShellTestElement: 📊 CART OPERATIONS SUMMARY - Thread 6
+2025-11-07 20:08:14,614 INFO o.a.j.u.BeanShellTestElement:    Operations performed:
+2025-11-07 20:08:14,614 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Added 3 products to cart
+2025-11-07 20:08:14,615 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Reduced Novel quantity: 2 → 1
+2025-11-07 20:08:14,615 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Completely removed: NUS T-Shirt
+2025-11-07 20:08:14,615 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Checkout completed with final cart
+2025-11-07 20:08:14,615 INFO o.a.j.u.BeanShellTestElement:    Final cart value: $160.0
+2025-11-07 20:08:14,616 INFO o.a.j.t.JMeterThread: Thread is done: Cart and Checkout Load Test Thread Group 1-6
+2025-11-07 20:08:14,616 INFO o.a.j.t.JMeterThread: Thread finished: Cart and Checkout Load Test Thread Group 1-6
+2025-11-07 20:08:14,729 INFO o.a.j.u.BeanShellTestElement: 🛒 FINAL CART SUMMARY - Thread 4
+2025-11-07 20:08:14,729 INFO o.a.j.u.BeanShellTestElement:    Remaining Items:
+2025-11-07 20:08:14,729 INFO o.a.j.u.BeanShellTestElement:    - Novel x1 ($25.0 each)
+2025-11-07 20:08:14,729 INFO o.a.j.u.BeanShellTestElement:    - Test Product x3 ($45.0 each)
+2025-11-07 20:08:14,729 INFO o.a.j.u.BeanShellTestElement:    Total Items: 4
+2025-11-07 20:08:14,729 INFO o.a.j.u.BeanShellTestElement:    Total Price: $160.0
+2025-11-07 20:08:14,875 INFO o.a.j.u.BeanShellTestElement: 🛒 FINAL CART SUMMARY - Thread 17
+2025-11-07 20:08:14,875 INFO o.a.j.u.BeanShellTestElement:    Remaining Items:
+2025-11-07 20:08:14,875 INFO o.a.j.u.BeanShellTestElement:    - Novel x1 ($25.0 each)
+2025-11-07 20:08:14,876 INFO o.a.j.u.BeanShellTestElement:    - Test Product x3 ($45.0 each)
+2025-11-07 20:08:14,876 INFO o.a.j.u.BeanShellTestElement:    Total Items: 4
+2025-11-07 20:08:14,876 INFO o.a.j.u.BeanShellTestElement:    Total Price: $160.0
+2025-11-07 20:08:15,004 INFO o.a.j.u.BeanShellTestElement: 📊 CART OPERATIONS SUMMARY - Thread 14
+2025-11-07 20:08:15,005 INFO o.a.j.u.BeanShellTestElement:    Operations performed:
+2025-11-07 20:08:15,005 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Added 3 products to cart
+2025-11-07 20:08:15,005 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Reduced Novel quantity: 2 → 1
+2025-11-07 20:08:15,005 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Completely removed: NUS T-Shirt
+2025-11-07 20:08:15,005 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Checkout completed with final cart
+2025-11-07 20:08:15,005 INFO o.a.j.u.BeanShellTestElement:    Final cart value: $160.0
+2025-11-07 20:08:15,007 INFO o.a.j.t.JMeterThread: Thread is done: Cart and Checkout Load Test Thread Group 1-14
+2025-11-07 20:08:15,007 INFO o.a.j.t.JMeterThread: Thread finished: Cart and Checkout Load Test Thread Group 1-14
+2025-11-07 20:08:15,449 INFO o.a.j.u.BeanShellTestElement: 📊 CART OPERATIONS SUMMARY - Thread 8
+2025-11-07 20:08:15,449 INFO o.a.j.u.BeanShellTestElement:    Operations performed:
+2025-11-07 20:08:15,449 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Added 3 products to cart
+2025-11-07 20:08:15,449 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Reduced Novel quantity: 2 → 1
+2025-11-07 20:08:15,450 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Completely removed: NUS T-Shirt
+2025-11-07 20:08:15,450 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Checkout completed with final cart
+2025-11-07 20:08:15,450 INFO o.a.j.u.BeanShellTestElement:    Final cart value: $160.0
+2025-11-07 20:08:15,452 INFO o.a.j.t.JMeterThread: Thread is done: Cart and Checkout Load Test Thread Group 1-8
+2025-11-07 20:08:15,452 INFO o.a.j.t.JMeterThread: Thread finished: Cart and Checkout Load Test Thread Group 1-8
+2025-11-07 20:08:15,741 INFO o.a.j.u.BeanShellTestElement: 🛒 FINAL CART SUMMARY - Thread 11
+2025-11-07 20:08:15,741 INFO o.a.j.u.BeanShellTestElement:    Remaining Items:
+2025-11-07 20:08:15,741 INFO o.a.j.u.BeanShellTestElement:    - Novel x1 ($25.0 each)
+2025-11-07 20:08:15,741 INFO o.a.j.u.BeanShellTestElement:    - Test Product x3 ($45.0 each)
+2025-11-07 20:08:15,741 INFO o.a.j.u.BeanShellTestElement:    Total Items: 4
+2025-11-07 20:08:15,742 INFO o.a.j.u.BeanShellTestElement:    Total Price: $160.0
+2025-11-07 20:08:16,066 INFO o.a.j.u.BeanShellTestElement: 🛒 FINAL CART SUMMARY - Thread 22
+2025-11-07 20:08:16,067 INFO o.a.j.u.BeanShellTestElement:    Remaining Items:
+2025-11-07 20:08:16,067 INFO o.a.j.u.BeanShellTestElement:    - Novel x1 ($25.0 each)
+2025-11-07 20:08:16,067 INFO o.a.j.u.BeanShellTestElement:    - Test Product x3 ($45.0 each)
+2025-11-07 20:08:16,067 INFO o.a.j.u.BeanShellTestElement:    Total Items: 4
+2025-11-07 20:08:16,067 INFO o.a.j.u.BeanShellTestElement:    Total Price: $160.0
+2025-11-07 20:08:16,430 INFO o.a.j.u.BeanShellTestElement: 📊 CART OPERATIONS SUMMARY - Thread 24
+2025-11-07 20:08:16,430 INFO o.a.j.u.BeanShellTestElement:    Operations performed:
+2025-11-07 20:08:16,431 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Added 3 products to cart
+2025-11-07 20:08:16,431 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Reduced Novel quantity: 2 → 1
+2025-11-07 20:08:16,431 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Completely removed: NUS T-Shirt
+2025-11-07 20:08:16,431 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Checkout completed with final cart
+2025-11-07 20:08:16,431 INFO o.a.j.u.BeanShellTestElement:    Final cart value: $160.0
+2025-11-07 20:08:16,431 INFO o.a.j.t.JMeterThread: Thread is done: Cart and Checkout Load Test Thread Group 1-24
+2025-11-07 20:08:16,431 INFO o.a.j.t.JMeterThread: Thread finished: Cart and Checkout Load Test Thread Group 1-24
+2025-11-07 20:08:16,547 INFO o.a.j.u.BeanShellTestElement: 🛒 FINAL CART SUMMARY - Thread 23
+2025-11-07 20:08:16,547 INFO o.a.j.u.BeanShellTestElement:    Remaining Items:
+2025-11-07 20:08:16,547 INFO o.a.j.u.BeanShellTestElement:    - Novel x1 ($25.0 each)
+2025-11-07 20:08:16,547 INFO o.a.j.u.BeanShellTestElement:    - Test Product x3 ($45.0 each)
+2025-11-07 20:08:16,547 INFO o.a.j.u.BeanShellTestElement:    Total Items: 4
+2025-11-07 20:08:16,547 INFO o.a.j.u.BeanShellTestElement:    Total Price: $160.0
+2025-11-07 20:08:16,556 INFO o.a.j.u.BeanShellTestElement: 📊 CART OPERATIONS SUMMARY - Thread 5
+2025-11-07 20:08:16,556 INFO o.a.j.u.BeanShellTestElement:    Operations performed:
+2025-11-07 20:08:16,556 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Added 3 products to cart
+2025-11-07 20:08:16,557 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Reduced Novel quantity: 2 → 1
+2025-11-07 20:08:16,557 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Completely removed: NUS T-Shirt
+2025-11-07 20:08:16,557 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Checkout completed with final cart
+2025-11-07 20:08:16,557 INFO o.a.j.u.BeanShellTestElement:    Final cart value: $160.0
+2025-11-07 20:08:16,558 INFO o.a.j.t.JMeterThread: Thread is done: Cart and Checkout Load Test Thread Group 1-5
+2025-11-07 20:08:16,558 INFO o.a.j.t.JMeterThread: Thread finished: Cart and Checkout Load Test Thread Group 1-5
+2025-11-07 20:08:16,755 INFO o.a.j.u.BeanShellTestElement: 🛒 FINAL CART SUMMARY - Thread 19
+2025-11-07 20:08:16,755 INFO o.a.j.u.BeanShellTestElement:    Remaining Items:
+2025-11-07 20:08:16,756 INFO o.a.j.u.BeanShellTestElement:    - Novel x1 ($25.0 each)
+2025-11-07 20:08:16,756 INFO o.a.j.u.BeanShellTestElement:    - Test Product x3 ($45.0 each)
+2025-11-07 20:08:16,756 INFO o.a.j.u.BeanShellTestElement:    Total Items: 4
+2025-11-07 20:08:16,756 INFO o.a.j.u.BeanShellTestElement:    Total Price: $160.0
+2025-11-07 20:08:16,882 INFO o.a.j.u.BeanShellTestElement: 📊 CART OPERATIONS SUMMARY - Thread 18
+2025-11-07 20:08:16,883 INFO o.a.j.u.BeanShellTestElement:    Operations performed:
+2025-11-07 20:08:16,883 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Added 3 products to cart
+2025-11-07 20:08:16,883 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Reduced Novel quantity: 2 → 1
+2025-11-07 20:08:16,883 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Completely removed: NUS T-Shirt
+2025-11-07 20:08:16,883 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Checkout completed with final cart
+2025-11-07 20:08:16,883 INFO o.a.j.u.BeanShellTestElement:    Final cart value: $160.0
+2025-11-07 20:08:16,884 INFO o.a.j.t.JMeterThread: Thread is done: Cart and Checkout Load Test Thread Group 1-18
+2025-11-07 20:08:16,885 INFO o.a.j.t.JMeterThread: Thread finished: Cart and Checkout Load Test Thread Group 1-18
+2025-11-07 20:08:17,024 INFO o.a.j.u.BeanShellTestElement: 📊 CART OPERATIONS SUMMARY - Thread 12
+2025-11-07 20:08:17,026 INFO o.a.j.u.BeanShellTestElement:    Operations performed:
+2025-11-07 20:08:17,026 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Added 3 products to cart
+2025-11-07 20:08:17,026 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Reduced Novel quantity: 2 → 1
+2025-11-07 20:08:17,026 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Completely removed: NUS T-Shirt
+2025-11-07 20:08:17,026 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Checkout completed with final cart
+2025-11-07 20:08:17,026 INFO o.a.j.u.BeanShellTestElement:    Final cart value: $160.0
+2025-11-07 20:08:17,027 INFO o.a.j.t.JMeterThread: Thread is done: Cart and Checkout Load Test Thread Group 1-12
+2025-11-07 20:08:17,027 INFO o.a.j.t.JMeterThread: Thread finished: Cart and Checkout Load Test Thread Group 1-12
+2025-11-07 20:08:17,151 INFO o.a.j.u.BeanShellTestElement: 📊 CART OPERATIONS SUMMARY - Thread 4
+2025-11-07 20:08:17,152 INFO o.a.j.u.BeanShellTestElement:    Operations performed:
+2025-11-07 20:08:17,152 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Added 3 products to cart
+2025-11-07 20:08:17,152 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Reduced Novel quantity: 2 → 1
+2025-11-07 20:08:17,152 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Completely removed: NUS T-Shirt
+2025-11-07 20:08:17,152 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Checkout completed with final cart
+2025-11-07 20:08:17,152 INFO o.a.j.u.BeanShellTestElement:    Final cart value: $160.0
+2025-11-07 20:08:17,153 INFO o.a.j.t.JMeterThread: Thread is done: Cart and Checkout Load Test Thread Group 1-4
+2025-11-07 20:08:17,153 INFO o.a.j.t.JMeterThread: Thread finished: Cart and Checkout Load Test Thread Group 1-4
+2025-11-07 20:08:17,300 INFO o.a.j.u.BeanShellTestElement: 📊 CART OPERATIONS SUMMARY - Thread 17
+2025-11-07 20:08:17,301 INFO o.a.j.u.BeanShellTestElement:    Operations performed:
+2025-11-07 20:08:17,301 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Added 3 products to cart
+2025-11-07 20:08:17,301 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Reduced Novel quantity: 2 → 1
+2025-11-07 20:08:17,301 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Completely removed: NUS T-Shirt
+2025-11-07 20:08:17,301 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Checkout completed with final cart
+2025-11-07 20:08:17,301 INFO o.a.j.u.BeanShellTestElement:    Final cart value: $160.0
+2025-11-07 20:08:17,303 INFO o.a.j.t.JMeterThread: Thread is done: Cart and Checkout Load Test Thread Group 1-17
+2025-11-07 20:08:17,303 INFO o.a.j.t.JMeterThread: Thread finished: Cart and Checkout Load Test Thread Group 1-17
+2025-11-07 20:08:18,205 INFO o.a.j.u.BeanShellTestElement: 📊 CART OPERATIONS SUMMARY - Thread 11
+2025-11-07 20:08:18,205 INFO o.a.j.u.BeanShellTestElement:    Operations performed:
+2025-11-07 20:08:18,205 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Added 3 products to cart
+2025-11-07 20:08:18,206 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Reduced Novel quantity: 2 → 1
+2025-11-07 20:08:18,206 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Completely removed: NUS T-Shirt
+2025-11-07 20:08:18,206 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Checkout completed with final cart
+2025-11-07 20:08:18,206 INFO o.a.j.u.BeanShellTestElement:    Final cart value: $160.0
+2025-11-07 20:08:18,207 INFO o.a.j.t.JMeterThread: Thread is done: Cart and Checkout Load Test Thread Group 1-11
+2025-11-07 20:08:18,207 INFO o.a.j.t.JMeterThread: Thread finished: Cart and Checkout Load Test Thread Group 1-11
+2025-11-07 20:08:18,548 INFO o.a.j.u.BeanShellTestElement: 📊 CART OPERATIONS SUMMARY - Thread 22
+2025-11-07 20:08:18,548 INFO o.a.j.u.BeanShellTestElement:    Operations performed:
+2025-11-07 20:08:18,548 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Added 3 products to cart
+2025-11-07 20:08:18,548 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Reduced Novel quantity: 2 → 1
+2025-11-07 20:08:18,548 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Completely removed: NUS T-Shirt
+2025-11-07 20:08:18,548 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Checkout completed with final cart
+2025-11-07 20:08:18,549 INFO o.a.j.u.BeanShellTestElement:    Final cart value: $160.0
+2025-11-07 20:08:18,549 INFO o.a.j.t.JMeterThread: Thread is done: Cart and Checkout Load Test Thread Group 1-22
+2025-11-07 20:08:18,550 INFO o.a.j.t.JMeterThread: Thread finished: Cart and Checkout Load Test Thread Group 1-22
+2025-11-07 20:08:19,006 INFO o.a.j.u.BeanShellTestElement: 🛒 FINAL CART SUMMARY - Thread 21
+2025-11-07 20:08:19,006 INFO o.a.j.u.BeanShellTestElement:    Remaining Items:
+2025-11-07 20:08:19,006 INFO o.a.j.u.BeanShellTestElement:    - Novel x1 ($25.0 each)
+2025-11-07 20:08:19,007 INFO o.a.j.u.BeanShellTestElement:    - Test Product x3 ($45.0 each)
+2025-11-07 20:08:19,007 INFO o.a.j.u.BeanShellTestElement:    Total Items: 4
+2025-11-07 20:08:19,007 INFO o.a.j.u.BeanShellTestElement:    Total Price: $160.0
+2025-11-07 20:08:19,192 INFO o.a.j.u.BeanShellTestElement: 📊 CART OPERATIONS SUMMARY - Thread 19
+2025-11-07 20:08:19,192 INFO o.a.j.u.BeanShellTestElement:    Operations performed:
+2025-11-07 20:08:19,192 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Added 3 products to cart
+2025-11-07 20:08:19,192 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Reduced Novel quantity: 2 → 1
+2025-11-07 20:08:19,192 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Completely removed: NUS T-Shirt
+2025-11-07 20:08:19,192 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Checkout completed with final cart
+2025-11-07 20:08:19,192 INFO o.a.j.u.BeanShellTestElement:    Final cart value: $160.0
+2025-11-07 20:08:19,194 INFO o.a.j.t.JMeterThread: Thread is done: Cart and Checkout Load Test Thread Group 1-19
+2025-11-07 20:08:19,194 INFO o.a.j.t.JMeterThread: Thread finished: Cart and Checkout Load Test Thread Group 1-19
+2025-11-07 20:08:19,194 INFO o.a.j.u.BeanShellTestElement: 📊 CART OPERATIONS SUMMARY - Thread 23
+2025-11-07 20:08:19,194 INFO o.a.j.u.BeanShellTestElement:    Operations performed:
+2025-11-07 20:08:19,194 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Added 3 products to cart
+2025-11-07 20:08:19,194 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Reduced Novel quantity: 2 → 1
+2025-11-07 20:08:19,194 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Completely removed: NUS T-Shirt
+2025-11-07 20:08:19,194 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Checkout completed with final cart
+2025-11-07 20:08:19,195 INFO o.a.j.u.BeanShellTestElement:    Final cart value: $160.0
+2025-11-07 20:08:19,195 INFO o.a.j.t.JMeterThread: Thread is done: Cart and Checkout Load Test Thread Group 1-23
+2025-11-07 20:08:19,195 INFO o.a.j.t.JMeterThread: Thread finished: Cart and Checkout Load Test Thread Group 1-23
+2025-11-07 20:08:19,472 INFO o.a.j.u.BeanShellTestElement: 🛒 FINAL CART SUMMARY - Thread 25
+2025-11-07 20:08:19,472 INFO o.a.j.u.BeanShellTestElement:    Remaining Items:
+2025-11-07 20:08:19,473 INFO o.a.j.u.BeanShellTestElement:    - Novel x1 ($25.0 each)
+2025-11-07 20:08:19,473 INFO o.a.j.u.BeanShellTestElement:    - Test Product x3 ($45.0 each)
+2025-11-07 20:08:19,473 INFO o.a.j.u.BeanShellTestElement:    Total Items: 4
+2025-11-07 20:08:19,473 INFO o.a.j.u.BeanShellTestElement:    Total Price: $160.0
+2025-11-07 20:08:20,053 INFO o.a.j.u.BeanShellTestElement: 🛒 FINAL CART SUMMARY - Thread 13
+2025-11-07 20:08:20,053 INFO o.a.j.u.BeanShellTestElement:    Remaining Items:
+2025-11-07 20:08:20,053 INFO o.a.j.u.BeanShellTestElement:    - Novel x1 ($25.0 each)
+2025-11-07 20:08:20,053 INFO o.a.j.u.BeanShellTestElement:    - Test Product x3 ($45.0 each)
+2025-11-07 20:08:20,054 INFO o.a.j.u.BeanShellTestElement:    Total Items: 4
+2025-11-07 20:08:20,054 INFO o.a.j.u.BeanShellTestElement:    Total Price: $160.0
+2025-11-07 20:08:20,957 INFO o.a.j.u.BeanShellTestElement: 🛒 FINAL CART SUMMARY - Thread 20
+2025-11-07 20:08:20,958 INFO o.a.j.u.BeanShellTestElement:    Remaining Items:
+2025-11-07 20:08:20,958 INFO o.a.j.u.BeanShellTestElement:    - Novel x1 ($25.0 each)
+2025-11-07 20:08:20,958 INFO o.a.j.u.BeanShellTestElement:    - Test Product x3 ($45.0 each)
+2025-11-07 20:08:20,958 INFO o.a.j.u.BeanShellTestElement:    Total Items: 4
+2025-11-07 20:08:20,958 INFO o.a.j.u.BeanShellTestElement:    Total Price: $160.0
+2025-11-07 20:08:21,455 INFO o.a.j.u.BeanShellTestElement: 📊 CART OPERATIONS SUMMARY - Thread 21
+2025-11-07 20:08:21,455 INFO o.a.j.u.BeanShellTestElement:    Operations performed:
+2025-11-07 20:08:21,455 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Added 3 products to cart
+2025-11-07 20:08:21,455 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Reduced Novel quantity: 2 → 1
+2025-11-07 20:08:21,455 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Completely removed: NUS T-Shirt
+2025-11-07 20:08:21,455 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Checkout completed with final cart
+2025-11-07 20:08:21,455 INFO o.a.j.u.BeanShellTestElement:    Final cart value: $160.0
+2025-11-07 20:08:21,457 INFO o.a.j.t.JMeterThread: Thread is done: Cart and Checkout Load Test Thread Group 1-21
+2025-11-07 20:08:21,457 INFO o.a.j.t.JMeterThread: Thread finished: Cart and Checkout Load Test Thread Group 1-21
+2025-11-07 20:08:21,870 INFO o.a.j.u.BeanShellTestElement: 📊 CART OPERATIONS SUMMARY - Thread 25
+2025-11-07 20:08:21,870 INFO o.a.j.u.BeanShellTestElement:    Operations performed:
+2025-11-07 20:08:21,870 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Added 3 products to cart
+2025-11-07 20:08:21,870 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Reduced Novel quantity: 2 → 1
+2025-11-07 20:08:21,871 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Completely removed: NUS T-Shirt
+2025-11-07 20:08:21,871 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Checkout completed with final cart
+2025-11-07 20:08:21,871 INFO o.a.j.u.BeanShellTestElement:    Final cart value: $160.0
+2025-11-07 20:08:21,872 INFO o.a.j.t.JMeterThread: Thread is done: Cart and Checkout Load Test Thread Group 1-25
+2025-11-07 20:08:21,872 INFO o.a.j.t.JMeterThread: Thread finished: Cart and Checkout Load Test Thread Group 1-25
+2025-11-07 20:08:22,677 INFO o.a.j.u.BeanShellTestElement: 📊 CART OPERATIONS SUMMARY - Thread 13
+2025-11-07 20:08:22,677 INFO o.a.j.u.BeanShellTestElement:    Operations performed:
+2025-11-07 20:08:22,677 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Added 3 products to cart
+2025-11-07 20:08:22,677 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Reduced Novel quantity: 2 → 1
+2025-11-07 20:08:22,677 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Completely removed: NUS T-Shirt
+2025-11-07 20:08:22,678 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Checkout completed with final cart
+2025-11-07 20:08:22,678 INFO o.a.j.u.BeanShellTestElement:    Final cart value: $160.0
+2025-11-07 20:08:22,679 INFO o.a.j.t.JMeterThread: Thread is done: Cart and Checkout Load Test Thread Group 1-13
+2025-11-07 20:08:22,679 INFO o.a.j.t.JMeterThread: Thread finished: Cart and Checkout Load Test Thread Group 1-13
+2025-11-07 20:08:23,450 INFO o.a.j.u.BeanShellTestElement: 📊 CART OPERATIONS SUMMARY - Thread 20
+2025-11-07 20:08:23,451 INFO o.a.j.u.BeanShellTestElement:    Operations performed:
+2025-11-07 20:08:23,452 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Added 3 products to cart
+2025-11-07 20:08:23,452 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Reduced Novel quantity: 2 → 1
+2025-11-07 20:08:23,452 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Completely removed: NUS T-Shirt
+2025-11-07 20:08:23,452 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Checkout completed with final cart
+2025-11-07 20:08:23,452 INFO o.a.j.u.BeanShellTestElement:    Final cart value: $160.0
+2025-11-07 20:08:23,454 INFO o.a.j.t.JMeterThread: Thread is done: Cart and Checkout Load Test Thread Group 1-20
+2025-11-07 20:08:23,454 INFO o.a.j.t.JMeterThread: Thread finished: Cart and Checkout Load Test Thread Group 1-20
+2025-11-07 20:08:23,454 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2025-11-07 20:08:23,455 INFO o.a.j.s.FileServer: Close: login_users.csv
+2025-11-07 20:08:23,457 INFO o.a.j.r.Summariser: summary +    111 in 00:00:23 =    4.7/s Avg:   125 Min:     0 Max:  1284 Err:    24 (21.62%) Active: 0 Started: 25 Finished: 25
+2025-11-07 20:08:23,457 INFO o.a.j.r.Summariser: summary =    225 in 00:00:51 =    4.4/s Avg:    73 Min:     0 Max:  1284 Err:    24 (10.67%)
+2025-11-07 20:08:23,458 INFO o.a.j.JMeter: Generating Dashboard
+2025-11-07 20:08:23,458 INFO o.a.j.r.d.ReportGenerator: Flushing result collector before report Generation
+2025-11-07 20:08:23,477 INFO o.a.j.r.p.NormalizerSampleConsumer: Using format, 'ms', to parse timeStamp field
+2025-11-07 20:08:23,550 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): beginDate produced 0 samples
+2025-11-07 20:08:23,550 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): endDate produced 0 samples
+2025-11-07 20:08:23,551 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ApdexSummaryConsumer#stopProducing(): apdexSummary produced 0 samples
+2025-11-07 20:08:23,551 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.RequestsSummaryConsumer#stopProducing(): requestsSummary produced 0 samples
+2025-11-07 20:08:23,552 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.StatisticsSummaryConsumer#stopProducing(): statisticsSummary produced 0 samples
+2025-11-07 20:08:23,553 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.Top5ErrorsBySamplerConsumer#stopProducing(): top5ErrorsBySampler produced 0 samples
+2025-11-07 20:08:23,553 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ErrorsSummaryConsumer#stopProducing(): errorsSummary produced 0 samples
+2025-11-07 20:08:23,553 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.HitsPerSecondGraphConsumer#stopProducing(): hitsPerSecond produced 0 samples
+2025-11-07 20:08:23,561 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyVSRequestGraphConsumer#stopProducing(): latencyVsRequest produced 0 samples
+2025-11-07 20:08:23,561 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.SyntheticResponseTimeDistributionGraphConsumer#stopProducing(): syntheticResponseTimeDistribution produced 0 samples
+2025-11-07 20:08:23,561 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.BytesThroughputGraphConsumer#stopProducing(): bytesThroughputOverTime produced 0 samples
+2025-11-07 20:08:23,561 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.CodesPerSecondGraphConsumer#stopProducing(): codesPerSecond produced 0 samples
+2025-11-07 20:08:23,563 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeVSRequestGraphConsumer#stopProducing(): responseTimeVsRequest produced 0 samples
+2025-11-07 20:08:23,563 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): startIntervalControlerFilter produced 1575 samples
+2025-11-07 20:08:23,563 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TotalTPSGraphConsumer#stopProducing(): totalTPS produced 0 samples
+2025-11-07 20:08:23,563 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ActiveThreadsGraphConsumer#stopProducing(): activeThreadsOverTime produced 0 samples
+2025-11-07 20:08:23,563 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TimeVSThreadGraphConsumer#stopProducing(): timeVsThreads produced 0 samples
+2025-11-07 20:08:23,563 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeDistributionGraphConsumer#stopProducing(): responseTimeDistribution produced 0 samples
+2025-11-07 20:08:23,564 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TransactionsPerSecondGraphConsumer#stopProducing(): transactionsPerSecond produced 0 samples
+2025-11-07 20:08:23,564 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesGraphConsumer#stopProducing(): responseTimePercentiles produced 0 samples
+2025-11-07 20:08:23,565 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesOverTimeGraphConsumer#stopProducing(): responseTimePercentilesOverTime produced 0 samples
+2025-11-07 20:08:23,565 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeOverTimeGraphConsumer#stopProducing(): responseTimesOverTime produced 0 samples
+2025-11-07 20:08:23,566 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ConnectTimeOverTimeGraphConsumer#stopProducing(): connectTimeOverTime produced 0 samples
+2025-11-07 20:08:23,566 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyOverTimeGraphConsumer#stopProducing(): latenciesOverTime produced 0 samples
+2025-11-07 20:08:23,566 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): nameFilter produced 3375 samples
+2025-11-07 20:08:23,566 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): dateRangeFilter produced 675 samples
+2025-11-07 20:08:23,566 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.NormalizerSampleConsumer#stopProducing(): normalizer produced 225 samples
+2025-11-07 20:08:23,566 INFO o.a.j.r.p.CsvFileSampleSource: produce(): 225 samples produced in 65ms on channel 0
+2025-11-07 20:08:23,566 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'json' of className:'org.apache.jmeter.report.dashboard.JsonExporter'
+2025-11-07 20:08:23,610 INFO o.a.j.r.d.JsonExporter: Found data for consumer statisticsSummary in context
+2025-11-07 20:08:23,610 INFO o.a.j.r.d.JsonExporter: Creating statistics for overall
+2025-11-07 20:08:23,610 INFO o.a.j.r.d.JsonExporter: Creating statistics for other transactions
+2025-11-07 20:08:23,610 INFO o.a.j.r.d.JsonExporter: Checking output folder
+2025-11-07 20:08:23,611 INFO o.a.j.r.d.JsonExporter: Writing statistics JSON to /Users/nishenghan/cs4218-2510-ecom-project-team002/cartpagereport/statistics.json
+2025-11-07 20:08:23,630 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'html' of className:'org.apache.jmeter.report.dashboard.HtmlTemplateExporter'
+2025-11-07 20:08:23,631 INFO o.a.j.r.d.HtmlTemplateExporter: Will generate dashboard in folder: /Users/nishenghan/cs4218-2510-ecom-project-team002/cartpagereport
+2025-11-07 20:08:23,687 INFO o.a.j.r.d.HtmlTemplateExporter: Report will be generated in: /Users/nishenghan/cs4218-2510-ecom-project-team002/cartpagereport, creating folder structure
+2025-11-07 20:08:23,688 INFO o.a.j.r.d.TemplateVisitor: Copying folder from '/opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/report-template' to '/Users/nishenghan/cs4218-2510-ecom-project-team002/cartpagereport', got message: /Users/nishenghan/cs4218-2510-ecom-project-team002/cartpagereport, found non empty folder with following content [/Users/nishenghan/cs4218-2510-ecom-project-team002/cartpagereport/statistics.json], will be ignored
+2025-11-07 20:08:23,863 INFO o.a.j.JMeter: Dashboard generated
