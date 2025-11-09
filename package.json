@@ -14,7 +14,11 @@
     "test:backend": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config jest.backend.config.js",
     "test:frontend:cov": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config jest.frontend.config.js --coverage --coverageDirectory=client/coverage",
     "test:backend:cov": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config jest.backend.config.js --coverage --coverageDirectory=server/coverage",
-    "test:cov": "npm run test:frontend:cov && npm run test:backend:cov"
+    "test:cov": "npm run test:frontend:cov && npm run test:backend:cov",
+    "sec:secrets": "docker run --rm -v \"$PWD:/repo\" -w /repo ghcr.io/gitleaks/gitleaks:latest detect --source . --redact --config tooling/security/gitleaks.toml",
+    "sec:audit": "npm exec audit-ci --config tooling/security/audit-ci.json",
+    "sec:scan": "docker run --rm -v \"$PWD:/src\" -w /src returntocorp/semgrep:latest semgrep scan --config p/owasp-top-ten --config p/nodejsscan --config p/javascript --config p/jwt --config tooling/security/semgrep.yml --severity ERROR --error --metrics=off",
+    "sec:all": "npm run sec:secrets && npm run sec:audit && npm run sec:scan"
   },
   "keywords": [],
   "author": "RP",

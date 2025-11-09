@@ -1,0 +1,13 @@
+node_modules/
+dist/
+build/
+coverage/
+**/__tests__/**
+**/*.test.ts
+**/*.test.js
+**/*.spec.ts
+**/*.spec.js
+**/Dockerfile
+**/Dockerfile.*
+playwright*/**
+client/src/_site/**
