@@ -742,7 +742,7 @@ describe("Authentication Controllers", () => {
       expect(res.status).toHaveBeenCalledWith(404);
       expect(res.send).toHaveBeenCalledWith({
         success: false,
-        message: "Email is not registerd",
+        message: "Invalid email or password",
       });
     });
 
@@ -751,7 +751,7 @@ describe("Authentication Controllers", () => {
      * Bug Found: Incorrect password should be rejected with proper message
      * Test Type: Communication-based (password comparison)
      */
-    test("should return 200 if password does not match", async () => {
+    test("should return 404 if password does not match", async () => {
       // Mock user exists but password comparison fails
       jest
         .spyOn(userModel, "findOne")
@@ -769,10 +769,10 @@ describe("Authentication Controllers", () => {
         "hashed"
       );
       // Verify appropriate error response
-      expect(res.status).toHaveBeenCalledWith(200);
+      expect(res.status).toHaveBeenCalledWith(404);
       expect(res.send).toHaveBeenCalledWith({
         success: false,
-        message: "Invalid Password",
+        message: "Invalid email or password",
       });
     });
 

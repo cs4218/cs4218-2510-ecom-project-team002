@@ -460,10 +460,11 @@ describe('Authentication Controller Integration Tests - Phase 2: Security & Navi
       // ───────────────────────────────────────────────────────────────
       // VERIFICATION #2: Invalid password error response
       // ───────────────────────────────────────────────────────────────
-      expect(res.status).toHaveBeenCalledWith(200);
+      
+      expect(res.status).toHaveBeenCalledWith(404);
       expect(res.send).toHaveBeenCalledWith({
         success: false,
-        message: 'Invalid Password',
+        message: "Invalid email or password",
       });
     });
     
@@ -511,7 +512,7 @@ describe('Authentication Controller Integration Tests - Phase 2: Security & Navi
       expect(res.status).toHaveBeenCalledWith(404);
       expect(res.send).toHaveBeenCalledWith({
         success: false,
-        message: 'Email is not registerd',
+        message: "Invalid email or password",
       });
     });
     
