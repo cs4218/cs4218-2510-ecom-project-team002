@@ -42,17 +42,28 @@ export const createProductController = async (req, res) => {
 
     // Additional type validation: ensure numeric fields are numbers
     if (isNaN(Number(price))) {
-      return res.status(400).send({ success: false, error: "Price must be a number" });
+      return res
+        .status(400)
+        .send({ success: false, error: "Price must be a number" });
     }
     if (isNaN(Number(quantity))) {
-      return res.status(400).send({ success: false, error: "Quantity must be a number" });
+      return res
+        .status(400)
+        .send({ success: false, error: "Quantity must be a number" });
     }
 
     // Prevent duplicate product name within the same category
     if (category) {
-      const existing = await productModel.findOne({ name: name, category: category }).lean();
+      const existing = await productModel
+        .findOne({ name: name, category: category })
+        .lean();
       if (existing) {
-        return res.status(409).send({ success: false, error: "Product with same name already exists in this category" });
+        return res
+          .status(409)
+          .send({
+            success: false,
+            error: "Product with same name already exists in this category",
+          });
       }
     }
 
@@ -137,7 +148,9 @@ export const getProductByIdController = async (req, res) => {
       .select("-photo")
       .populate("category");
     if (!product) {
-      return res.status(404).send({ success: false, message: "Product not found" });
+      return res
+        .status(404)
+        .send({ success: false, message: "Product not found" });
     }
     res.status(200).send({ success: true, product });
   } catch (error) {
@@ -217,17 +230,32 @@ export const updateProductController = async (req, res) => {
 
     // Additional type validation
     if (isNaN(Number(price))) {
-      return res.status(400).send({ success: false, error: "Price must be a number" });
+      return res
+        .status(400)
+        .send({ success: false, error: "Price must be a number" });
     }
     if (isNaN(Number(quantity))) {
-      return res.status(400).send({ success: false, error: "Quantity must be a number" });
+      return res
+        .status(400)
+        .send({ success: false, error: "Quantity must be a number" });
     }
 
     // Prevent updating to a name/category that already exists on a different product
     if (name && category) {
-      const existing = await productModel.findOne({ name: name, category: category, _id: { $ne: req.params.pid } }).lean();
+      const existing = await productModel
+        .findOne({
+          name: name,
+          category: category,
+          _id: { $ne: req.params.pid },
+        })
+        .lean();
       if (existing) {
-        return res.status(409).send({ success: false, error: "Another product with same name exists in this category" });
+        return res
+          .status(409)
+          .send({
+            success: false,
+            error: "Another product with same name exists in this category",
+          });
       }
     }
 
@@ -410,10 +438,27 @@ export const braintreeTokenController = async (req, res) => {
 export const brainTreePaymentController = async (req, res) => {
   try {
     const { nonce, cart } = req.body;
+
+    // Add validation for concurrent requests
+    if (!nonce || !cart || !Array.isArray(cart) || cart.length === 0) {
+      return res.status(400).json({
+        ok: false,
+        error: "Invalid payment data: missing nonce or cart items",
+      });
+    }
+
     let total = 0;
     cart.map((i) => {
       total += i.price;
     });
+
+    // Add user identifier for debugging concurrent requests
+    const userId = req.user._id;
+    const timestamp = Date.now();
+    console.log(
+      `🔄 Processing payment for user ${userId} at ${timestamp}, total: $${total}`
+    );
+
     let newTransaction = gateway.transaction.sale(
       {
         amount: total,
@@ -422,36 +467,68 @@ export const brainTreePaymentController = async (req, res) => {
           submitForSettlement: true,
         },
       },
-      function (error, result) {
+      async function (error, result) {
         if (error) {
           // Network or system error
-          console.error('Braintree transaction error:', error);
+          console.error(
+            `❌ Braintree transaction error for user ${userId}:`,
+            error
+          );
           return res.status(500).send(error);
         }
-        
+
         // Check if transaction was successful
         if (result && result.success) {
-          // Payment succeeded - create order
-          const order = new orderModel({
-            products: cart,
-            payment: result,
-            buyer: req.user._id,
-          }).save();
-          res.json({ ok: true });
+          try {
+            // Payment succeeded - create order with proper error handling
+            console.log(
+              `✅ Payment successful for user ${userId}, creating order...`
+            );
+
+            const order = await new orderModel({
+              products: cart,
+              payment: result,
+              buyer: userId,
+            }).save();
+
+            console.log(
+              `✅ Order created successfully for user ${userId}, order ID: ${order._id}`
+            );
+            res.json({ ok: true, orderId: order._id });
+          } catch (orderError) {
+            // Handle order creation errors (database conflicts, etc.)
+            console.error(
+              `❌ Order creation failed for user ${userId}:`,
+              orderError
+            );
+            res.status(500).json({
+              ok: false,
+              error: "Payment processed but order creation failed",
+              paymentId: result.transaction.id,
+            });
+          }
         } else {
           // Payment declined or failed
-          console.log('Payment declined:', result?.message || 'Transaction failed');
-          const errorMessage = result?.message || 'Payment declined. Please check your card details.';
-          res.status(400).json({ 
-            ok: false, 
+          console.log(
+            `❌ Payment declined for user ${userId}:`,
+            result?.message || "Transaction failed"
+          );
+          const errorMessage =
+            result?.message ||
+            "Payment declined. Please check your card details.";
+          res.status(400).json({
+            ok: false,
             error: errorMessage,
-            declined: true 
+            declined: true,
           });
         }
       }
     );
   } catch (error) {
-    console.log(error);
-    res.status(500).json({ ok: false, error: 'Payment processing failed' });
+    console.error(
+      `💥 Payment controller error for user ${req.user?._id}:`,
+      error
+    );
+    res.status(500).json({ ok: false, error: "Payment processing failed" });
   }
 };

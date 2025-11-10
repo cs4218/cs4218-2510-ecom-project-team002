@@ -1,0 +1,6 @@
+[2025-11-10 11:05:02] 🚀 Starting system monitoring for JMeter load test
+[2025-11-10 11:05:02] 📊 Monitoring interval: 5 seconds
+[2025-11-10 11:05:02] 📁 Results will be saved to: ./monitoring-results/system_metrics_20251110_110502.csv
+[2025-11-10 11:05:02] 🔍 Monitoring Node.js PID: 'Not found'
+[2025-11-10 11:05:02] 🔍 Monitoring MongoDB PID: 'Not found'
+[2025-11-10 11:05:02] ⏳ Waiting for JMeter to start... (monitoring will begin automatically)

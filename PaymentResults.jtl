@@ -1,0 +1,241 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1762707224815,25,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-1,text,true,,114,0,1,1,null,0,0,0
+1762707231339,94,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-1,text,true,,666,276,1,1,http://localhost:6060/api/v1/auth/login,91,0,11
+1762707234968,21,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-1,text,true,,2083,203,2,2,http://localhost:6060/api/v1/product/product-list/1,21,0,0
+1762707237620,11,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-2,text,true,,112,0,2,2,null,0,0,0
+1762707240491,24,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-1,text,true,,108,0,2,2,null,0,0,0
+1762707243230,94,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-2,text,true,,648,277,2,2,http://localhost:6060/api/v1/auth/login,94,0,2
+1762707244210,897,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-1,text,true,,2687,204,3,3,http://localhost:6060/api/v1/product/braintree/token,897,0,5
+1762707247012,17,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-2,text,true,,2083,203,3,3,http://localhost:6060/api/v1/product/product-list/1,17,0,0
+1762707252195,11,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-3,text,true,,112,0,3,3,null,0,0,0
+1762707251217,1017,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-1,text,true,,350,0,3,3,null,0,0,0
+1762707253019,11,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-2,text,true,,108,0,3,3,null,0,0,0
+1762707256201,309,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-2,text,true,,2667,204,3,3,http://localhost:6060/api/v1/product/braintree/token,309,0,2
+1762707256465,88,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-3,text,true,,648,277,3,3,http://localhost:6060/api/v1/auth/login,88,0,2
+1762707259838,473,06 - Process Braintree Payment,200,OK,Payment Page Load Test Thread Group 1-1,text,true,,315,615,4,4,http://localhost:6060/api/v1/product/braintree/payment,473,0,3
+1762707261675,1317,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-2,text,true,,424,0,4,4,null,0,0,0
+1762707263268,7,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-4,text,true,,118,0,4,4,null,0,0,0
+1762707264194,17,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-3,text,true,,2083,203,4,4,http://localhost:6060/api/v1/product/product-list/1,17,0,3
+1762707264572,9,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-1,text,true,,659,0,4,4,null,0,0,0
+1762707268198,500,06 - Process Braintree Payment,200,OK,Payment Page Load Test Thread Group 1-2,text,true,,315,691,4,4,http://localhost:6060/api/v1/product/braintree/payment,500,0,2
+1762707269147,6,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-1,text,true,,114,0,5,5,null,0,0,0
+1762707269975,94,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-4,text,true,,648,277,5,5,http://localhost:6060/api/v1/auth/login,94,0,2
+1762707271258,3,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-3,text,true,,108,0,5,5,null,0,0,0
+1762707274710,7,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-2,text,true,,655,0,5,5,null,0,0,0
+1762707275249,106,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-1,text,true,,666,276,5,5,http://localhost:6060/api/v1/auth/login,106,0,3
+1762707275544,9,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-5,text,true,,118,0,5,5,null,0,0,0
+1762707276430,15,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-4,text,true,,2083,203,5,5,http://localhost:6060/api/v1/product/product-list/1,15,0,2
+1762707278138,6,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-2,text,true,,112,0,5,5,null,0,0,0
+1762707278467,362,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-3,text,true,,2687,204,5,5,http://localhost:6060/api/v1/product/braintree/token,362,0,2
+1762707279620,94,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-5,text,true,,648,277,5,5,http://localhost:6060/api/v1/auth/login,94,0,2
+1762707280203,8,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-4,text,true,,109,0,5,5,null,0,0,0
+1762707281811,24,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-1,text,true,,2083,203,6,6,http://localhost:6060/api/v1/product/product-list/1,24,0,3
+1762707283363,76,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-2,text,true,,648,277,6,6,http://localhost:6060/api/v1/auth/login,76,0,1
+1762707283336,1618,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-3,text,true,,502,0,6,6,null,0,0,0
+1762707286309,9,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-5,text,true,,2083,203,6,6,http://localhost:6060/api/v1/product/product-list/1,9,0,1
+1762707286871,14,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-2,text,true,,2083,203,6,6,http://localhost:6060/api/v1/product/product-list/1,14,0,0
+1762707287127,7,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-6,text,true,,112,0,6,6,null,0,0,0
+1762707287784,541,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-4,text,true,,2667,204,6,6,http://localhost:6060/api/v1/product/braintree/token,541,0,3
+1762707288558,6,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-1,text,true,,108,0,6,6,null,0,0,0
+1762707292192,8,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-5,text,true,,109,0,6,6,null,0,0,0
+1762707291904,598,06 - Process Braintree Payment,200,OK,Payment Page Load Test Thread Group 1-3,text,true,,315,768,6,6,http://localhost:6060/api/v1/product/braintree/payment,598,0,2
+1762707293397,6,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-2,text,true,,109,0,7,7,null,0,0,0
+1762707293606,88,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-6,text,true,,648,277,7,7,http://localhost:6060/api/v1/auth/login,88,0,3
+1762707293840,318,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-1,text,true,,2667,204,7,7,http://localhost:6060/api/v1/product/braintree/token,317,0,1
+1762707295665,6,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-3,text,true,,656,0,7,7,null,0,0,0
+1762707293946,1909,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-4,text,true,,578,0,7,7,null,0,0,0
+1762707296505,7,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-7,text,true,,118,0,7,7,null,0,0,0
+1762707298532,13,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-6,text,true,,2083,203,7,7,http://localhost:6060/api/v1/product/product-list/1,13,0,0
+1762707299231,5,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-3,text,true,,112,0,7,7,null,0,0,0
+1762707300177,316,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-5,text,true,,2667,204,7,7,http://localhost:6060/api/v1/product/braintree/token,316,0,1
+1762707300382,526,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-2,text,true,,2687,204,7,7,http://localhost:6060/api/v1/product/braintree/token,526,0,2
+1762707300893,1014,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-1,text,true,,431,0,7,7,null,0,0,0
+1762707301920,78,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-7,text,true,,648,277,7,7,http://localhost:6060/api/v1/auth/login,78,0,1
+1762707302747,607,06 - Process Braintree Payment,200,OK,Payment Page Load Test Thread Group 1-4,text,true,,315,838,7,7,http://localhost:6060/api/v1/product/braintree/payment,607,0,1
+1762707305783,6,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-6,text,true,,109,0,8,8,null,0,0,0
+1762707303763,2216,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-5,text,true,,639,0,8,8,null,0,0,0
+1762707306426,68,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-3,text,true,,648,277,8,8,http://localhost:6060/api/v1/auth/login,68,0,0
+1762707308336,16,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-7,text,true,,2083,203,8,8,http://localhost:6060/api/v1/product/product-list/1,16,0,1
+1762707308113,526,06 - Process Braintree Payment,200,OK,Payment Page Load Test Thread Group 1-1,text,true,,315,696,8,8,http://localhost:6060/api/v1/product/braintree/payment,526,0,3
+1762707307855,1314,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-2,text,true,,491,0,8,8,null,0,0,0
+1762707310040,6,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-4,text,true,,668,0,8,8,null,0,0,0
+1762707309733,1072,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-6,text,true,,2687,204,8,8,http://localhost:6060/api/v1/product/braintree/token,1072,0,2
+1762707312056,4,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-8,text,true,,112,0,8,8,null,0,0,0
+1762707312688,9,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-3,text,true,,2083,203,8,8,http://localhost:6060/api/v1/product/product-list/1,9,0,1
+1762707312601,500,06 - Process Braintree Payment,200,OK,Payment Page Load Test Thread Group 1-5,text,true,,315,899,8,8,http://localhost:6060/api/v1/product/braintree/payment,500,0,1
+1762707313127,504,06 - Process Braintree Payment,200,OK,Payment Page Load Test Thread Group 1-2,text,true,,315,757,8,8,http://localhost:6060/api/v1/product/braintree/payment,504,0,2
+1762707314321,6,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-1,text,true,,659,0,8,8,null,0,0,0
+1762707315481,5,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-7,text,true,,109,0,7,7,null,0,0,0
+1762707315744,94,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-8,text,true,,648,277,7,7,http://localhost:6060/api/v1/auth/login,94,0,3
+1762707317760,2,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-4,text,true,,118,0,8,8,null,0,0,0
+1762707315796,2512,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-6,text,true,,709,0,8,8,null,0,0,0
+1762707320393,5,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-3,text,true,,109,0,8,8,null,0,0,0
+1762707321085,5,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-5,text,true,,668,0,8,8,null,0,0,0
+1762707321268,61,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-4,text,true,,648,277,8,8,http://localhost:6060/api/v1/auth/login,60,0,1
+1762707321620,5,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-2,text,true,,656,0,8,8,null,0,0,0
+1762707321727,17,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-8,text,true,,2083,203,7,7,http://localhost:6060/api/v1/product/product-list/1,17,0,2
+1762707322492,4,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-9,text,true,,118,0,7,7,null,0,0,0
+1762707322669,561,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-7,text,true,,2687,204,7,7,http://localhost:6060/api/v1/product/braintree/token,561,0,0
+1762707325943,14,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-4,text,true,,2083,203,7,7,http://localhost:6060/api/v1/product/product-list/1,14,0,0
+1762707325549,511,06 - Process Braintree Payment,200,OK,Payment Page Load Test Thread Group 1-6,text,true,,315,975,7,7,http://localhost:6060/api/v1/product/braintree/payment,511,0,3
+1762707326538,6,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-5,text,true,,118,0,7,7,null,0,0,0
+1762707326430,382,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-3,text,true,,2667,204,7,7,http://localhost:6060/api/v1/product/braintree/token,382,0,2
+1762707328162,5,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-8,text,true,,109,0,7,7,null,0,0,0
+1762707329964,6,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-6,text,true,,656,0,8,8,null,0,0,0
+1762707330082,92,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-9,text,true,,648,277,8,8,http://localhost:6060/api/v1/auth/login,92,0,2
+1762707328139,2815,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-7,text,true,,792,0,8,8,null,0,0,0
+1762707331613,106,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-5,text,true,,648,277,8,8,http://localhost:6060/api/v1/auth/login,106,0,2
+1762707331227,1612,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-3,text,true,,567,0,8,8,null,0,0,0
+1762707333437,7,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-4,text,true,,109,0,8,8,null,0,0,0
+1762707333504,14,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-9,text,true,,2083,203,8,8,http://localhost:6060/api/v1/product/product-list/1,14,0,0
+1762707335040,361,06 - Process Braintree Payment,400,Bad Request,Payment Page Load Test Thread Group 1-7,text,false,Payment must be processed successfully,343,1052,8,8,http://localhost:6060/api/v1/product/braintree/payment,361,0,3
+1762707335460,4,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-10,text,true,,113,0,8,8,null,0,0,0
+1762707335724,5,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-6,text,true,,112,0,8,8,null,0,0,0
+1762707334932,1083,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-8,text,true,,2667,204,8,8,http://localhost:6060/api/v1/product/braintree/token,1083,0,2
+1762707336980,12,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-5,text,true,,2083,203,8,8,http://localhost:6060/api/v1/product/product-list/1,12,0,2
+1762707336646,464,06 - Process Braintree Payment,200,OK,Payment Page Load Test Thread Group 1-3,text,true,,315,833,8,8,http://localhost:6060/api/v1/product/braintree/payment,464,0,3
+1762707338174,6,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-9,text,true,,110,0,8,8,null,0,0,0
+1762707338691,4,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-7,text,true,,648,0,8,8,null,0,0,0
+1762707338715,96,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-10,text,true,,648,277,8,8,http://localhost:6060/api/v1/auth/login,96,0,2
+1762707339567,93,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-6,text,true,,648,277,8,8,http://localhost:6060/api/v1/auth/login,93,0,2
+1762707339484,272,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-4,text,true,,2667,204,8,8,http://localhost:6060/api/v1/product/braintree/token,272,0,3
+1762707341421,2,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-3,text,true,,656,0,9,9,null,0,0,0
+1762707342470,4,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-7,text,true,,118,0,8,8,null,0,0,0
+1762707344386,5,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-5,text,true,,109,0,8,8,null,0,0,0
+1762707344454,316,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-9,text,true,,2667,204,8,8,http://localhost:6060/api/v1/product/braintree/token,316,0,2
+1762707344756,17,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-6,text,true,,2083,203,8,8,http://localhost:6060/api/v1/product/product-list/1,17,0,2
+1762707345170,5,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-11,text,true,,121,0,8,8,null,0,0,0
+1762707343353,3112,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-8,text,true,,856,0,8,8,null,0,0,0
+1762707346706,18,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-10,text,true,,2083,203,8,8,http://localhost:6060/api/v1/product/product-list/1,18,0,2
+1762707347971,12,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-6,text,true,,109,0,8,8,null,0,0,0
+1762707347888,274,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-5,text,true,,2667,204,8,8,http://localhost:6060/api/v1/product/braintree/token,274,0,1
+1762707347598,1909,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-4,text,true,,650,0,8,8,null,0,0,0
+1762707350316,95,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-7,text,true,,648,277,8,8,http://localhost:6060/api/v1/auth/login,95,0,2
+1762707351343,60,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-11,text,true,,651,279,8,8,http://localhost:6060/api/v1/auth/login,60,0,1
+1762707349271,3408,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-9,text,true,,924,0,8,8,null,0,0,0
+1762707352640,401,06 - Process Braintree Payment,400,Bad Request,Payment Page Load Test Thread Group 1-8,text,false,Payment must be processed successfully,343,1122,9,9,http://localhost:6060/api/v1/product/braintree/payment,401,0,1
+1762707351345,2210,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-5,text,true,,720,0,9,9,null,0,0,0
+1762707353667,5,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-10,text,true,,110,0,9,9,null,0,0,0
+1762707354668,13,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-7,text,true,,2083,203,9,9,http://localhost:6060/api/v1/product/product-list/1,12,0,0
+1762707354038,705,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-6,text,true,,2667,204,9,9,http://localhost:6060/api/v1/product/braintree/token,705,0,2
+1762707354825,12,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-11,text,true,,2083,203,9,9,http://localhost:6060/api/v1/product/product-list/1,12,0,0
+1762707354502,480,06 - Process Braintree Payment,200,OK,Payment Page Load Test Thread Group 1-4,text,true,,315,910,9,9,http://localhost:6060/api/v1/product/braintree/payment,480,0,2
+1762707356350,375,06 - Process Braintree Payment,400,Bad Request,Payment Page Load Test Thread Group 1-9,text,false,Payment must be processed successfully,343,1183,9,9,http://localhost:6060/api/v1/product/braintree/payment,375,0,1
+1762707357664,1,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-8,text,true,,636,0,9,9,null,0,0,0
+1762707358322,3,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-4,text,true,,668,0,9,9,null,0,0,0
+1762707357764,572,06 - Process Braintree Payment,200,OK,Payment Page Load Test Thread Group 1-5,text,true,,315,980,8,8,http://localhost:6060/api/v1/product/braintree/payment,572,0,1
+1762707358514,4,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-12,text,true,,115,0,8,8,null,0,0,0
+1762707359763,4,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-9,text,true,,650,0,8,8,null,0,0,0
+1762707360763,6,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-7,text,true,,109,0,8,8,null,0,0,0
+1762707360654,467,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-10,text,true,,2667,204,8,8,http://localhost:6060/api/v1/product/braintree/token,467,0,2
+1762707361598,3,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-5,text,true,,668,0,8,8,null,0,0,0
+1762707362704,2,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-11,text,true,,110,0,7,7,null,0,0,0
+1762707363571,94,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-12,text,true,,651,279,7,7,http://localhost:6060/api/v1/auth/login,94,0,2
+1762707361351,2511,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-6,text,true,,775,0,7,7,null,0,0,0
+1762707365210,4,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-8,text,true,,112,0,8,8,null,0,0,0
+1762707366810,14,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-12,text,true,,2083,203,8,8,http://localhost:6060/api/v1/product/product-list/1,14,0,0
+1762707366998,3,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-9,text,true,,118,0,8,8,null,0,0,0
+1762707367713,364,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-7,text,true,,2687,204,8,8,http://localhost:6060/api/v1/product/braintree/token,364,0,1
+1762707368366,442,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-11,text,true,,2667,204,8,8,http://localhost:6060/api/v1/product/braintree/token,442,0,1
+1762707369699,442,06 - Process Braintree Payment,400,Bad Request,Payment Page Load Test Thread Group 1-6,text,false,Payment must be processed successfully,343,1041,8,8,http://localhost:6060/api/v1/product/braintree/payment,442,0,3
+1762707370545,83,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-8,text,true,,648,277,8,8,http://localhost:6060/api/v1/auth/login,83,0,1
+1762707371080,6,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-12,text,true,,109,0,8,8,null,0,0,0
+1762707371253,2,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-13,text,true,,121,0,8,8,null,0,0,0
+1762707371682,98,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-9,text,true,,648,277,8,8,http://localhost:6060/api/v1/auth/login,98,0,3
+1762707368338,3714,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-10,text,true,,994,0,8,8,null,0,0,0
+1762707376114,13,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-9,text,true,,2083,203,8,8,http://localhost:6060/api/v1/product/product-list/1,13,0,0
+1762707373974,2807,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-7,text,true,,857,0,8,8,null,0,0,0
+1762707376577,373,06 - Process Braintree Payment,400,Bad Request,Payment Page Load Test Thread Group 1-10,text,false,Payment must be processed successfully,343,1259,9,9,http://localhost:6060/api/v1/product/braintree/payment,373,0,2
+1762707377262,557,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-12,text,true,,2687,204,9,9,http://localhost:6060/api/v1/product/braintree/token,557,0,2
+1762707378084,4,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-6,text,true,,636,0,9,9,null,0,0,0
+1762707378556,20,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-8,text,true,,2083,203,8,8,http://localhost:6060/api/v1/product/product-list/1,20,0,2
+1762707374682,4015,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-11,text,true,,1078,0,8,8,null,0,0,0
+1762707378801,98,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-13,text,true,,651,279,8,8,http://localhost:6060/api/v1/auth/login,98,0,2
+1762707381407,1,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-9,text,true,,110,0,8,8,null,0,0,0
+1762707382264,4,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-14,text,true,,115,0,8,8,null,0,0,0
+1762707383190,396,06 - Process Braintree Payment,400,Bad Request,Payment Page Load Test Thread Group 1-11,text,false,Payment must be processed successfully,343,1336,8,8,http://localhost:6060/api/v1/product/braintree/payment,396,0,4
+1762707384452,6,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-10,text,true,,639,0,8,8,null,0,0,0
+1762707384670,14,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-13,text,true,,2083,203,8,8,http://localhost:6060/api/v1/product/product-list/1,14,0,2
+1762707384519,342,06 - Process Braintree Payment,400,Bad Request,Payment Page Load Test Thread Group 1-7,text,false,Payment must be processed successfully,343,1117,8,8,http://localhost:6060/api/v1/product/braintree/payment,342,0,2
+1762707384864,4,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-8,text,true,,110,0,8,8,null,0,0,0
+1762707386147,90,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-14,text,true,,651,279,8,8,http://localhost:6060/api/v1/auth/login,90,0,2
+1762707385621,709,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-9,text,true,,2667,204,8,8,http://localhost:6060/api/v1/product/braintree/token,709,0,2
+1762707387471,4,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-10,text,true,,113,0,8,8,null,0,0,0
+1762707384753,4312,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-12,text,true,,1142,0,9,9,null,0,0,0
+1762707389873,4,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-13,text,true,,110,0,9,9,null,0,0,0
+1762707390533,6,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-11,text,true,,655,0,9,9,null,0,0,0
+1762707390793,98,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-10,text,true,,648,277,9,9,http://localhost:6060/api/v1/auth/login,98,0,3
+1762707391092,4,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-7,text,true,,648,0,9,9,null,0,0,0
+1762707392722,455,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-8,text,true,,2667,204,8,8,http://localhost:6060/api/v1/product/braintree/token,455,0,1
+1762707393628,14,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-14,text,true,,2083,203,8,8,http://localhost:6060/api/v1/product/product-list/1,14,0,2
+1762707393441,763,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-13,text,true,,2667,204,8,8,http://localhost:6060/api/v1/product/braintree/token,762,0,2
+1762707394515,358,06 - Process Braintree Payment,400,Bad Request,Payment Page Load Test Thread Group 1-12,text,false,Payment must be processed successfully,343,1406,8,8,http://localhost:6060/api/v1/product/braintree/payment,358,0,2
+1762707391698,3411,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-9,text,true,,1005,0,8,8,null,0,0,0
+1762707395634,4,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-15,text,true,,121,0,8,8,null,0,0,0
+1762707396917,3,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-11,text,true,,121,0,8,8,null,0,0,0
+1762707398515,14,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-10,text,true,,2083,203,8,8,http://localhost:6060/api/v1/product/product-list/1,14,0,2
+1762707399309,5,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-14,text,true,,110,0,8,8,null,0,0,0
+1762707399987,92,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-15,text,true,,651,279,8,8,http://localhost:6060/api/v1/auth/login,92,0,3
+1762707400402,5,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-12,text,true,,643,0,8,8,null,0,0,0
+1762707400560,507,06 - Process Braintree Payment,400,Bad Request,Payment Page Load Test Thread Group 1-9,text,false,Payment must be processed successfully,343,1264,8,8,http://localhost:6060/api/v1/product/braintree/payment,507,0,2
+1762707402132,95,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-11,text,true,,651,279,8,8,http://localhost:6060/api/v1/auth/login,95,0,3
+1762707400663,3113,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-8,text,true,,929,0,8,8,null,0,0,0
+1762707400120,4609,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-13,text,true,,1209,0,8,8,null,0,0,0
+1762707405517,5,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-9,text,true,,650,0,8,8,null,0,0,0
+1762707405722,5,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-10,text,true,,110,0,7,7,null,0,0,0
+1762707406668,4,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-12,text,true,,115,0,7,7,null,0,0,0
+1762707406762,18,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-15,text,true,,2083,203,7,7,http://localhost:6060/api/v1/product/product-list/1,18,0,2
+1762707407134,358,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-14,text,true,,2687,204,7,7,http://localhost:6060/api/v1/product/braintree/token,358,0,1
+1762707408912,15,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-11,text,true,,2083,203,7,7,http://localhost:6060/api/v1/product/product-list/1,14,0,2
+1762707408982,375,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-10,text,true,,2667,204,7,7,http://localhost:6060/api/v1/product/braintree/token,375,0,1
+1762707410466,93,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-12,text,true,,651,279,7,7,http://localhost:6060/api/v1/auth/login,93,0,2
+1762707410352,387,06 - Process Braintree Payment,400,Bad Request,Payment Page Load Test Thread Group 1-13,text,false,Payment must be processed successfully,343,1468,7,7,http://localhost:6060/api/v1/product/braintree/payment,387,0,2
+1762707410521,364,06 - Process Braintree Payment,400,Bad Request,Payment Page Load Test Thread Group 1-8,text,false,Payment must be processed successfully,343,1194,7,7,http://localhost:6060/api/v1/product/braintree/payment,364,0,1
+1762707411634,6,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-15,text,true,,110,0,7,7,null,0,0,0
+1762707413934,4,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-11,text,true,,110,0,7,7,null,0,0,0
+1762707414146,4,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-8,text,true,,638,0,7,7,null,0,0,0
+1762707415879,4,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-13,text,true,,655,0,6,6,null,0,0,0
+1762707416183,14,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-12,text,true,,2083,203,6,6,http://localhost:6060/api/v1/product/product-list/1,14,0,3
+1762707416704,332,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-15,text,true,,2667,204,6,6,http://localhost:6060/api/v1/product/braintree/token,332,0,2
+1762707417025,522,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-11,text,true,,2667,204,6,6,http://localhost:6060/api/v1/product/braintree/token,522,0,2
+1762707413915,4913,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-14,text,true,,1279,0,6,6,null,0,0,0
+1762707420087,5,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-12,text,true,,110,0,6,6,null,0,0,0
+1762707416417,3708,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-10,text,true,,1060,0,6,6,null,0,0,0
+1762707420862,4,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-13,text,true,,121,0,6,6,null,0,0,0
+1762707422541,479,06 - Process Braintree Payment,400,Bad Request,Payment Page Load Test Thread Group 1-14,text,false,Payment must be processed successfully,343,1544,6,6,http://localhost:6060/api/v1/product/braintree/payment,479,0,3
+1762707420623,5215,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-15,text,true,,1362,0,6,6,null,0,0,0
+1762707426840,6,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-14,text,true,,643,0,6,6,null,0,0,0
+1762707423227,4012,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-11,text,true,,1143,0,6,6,null,0,0,0
+1762707427159,323,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-12,text,true,,2667,204,6,6,http://localhost:6060/api/v1/product/braintree/token,323,0,0
+1762707427636,360,06 - Process Braintree Payment,400,Bad Request,Payment Page Load Test Thread Group 1-10,text,false,Payment must be processed successfully,343,1325,6,6,http://localhost:6060/api/v1/product/braintree/payment,360,0,2
+1762707427988,93,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-13,text,true,,651,279,6,6,http://localhost:6060/api/v1/auth/login,93,0,2
+1762707429398,399,06 - Process Braintree Payment,400,Bad Request,Payment Page Load Test Thread Group 1-15,text,false,Payment must be processed successfully,343,1621,6,6,http://localhost:6060/api/v1/product/braintree/payment,399,0,2
+1762707430543,321,06 - Process Braintree Payment,400,Bad Request,Payment Page Load Test Thread Group 1-11,text,false,Payment must be processed successfully,343,1401,6,6,http://localhost:6060/api/v1/product/braintree/payment,321,0,2
+1762707431753,18,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-13,text,true,,2083,203,6,6,http://localhost:6060/api/v1/product/product-list/1,17,0,0
+1762707432732,1,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-14,text,true,,115,0,6,6,null,0,0,0
+1762707435303,5,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-10,text,true,,639,0,6,6,null,0,0,0
+1762707436534,3,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-13,text,true,,110,0,5,5,null,0,0,0
+1762707437738,1,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-15,text,true,,655,0,5,5,null,0,0,0
+1762707433548,4309,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-12,text,true,,1214,0,5,5,null,0,0,0
+1762707438720,4,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-11,text,true,,655,0,5,5,null,0,0,0
+1762707439198,102,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-14,text,true,,651,279,4,4,http://localhost:6060/api/v1/auth/login,102,0,3
+1762707440624,499,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-13,text,true,,2667,204,4,4,http://localhost:6060/api/v1/product/braintree/token,499,0,2
+1762707442970,338,06 - Process Braintree Payment,400,Bad Request,Payment Page Load Test Thread Group 1-12,text,false,Payment must be processed successfully,343,1479,4,4,http://localhost:6060/api/v1/product/braintree/payment,338,0,3
+1762707443679,13,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-14,text,true,,2083,203,4,4,http://localhost:6060/api/v1/product/product-list/1,13,0,0
+1762707445126,2,00 - Setup User Credentials,200,OK,Payment Page Load Test Thread Group 1-15,text,true,,121,0,4,4,null,0,0,0
+1762707449237,5,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-12,text,true,,643,0,4,4,null,0,0,0
+1762707450061,5,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-14,text,true,,110,0,3,3,null,0,0,0
+1762707450666,96,01 - User Login,200,OK,Payment Page Load Test Thread Group 1-15,text,true,,651,279,3,3,http://localhost:6060/api/v1/auth/login,96,0,3
+1762707448270,4609,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-13,text,true,,1290,0,3,3,null,0,0,0
+1762707454504,974,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-14,text,true,,2667,204,3,3,http://localhost:6060/api/v1/product/braintree/token,974,0,2
+1762707457492,13,02 - Get Products for Cart,200,OK,Payment Page Load Test Thread Group 1-15,text,true,,2083,203,3,3,http://localhost:6060/api/v1/product/product-list/1,13,0,2
+1762707458469,349,06 - Process Braintree Payment,400,Bad Request,Payment Page Load Test Thread Group 1-13,text,false,Payment must be processed successfully,343,1549,3,3,http://localhost:6060/api/v1/product/braintree/payment,349,0,2
+1762707464060,4,03 - Create Payment Cart,200,OK,Payment Page Load Test Thread Group 1-15,text,true,,109,0,3,3,null,0,0,0
+1762707466716,2,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-13,text,true,,655,0,3,3,null,0,0,0
+1762707462729,4909,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-14,text,true,,1345,0,2,2,null,0,0,0
+1762707470406,321,04 - Get Braintree Token,200,OK,Payment Page Load Test Thread Group 1-15,text,true,,2667,204,2,2,http://localhost:6060/api/v1/product/braintree/token,321,0,2
+1762707475346,372,06 - Process Braintree Payment,400,Bad Request,Payment Page Load Test Thread Group 1-14,text,false,Payment must be processed successfully,343,1610,2,2,http://localhost:6060/api/v1/product/braintree/payment,372,0,2
+1762707475329,5214,05 - Generate Payment Nonce (User-Specific Card),200,OK,Payment Page Load Test Thread Group 1-15,text,true,,1427,0,2,2,null,0,0,0
+1762707482373,4,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-14,text,true,,643,0,2,2,null,0,0,0
+1762707487888,373,06 - Process Braintree Payment,400,Bad Request,Payment Page Load Test Thread Group 1-15,text,false,Payment must be processed successfully,343,1686,1,1,http://localhost:6060/api/v1/product/braintree/payment,372,0,4
+1762707491419,2,07 - Payment Load Test Summary,200,OK,Payment Page Load Test Thread Group 1-15,text,true,,655,0,1,1,null,0,0,0

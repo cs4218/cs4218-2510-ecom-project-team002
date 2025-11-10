@@ -1,0 +1,136 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1762706464385,8,01 - User Role Assignment,200,OK,Mixed Admin and User Profile Management 1-1,text,true,,133,0,1,1,null,0,0,0
+1762706464433,93,02 - User Login,200,OK,Mixed Admin and User Profile Management 1-1,text,true,,666,295,1,1,http://localhost:6060/api/v1/auth/login,90,0,10
+1762706464583,2,Admin Navigate to Cart Page,200,OK,Mixed Admin and User Profile Management 1-1,text,true,,135,0,1,1,null,0,0,0
+1762706464585,1,Admin Click Update Address,200,OK,Mixed Admin and User Profile Management 1-1,text,true,,186,0,1,1,null,0,0,0
+1762706464587,3,04 - Use Profile Information from Login,200,OK,Mixed Admin and User Profile Management 1-1,text,true,,167,0,1,1,null,0,0,0
+1762706464591,3,05 - Prepare Profile Updates,200,OK,Mixed Admin and User Profile Management 1-1,text,true,,243,0,1,1,null,0,0,0
+1762706464594,31,06 - Update Profile,200,OK,Mixed Admin and User Profile Management 1-1,text,true,,676,566,1,1,http://localhost:6060/api/v1/auth/profile,31,0,0
+1762706464625,2,07 - Profile Update Completion,200,OK,Mixed Admin and User Profile Management 1-1,text,true,,186,0,1,1,null,0,0,0
+1762706464628,2,08 - Final Profile Management Report,200,OK,Mixed Admin and User Profile Management 1-1,text,true,,447,0,1,1,null,0,0,0
+1762706465061,2,01 - User Role Assignment,200,OK,Mixed Admin and User Profile Management 1-2,text,true,,133,0,1,1,null,0,0,0
+1762706465063,64,02 - User Login,200,OK,Mixed Admin and User Profile Management 1-2,text,true,,666,295,1,1,http://localhost:6060/api/v1/auth/login,64,0,1
+1762706465130,1,Admin Navigate to Cart Page,200,OK,Mixed Admin and User Profile Management 1-2,text,true,,135,0,1,1,null,0,0,0
+1762706465131,0,Admin Click Update Address,200,OK,Mixed Admin and User Profile Management 1-2,text,true,,186,0,1,1,null,0,0,0
+1762706465132,2,04 - Use Profile Information from Login,200,OK,Mixed Admin and User Profile Management 1-2,text,true,,167,0,1,1,null,0,0,0
+1762706465134,2,05 - Prepare Profile Updates,200,OK,Mixed Admin and User Profile Management 1-2,text,true,,246,0,1,1,null,0,0,0
+1762706465136,16,06 - Update Profile,200,OK,Mixed Admin and User Profile Management 1-2,text,true,,679,569,1,1,http://localhost:6060/api/v1/auth/profile,16,0,0
+1762706465153,1,07 - Profile Update Completion,200,OK,Mixed Admin and User Profile Management 1-2,text,true,,210,0,1,1,null,0,0,0
+1762706465154,2,08 - Final Profile Management Report,200,OK,Mixed Admin and User Profile Management 1-2,text,true,,466,0,1,1,null,0,0,0
+1762706465732,2,01 - User Role Assignment,200,OK,Mixed Admin and User Profile Management 1-3,text,true,,133,0,1,1,null,0,0,0
+1762706465734,65,02 - User Login,200,OK,Mixed Admin and User Profile Management 1-3,text,true,,669,295,1,1,http://localhost:6060/api/v1/auth/login,65,0,1
+1762706465802,1,Admin Navigate to Cart Page,200,OK,Mixed Admin and User Profile Management 1-3,text,true,,135,0,1,1,null,0,0,0
+1762706465803,2,Admin Click Update Address,200,OK,Mixed Admin and User Profile Management 1-3,text,true,,186,0,1,1,null,0,0,0
+1762706465807,2,04 - Use Profile Information from Login,200,OK,Mixed Admin and User Profile Management 1-3,text,true,,170,0,1,1,null,0,0,0
+1762706465809,1,05 - Prepare Profile Updates,200,OK,Mixed Admin and User Profile Management 1-3,text,true,,249,0,1,1,null,0,0,0
+1762706465811,21,06 - Update Profile,200,OK,Mixed Admin and User Profile Management 1-3,text,true,,679,569,1,1,http://localhost:6060/api/v1/auth/profile,21,0,0
+1762706465834,3,07 - Profile Update Completion,200,OK,Mixed Admin and User Profile Management 1-3,text,true,,186,0,1,1,null,0,0,0
+1762706465837,3,08 - Final Profile Management Report,200,OK,Mixed Admin and User Profile Management 1-3,text,true,,447,0,1,1,null,0,0,0
+1762706466392,3,01 - User Role Assignment,200,OK,Mixed Admin and User Profile Management 1-4,text,true,,133,0,1,1,null,0,0,0
+1762706466396,106,02 - User Login,200,OK,Mixed Admin and User Profile Management 1-4,text,true,,669,295,1,1,http://localhost:6060/api/v1/auth/login,106,0,1
+1762706466505,1,Admin Navigate to Cart Page,200,OK,Mixed Admin and User Profile Management 1-4,text,true,,135,0,1,1,null,0,0,0
+1762706466506,1,Admin Click Update Address,200,OK,Mixed Admin and User Profile Management 1-4,text,true,,186,0,1,1,null,0,0,0
+1762706466508,1,04 - Use Profile Information from Login,200,OK,Mixed Admin and User Profile Management 1-4,text,true,,170,0,1,1,null,0,0,0
+1762706466509,1,05 - Prepare Profile Updates,200,OK,Mixed Admin and User Profile Management 1-4,text,true,,250,0,1,1,null,0,0,0
+1762706466511,19,06 - Update Profile,200,OK,Mixed Admin and User Profile Management 1-4,text,true,,680,570,1,1,http://localhost:6060/api/v1/auth/profile,19,0,0
+1762706466530,1,07 - Profile Update Completion,200,OK,Mixed Admin and User Profile Management 1-4,text,true,,211,0,1,1,null,0,0,0
+1762706466531,2,08 - Final Profile Management Report,200,OK,Mixed Admin and User Profile Management 1-4,text,true,,467,0,1,1,null,0,0,0
+1762706467053,5,01 - User Role Assignment,200,OK,Mixed Admin and User Profile Management 1-5,text,true,,133,0,1,1,null,0,0,0
+1762706467060,91,02 - User Login,200,OK,Mixed Admin and User Profile Management 1-5,text,true,,670,295,1,1,http://localhost:6060/api/v1/auth/login,91,0,2
+1762706467153,1,Admin Navigate to Cart Page,200,OK,Mixed Admin and User Profile Management 1-5,text,true,,135,0,1,1,null,0,0,0
+1762706467154,0,Admin Click Update Address,200,OK,Mixed Admin and User Profile Management 1-5,text,true,,186,0,1,1,null,0,0,0
+1762706467155,1,04 - Use Profile Information from Login,200,OK,Mixed Admin and User Profile Management 1-5,text,true,,171,0,1,1,null,0,0,0
+1762706467156,1,05 - Prepare Profile Updates,200,OK,Mixed Admin and User Profile Management 1-5,text,true,,251,0,1,1,null,0,0,0
+1762706467157,17,06 - Update Profile,200,OK,Mixed Admin and User Profile Management 1-5,text,true,,680,570,1,1,http://localhost:6060/api/v1/auth/profile,17,0,0
+1762706467174,1,07 - Profile Update Completion,200,OK,Mixed Admin and User Profile Management 1-5,text,true,,186,0,1,1,null,0,0,0
+1762706467175,1,08 - Final Profile Management Report,200,OK,Mixed Admin and User Profile Management 1-5,text,true,,447,0,1,1,null,0,0,0
+1762706467719,3,01 - User Role Assignment,200,OK,Mixed Admin and User Profile Management 1-6,text,true,,133,0,1,1,null,0,0,0
+1762706467723,82,02 - User Login,200,OK,Mixed Admin and User Profile Management 1-6,text,true,,670,295,1,1,http://localhost:6060/api/v1/auth/login,82,0,1
+1762706467807,1,Admin Navigate to Cart Page,200,OK,Mixed Admin and User Profile Management 1-6,text,true,,135,0,1,1,null,0,0,0
+1762706467808,1,Admin Click Update Address,200,OK,Mixed Admin and User Profile Management 1-6,text,true,,186,0,1,1,null,0,0,0
+1762706467809,1,04 - Use Profile Information from Login,200,OK,Mixed Admin and User Profile Management 1-6,text,true,,171,0,1,1,null,0,0,0
+1762706467810,1,05 - Prepare Profile Updates,200,OK,Mixed Admin and User Profile Management 1-6,text,true,,247,0,1,1,null,0,0,0
+1762706467811,19,06 - Update Profile,200,OK,Mixed Admin and User Profile Management 1-6,text,true,,676,566,1,1,http://localhost:6060/api/v1/auth/profile,19,0,0
+1762706467830,1,07 - Profile Update Completion,200,OK,Mixed Admin and User Profile Management 1-6,text,true,,207,0,1,1,null,0,0,0
+1762706467831,1,08 - Final Profile Management Report,200,OK,Mixed Admin and User Profile Management 1-6,text,true,,463,0,1,1,null,0,0,0
+1762706468387,1,01 - User Role Assignment,200,OK,Mixed Admin and User Profile Management 1-7,text,true,,144,0,1,1,null,0,0,0
+1762706468389,77,02 - User Login,200,OK,Mixed Admin and User Profile Management 1-7,text,true,,648,298,1,1,http://localhost:6060/api/v1/auth/login,77,0,1
+1762706468470,0,User Navigate to Dashboard,200,OK,Mixed Admin and User Profile Management 1-7,text,true,,139,0,1,1,null,0,0,0
+1762706468470,1,User Click Profile,200,OK,Mixed Admin and User Profile Management 1-7,text,true,,174,0,1,1,null,0,0,0
+1762706468471,0,04 - Use Profile Information from Login,200,OK,Mixed Admin and User Profile Management 1-7,text,true,,155,0,1,1,null,0,0,0
+1762706468472,0,05 - Prepare Profile Updates,200,OK,Mixed Admin and User Profile Management 1-7,text,true,,204,0,1,1,null,0,0,0
+1762706468473,15,06 - Update Profile,200,OK,Mixed Admin and User Profile Management 1-7,text,true,,662,553,1,1,http://localhost:6060/api/v1/auth/profile,15,0,0
+1762706468488,1,07 - Profile Update Completion,200,OK,Mixed Admin and User Profile Management 1-7,text,true,,190,0,1,1,null,0,0,0
+1762706468489,1,08 - Final Profile Management Report,200,OK,Mixed Admin and User Profile Management 1-7,text,true,,458,0,1,1,null,0,0,0
+1762706469052,2,01 - User Role Assignment,200,OK,Mixed Admin and User Profile Management 1-8,text,true,,144,0,1,1,null,0,0,0
+1762706469055,77,02 - User Login,200,OK,Mixed Admin and User Profile Management 1-8,text,true,,653,298,1,1,http://localhost:6060/api/v1/auth/login,77,0,1
+1762706469134,1,User Navigate to Dashboard,200,OK,Mixed Admin and User Profile Management 1-8,text,true,,139,0,1,1,null,0,0,0
+1762706469135,0,User Click Profile,200,OK,Mixed Admin and User Profile Management 1-8,text,true,,174,0,1,1,null,0,0,0
+1762706469135,1,04 - Use Profile Information from Login,200,OK,Mixed Admin and User Profile Management 1-8,text,true,,160,0,1,1,null,0,0,0
+1762706469136,2,05 - Prepare Profile Updates,200,OK,Mixed Admin and User Profile Management 1-8,text,true,,232,0,1,1,null,0,0,0
+1762706469139,22,06 - Update Profile,200,OK,Mixed Admin and User Profile Management 1-8,text,true,,685,576,1,1,http://localhost:6060/api/v1/auth/profile,22,0,0
+1762706469162,1,07 - Profile Update Completion,200,OK,Mixed Admin and User Profile Management 1-8,text,true,,214,0,1,1,null,0,0,0
+1762706469163,1,08 - Final Profile Management Report,200,OK,Mixed Admin and User Profile Management 1-8,text,true,,477,0,1,1,null,0,0,0
+1762706469716,3,01 - User Role Assignment,200,OK,Mixed Admin and User Profile Management 1-9,text,true,,144,0,1,1,null,0,0,0
+1762706469721,82,02 - User Login,200,OK,Mixed Admin and User Profile Management 1-9,text,true,,676,298,1,1,http://localhost:6060/api/v1/auth/login,82,0,1
+1762706469806,0,User Navigate to Dashboard,200,OK,Mixed Admin and User Profile Management 1-9,text,true,,139,0,1,1,null,0,0,0
+1762706469806,1,User Click Profile,200,OK,Mixed Admin and User Profile Management 1-9,text,true,,174,0,1,1,null,0,0,0
+1762706469807,0,04 - Use Profile Information from Login,200,OK,Mixed Admin and User Profile Management 1-9,text,true,,183,0,1,1,null,0,0,0
+1762706469808,0,05 - Prepare Profile Updates,200,OK,Mixed Admin and User Profile Management 1-9,text,true,,255,0,1,1,null,0,0,0
+1762706469808,23,06 - Update Profile,200,OK,Mixed Admin and User Profile Management 1-9,text,true,,685,576,1,1,http://localhost:6060/api/v1/auth/profile,23,0,0
+1762706469832,1,07 - Profile Update Completion,200,OK,Mixed Admin and User Profile Management 1-9,text,true,,190,0,1,1,null,0,0,0
+1762706469833,1,08 - Final Profile Management Report,200,OK,Mixed Admin and User Profile Management 1-9,text,true,,458,0,1,1,null,0,0,0
+1762706470387,2,01 - User Role Assignment,200,OK,Mixed Admin and User Profile Management 1-10,text,true,,145,0,1,1,null,0,0,0
+1762706470390,89,02 - User Login,200,OK,Mixed Admin and User Profile Management 1-10,text,true,,676,298,1,1,http://localhost:6060/api/v1/auth/login,89,0,1
+1762706470481,1,User Navigate to Dashboard,200,OK,Mixed Admin and User Profile Management 1-10,text,true,,140,0,1,1,null,0,0,0
+1762706470482,1,User Click Profile,200,OK,Mixed Admin and User Profile Management 1-10,text,true,,175,0,1,1,null,0,0,0
+1762706470483,0,04 - Use Profile Information from Login,200,OK,Mixed Admin and User Profile Management 1-10,text,true,,184,0,1,1,null,0,0,0
+1762706470483,1,05 - Prepare Profile Updates,200,OK,Mixed Admin and User Profile Management 1-10,text,true,,257,0,1,1,null,0,0,0
+1762706470484,15,06 - Update Profile,200,OK,Mixed Admin and User Profile Management 1-10,text,true,,686,577,1,1,http://localhost:6060/api/v1/auth/profile,15,0,0
+1762706470499,1,07 - Profile Update Completion,200,OK,Mixed Admin and User Profile Management 1-10,text,true,,216,0,1,1,null,0,0,0
+1762706470500,1,08 - Final Profile Management Report,200,OK,Mixed Admin and User Profile Management 1-10,text,true,,479,0,1,1,null,0,0,0
+1762706471053,2,01 - User Role Assignment,200,OK,Mixed Admin and User Profile Management 1-11,text,true,,145,0,1,1,null,0,0,0
+1762706471056,97,02 - User Login,200,OK,Mixed Admin and User Profile Management 1-11,text,true,,677,298,1,1,http://localhost:6060/api/v1/auth/login,97,0,1
+1762706471156,1,User Navigate to Dashboard,200,OK,Mixed Admin and User Profile Management 1-11,text,true,,140,0,1,1,null,0,0,0
+1762706471158,0,User Click Profile,200,OK,Mixed Admin and User Profile Management 1-11,text,true,,175,0,1,1,null,0,0,0
+1762706471158,1,04 - Use Profile Information from Login,200,OK,Mixed Admin and User Profile Management 1-11,text,true,,185,0,1,1,null,0,0,0
+1762706471159,1,05 - Prepare Profile Updates,200,OK,Mixed Admin and User Profile Management 1-11,text,true,,258,0,1,1,null,0,0,0
+1762706471160,20,06 - Update Profile,200,OK,Mixed Admin and User Profile Management 1-11,text,true,,686,577,1,1,http://localhost:6060/api/v1/auth/profile,20,0,0
+1762706471180,3,07 - Profile Update Completion,200,OK,Mixed Admin and User Profile Management 1-11,text,true,,191,0,1,1,null,0,0,0
+1762706471183,1,08 - Final Profile Management Report,200,OK,Mixed Admin and User Profile Management 1-11,text,true,,459,0,1,1,null,0,0,0
+1762706471732,2,01 - User Role Assignment,200,OK,Mixed Admin and User Profile Management 1-12,text,true,,145,0,1,1,null,0,0,0
+1762706471735,97,02 - User Login,200,OK,Mixed Admin and User Profile Management 1-12,text,true,,677,298,1,1,http://localhost:6060/api/v1/auth/login,97,0,2
+1762706471834,0,User Navigate to Dashboard,200,OK,Mixed Admin and User Profile Management 1-12,text,true,,140,0,1,1,null,0,0,0
+1762706471834,1,User Click Profile,200,OK,Mixed Admin and User Profile Management 1-12,text,true,,175,0,1,1,null,0,0,0
+1762706471835,0,04 - Use Profile Information from Login,200,OK,Mixed Admin and User Profile Management 1-12,text,true,,185,0,1,1,null,0,0,0
+1762706471835,1,05 - Prepare Profile Updates,200,OK,Mixed Admin and User Profile Management 1-12,text,true,,254,0,1,1,null,0,0,0
+1762706471836,18,06 - Update Profile,200,OK,Mixed Admin and User Profile Management 1-12,text,true,,682,573,1,1,http://localhost:6060/api/v1/auth/profile,18,0,0
+1762706471855,0,07 - Profile Update Completion,200,OK,Mixed Admin and User Profile Management 1-12,text,true,,212,0,1,1,null,0,0,0
+1762706471855,1,08 - Final Profile Management Report,200,OK,Mixed Admin and User Profile Management 1-12,text,true,,475,0,1,1,null,0,0,0
+1762706472402,2,01 - User Role Assignment,200,OK,Mixed Admin and User Profile Management 1-13,text,true,,145,0,1,1,null,0,0,0
+1762706472405,96,02 - User Login,200,OK,Mixed Admin and User Profile Management 1-13,text,true,,673,298,1,1,http://localhost:6060/api/v1/auth/login,96,0,2
+1762706472503,1,User Navigate to Dashboard,200,OK,Mixed Admin and User Profile Management 1-13,text,true,,140,0,1,1,null,0,0,0
+1762706472504,0,User Click Profile,200,OK,Mixed Admin and User Profile Management 1-13,text,true,,175,0,1,1,null,0,0,0
+1762706472504,1,04 - Use Profile Information from Login,200,OK,Mixed Admin and User Profile Management 1-13,text,true,,181,0,1,1,null,0,0,0
+1762706472505,0,05 - Prepare Profile Updates,200,OK,Mixed Admin and User Profile Management 1-13,text,true,,250,0,1,1,null,0,0,0
+1762706472506,25,06 - Update Profile,200,OK,Mixed Admin and User Profile Management 1-13,text,true,,682,573,1,1,http://localhost:6060/api/v1/auth/profile,25,0,0
+1762706472531,1,07 - Profile Update Completion,200,OK,Mixed Admin and User Profile Management 1-13,text,true,,191,0,1,1,null,0,0,0
+1762706472532,1,08 - Final Profile Management Report,200,OK,Mixed Admin and User Profile Management 1-13,text,true,,459,0,1,1,null,0,0,0
+1762706473070,2,01 - User Role Assignment,200,OK,Mixed Admin and User Profile Management 1-14,text,true,,145,0,1,1,null,0,0,0
+1762706473073,95,02 - User Login,200,OK,Mixed Admin and User Profile Management 1-14,text,true,,673,298,1,1,http://localhost:6060/api/v1/auth/login,95,0,1
+1762706473171,0,User Navigate to Dashboard,200,OK,Mixed Admin and User Profile Management 1-14,text,true,,140,0,1,1,null,0,0,0
+1762706473171,1,User Click Profile,200,OK,Mixed Admin and User Profile Management 1-14,text,true,,175,0,1,1,null,0,0,0
+1762706473172,0,04 - Use Profile Information from Login,200,OK,Mixed Admin and User Profile Management 1-14,text,true,,181,0,1,1,null,0,0,0
+1762706473172,1,05 - Prepare Profile Updates,200,OK,Mixed Admin and User Profile Management 1-14,text,true,,253,0,1,1,null,0,0,0
+1762706473173,17,06 - Update Profile,200,OK,Mixed Admin and User Profile Management 1-14,text,true,,685,576,1,1,http://localhost:6060/api/v1/auth/profile,17,0,0
+1762706473190,1,07 - Profile Update Completion,200,OK,Mixed Admin and User Profile Management 1-14,text,true,,215,0,1,1,null,0,0,0
+1762706473191,1,08 - Final Profile Management Report,200,OK,Mixed Admin and User Profile Management 1-14,text,true,,478,0,1,1,null,0,0,0
+1762706473727,3,01 - User Role Assignment,200,OK,Mixed Admin and User Profile Management 1-15,text,true,,145,0,1,1,null,0,0,0
+1762706473731,91,02 - User Login,200,OK,Mixed Admin and User Profile Management 1-15,text,true,,676,298,1,1,http://localhost:6060/api/v1/auth/login,91,0,2
+1762706473824,1,User Navigate to Dashboard,200,OK,Mixed Admin and User Profile Management 1-15,text,true,,140,0,1,1,null,0,0,0
+1762706473825,0,User Click Profile,200,OK,Mixed Admin and User Profile Management 1-15,text,true,,175,0,1,1,null,0,0,0
+1762706473825,1,04 - Use Profile Information from Login,200,OK,Mixed Admin and User Profile Management 1-15,text,true,,184,0,1,1,null,0,0,0
+1762706473826,0,05 - Prepare Profile Updates,200,OK,Mixed Admin and User Profile Management 1-15,text,true,,256,0,1,1,null,0,0,0
+1762706473827,16,06 - Update Profile,200,OK,Mixed Admin and User Profile Management 1-15,text,true,,685,576,1,1,http://localhost:6060/api/v1/auth/profile,16,0,0
+1762706473843,1,07 - Profile Update Completion,200,OK,Mixed Admin and User Profile Management 1-15,text,true,,191,0,1,1,null,0,0,0
+1762706473844,0,08 - Final Profile Management Report,200,OK,Mixed Admin and User Profile Management 1-15,text,true,,459,0,1,1,null,0,0,0

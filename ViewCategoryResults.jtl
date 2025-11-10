@@ -1,0 +1,811 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1762706061712,86,01 - User Login,200,OK,View Category Load Test Thread Group 1-1,text,true,,648,301,5,5,http://localhost:6060/api/v1/auth/login,86,0,11
+1762706062713,91,01 - User Login,200,OK,View Category Load Test Thread Group 1-2,text,true,,648,301,6,6,http://localhost:6060/api/v1/auth/login,91,0,2
+1762706063782,102,01 - User Login,200,OK,View Category Load Test Thread Group 1-4,text,true,,648,301,7,7,http://localhost:6060/api/v1/auth/login,102,0,3
+1762706063883,60,01 - User Login,200,OK,View Category Load Test Thread Group 1-3,text,true,,648,301,7,7,http://localhost:6060/api/v1/auth/login,60,0,0
+1762706064680,95,01 - User Login,200,OK,View Category Load Test Thread Group 1-5,text,true,,648,301,7,7,http://localhost:6060/api/v1/auth/login,95,0,3
+1762706065898,20,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-1,text,true,,1357,224,9,9,http://localhost:6060/api/v1/category/get-category,20,0,0
+1762706066151,15,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-2,text,true,,1357,224,9,9,http://localhost:6060/api/v1/category/get-category,14,0,0
+1762706066718,90,01 - User Login,200,OK,View Category Load Test Thread Group 1-6,text,true,,648,301,10,10,http://localhost:6060/api/v1/auth/login,90,0,2
+1762706067336,80,01 - User Login,200,OK,View Category Load Test Thread Group 1-7,text,true,,648,301,10,10,http://localhost:6060/api/v1/auth/login,80,0,1
+1762706067697,13,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-4,text,true,,1357,224,10,10,http://localhost:6060/api/v1/category/get-category,13,0,0
+1762706068407,14,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-3,text,true,,1357,224,11,11,http://localhost:6060/api/v1/category/get-category,14,0,0
+1762706069313,9,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-5,text,true,,1357,224,12,12,http://localhost:6060/api/v1/category/get-category,9,0,0
+1762706069243,88,01 - User Login,200,OK,View Category Load Test Thread Group 1-8,text,true,,648,301,12,12,http://localhost:6060/api/v1/auth/login,88,0,1
+1762706069549,14,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-2,text,true,,425,239,12,12,http://localhost:6060/api/v1/category/single-category/electronics,14,0,0
+1762706070344,94,01 - User Login,200,OK,View Category Load Test Thread Group 1-10,text,true,,648,301,13,13,http://localhost:6060/api/v1/auth/login,94,0,2
+1762706070484,64,01 - User Login,200,OK,View Category Load Test Thread Group 1-9,text,true,,648,301,13,13,http://localhost:6060/api/v1/auth/login,64,0,1
+1762706070717,16,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-6,text,true,,1357,224,13,13,http://localhost:6060/api/v1/category/get-category,16,0,0
+1762706070800,93,01 - User Login,200,OK,View Category Load Test Thread Group 1-11,text,true,,648,301,14,14,http://localhost:6060/api/v1/auth/login,93,0,2
+1762706070928,9,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-1,text,true,,425,239,14,14,http://localhost:6060/api/v1/category/single-category/electronics,9,0,2
+1762706071355,12,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-7,text,true,,1357,224,14,14,http://localhost:6060/api/v1/category/get-category,12,0,0
+1762706072282,13,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-3,text,true,,425,239,15,15,http://localhost:6060/api/v1/category/single-category/electronics,12,0,0
+1762706072282,105,01 - User Login,200,OK,View Category Load Test Thread Group 1-12,text,true,,648,301,15,15,http://localhost:6060/api/v1/auth/login,105,0,2
+1762706072666,17,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-4,text,true,,425,239,15,15,http://localhost:6060/api/v1/category/single-category/electronics,17,0,0
+1762706072712,11,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-8,text,true,,1357,224,15,15,http://localhost:6060/api/v1/category/get-category,11,0,0
+1762706073513,17,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-10,text,true,,1357,224,16,16,http://localhost:6060/api/v1/category/get-category,17,0,0
+1762706073541,87,01 - User Login,200,OK,View Category Load Test Thread Group 1-13,text,true,,648,301,16,16,http://localhost:6060/api/v1/auth/login,87,0,2
+1762706073606,59,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-1,text,true,,1376560,310,16,16,http://localhost:6060/api/v1/product/product-filters,54,0,0
+1762706073766,7,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-5,text,true,,425,239,16,16,http://localhost:6060/api/v1/category/single-category/electronics,7,0,0
+1762706073893,51,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-2,text,true,,1376560,310,17,17,http://localhost:6060/api/v1/product/product-filters,46,0,0
+1762706073974,12,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-9,text,true,,1357,224,17,17,http://localhost:6060/api/v1/category/get-category,12,0,0
+1762706074319,22,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-6,text,true,,425,239,17,17,http://localhost:6060/api/v1/category/single-category/electronics,22,0,0
+1762706074371,97,01 - User Login,200,OK,View Category Load Test Thread Group 1-14,text,true,,648,301,17,17,http://localhost:6060/api/v1/auth/login,97,0,1
+1762706075278,14,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-11,text,true,,1357,224,18,18,http://localhost:6060/api/v1/category/get-category,14,0,0
+1762706075426,7,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-12,text,true,,1357,224,18,18,http://localhost:6060/api/v1/category/get-category,7,0,0
+1762706075508,9,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-7,text,true,,425,239,18,18,http://localhost:6060/api/v1/category/single-category/electronics,9,0,0
+1762706075627,83,01 - User Login,200,OK,View Category Load Test Thread Group 1-16,text,true,,648,301,18,18,http://localhost:6060/api/v1/auth/login,83,0,1
+1762706075927,79,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-4,text,true,,1376560,310,19,19,http://localhost:6060/api/v1/product/product-filters,74,0,0
+1762706076059,8,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-10,text,true,,425,239,19,19,http://localhost:6060/api/v1/category/single-category/electronics,8,0,0
+1762706076153,6,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-1,text,true,,411,232,19,19,http://localhost:6060/api/v1/category/single-category/book,6,0,0
+1762706076096,84,01 - User Login,200,OK,View Category Load Test Thread Group 1-15,text,true,,648,301,19,19,http://localhost:6060/api/v1/auth/login,84,0,1
+1762706076560,14,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-8,text,true,,425,239,19,19,http://localhost:6060/api/v1/category/single-category/electronics,14,0,0
+1762706076873,69,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-3,text,true,,1376560,310,20,20,http://localhost:6060/api/v1/product/product-filters,67,0,0
+1762706077070,57,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-5,text,true,,1376560,310,20,20,http://localhost:6060/api/v1/product/product-filters,52,0,0
+1762706077163,81,01 - User Login,200,OK,View Category Load Test Thread Group 1-17,text,true,,648,301,20,20,http://localhost:6060/api/v1/auth/login,81,0,1
+1762706077358,8,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-9,text,true,,425,239,20,20,http://localhost:6060/api/v1/category/single-category/electronics,8,0,0
+1762706077566,85,01 - User Login,200,OK,View Category Load Test Thread Group 1-18,text,true,,648,301,20,20,http://localhost:6060/api/v1/auth/login,85,0,2
+1762706077820,15,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-2,text,true,,411,232,21,21,http://localhost:6060/api/v1/category/single-category/book,15,0,0
+1762706077846,11,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-13,text,true,,1357,224,21,21,http://localhost:6060/api/v1/category/get-category,11,0,0
+1762706078229,7,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-14,text,true,,1357,224,21,21,http://localhost:6060/api/v1/category/get-category,7,0,0
+1762706078281,69,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-7,text,true,,1376560,310,21,21,http://localhost:6060/api/v1/product/product-filters,64,0,0
+1762706078560,13,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-16,text,true,,1357,224,21,21,http://localhost:6060/api/v1/category/get-category,13,0,0
+1762706078627,9,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-11,text,true,,425,239,21,21,http://localhost:6060/api/v1/category/single-category/electronics,9,0,0
+1762706078621,55,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-6,text,true,,1376560,310,21,21,http://localhost:6060/api/v1/product/product-filters,52,0,0
+1762706078728,84,01 - User Login,200,OK,View Category Load Test Thread Group 1-19,text,true,,648,301,22,22,http://localhost:6060/api/v1/auth/login,84,0,1
+1762706079056,11,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-15,text,true,,1357,224,22,22,http://localhost:6060/api/v1/category/get-category,11,0,0
+1762706079189,12,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-12,text,true,,425,239,22,22,http://localhost:6060/api/v1/category/single-category/electronics,12,0,0
+1762706079470,11,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-1,text,true,,425,239,22,22,http://localhost:6060/api/v1/category/single-category/electronics,11,0,0
+1762706080029,78,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-10,text,true,,1376560,310,23,23,http://localhost:6060/api/v1/product/product-filters,73,0,0
+1762706080109,31,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-3,text,true,,411,232,23,23,http://localhost:6060/api/v1/category/single-category/book,31,0,0
+1762706080083,62,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-9,text,true,,1376560,310,23,23,http://localhost:6060/api/v1/product/product-filters,57,0,0
+1762706080377,13,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-5,text,true,,411,232,23,23,http://localhost:6060/api/v1/category/single-category/book,13,0,0
+1762706080744,11,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-4,text,true,,411,232,23,23,http://localhost:6060/api/v1/category/single-category/book,11,0,0
+1762706080769,92,01 - User Login,200,OK,View Category Load Test Thread Group 1-20,text,true,,648,301,24,24,http://localhost:6060/api/v1/auth/login,92,0,2
+1762706080874,7,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-17,text,true,,1357,224,24,24,http://localhost:6060/api/v1/category/get-category,7,0,0
+1762706081002,87,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-8,text,true,,1376560,310,24,24,http://localhost:6060/api/v1/product/product-filters,82,0,0
+1762706081123,8,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-18,text,true,,1357,224,24,24,http://localhost:6060/api/v1/category/get-category,8,0,0
+1762706081306,26,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-19,text,true,,1357,224,24,24,http://localhost:6060/api/v1/category/get-category,26,0,0
+1762706081996,7,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-14,text,true,,425,239,25,25,http://localhost:6060/api/v1/category/single-category/electronics,7,0,0
+1762706081960,85,01 - User Login,200,OK,View Category Load Test Thread Group 1-22,text,true,,648,301,25,25,http://localhost:6060/api/v1/auth/login,85,0,1
+1762706082070,7,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-2,text,true,,419,236,25,25,http://localhost:6060/api/v1/category/single-category/clothing,7,0,0
+1762706082280,11,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-7,text,true,,411,232,25,25,http://localhost:6060/api/v1/category/single-category/book,11,0,0
+1762706082459,98,01 - User Login,200,OK,View Category Load Test Thread Group 1-21,text,true,,648,301,25,25,http://localhost:6060/api/v1/auth/login,98,0,2
+1762706082816,11,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-6,text,true,,411,232,26,26,http://localhost:6060/api/v1/category/single-category/book,11,0,0
+1762706082900,13,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-13,text,true,,425,239,26,26,http://localhost:6060/api/v1/category/single-category/electronics,13,0,2
+1762706083043,9,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-16,text,true,,425,239,26,26,http://localhost:6060/api/v1/category/single-category/electronics,9,0,0
+1762706083324,83,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-11,text,true,,1376560,310,26,26,http://localhost:6060/api/v1/product/product-filters,80,0,0
+1762706083397,15,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-10,text,true,,411,232,26,26,http://localhost:6060/api/v1/category/single-category/book,15,0,0
+1762706083384,28,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-1,text,true,,19249,310,26,26,http://localhost:6060/api/v1/product/product-filters,28,0,0
+1762706083506,73,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-12,text,true,,1376560,310,26,26,http://localhost:6060/api/v1/product/product-filters,68,0,0
+1762706083611,7,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-15,text,true,,425,239,26,26,http://localhost:6060/api/v1/category/single-category/electronics,7,0,0
+1762706084037,11,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-5,text,true,,344,242,27,27,http://localhost:6060/api/v1/category/single-category/user5_category,11,0,0
+1762706084146,9,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-18,text,true,,425,239,27,27,http://localhost:6060/api/v1/category/single-category/electronics,9,0,0
+1762706084180,11,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-3,text,true,,411,232,27,27,http://localhost:6060/api/v1/category/single-category/book,11,0,0
+1762706084337,90,01 - User Login,200,OK,View Category Load Test Thread Group 1-25,text,true,,648,301,27,27,http://localhost:6060/api/v1/auth/login,90,0,2
+1762706084652,11,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-22,text,true,,1357,224,27,27,http://localhost:6060/api/v1/category/get-category,11,0,0
+1762706084691,7,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-4,text,true,,344,242,27,27,http://localhost:6060/api/v1/category/single-category/user4_category,7,0,0
+1762706084663,93,01 - User Login,200,OK,View Category Load Test Thread Group 1-23,text,true,,648,301,27,27,http://localhost:6060/api/v1/auth/login,93,0,2
+1762706084912,8,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-9,text,true,,411,232,28,28,http://localhost:6060/api/v1/category/single-category/book,8,0,0
+1762706084967,6,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-17,text,true,,425,239,28,28,http://localhost:6060/api/v1/category/single-category/electronics,6,0,0
+1762706084890,86,01 - User Login,200,OK,View Category Load Test Thread Group 1-24,text,true,,648,301,28,28,http://localhost:6060/api/v1/auth/login,86,0,1
+1762706085021,9,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-2,text,true,,19249,310,28,28,http://localhost:6060/api/v1/product/product-filters,9,0,0
+1762706085101,7,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-19,text,true,,425,239,28,28,http://localhost:6060/api/v1/category/single-category/electronics,7,0,0
+1762706085107,7,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-8,text,true,,411,232,28,28,http://localhost:6060/api/v1/category/single-category/book,7,0,0
+1762706085102,61,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-14,text,true,,1376560,310,28,28,http://localhost:6060/api/v1/product/product-filters,56,0,0
+1762706085226,8,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-7,text,true,,344,242,28,28,http://localhost:6060/api/v1/category/single-category/user7_category,8,0,0
+1762706085705,12,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-20,text,true,,1357,224,28,28,http://localhost:6060/api/v1/category/get-category,12,0,0
+1762706086224,7,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-6,text,true,,344,242,29,29,http://localhost:6060/api/v1/category/single-category/user6_category,7,0,0
+1762706086139,99,01 - User Login,200,OK,View Category Load Test Thread Group 1-26,text,true,,648,301,29,29,http://localhost:6060/api/v1/auth/login,98,0,2
+1762706086289,59,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-16,text,true,,1376560,310,29,29,http://localhost:6060/api/v1/product/product-filters,55,0,0
+1762706086820,13,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-12,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,13,0,0
+1762706086880,41,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-10,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user10_category,41,0,0
+1762706086864,59,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-13,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,56,0,0
+1762706086895,34,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-21,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,34,0,0
+1762706086945,9,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-5,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,9,0,0
+1762706086994,9,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-11,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,9,0,0
+1762706087528,10,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-1,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,10,0,0
+1762706087882,14,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-3,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,14,0,0
+1762706088031,17,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-25,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,17,0,0
+1762706088073,9,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-8,text,true,,344,242,30,30,http://localhost:6060/api/v1/category/single-category/user8_category,9,0,0
+1762706088071,11,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-7,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,11,0,0
+1762706088132,12,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-4,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,12,0,0
+1762706088423,83,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-17,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,78,0,0
+1762706088448,81,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-18,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,76,0,0
+1762706088562,42,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-15,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,39,0,0
+1762706088610,7,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-23,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,7,0,0
+1762706088759,52,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-19,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,47,0,0
+1762706088826,7,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-14,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,7,0,0
+1762706089002,8,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-2,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,8,0,0
+1762706088967,97,01 - User Login,200,OK,View Category Load Test Thread Group 1-28,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,97,0,3
+1762706088972,92,01 - User Login,200,OK,View Category Load Test Thread Group 1-27,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,92,0,1
+1762706089059,7,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-20,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,7,0,0
+1762706089129,7,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-22,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,7,0,0
+1762706089313,22,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-21,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,22,0,0
+1762706089352,9,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-9,text,true,,344,242,30,30,http://localhost:6060/api/v1/category/single-category/user9_category,9,0,0
+1762706089384,14,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-24,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,14,0,0
+1762706090153,17,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-6,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,17,0,0
+1762706090211,24,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-16,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,24,0,0
+1762706090270,107,01 - User Login,200,OK,View Category Load Test Thread Group 1-30,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,107,0,1
+1762706090283,94,01 - User Login,200,OK,View Category Load Test Thread Group 1-29,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,94,0,2
+1762706090399,7,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-11,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user11_category,7,0,0
+1762706090582,8,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-13,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,8,0,0
+1762706090799,11,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-26,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,11,0,0
+1762706091227,15,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-15,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,15,0,0
+1762706091260,10,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-12,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user12_category,10,0,0
+1762706091279,11,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-10,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,11,0,0
+1762706091286,9,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-25,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,9,0,0
+1762706091321,10,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-3,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,10,0,0
+1762706091369,12,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-5,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,12,0,0
+1762706091459,12,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-14,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user14_category,12,0,0
+1762706091618,30,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-1,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,30,0,0
+1762706091890,13,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-8,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,13,0,0
+1762706092265,25,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-19,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,25,0,0
+1762706092265,26,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-7,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,26,0,0
+1762706092304,9,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-4,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,9,0,0
+1762706092295,75,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-20,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,69,0,0
+1762706092452,27,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-27,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,27,0,0
+1762706092654,14,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-9,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,14,0,0
+1762706092716,64,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-22,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,59,0,0
+1762706092967,25,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-16,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user16_category,25,0,0
+1762706093085,9,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-18,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,9,0,0
+1762706093464,17,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-24,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,17,0,0
+1762706093480,10,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-17,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,9,0,0
+1762706093508,25,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-2,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,25,0,0
+1762706093746,15,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-23,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,15,0,2
+1762706093810,37,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-28,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,37,0,0
+1762706093763,88,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-21,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,83,0,0
+1762706093856,8,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-10,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,8,0,0
+1762706094100,13,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-30,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,13,0,0
+1762706094403,12,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-13,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user13_category,12,0,0
+1762706094512,9,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-19,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user19_category,9,0,0
+1762706094518,68,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-25,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,63,0,0
+1762706094628,21,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-5,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,21,0,0
+1762706094656,7,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-15,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user15_category,7,0,0
+1762706094860,14,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-11,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,14,0,0
+1762706094867,8,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-29,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,8,0,0
+1762706095019,11,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-6,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,11,0,0
+1762706095420,8,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-8,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,8,0,0
+1762706095434,8,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-20,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,8,0,0
+1762706095367,90,01 - User Login,200,OK,View Category Load Test Thread Group 1-1,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,90,0,0
+1762706095490,10,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-12,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,10,0,0
+1762706095609,15,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-3,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,15,0,0
+1762706095707,9,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-26,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,9,0,0
+1762706095847,11,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-22,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,11,0,0
+1762706096020,29,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-7,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,29,0,0
+1762706096097,12,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-14,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,12,0,0
+1762706096366,15,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-9,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,15,0,0
+1762706096661,14,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-27,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,14,0,0
+1762706096706,10,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-17,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user17_category,10,0,0
+1762706096758,13,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-28,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,13,0,0
+1762706096810,13,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-4,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,13,0,0
+1762706096985,10,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-21,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,10,0,0
+1762706097302,80,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-24,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,75,0,0
+1762706097414,9,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-13,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,9,0,0
+1762706097625,13,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-16,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,13,0,0
+1762706097631,9,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-18,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user18_category,9,0,0
+1762706097711,10,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-25,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,10,0,0
+1762706097738,13,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-19,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,12,0,0
+1762706098232,20,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-10,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,20,0,0
+1762706098259,8,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-11,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,8,0,0
+1762706098277,79,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-23,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,74,0,0
+1762706098595,94,01 - User Login,200,OK,View Category Load Test Thread Group 1-5,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,94,0,0
+1762706098721,65,01 - User Login,200,OK,View Category Load Test Thread Group 1-2,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,65,0,1
+1762706098840,8,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-12,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,8,0,0
+1762706099167,17,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-30,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,17,0,2
+1762706099176,67,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-26,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,62,0,0
+1762706099347,10,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-20,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user20_category,10,0,0
+1762706099408,14,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-15,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,14,0,0
+1762706099440,20,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-6,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,20,0,0
+1762706099566,12,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-1,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,12,0,0
+1762706099789,13,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-14,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,12,0,0
+1762706099928,12,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-16,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,12,0,0
+1762706099962,17,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-8,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,17,0,0
+1762706100038,58,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-27,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,53,0,0
+1762706100090,94,01 - User Login,200,OK,View Category Load Test Thread Group 1-3,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,94,0,0
+1762706100268,8,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-29,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,8,0,1
+1762706100330,16,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-22,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user22_category,16,0,0
+1762706100561,11,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-17,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,11,0,0
+1762706100595,13,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-9,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,13,0,0
+1762706100592,80,01 - User Login,200,OK,View Category Load Test Thread Group 1-7,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,80,0,0
+1762706100958,13,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-23,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,13,0,0
+1762706101011,24,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-13,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,24,0,0
+1762706101173,11,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-18,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,11,0,0
+1762706101293,79,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-28,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,74,0,0
+1762706101397,8,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-24,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,8,0,0
+1762706101389,80,01 - User Login,200,OK,View Category Load Test Thread Group 1-4,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,80,0,0
+1762706101651,13,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-25,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user25_category,13,0,0
+1762706101997,12,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-21,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user21_category,12,0,3
+1762706102169,12,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-19,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,12,0,0
+1762706102277,88,01 - User Login,200,OK,View Category Load Test Thread Group 1-10,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,88,0,0
+1762706102609,19,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-11,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,19,0,0
+1762706102743,7,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-5,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,7,0,0
+1762706102785,9,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-15,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,9,0,0
+1762706102709,94,01 - User Login,200,OK,View Category Load Test Thread Group 1-8,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,94,0,0
+1762706102831,63,01 - User Login,200,OK,View Category Load Test Thread Group 1-6,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,63,0,0
+1762706103068,71,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-29,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,66,0,0
+1762706103180,30,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-30,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,28,0,0
+1762706103244,9,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-20,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,9,0,0
+1762706103268,7,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-26,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,7,0,0
+1762706103373,7,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-2,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,7,0,0
+1762706103693,13,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-1,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,13,0,0
+1762706103768,26,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-12,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,26,0,0
+1762706103985,9,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-3,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,9,0,0
+1762706104024,13,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-17,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,13,0,0
+1762706104085,11,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-24,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user24_category,11,0,0
+1762706104139,14,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-27,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,14,0,0
+1762706104324,18,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-22,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,18,0,0
+1762706104349,24,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-14,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,24,0,0
+1762706104498,88,01 - User Login,200,OK,View Category Load Test Thread Group 1-9,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,88,0,0
+1762706104672,13,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-16,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,13,0,0
+1762706105048,15,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-6,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,15,0,0
+1762706105188,11,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-23,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user23_category,11,0,0
+1762706105184,14,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-25,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,14,0,0
+1762706105225,9,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-28,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,9,0,0
+1762706105479,9,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-18,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,9,0,0
+1762706105496,15,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-19,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,15,0,0
+1762706105668,13,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-21,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,13,0,0
+1762706105762,11,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-7,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,11,0,2
+1762706105738,93,01 - User Login,200,OK,View Category Load Test Thread Group 1-11,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,93,0,0
+1762706105823,12,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-13,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,12,0,0
+1762706106145,7,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-4,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,7,0,0
+1762706106233,18,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-15,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,18,0,0
+1762706106268,7,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-8,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,7,0,0
+1762706106269,7,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-26,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user26_category,7,0,0
+1762706106411,12,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-30,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,12,0,0
+1762706106670,11,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-10,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,11,0,0
+1762706106827,13,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-24,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,13,0,0
+1762706107049,84,01 - User Login,200,OK,View Category Load Test Thread Group 1-12,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,84,0,0
+1762706107162,19,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-17,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,19,0,0
+1762706107223,13,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-3,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,13,0,0
+1762706107248,6,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-29,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,6,0,0
+1762706107294,8,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-20,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,8,0,0
+1762706107537,13,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-2,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,13,0,0
+1762706107563,9,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-9,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,9,0,0
+1762706107893,12,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-5,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,12,0,2
+1762706107987,12,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-22,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,12,0,0
+1762706108251,75,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-1,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,72,0,0
+1762706108429,10,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-27,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user27_category,10,0,0
+1762706108389,88,01 - User Login,200,OK,View Category Load Test Thread Group 1-16,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,88,0,0
+1762706108659,12,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-28,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user28_category,12,0,0
+1762706108913,16,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-23,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,16,0,0
+1762706109026,19,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-18,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,19,0,0
+1762706109039,8,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-21,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,8,0,0
+1762706109051,12,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-7,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,11,0,0
+1762706109100,10,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-10,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,10,0,0
+1762706109485,10,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-30,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user30_category,10,0,0
+1762706109623,8,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-6,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,8,0,0
+1762706109667,6,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-4,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,6,0,0
+1762706109637,87,01 - User Login,200,OK,View Category Load Test Thread Group 1-14,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,87,0,1
+1762706109637,87,01 - User Login,200,OK,View Category Load Test Thread Group 1-19,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,87,0,0
+1762706109812,7,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-11,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,7,0,0
+1762706110006,90,01 - User Login,200,OK,View Category Load Test Thread Group 1-13,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,90,0,0
+1762706110208,8,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-12,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,8,0,0
+1762706110209,8,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-25,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,8,0,1
+1762706110276,101,01 - User Login,200,OK,View Category Load Test Thread Group 1-15,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,101,0,0
+1762706110300,82,01 - User Login,200,OK,View Category Load Test Thread Group 1-17,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,82,0,0
+1762706110414,6,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-8,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,6,0,0
+1762706110472,22,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-26,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,22,0,0
+1762706110522,71,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-3,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,66,0,0
+1762706110878,63,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-2,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,58,0,0
+1762706111083,12,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-1,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,12,0,0
+1762706111133,12,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-24,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,12,0,0
+1762706111727,17,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-20,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,17,0,0
+1762706111900,35,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-16,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,35,0,0
+1762706111876,63,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-5,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,58,0,0
+1762706111960,18,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-29,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user29_category,18,0,0
+1762706112178,14,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-27,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,14,0,0
+1762706112326,20,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-22,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,20,0,0
+1762706112460,79,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-10,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,75,0,0
+1762706112638,10,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-14,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,10,0,0
+1762706112655,7,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-13,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,7,0,0
+1762706112772,11,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-9,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,10,0,2
+1762706112780,15,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-21,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,15,0,0
+1762706112871,88,01 - User Login,200,OK,View Category Load Test Thread Group 1-18,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,88,0,0
+1762706112959,11,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-28,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,11,0,0
+1762706113047,10,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-30,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,10,0,0
+1762706113238,10,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-15,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,10,0,0
+1762706113486,58,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-6,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,50,0,0
+1762706113443,101,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-7,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,76,0,0
+1762706113537,8,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-3,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,8,0,0
+1762706113632,7,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-19,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,7,0,0
+1762706113943,9,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-17,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,9,0,0
+1762706113989,54,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-4,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,49,0,0
+1762706114079,9,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-12,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,9,0,0
+1762706114078,10,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-23,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,10,0,1
+1762706114088,14,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-25,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,14,0,0
+1762706114190,10,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-1,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,10,0,0
+1762706114263,20,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-16,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,20,0,0
+1762706114573,99,01 - User Login,200,OK,View Category Load Test Thread Group 1-22,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,99,0,0
+1762706114784,8,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-11,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,8,0,0
+1762706114833,53,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-8,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,49,0,0
+1762706114975,9,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-2,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,9,0,0
+1762706115227,10,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-29,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,10,0,0
+1762706115250,7,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-26,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,7,0,0
+1762706115295,11,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-24,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,11,0,0
+1762706115221,91,01 - User Login,200,OK,View Category Load Test Thread Group 1-20,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,90,0,0
+1762706115672,13,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-13,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,13,0,0
+1762706115780,77,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-9,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,72,0,0
+1762706116264,12,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-10,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,12,0,0
+1762706116293,9,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-5,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,9,0,0
+1762706116386,12,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-27,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,12,0,0
+1762706116510,12,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-18,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,12,0,0
+1762706116593,11,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-15,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,11,0,0
+1762706116665,11,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-14,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,11,0,0
+1762706116896,13,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-28,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,13,0,0
+1762706116901,13,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-1,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,13,0,0
+1762706116918,9,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-17,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,9,0,0
+1762706116909,87,01 - User Login,200,OK,View Category Load Test Thread Group 1-21,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,87,0,0
+1762706117421,22,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-23,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,22,0,0
+1762706117497,95,01 - User Login,200,OK,View Category Load Test Thread Group 1-25,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,95,0,0
+1762706117592,7,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-4,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,7,0,0
+1762706117641,6,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-6,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,6,0,0
+1762706117813,10,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-3,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,10,0,0
+1762706117824,7,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-7,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,7,0,0
+1762706117937,9,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-30,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,9,0,0
+1762706117987,71,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-12,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,67,0,0
+1762706118088,35,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-11,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,31,0,0
+1762706118339,57,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-16,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,53,0,0
+1762706118371,28,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-19,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,28,0,0
+1762706118431,6,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-29,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,6,0,0
+1762706118717,9,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-22,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,9,0,0
+1762706119001,32,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-26,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,31,0,0
+1762706119178,10,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-8,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,10,0,0
+1762706119258,9,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-9,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,9,0,0
+1762706119307,9,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-2,text,true,,419,236,30,30,http://localhost:6060/api/v1/category/single-category/clothing,9,0,0
+1762706119563,12,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-18,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,12,0,0
+1762706119893,38,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-10,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user10_category,38,0,0
+1762706119854,78,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-15,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,73,0,0
+1762706119911,85,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-13,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,80,0,0
+1762706119964,41,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-28,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,41,0,0
+1762706120012,6,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-20,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,6,0,0
+1762706119980,89,01 - User Login,200,OK,View Category Load Test Thread Group 1-23,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,89,0,0
+1762706120399,10,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-1,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,10,0,0
+1762706120402,9,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-4,text,true,,344,242,30,30,http://localhost:6060/api/v1/category/single-category/user4_category,9,0,0
+1762706120451,7,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-5,text,true,,344,242,30,30,http://localhost:6060/api/v1/category/single-category/user5_category,7,0,0
+1762706120583,14,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-27,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,14,0,0
+1762706120661,90,01 - User Login,200,OK,View Category Load Test Thread Group 1-24,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,90,0,2
+1762706120899,15,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-3,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,15,0,0
+1762706121026,12,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-21,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,12,0,0
+1762706121041,9,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-6,text,true,,344,242,30,30,http://localhost:6060/api/v1/category/single-category/user6_category,9,0,0
+1762706121100,11,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-7,text,true,,344,242,30,30,http://localhost:6060/api/v1/category/single-category/user7_category,11,0,0
+1762706121170,58,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-14,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,54,0,0
+1762706121403,73,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-17,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,70,0,0
+1762706121723,16,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-29,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,16,0,0
+1762706121856,12,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-25,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,12,0,0
+1762706121883,12,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-16,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,12,0,0
+1762706121950,73,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-19,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,68,0,0
+1762706122171,10,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-12,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,10,0,0
+1762706122347,11,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-13,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,11,0,0
+1762706122402,18,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-30,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,18,0,0
+1762706122500,15,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-4,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,14,0,0
+1762706122586,11,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-8,text,true,,344,242,30,30,http://localhost:6060/api/v1/category/single-category/user8_category,11,0,0
+1762706122807,12,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-9,text,true,,344,242,30,30,http://localhost:6060/api/v1/category/single-category/user9_category,12,0,0
+1762706122880,12,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-23,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,11,0,0
+1762706122999,9,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-11,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,9,0,0
+1762706122993,88,01 - User Login,200,OK,View Category Load Test Thread Group 1-26,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,88,0,0
+1762706123406,16,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-2,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,16,0,0
+1762706123442,11,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-22,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,11,0,0
+1762706123489,77,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-18,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,73,0,0
+1762706123612,9,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-15,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,9,0,0
+1762706123931,15,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-20,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,15,0,0
+1762706124004,10,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-5,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,10,0,0
+1762706123986,90,01 - User Login,200,OK,View Category Load Test Thread Group 1-28,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,90,0,0
+1762706124403,10,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-14,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,10,0,0
+1762706124455,19,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-1,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,19,0,0
+1762706124498,12,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-6,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,12,0,0
+1762706124508,24,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-3,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,24,0,1
+1762706124797,89,01 - User Login,200,OK,View Category Load Test Thread Group 1-27,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,89,0,0
+1762706124885,9,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-7,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,9,0,0
+1762706124956,10,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-10,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,9,0,0
+1762706125110,11,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-19,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,11,0,0
+1762706125246,21,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-25,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,21,0,0
+1762706125262,7,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-24,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,7,0,0
+1762706125338,13,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-4,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,13,0,2
+1762706125383,7,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-21,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,7,0,0
+1762706125456,7,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-17,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,7,0,0
+1762706125504,60,01 - User Login,200,OK,View Category Load Test Thread Group 1-29,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,60,0,0
+1762706125990,11,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-12,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user12_category,11,0,0
+1762706126374,15,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-26,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,15,0,0
+1762706126455,10,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-13,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user13_category,10,0,0
+1762706126488,10,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-5,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,10,0,0
+1762706126627,9,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-23,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,9,0,0
+1762706126636,9,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-16,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user16_category,9,0,0
+1762706126806,13,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-9,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,13,0,0
+1762706126997,81,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-20,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,77,0,0
+1762706127268,13,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-11,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user11_category,13,0,0
+1762706127334,53,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-22,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,48,0,0
+1762706127367,24,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-28,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,24,0,0
+1762706127387,8,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-7,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,8,0,0
+1762706127413,80,01 - User Login,200,OK,View Category Load Test Thread Group 1-30,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,80,0,0
+1762706127583,11,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-8,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,11,0,0
+1762706127851,90,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-21,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,85,0,0
+1762706128028,9,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-18,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,9,0,0
+1762706128202,8,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-2,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,8,0,0
+1762706128327,10,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-15,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user15_category,10,0,0
+1762706128407,16,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-3,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,16,0,0
+1762706128442,9,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-14,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user14_category,9,0,0
+1762706128442,73,01 - User Login,200,OK,View Category Load Test Thread Group 1-1,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,73,0,0
+1762706128638,7,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-10,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,7,0,0
+1762706128692,8,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-19,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user19_category,8,0,0
+1762706128804,9,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-24,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,9,0,0
+1762706128843,7,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-26,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,7,0,0
+1762706128988,17,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-4,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,17,0,0
+1762706129069,32,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-13,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,32,0,0
+1762706129160,77,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-25,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,72,0,0
+1762706129353,12,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-6,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,12,0,2
+1762706129412,10,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-27,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,10,0,0
+1762706129544,9,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-17,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user17_category,9,0,0
+1762706129547,7,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-29,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,7,0,0
+1762706129804,13,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-12,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,13,0,0
+1762706129810,53,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-23,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,48,0,0
+1762706130153,13,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-22,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,13,0,0
+1762706130194,24,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-5,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,24,0,0
+1762706130400,13,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-16,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,13,0,0
+1762706130871,21,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-9,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,21,0,0
+1762706131061,30,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-30,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,30,0,0
+1762706131118,10,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-20,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,10,0,0
+1762706131376,18,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-11,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,18,0,1
+1762706131599,13,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-21,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,13,0,0
+1762706131857,12,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-18,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user18_category,12,0,0
+1762706131908,95,01 - User Login,200,OK,View Category Load Test Thread Group 1-3,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,95,0,0
+1762706132010,10,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-8,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,10,0,1
+1762706132040,16,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-2,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,16,0,0
+1762706132049,10,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-15,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,10,0,0
+1762706132095,9,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-14,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,9,0,0
+1762706132104,13,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-7,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,13,0,0
+1762706132230,12,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-28,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,12,0,0
+1762706132327,17,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-10,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,17,0,0
+1762706132368,11,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-1,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,11,0,2
+1762706132418,16,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-17,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,16,0,0
+1762706132519,16,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-27,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,16,0,0
+1762706132517,101,01 - User Login,200,OK,View Category Load Test Thread Group 1-4,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,101,0,0
+1762706132678,9,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-13,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,9,0,0
+1762706132666,69,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-26,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,66,0,0
+1762706132739,8,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-29,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,8,0,0
+1762706132784,75,01 - User Login,200,OK,View Category Load Test Thread Group 1-5,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,75,0,0
+1762706133222,59,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-24,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,54,0,0
+1762706133364,16,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-6,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,16,0,0
+1762706133387,12,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-19,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,12,0,0
+1762706133429,12,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-25,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,12,0,0
+1762706133834,15,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-23,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,15,0,0
+1762706134053,30,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-12,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,30,0,2
+1762706134181,10,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-30,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,10,0,0
+1762706134756,13,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-22,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user22_category,13,0,0
+1762706134831,14,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-11,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,14,0,0
+1762706134823,31,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-8,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,31,0,0
+1762706134817,82,01 - User Login,200,OK,View Category Load Test Thread Group 1-7,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,82,0,0
+1762706134989,17,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-15,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,17,0,0
+1762706135186,63,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-29,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,59,0,0
+1762706135285,13,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-9,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,13,0,0
+1762706135315,6,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-21,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user21_category,6,0,0
+1762706135372,11,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-16,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,11,0,0
+1762706135408,9,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-20,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user20_category,9,0,0
+1762706135498,59,01 - User Login,200,OK,View Category Load Test Thread Group 1-2,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,59,0,0
+1762706135595,7,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-17,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,7,0,0
+1762706135753,12,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-18,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,12,0,0
+1762706135971,28,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-1,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,28,0,0
+1762706135993,11,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-19,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,11,0,0
+1762706136024,9,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-26,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,9,0,0
+1762706136171,14,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-14,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,14,0,0
+1762706136242,10,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-4,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,10,0,0
+1762706136368,9,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-3,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,9,0,0
+1762706136456,17,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-13,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,17,0,0
+1762706136506,10,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-5,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,10,0,0
+1762706136600,92,01 - User Login,200,OK,View Category Load Test Thread Group 1-6,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,92,0,0
+1762706136680,56,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-27,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,52,0,0
+1762706136830,42,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-28,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,38,0,0
+1762706137448,14,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-12,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,14,0,0
+1762706137442,87,01 - User Login,200,OK,View Category Load Test Thread Group 1-10,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,87,0,1
+1762706137539,7,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-25,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user25_category,7,0,0
+1762706137660,8,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-23,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user23_category,8,0,0
+1762706138136,9,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-21,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,9,0,0
+1762706138232,9,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-24,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,9,0,0
+1762706138435,70,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-30,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,66,0,0
+1762706138565,18,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-15,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,18,0,1
+1762706138643,19,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-16,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,19,0,1
+1762706138675,9,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-3,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,9,0,0
+1762706138767,20,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-17,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,20,0,2
+1762706138788,8,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-18,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,8,0,1
+1762706138870,19,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-11,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,19,0,0
+1762706139130,86,01 - User Login,200,OK,View Category Load Test Thread Group 1-9,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,86,0,0
+1762706139242,19,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-19,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,19,0,1
+1762706139254,13,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-22,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,13,0,0
+1762706139267,8,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-2,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,8,0,0
+1762706139382,12,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-26,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user26_category,12,0,0
+1762706139581,9,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-7,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,9,0,0
+1762706139604,9,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-29,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,9,0,0
+1762706139637,11,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-27,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,11,0,0
+1762706139682,9,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-4,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,9,0,0
+1762706139687,86,01 - User Login,200,OK,View Category Load Test Thread Group 1-13,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,86,0,0
+1762706139727,65,01 - User Login,200,OK,View Category Load Test Thread Group 1-8,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,65,0,0
+1762706139934,14,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-14,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,14,0,0
+1762706140099,15,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-20,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,14,0,0
+1762706140084,73,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-1,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,68,0,0
+1762706140537,10,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-6,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,10,0,0
+1762706140674,7,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-5,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,7,0,0
+1762706140987,15,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-28,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,15,0,0
+1762706141155,92,01 - User Login,200,OK,View Category Load Test Thread Group 1-12,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,92,0,0
+1762706141596,68,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-3,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,63,0,0
+1762706142124,10,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-21,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,10,0,0
+1762706142158,11,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-25,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,11,0,0
+1762706142169,6,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-9,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,6,0,0
+1762706142134,82,01 - User Login,200,OK,View Category Load Test Thread Group 1-16,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,82,0,0
+1762706142139,80,01 - User Login,200,OK,View Category Load Test Thread Group 1-11,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,80,0,0
+1762706142226,8,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-7,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,8,0,0
+1762706142302,8,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-23,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,8,0,0
+1762706142570,12,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-2,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,12,0,0
+1762706142585,8,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-24,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user24_category,8,0,0
+1762706142583,91,01 - User Login,200,OK,View Category Load Test Thread Group 1-17,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,91,0,0
+1762706142629,68,01 - User Login,200,OK,View Category Load Test Thread Group 1-19,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,68,0,0
+1762706142792,6,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-27,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user27_category,6,0,0
+1762706142842,8,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-10,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,8,0,1
+1762706142895,11,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-26,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,10,0,0
+1762706143068,6,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-8,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,6,0,0
+1762706143016,93,01 - User Login,200,OK,View Category Load Test Thread Group 1-15,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,93,0,0
+1762706143211,9,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-29,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user29_category,9,0,0
+1762706143281,11,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-13,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,11,0,2
+1762706143286,10,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-30,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,10,0,0
+1762706143302,10,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-22,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,10,0,0
+1762706143341,22,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-18,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,22,0,0
+1762706143408,93,01 - User Login,200,OK,View Category Load Test Thread Group 1-14,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,92,0,0
+1762706143832,12,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-1,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,12,0,0
+1762706143886,11,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-20,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,11,0,2
+1762706143921,77,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-4,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,72,0,0
+1762706144651,15,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-11,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,15,0,0
+1762706144884,21,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-12,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,21,0,0
+1762706144858,84,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-5,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,80,0,0
+1762706145285,10,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-6,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,10,0,0
+1762706145425,13,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-17,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,13,0,0
+1762706145445,7,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-23,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,7,0,0
+1762706145455,13,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-28,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user28_category,13,0,0
+1762706145519,7,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-16,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,7,0,0
+1762706145708,14,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-24,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,14,0,0
+1762706146007,61,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-7,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,57,0,0
+1762706146063,15,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-9,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,15,0,0
+1762706146081,25,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-10,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,25,0,0
+1762706146039,68,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-2,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,65,0,0
+1762706146259,15,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-25,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,15,0,0
+1762706146293,7,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-3,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,7,0,0
+1762706146403,31,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-21,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,31,0,0
+1762706146654,12,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-15,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,12,0,0
+1762706146829,10,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-14,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,10,0,0
+1762706146876,14,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-27,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,14,0,0
+1762706146966,11,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-29,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,11,0,0
+1762706146892,88,01 - User Login,200,OK,View Category Load Test Thread Group 1-18,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,88,0,0
+1762706147058,7,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-26,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,7,0,1
+1762706147066,6,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-8,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,6,0,0
+1762706147459,17,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-13,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,17,0,0
+1762706147640,12,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-19,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,12,0,0
+1762706147906,10,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-30,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user30_category,10,0,0
+1762706147969,19,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-22,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,19,0,0
+1762706148137,8,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-12,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,8,0,0
+1762706148131,14,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-16,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,14,0,0
+1762706148238,7,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-5,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,7,0,0
+1762706148379,9,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-4,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,9,0,0
+1762706148438,31,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-23,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,31,0,0
+1762706148489,10,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-17,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,10,0,0
+1762706148542,11,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-7,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,11,0,0
+1762706148685,10,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-24,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,10,0,0
+1762706148713,28,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-20,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,28,0,0
+1762706148845,12,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-1,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,12,0,2
+1762706149042,84,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-6,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,79,0,0
+1762706149287,23,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-25,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,23,0,0
+1762706149412,63,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-9,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,59,0,0
+1762706149454,24,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-2,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,24,0,0
+1762706149587,14,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-28,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,14,0,1
+1762706149781,11,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-11,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,11,0,2
+1762706150437,15,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-26,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,15,0,0
+1762706150475,9,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-27,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,9,0,1
+1762706150543,9,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-29,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,9,0,0
+1762706150583,7,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-3,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,7,0,0
+1762706150678,55,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-10,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,53,0,0
+1762706150690,88,01 - User Login,200,OK,View Category Load Test Thread Group 1-21,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,88,0,0
+1762706150863,76,01 - User Login,200,OK,View Category Load Test Thread Group 1-22,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,76,0,0
+1762706151113,12,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-14,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,12,0,0
+1762706151167,59,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-8,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,54,0,0
+1762706151240,9,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-30,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,9,0,0
+1762706151302,9,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-19,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,9,0,0
+1762706151310,9,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-18,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,9,0,0
+1762706151357,13,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-15,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,13,0,0
+1762706151521,9,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-4,text,true,,344,242,30,30,http://localhost:6060/api/v1/category/single-category/user4_category,9,0,0
+1762706151731,54,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-12,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,50,0,0
+1762706151779,10,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-1,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,10,0,0
+1762706151896,41,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-5,text,true,,344,242,30,30,http://localhost:6060/api/v1/category/single-category/user5_category,41,0,0
+1762706151877,65,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-17,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,60,0,0
+1762706152033,9,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-2,text,true,,419,236,30,30,http://localhost:6060/api/v1/category/single-category/clothing,9,0,0
+1762706152061,69,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-16,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,65,0,0
+1762706152147,8,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-7,text,true,,344,242,30,30,http://localhost:6060/api/v1/category/single-category/user7_category,8,0,0
+1762706152243,58,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-13,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,53,0,0
+1762706152273,96,01 - User Login,200,OK,View Category Load Test Thread Group 1-25,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,96,0,0
+1762706152293,76,01 - User Login,200,OK,View Category Load Test Thread Group 1-23,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,76,0,0
+1762706152442,71,01 - User Login,200,OK,View Category Load Test Thread Group 1-20,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,71,0,0
+1762706153066,54,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-9,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,54,0,0
+1762706153121,15,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-6,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,15,0,0
+1762706153070,66,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-24,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,66,0,0
+1762706153390,19,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-3,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,19,0,0
+1762706153526,13,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-28,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,13,0,0
+1762706153515,73,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-11,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,68,0,0
+1762706153811,12,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-22,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,12,0,0
+1762706153844,54,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-19,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,49,0,0
+1762706153943,9,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-4,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,9,0,0
+1762706154143,50,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-14,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,48,0,0
+1762706154394,15,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-21,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,15,0,0
+1762706154533,19,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-29,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,19,0,0
+1762706154589,16,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-7,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,16,0,0
+1762706154753,30,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-27,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,30,0,0
+1762706154866,7,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-30,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,7,0,0
+1762706154794,89,01 - User Login,200,OK,View Category Load Test Thread Group 1-26,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,89,0,0
+1762706155091,10,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-10,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,10,0,0
+1762706155334,10,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-17,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,10,0,0
+1762706155331,14,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-5,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,14,0,0
+1762706155395,7,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-1,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,7,0,0
+1762706155500,6,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-16,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,6,0,0
+1762706155516,21,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-2,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,21,0,0
+1762706155697,65,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-15,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,60,0,0
+1762706155751,22,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-8,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,22,0,0
+1762706155816,8,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-18,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,8,0,0
+1762706155855,8,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-20,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,8,0,0
+1762706155935,9,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-9,text,true,,344,242,30,30,http://localhost:6060/api/v1/category/single-category/user9_category,9,0,0
+1762706156126,11,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-13,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,11,0,0
+1762706156389,15,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-3,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,15,0,0
+1762706156444,9,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-12,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,9,0,0
+1762706156617,8,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-11,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,8,0,0
+1762706156639,7,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-6,text,true,,344,242,30,30,http://localhost:6060/api/v1/category/single-category/user6_category,7,0,0
+1762706156729,9,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-23,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,9,0,0
+1762706156830,11,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-4,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,11,0,0
+1762706157045,9,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-14,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,9,0,0
+1762706157068,16,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-25,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,16,0,0
+1762706157515,14,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-17,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user17_category,14,0,0
+1762706157680,10,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-22,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,10,0,0
+1762706157726,8,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-19,text,true,,411,232,30,30,http://localhost:6060/api/v1/category/single-category/book,8,0,0
+1762706157784,32,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-28,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,32,0,0
+1762706157821,8,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-7,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,8,0,0
+1762706157844,93,01 - User Login,200,OK,View Category Load Test Thread Group 1-24,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,93,0,0
+1762706158643,7,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-26,text,true,,1357,224,30,30,http://localhost:6060/api/v1/category/get-category,7,0,0
+1762706158650,6,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-2,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,6,0,0
+1762706158560,100,01 - User Login,200,OK,View Category Load Test Thread Group 1-29,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,100,0,0
+1762706158878,21,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-30,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,21,0,0
+1762706159124,13,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-12,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user12_category,13,0,0
+1762706159179,11,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-5,text,true,,557,221,30,30,http://localhost:6060/api/v1/product/search/NUS,11,0,0
+1762706159338,10,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-20,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,10,0,0
+1762706159427,14,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-9,text,true,,19249,310,30,30,http://localhost:6060/api/v1/product/product-filters,14,0,0
+1762706159464,76,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-18,text,true,,1376560,310,30,30,http://localhost:6060/api/v1/product/product-filters,73,0,0
+1762706159524,20,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-16,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user16_category,20,0,0
+1762706159577,8,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-21,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,8,0,1
+1762706159493,112,01 - User Login,200,OK,View Category Load Test Thread Group 1-27,text,true,,648,301,30,30,http://localhost:6060/api/v1/auth/login,112,0,0
+1762706159617,6,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-8,text,true,,344,242,30,30,http://localhost:6060/api/v1/category/single-category/user8_category,6,0,0
+1762706159660,5,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-11,text,true,,344,243,30,30,http://localhost:6060/api/v1/category/single-category/user11_category,5,0,0
+1762706159729,16,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-25,text,true,,425,239,30,30,http://localhost:6060/api/v1/category/single-category/electronics,16,0,0
+1762706159778,15,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-4,text,true,,669,233,30,30,http://localhost:6060/api/v1/product/get-product/nus-tshirt,15,0,0
+1762706159821,17,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-1,text,true,,669,233,29,29,http://localhost:6060/api/v1/product/get-product/nus-tshirt,17,0,0
+1762706159922,9,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-10,text,true,,344,243,28,28,http://localhost:6060/api/v1/category/single-category/user10_category,9,0,0
+1762706160020,10,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-13,text,true,,344,243,28,28,http://localhost:6060/api/v1/category/single-category/user13_category,9,0,0
+1762706160109,9,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-14,text,true,,344,243,28,28,http://localhost:6060/api/v1/category/single-category/user14_category,9,0,0
+1762706160177,13,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-6,text,true,,19249,310,28,28,http://localhost:6060/api/v1/product/product-filters,13,0,0
+1762706160441,8,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-15,text,true,,411,232,28,28,http://localhost:6060/api/v1/category/single-category/book,8,0,0
+1762706160619,11,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-3,text,true,,669,233,28,28,http://localhost:6060/api/v1/product/get-product/nus-tshirt,11,0,0
+1762706160886,9,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-23,text,true,,425,239,27,27,http://localhost:6060/api/v1/category/single-category/electronics,9,0,0
+1762706160994,13,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-17,text,true,,19249,310,27,27,http://localhost:6060/api/v1/product/product-filters,13,0,0
+1762706161080,65,01 - User Login,200,OK,View Category Load Test Thread Group 1-28,text,true,,648,301,27,27,http://localhost:6060/api/v1/auth/login,65,0,0
+1762706161140,7,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-24,text,true,,1357,224,27,27,http://localhost:6060/api/v1/category/get-category,7,0,0
+1762706161377,11,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-19,text,true,,344,243,27,27,http://localhost:6060/api/v1/category/single-category/user19_category,11,0,0
+1762706161511,77,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-22,text,true,,1376560,310,27,27,http://localhost:6060/api/v1/product/product-filters,72,0,0
+1762706161824,16,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-2,text,true,,669,233,27,27,http://localhost:6060/api/v1/product/get-product/nus-tshirt,16,0,2
+1762706162003,60,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-25,text,true,,1376560,310,26,26,http://localhost:6060/api/v1/product/product-filters,56,0,0
+1762706162255,58,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-20,text,true,,1376560,310,26,26,http://localhost:6060/api/v1/product/product-filters,53,0,0
+1762706162507,14,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-29,text,true,,1357,224,26,26,http://localhost:6060/api/v1/category/get-category,14,0,1
+1762706162554,11,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-13,text,true,,19249,310,26,26,http://localhost:6060/api/v1/product/product-filters,11,0,0
+1762706162519,92,01 - User Login,200,OK,View Category Load Test Thread Group 1-30,text,true,,648,301,26,26,http://localhost:6060/api/v1/auth/login,92,0,1
+1762706162670,17,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-5,text,true,,669,233,26,26,http://localhost:6060/api/v1/product/get-product/nus-tshirt,16,0,0
+1762706162709,15,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-8,text,true,,19249,310,25,25,http://localhost:6060/api/v1/product/product-filters,15,0,0
+1762706162787,15,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-7,text,true,,669,233,25,25,http://localhost:6060/api/v1/product/get-product/nus-tshirt,15,0,0
+1762706163045,8,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-26,text,true,,425,239,24,24,http://localhost:6060/api/v1/category/single-category/electronics,8,0,0
+1762706163092,11,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-12,text,true,,19249,310,24,24,http://localhost:6060/api/v1/product/product-filters,11,0,0
+1762706163259,10,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-14,text,true,,19249,310,24,24,http://localhost:6060/api/v1/product/product-filters,10,0,0
+1762706163401,10,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-6,text,true,,557,221,24,24,http://localhost:6060/api/v1/product/search/NUS,10,0,0
+1762706163443,11,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-9,text,true,,557,221,24,24,http://localhost:6060/api/v1/product/search/NUS,11,0,0
+1762706163564,11,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-15,text,true,,344,243,24,24,http://localhost:6060/api/v1/category/single-category/user15_category,11,0,0
+1762706163554,62,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-21,text,true,,1376560,310,24,24,http://localhost:6060/api/v1/product/product-filters,57,0,0
+1762706163641,10,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-10,text,true,,19249,310,24,24,http://localhost:6060/api/v1/product/product-filters,10,0,0
+1762706163973,24,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-27,text,true,,1357,224,24,24,http://localhost:6060/api/v1/category/get-category,24,0,0
+1762706164177,14,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-16,text,true,,19249,310,24,24,http://localhost:6060/api/v1/product/product-filters,14,0,0
+1762706164257,10,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-17,text,true,,557,221,24,24,http://localhost:6060/api/v1/product/search/NUS,10,0,0
+1762706164305,10,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-18,text,true,,411,232,24,24,http://localhost:6060/api/v1/category/single-category/book,10,0,0
+1762706164721,13,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-24,text,true,,425,239,24,24,http://localhost:6060/api/v1/category/single-category/electronics,13,0,0
+1762706164729,8,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-22,text,true,,411,232,24,24,http://localhost:6060/api/v1/category/single-category/book,8,0,0
+1762706165042,10,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-28,text,true,,1357,224,24,24,http://localhost:6060/api/v1/category/get-category,10,0,0
+1762706165035,19,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-11,text,true,,19249,310,24,24,http://localhost:6060/api/v1/product/product-filters,19,0,2
+1762706165440,14,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-19,text,true,,19249,310,24,24,http://localhost:6060/api/v1/product/product-filters,14,0,0
+1762706165703,83,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-23,text,true,,1376560,310,24,24,http://localhost:6060/api/v1/product/product-filters,79,0,0
+1762706165931,11,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-25,text,true,,411,232,24,24,http://localhost:6060/api/v1/category/single-category/book,11,0,0
+1762706166046,9,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-8,text,true,,557,221,24,24,http://localhost:6060/api/v1/product/search/NUS,9,0,0
+1762706166076,7,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-12,text,true,,557,221,24,24,http://localhost:6060/api/v1/product/search/NUS,7,0,0
+1762706166216,8,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-29,text,true,,425,239,24,24,http://localhost:6060/api/v1/category/single-category/electronics,8,0,0
+1762706166501,22,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-9,text,true,,669,233,24,24,http://localhost:6060/api/v1/product/get-product/nus-tshirt,22,0,0
+1762706166533,9,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-13,text,true,,557,221,23,23,http://localhost:6060/api/v1/product/search/NUS,9,0,0
+1762706166631,36,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-6,text,true,,669,233,23,23,http://localhost:6060/api/v1/product/get-product/nus-tshirt,35,0,0
+1762706167009,15,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-20,text,true,,411,232,22,22,http://localhost:6060/api/v1/category/single-category/book,15,0,0
+1762706167009,15,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-10,text,true,,557,221,22,22,http://localhost:6060/api/v1/product/search/NUS,15,0,0
+1762706167082,85,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-26,text,true,,1376560,310,22,22,http://localhost:6060/api/v1/product/product-filters,80,0,0
+1762706167340,12,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-16,text,true,,557,221,22,22,http://localhost:6060/api/v1/product/search/NUS,12,0,0
+1762706167425,10,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-14,text,true,,557,221,22,22,http://localhost:6060/api/v1/product/search/NUS,10,0,0
+1762706167502,15,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-15,text,true,,19249,310,22,22,http://localhost:6060/api/v1/product/product-filters,15,0,0
+1762706167824,11,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-27,text,true,,425,239,22,22,http://localhost:6060/api/v1/category/single-category/electronics,11,0,0
+1762706167926,10,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-22,text,true,,344,243,22,22,http://localhost:6060/api/v1/category/single-category/user22_category,10,0,0
+1762706167920,16,02 - Get All Categories,200,OK,View Category Load Test Thread Group 1-30,text,true,,1357,224,22,22,http://localhost:6060/api/v1/category/get-category,16,0,2
+1762706168267,8,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-28,text,true,,425,239,22,22,http://localhost:6060/api/v1/category/single-category/electronics,8,0,0
+1762706168463,17,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-19,text,true,,557,221,22,22,http://localhost:6060/api/v1/product/search/NUS,17,0,0
+1762706168485,8,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-18,text,true,,344,243,22,22,http://localhost:6060/api/v1/category/single-category/user18_category,8,0,0
+1762706168559,8,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-25,text,true,,344,243,22,22,http://localhost:6060/api/v1/category/single-category/user25_category,8,0,0
+1762706168582,40,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-21,text,true,,411,232,22,22,http://localhost:6060/api/v1/category/single-category/book,40,0,0
+1762706168541,81,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-24,text,true,,1376560,310,22,22,http://localhost:6060/api/v1/product/product-filters,79,0,0
+1762706168950,47,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-17,text,true,,669,233,22,22,http://localhost:6060/api/v1/product/get-product/nus-tshirt,47,0,0
+1762706168954,48,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-29,text,true,,1376560,310,21,21,http://localhost:6060/api/v1/product/product-filters,42,0,0
+1762706169152,17,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-8,text,true,,669,233,21,21,http://localhost:6060/api/v1/product/get-product/nus-tshirt,17,0,0
+1762706169199,20,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-11,text,true,,557,221,20,20,http://localhost:6060/api/v1/product/search/NUS,20,0,0
+1762706169761,14,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-26,text,true,,411,232,20,20,http://localhost:6060/api/v1/category/single-category/book,14,0,0
+1762706169851,18,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-12,text,true,,669,233,20,20,http://localhost:6060/api/v1/product/get-product/nus-tshirt,18,0,0
+1762706169966,10,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-23,text,true,,411,232,19,19,http://localhost:6060/api/v1/category/single-category/book,10,0,0
+1762706170449,30,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-14,text,true,,669,233,19,19,http://localhost:6060/api/v1/product/get-product/nus-tshirt,30,0,1
+1762706170819,16,03 - View Category 1 Products,200,OK,View Category Load Test Thread Group 1-30,text,true,,425,239,18,18,http://localhost:6060/api/v1/category/single-category/electronics,16,0,0
+1762706170926,19,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-13,text,true,,669,233,18,18,http://localhost:6060/api/v1/product/get-product/nus-tshirt,19,0,0
+1762706171053,11,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-21,text,true,,344,243,17,17,http://localhost:6060/api/v1/category/single-category/user21_category,10,0,0
+1762706171078,9,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-20,text,true,,344,243,17,17,http://localhost:6060/api/v1/category/single-category/user20_category,9,0,0
+1762706171077,75,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-28,text,true,,1376560,310,17,17,http://localhost:6060/api/v1/product/product-filters,70,0,0
+1762706171212,51,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-27,text,true,,1376560,310,17,17,http://localhost:6060/api/v1/product/product-filters,46,0,0
+1762706171271,21,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-10,text,true,,669,233,17,17,http://localhost:6060/api/v1/product/get-product/nus-tshirt,21,0,0
+1762706171343,8,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-24,text,true,,411,232,16,16,http://localhost:6060/api/v1/category/single-category/book,8,0,0
+1762706171374,14,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-16,text,true,,669,233,16,16,http://localhost:6060/api/v1/product/get-product/nus-tshirt,14,0,0
+1762706171405,9,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-15,text,true,,557,221,15,15,http://localhost:6060/api/v1/product/search/NUS,9,0,0
+1762706171530,7,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-29,text,true,,411,232,15,15,http://localhost:6060/api/v1/category/single-category/book,7,0,0
+1762706171790,12,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-18,text,true,,19249,310,15,15,http://localhost:6060/api/v1/product/product-filters,12,0,0
+1762706171799,10,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-22,text,true,,19249,310,15,15,http://localhost:6060/api/v1/product/product-filters,10,0,0
+1762706172298,20,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-11,text,true,,669,233,15,15,http://localhost:6060/api/v1/product/get-product/nus-tshirt,20,0,0
+1762706172997,17,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-19,text,true,,669,233,14,14,http://localhost:6060/api/v1/product/get-product/nus-tshirt,17,0,0
+1762706173645,18,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-25,text,true,,19249,310,13,13,http://localhost:6060/api/v1/product/product-filters,18,0,2
+1762706173990,12,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-27,text,true,,411,232,13,13,http://localhost:6060/api/v1/category/single-category/book,12,0,0
+1762706174035,10,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-24,text,true,,344,243,13,13,http://localhost:6060/api/v1/category/single-category/user24_category,10,0,0
+1762706174305,66,04 - Filter Products by Category,200,OK,View Category Load Test Thread Group 1-30,text,true,,1376560,310,13,13,http://localhost:6060/api/v1/product/product-filters,61,0,0
+1762706174424,10,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-26,text,true,,344,243,13,13,http://localhost:6060/api/v1/category/single-category/user26_category,10,0,0
+1762706174425,11,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-20,text,true,,19249,310,13,13,http://localhost:6060/api/v1/product/product-filters,11,0,0
+1762706174649,11,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-23,text,true,,344,243,13,13,http://localhost:6060/api/v1/category/single-category/user23_category,11,0,3
+1762706174856,17,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-15,text,true,,669,233,13,13,http://localhost:6060/api/v1/product/get-product/nus-tshirt,17,0,0
+1762706175075,13,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-21,text,true,,19249,310,12,12,http://localhost:6060/api/v1/product/product-filters,13,0,0
+1762706175467,17,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-28,text,true,,411,232,12,12,http://localhost:6060/api/v1/category/single-category/book,17,0,0
+1762706175809,9,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-29,text,true,,344,243,12,12,http://localhost:6060/api/v1/category/single-category/user29_category,8,0,0
+1762706176157,13,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-22,text,true,,557,221,12,12,http://localhost:6060/api/v1/product/search/NUS,13,0,0
+1762706176392,15,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-18,text,true,,557,221,12,12,http://localhost:6060/api/v1/product/search/NUS,15,0,0
+1762706177293,10,05 - View Category 2 Products,200,OK,View Category Load Test Thread Group 1-30,text,true,,411,232,12,12,http://localhost:6060/api/v1/category/single-category/book,10,0,0
+1762706177515,15,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-23,text,true,,19249,310,12,12,http://localhost:6060/api/v1/product/product-filters,15,0,0
+1762706177569,10,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-27,text,true,,344,243,12,12,http://localhost:6060/api/v1/category/single-category/user27_category,10,0,0
+1762706177825,12,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-21,text,true,,557,221,12,12,http://localhost:6060/api/v1/product/search/NUS,12,0,0
+1762706178128,14,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-24,text,true,,19249,310,12,12,http://localhost:6060/api/v1/product/product-filters,14,0,0
+1762706178248,9,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-25,text,true,,557,221,12,12,http://localhost:6060/api/v1/product/search/NUS,9,0,0
+1762706178310,9,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-20,text,true,,557,221,12,12,http://localhost:6060/api/v1/product/search/NUS,9,0,0
+1762706178940,13,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-26,text,true,,19249,310,12,12,http://localhost:6060/api/v1/product/product-filters,13,0,0
+1762706178936,22,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-18,text,true,,669,233,12,12,http://localhost:6060/api/v1/product/get-product/nus-tshirt,22,0,0
+1762706178951,11,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-29,text,true,,19249,310,11,11,http://localhost:6060/api/v1/product/product-filters,11,0,0
+1762706179295,10,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-28,text,true,,344,243,11,11,http://localhost:6060/api/v1/category/single-category/user28_category,10,0,0
+1762706179331,17,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-22,text,true,,669,233,11,11,http://localhost:6060/api/v1/product/get-product/nus-tshirt,17,0,0
+1762706180252,11,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-23,text,true,,557,221,10,10,http://localhost:6060/api/v1/product/search/NUS,11,0,0
+1762706181196,26,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-24,text,true,,557,221,10,10,http://localhost:6060/api/v1/product/search/NUS,26,0,1
+1762706181538,23,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-21,text,true,,669,233,10,10,http://localhost:6060/api/v1/product/get-product/nus-tshirt,23,0,0
+1762706181573,8,06 - Browse Random Category Dropdown (3 Users: Electronics/Clothing/Book),200,OK,View Category Load Test Thread Group 1-30,text,true,,344,243,9,9,http://localhost:6060/api/v1/category/single-category/user30_category,8,0,0
+1762706181664,17,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-25,text,true,,669,233,9,9,http://localhost:6060/api/v1/product/get-product/nus-tshirt,17,0,0
+1762706181748,12,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-28,text,true,,19249,310,8,8,http://localhost:6060/api/v1/product/product-filters,12,0,0
+1762706181801,13,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-27,text,true,,19249,310,8,8,http://localhost:6060/api/v1/product/product-filters,13,0,0
+1762706182222,18,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-20,text,true,,669,233,8,8,http://localhost:6060/api/v1/product/get-product/nus-tshirt,18,0,0
+1762706182392,10,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-26,text,true,,557,221,7,7,http://localhost:6060/api/v1/product/search/NUS,10,0,0
+1762706182476,18,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-29,text,true,,557,221,7,7,http://localhost:6060/api/v1/product/search/NUS,18,0,0
+1762706183787,22,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-23,text,true,,669,233,7,7,http://localhost:6060/api/v1/product/get-product/nus-tshirt,22,0,0
+1762706185080,12,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-27,text,true,,557,221,6,6,http://localhost:6060/api/v1/product/search/NUS,12,0,0
+1762706185245,19,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-26,text,true,,669,233,6,6,http://localhost:6060/api/v1/product/get-product/nus-tshirt,19,0,0
+1762706186115,14,07 - Get Products in Clothing Category,200,OK,View Category Load Test Thread Group 1-30,text,true,,19249,310,5,5,http://localhost:6060/api/v1/product/product-filters,14,0,0
+1762706186317,19,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-29,text,true,,669,233,5,5,http://localhost:6060/api/v1/product/get-product/nus-tshirt,19,0,0
+1762706186418,19,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-24,text,true,,669,233,4,4,http://localhost:6060/api/v1/product/get-product/nus-tshirt,19,0,2
+1762706186844,23,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-28,text,true,,557,221,3,3,http://localhost:6060/api/v1/product/search/NUS,23,0,10
+1762706188382,20,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-27,text,true,,669,233,3,3,http://localhost:6060/api/v1/product/get-product/nus-tshirt,20,0,0
+1762706189613,14,08 - Search for NUS T-Shirt in Clothing,200,OK,View Category Load Test Thread Group 1-30,text,true,,557,221,2,2,http://localhost:6060/api/v1/product/search/NUS,14,0,0
+1762706191263,19,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-28,text,true,,669,233,2,2,http://localhost:6060/api/v1/product/get-product/nus-tshirt,19,0,0
+1762706192542,22,09 - View NUS T-Shirt Product Details,200,OK,View Category Load Test Thread Group 1-30,text,true,,669,233,1,1,http://localhost:6060/api/v1/product/get-product/nus-tshirt,22,0,0

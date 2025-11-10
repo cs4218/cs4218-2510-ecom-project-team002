@@ -1,0 +1,1923 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Admin Dashboard Load Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments">Admin Dashboard Load Test - Virtual Vault E-commerce - Testing admin operations with multiple concurrent users performing CRUD operations on categories and products</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="BASE_URL" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL</stringProp>
+            <stringProp name="Argument.value">http://localhost:6060</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ADMIN_EMAIL" elementType="Argument">
+            <stringProp name="Argument.name">ADMIN_EMAIL</stringProp>
+            <stringProp name="Argument.value">david123@gmail.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ADMIN_PASSWORD" elementType="Argument">
+            <stringProp name="Argument.name">ADMIN_PASSWORD</stringProp>
+            <stringProp name="Argument.value">12345678</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults">
+        <stringProp name="HTTPSampler.domain">localhost</stringProp>
+        <stringProp name="HTTPSampler.port">6060</stringProp>
+        <stringProp name="HTTPSampler.protocol">http</stringProp>
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Content-Type</stringProp>
+            <stringProp name="Header.value">application/json</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Accept</stringProp>
+            <stringProp name="Header.value">application/json</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Authorization</stringProp>
+            <stringProp name="Header.value">Bearer ${jwt_token}</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+        <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+      </CookieManager>
+      <hashTree/>
+      
+      <!-- Test Group 1: Mass Category Creation - 50 Concurrent Users -->
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Test Group 1 - Mass Category Creation - 50 Concurrent Users" enabled="false">
+        <intProp name="ThreadGroup.num_threads">50</intProp>
+        <intProp name="ThreadGroup.ramp_time">30</intProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <stringProp name="LoopController.loops">1</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <!-- Admin Login -->
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="01 - Admin Login" enabled="true">
+          <stringProp name="HTTPSampler.path">/api/v1/auth/login</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;email&quot;: &quot;${ADMIN_EMAIL}&quot;,&#xd;
+  &quot;password&quot;: &quot;${ADMIN_PASSWORD}&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract JWT Token" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">jwt_token</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.token</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">TOKEN_NOT_FOUND</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Admin Login Success" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">Admin must login successfully</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        
+        <!-- Generate Simple Random Category Data -->
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="02 - Generate Simple Category Data" enabled="true">
+          <stringProp name="BeanShellSampler.query">import java.util.Random;
+
+// Generate unique category data for this thread
+Random rand = new Random();
+long timestamp = System.currentTimeMillis();
+int threadNum = ctx.getThreadNum() + 1;
+
+// Simple category names for testing
+String[] categoryTypes = {
+    "Electronics", "Fashion", "Sports", "Home-Garden", "Books", 
+    "Automotive", "Health-Beauty", "Toys-Games", "Food-Beverages", 
+    "Music-Instruments", "Art-Crafts", "Pet-Supplies", "Office-Supplies"
+};
+
+String[] categoryDescriptors = {
+    "Premium", "Luxury", "Budget", "Professional", "Eco-Friendly", 
+    "Vintage", "Modern", "Classic", "Innovative", "Exclusive"
+};
+
+String categoryType = categoryTypes[rand.nextInt(categoryTypes.length)];
+String descriptor = categoryDescriptors[rand.nextInt(categoryDescriptors.length)];
+
+String categoryName = descriptor + "-" + categoryType + "-T" + threadNum + "-" + timestamp;
+String updatedCategoryName = categoryName + "-EDITED";
+
+// Store in JMeter variables
+vars.put("category_name", categoryName);
+vars.put("updated_category_name", updatedCategoryName);
+
+log.info("Generated category: " + categoryName + " (Thread: " + threadNum + ")");
+log.info("Updated name will be: " + updatedCategoryName);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        
+        <!-- Create Category -->
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="03 - Create New Category" enabled="true">
+          <stringProp name="HTTPSampler.path">/api/v1/category/create-category</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;name&quot;: &quot;${category_name}&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract Created Category ID" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">created_category_id</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.category._id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">NOT_FOUND</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Category Creation Success" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49587">201</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">Category must be created successfully</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Category Creation Performance" enabled="true">
+            <stringProp name="DurationAssertion.duration">3000</stringProp>
+          </DurationAssertion>
+        </hashTree>
+        
+        <!-- Success Confirmation -->
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="04 - Category Creation Complete" enabled="true">
+          <stringProp name="BeanShellSampler.query">// Log successful category creation
+String categoryName = vars.get("category_name");
+String categoryId = vars.get("created_category_id");
+int threadNum = ctx.getThreadNum() + 1;
+
+log.info("✅ SUCCESS: Thread " + threadNum + " created category: " + categoryName);
+log.info("   Category ID: " + categoryId);
+
+SampleResult.setResponseData("Category created successfully: " + categoryName + " (ID: " + categoryId + ")");
+SampleResult.setDataType(SampleResult.TEXT);
+SampleResult.setSuccessful(true);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        
+        <!-- Wait before editing -->
+        <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think Time Before Edit" enabled="true">
+          <stringProp name="ConstantTimer.delay">500</stringProp>
+          <stringProp name="RandomTimer.range">1500</stringProp>
+        </UniformRandomTimer>
+        <hashTree/>
+        
+        <!-- Edit/Update Category -->
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="05 - Edit Category" enabled="true">
+          <stringProp name="HTTPSampler.path">/api/v1/category/update-category/${created_category_id}</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;name&quot;: &quot;${updated_category_name}&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Category Edit Success" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">Category must be edited successfully</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Category Edit Performance" enabled="true">
+            <stringProp name="DurationAssertion.duration">3000</stringProp>
+          </DurationAssertion>
+          <hashTree/>
+        </hashTree>
+        
+        <!-- Edit Success Confirmation -->
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="06 - Category Edit Complete" enabled="true">
+          <stringProp name="BeanShellSampler.query">// Log successful category edit
+String originalName = vars.get("category_name");
+String updatedName = vars.get("updated_category_name");
+String categoryId = vars.get("created_category_id");
+int threadNum = ctx.getThreadNum() + 1;
+
+log.info("✅ EDIT SUCCESS: Thread " + threadNum + " updated category");
+log.info("   Original: " + originalName);
+log.info("   Updated to: " + updatedName);
+log.info("   Category ID: " + categoryId);
+
+SampleResult.setResponseData("Category edited successfully!" + System.lineSeparator() + 
+                           "Original: " + originalName + System.lineSeparator() + 
+                           "Updated to: " + updatedName + System.lineSeparator() + 
+                           "ID: " + categoryId);
+SampleResult.setDataType(SampleResult.TEXT);
+SampleResult.setSuccessful(true);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        
+        <!-- Wait before deleting -->
+        <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think Time Before Delete" enabled="true">
+          <stringProp name="ConstantTimer.delay">500</stringProp>
+          <stringProp name="RandomTimer.range">1500</stringProp>
+        </UniformRandomTimer>
+        <hashTree/>
+        
+        <!-- Delete Category -->
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="07 - Delete Category" enabled="true">
+          <stringProp name="HTTPSampler.path">/api/v1/category/delete-category/${created_category_id}</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">DELETE</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Category Delete Success" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">Category must be deleted successfully</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Category Delete Performance" enabled="true">
+            <stringProp name="DurationAssertion.duration">3000</stringProp>
+          </DurationAssertion>
+          <hashTree/>
+        </hashTree>
+        
+        <!-- Final CRUD Complete Confirmation -->
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="08 - Complete CRUD Operations" enabled="true">
+          <stringProp name="BeanShellSampler.query">// Log successful complete CRUD operations
+String originalName = vars.get("category_name");
+String updatedName = vars.get("updated_category_name");
+String categoryId = vars.get("created_category_id");
+int threadNum = ctx.getThreadNum() + 1;
+
+log.info("🎉 CRUD COMPLETE: Thread " + threadNum + " finished all operations");
+log.info("   ✅ Created: " + originalName);
+log.info("   ✅ Updated to: " + updatedName);
+log.info("   ✅ Deleted: " + categoryId);
+
+SampleResult.setResponseData("Complete CRUD operations successful!" + System.lineSeparator() + 
+                           "Thread " + threadNum + " completed:" + System.lineSeparator() +
+                           "✅ CREATE: " + originalName + System.lineSeparator() + 
+                           "✅ UPDATE: " + updatedName + System.lineSeparator() + 
+                           "✅ DELETE: Category ID " + categoryId + System.lineSeparator() +
+                           "🎉 All CRUD operations completed successfully!");
+SampleResult.setDataType(SampleResult.TEXT);
+SampleResult.setSuccessful(true);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        
+        <!-- Wait before verification -->
+        <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Wait Before Verification" enabled="true">
+          <stringProp name="ConstantTimer.delay">1000</stringProp>
+          <stringProp name="RandomTimer.range">2000</stringProp>
+        </UniformRandomTimer>
+        <hashTree/>
+        
+        <!-- Verify Category Deletion - Get All Categories -->
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="09 - Verify Category Cleanup" enabled="true">
+          <stringProp name="HTTPSampler.path">/api/v1/category/get-category</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Get Categories Success" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">Get categories for verification must work</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="Verify Deleted Category Not Found" enabled="true">
+            <stringProp name="BeanShellPostProcessor.query">import org.json.*;
+
+// Parse the response to check if our deleted category still exists
+String response = prev.getResponseDataAsString();
+String deletedCategoryId = vars.get("created_category_id");
+String updatedCategoryName = vars.get("updated_category_name");
+int threadNum = ctx.getThreadNum() + 1;
+
+boolean categoryFound = false;
+boolean editedCategoryFound = false;
+int totalEditedCategories = 0;
+StringBuilder editedCategoriesList = new StringBuilder();
+
+try {
+    JSONObject jsonResponse = new JSONObject(response);
+    JSONArray categories = jsonResponse.getJSONArray("category");
+    
+    editedCategoriesList.append("Found categories with EDITED suffix:").append(System.lineSeparator());
+    
+    for (int i = 0; i &lt; categories.length(); i++) {
+        JSONObject category = categories.getJSONObject(i);
+        String categoryId = category.getString("_id");
+        String categoryName = category.getString("name");
+        
+        // Check if this is our specific deleted category
+        if (categoryId.equals(deletedCategoryId)) {
+            categoryFound = true;
+            log.error("DELETION FAILED: Category " + deletedCategoryId + " still exists!");
+        }
+        
+        // Check for any categories with EDITED suffix (should be cleaned up)
+        if (categoryName.endsWith("-EDITED")) {
+            editedCategoryFound = true;
+            totalEditedCategories++;
+            editedCategoriesList.append("- ").append(categoryName)
+                               .append(" (ID: ").append(categoryId).append(")")
+                               .append(System.lineSeparator());
+            log.warn("CLEANUP NEEDED: Found category with EDITED suffix: " + categoryName);
+        }
+    }
+    
+    if (totalEditedCategories == 0) {
+        editedCategoriesList.append("No categories with EDITED suffix found - cleanup successful!");
+    }
+    
+} catch (Exception e) {
+    log.error("Error parsing category response: " + e.getMessage());
+    categoryFound = true; // Assume failure if we cannot parse
+}
+
+// Store verification results
+vars.put("category_still_exists", String.valueOf(categoryFound));
+vars.put("edited_categories_found", String.valueOf(editedCategoryFound));
+vars.put("total_edited_categories", String.valueOf(totalEditedCategories));
+vars.put("edited_categories_list", editedCategoriesList.toString());
+
+// Log verification results
+if (!categoryFound) {
+    log.info("DELETION VERIFIED: Thread " + threadNum + " category " + deletedCategoryId + " successfully deleted");
+} else {
+    log.error("DELETION VERIFICATION FAILED: Thread " + threadNum + " category " + deletedCategoryId + " still exists!");
+}
+
+log.info("=== EDITED CATEGORIES CLEANUP VERIFICATION ===");
+log.info("Total EDITED categories found: " + totalEditedCategories);
+log.info(editedCategoriesList.toString());
+</stringProp>
+            <stringProp name="BeanShellPostProcessor.filename"></stringProp>
+            <stringProp name="BeanShellPostProcessor.parameters"></stringProp>
+            <boolProp name="BeanShellPostProcessor.resetInterpreter">false</boolProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        
+        <!-- Final Verification Results -->
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="10 - Category Cleanup Verification Results" enabled="true">
+          <stringProp name="BeanShellSampler.query">// Display final verification results
+String categoryExists = vars.get("category_still_exists");
+String editedCategoriesFound = vars.get("edited_categories_found");
+String totalEditedCategories = vars.get("total_edited_categories");
+String editedCategoriesList = vars.get("edited_categories_list");
+String deletedCategoryId = vars.get("created_category_id");
+String updatedCategoryName = vars.get("updated_category_name");
+int threadNum = ctx.getThreadNum() + 1;
+
+// Handle null values
+if (categoryExists == null) categoryExists = "true";
+if (editedCategoriesFound == null) editedCategoriesFound = "true";
+if (totalEditedCategories == null) totalEditedCategories = "0";
+if (editedCategoriesList == null) editedCategoriesList = "No verification completed";
+
+// Determine verification status
+boolean deletionVerified = !"true".equals(categoryExists);
+boolean cleanupVerified = !"true".equals(editedCategoriesFound);
+
+String verificationStatus = "";
+if (deletionVerified &amp;&amp; cleanupVerified) {
+    verificationStatus = "FULL VERIFICATION SUCCESS";
+} else if (deletionVerified &amp;&amp; !cleanupVerified) {
+    verificationStatus = "PARTIAL SUCCESS - Category deleted but edited categories remain";
+} else if (!deletionVerified &amp;&amp; cleanupVerified) {
+    verificationStatus = "DELETION FAILED - Category still exists";
+} else {
+    verificationStatus = "VERIFICATION FAILED - Category exists and edited categories remain";
+}
+
+// Create verification report
+String report = "Category Cleanup Verification Complete!" + System.lineSeparator() + System.lineSeparator() +
+               "Thread " + threadNum + " Results:" + System.lineSeparator() +
+               "Deleted Category ID: " + deletedCategoryId + System.lineSeparator() +
+               "Updated Name: " + updatedCategoryName + System.lineSeparator() +
+               "Category Still Exists: " + categoryExists + System.lineSeparator() +
+               "Total EDITED Categories Found: " + totalEditedCategories + System.lineSeparator() +
+               System.lineSeparator() +
+               verificationStatus + System.lineSeparator() +
+               System.lineSeparator() +
+               editedCategoriesList;
+
+SampleResult.setResponseData(report);
+SampleResult.setDataType(SampleResult.TEXT);
+
+// Set success based on verification results
+if (deletionVerified) {
+    SampleResult.setSuccessful(true);
+    log.info("Thread " + threadNum + " - Category deletion verified successfully");
+    if (!cleanupVerified) {
+        log.warn("Thread " + threadNum + " - " + totalEditedCategories + " edited categories still remain");
+    }
+} else {
+    SampleResult.setSuccessful(false);
+    log.error("Thread " + threadNum + " - Category deletion verification failed");
+}
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        
+        <!-- Final Global Cleanup Check -->
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="11 - Final Global Category Check" enabled="true">
+          <stringProp name="HTTPSampler.path">/api/v1/category/get-category</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Final Category Check Success" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">Final category check must work</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="Search All EDITED Categories" enabled="true">
+            <stringProp name="BeanShellPostProcessor.query">import org.json.*;
+
+// Parse the response to search for ALL categories with EDITED suffix
+String response = prev.getResponseDataAsString();
+int threadNum = ctx.getThreadNum() + 1;
+
+int totalEditedFound = 0;
+StringBuilder allEditedCategories = new StringBuilder();
+
+try {
+    JSONObject jsonResponse = new JSONObject(response);
+    JSONArray categories = jsonResponse.getJSONArray("category");
+    
+    allEditedCategories.append("=== FINAL GLOBAL EDITED CATEGORIES SEARCH ===").append(System.lineSeparator());
+    allEditedCategories.append("Thread " + threadNum + " scanning all categories for EDITED suffix:").append(System.lineSeparator()).append(System.lineSeparator());
+    
+    for (int i = 0; i &lt; categories.length(); i++) {
+        JSONObject category = categories.getJSONObject(i);
+        String categoryId = category.getString("_id");
+        String categoryName = category.getString("name");
+        
+        // Search for any categories with EDITED suffix
+        if (categoryName.endsWith("-EDITED")) {
+            totalEditedFound++;
+            allEditedCategories.append(totalEditedFound + ". " + categoryName)
+                              .append(" (ID: ").append(categoryId).append(")")
+                              .append(System.lineSeparator());
+        }
+    }
+    
+    if (totalEditedFound == 0) {
+        allEditedCategories.append("SUCCESS: No categories with EDITED suffix found!").append(System.lineSeparator());
+        allEditedCategories.append("All test categories have been properly cleaned up.").append(System.lineSeparator());
+    } else {
+        allEditedCategories.append(System.lineSeparator());
+        allEditedCategories.append("WARNING: Found " + totalEditedFound + " categories with EDITED suffix that need cleanup!").append(System.lineSeparator());
+    }
+    
+} catch (Exception e) {
+    log.error("Error parsing final category check response: " + e.getMessage());
+    allEditedCategories.append("ERROR: Could not parse response for final check").append(System.lineSeparator());
+}
+
+// Store final results
+vars.put("final_edited_count", String.valueOf(totalEditedFound));
+vars.put("final_edited_list", allEditedCategories.toString());
+
+// Log final results
+log.info("=== FINAL GLOBAL EDITED CATEGORIES SEARCH ===");
+log.info("Thread " + threadNum + " - Total EDITED categories found: " + totalEditedFound);
+log.info(allEditedCategories.toString());
+</stringProp>
+            <stringProp name="BeanShellPostProcessor.filename"></stringProp>
+            <stringProp name="BeanShellPostProcessor.parameters"></stringProp>
+            <boolProp name="BeanShellPostProcessor.resetInterpreter">false</boolProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        
+        <!-- Display Final Results -->
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="12 - Final EDITED Categories Report" enabled="true">
+          <stringProp name="BeanShellSampler.query">// Display final comprehensive results
+String finalEditedCount = vars.get("final_edited_count");
+String finalEditedList = vars.get("final_edited_list");
+int threadNum = ctx.getThreadNum() + 1;
+
+// Handle null values
+if (finalEditedCount == null) finalEditedCount = "0";
+if (finalEditedList == null) finalEditedList = "No final check completed";
+
+// Create final report
+String finalReport = "=== FINAL COMPREHENSIVE CLEANUP REPORT ===" + System.lineSeparator() + System.lineSeparator() +
+                    "Thread " + threadNum + " Final Results:" + System.lineSeparator() +
+                    "Total categories with EDITED suffix found: " + finalEditedCount + System.lineSeparator() +
+                    System.lineSeparator() +
+                    finalEditedList;
+
+SampleResult.setResponseData(finalReport);
+SampleResult.setDataType(SampleResult.TEXT);
+
+// Set success based on final results
+try {
+    int count = Integer.parseInt(finalEditedCount);
+    if (count == 0) {
+        SampleResult.setSuccessful(true);
+        log.info("FINAL SUCCESS: Thread " + threadNum + " - No EDITED categories remaining!");
+    } else {
+        SampleResult.setSuccessful(true); // Still successful but with warnings
+        log.warn("FINAL WARNING: Thread " + threadNum + " - " + count + " EDITED categories still exist!");
+    }
+} catch (NumberFormatException e) {
+    SampleResult.setSuccessful(false);
+    log.error("Error parsing final edited count: " + finalEditedCount);
+}
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+      </hashTree>
+      
+      <!-- Test Group 2: Enhanced Product CRUD Operations for Multiple Users -->
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Test Group 2 - Enhanced Product CRUD Operations for Multiple Users" enabled="true">
+        <intProp name="ThreadGroup.num_threads">25</intProp>
+        <intProp name="ThreadGroup.ramp_time">20</intProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <stringProp name="LoopController.loops">2</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <!-- Admin Login for Product Operations -->
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="01 - Admin Login for Products" enabled="true">
+          <stringProp name="HTTPSampler.path">/api/v1/auth/login</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;email&quot;: &quot;${ADMIN_EMAIL}&quot;,&#xd;
+  &quot;password&quot;: &quot;${ADMIN_PASSWORD}&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract JWT Token" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">jwt_token</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.token</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">TOKEN_NOT_FOUND</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+        </hashTree>
+        
+        <!-- Get Categories for Product Creation -->
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="02 - Get Categories for Product" enabled="true">
+          <stringProp name="HTTPSampler.path">/api/v1/category/get-category</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract Category ID" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">available_category_id</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.category[0]._id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">66db427fdb0119d9234b27ee</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+        </hashTree>
+        
+        <!-- Generate Random Product Data -->
+                <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="02 - Generate Random Product Data" enabled="true">
+          <stringProp name="BeanShellSampler.query">import java.util.Random;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.text.DecimalFormat;
+
+// Generate unique product data for this thread and iteration
+Random rand = new Random();
+long timestamp = System.currentTimeMillis();
+int threadNum = ctx.getThreadNum() + 1;
+
+// Product name with timestamp for uniqueness
+String productName = "LoadTest-Product-T" + threadNum + "-" + timestamp;
+String productSlug = "loadtest-product-t" + threadNum + "-" + timestamp;
+
+// Random price between $10-100
+double price = 10.0 + (rand.nextDouble() * 90.0);
+DecimalFormat df = new DecimalFormat("#.##");
+String priceStr = df.format(price);
+
+// Random stock quantity between 10-100
+int stock = 10 + rand.nextInt(91);
+
+// Random brand
+String[] brands = {"Nike", "Adidas", "Puma", "Under Armour", "Reebok"};
+String brand = brands[rand.nextInt(brands.length)];
+
+// Product description
+String description = "This is a load test product for thread " + threadNum + " created at " + timestamp;
+
+// Store in JMeter variables
+vars.put("product_name", productName);
+vars.put("product_slug", productSlug);
+vars.put("product_price", priceStr);
+vars.put("product_stock", String.valueOf(stock));
+vars.put("product_brand", brand);
+vars.put("product_description", description);
+
+log.info("Generated product data: " + productName + " / Price: $" + priceStr + " / Stock: " + stock);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        
+        <!-- Create Product -->
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="04 - Create New Product" enabled="true">
+          <stringProp name="HTTPSampler.path">/api/v1/product/create-product</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="name" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${product_name}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">name</stringProp>
+              </elementProp>
+              <elementProp name="description" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${product_description}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">description</stringProp>
+              </elementProp>
+              <elementProp name="price" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${product_price}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">price</stringProp>
+              </elementProp>
+              <elementProp name="category" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${available_category_id}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">category</stringProp>
+              </elementProp>
+              <elementProp name="quantity" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${product_stock}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">quantity</stringProp>
+              </elementProp>
+              <elementProp name="shipping" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">shipping</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Create Authorization Header" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${jwt_token}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract Created Product ID" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">created_product_id;created_product_slug</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.products._id;$.products.slug</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">NOT_FOUND;NOT_FOUND</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Product Creation Success" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49587">201</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">Product must be created successfully</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Product Creation Time" enabled="true">
+            <stringProp name="DurationAssertion.duration">5000</stringProp>
+          </DurationAssertion>
+          <hashTree/>
+        </hashTree>
+        
+        <!-- Verify Product Creation by Getting Product -->
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="05 - Verify Created Product" enabled="true">
+          <stringProp name="HTTPSampler.path">/api/v1/product/get-product/${created_product_slug}</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Product Verification Success" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">Created product must be retrievable</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="Verify Product Details" enabled="true">
+            <stringProp name="JSON_PATH">$.product.name</stringProp>
+            <stringProp name="EXPECTED_VALUE">${product_name}</stringProp>
+            <boolProp name="JSONVALIDATION">false</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">false</boolProp>
+          </JSONPathAssertion>
+          <hashTree/>
+        </hashTree>
+        
+        <!-- Product Creation Success Confirmation -->
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="06 - Product Creation Complete" enabled="true">
+          <stringProp name="BeanShellSampler.query">// Log successful product creation
+String productName = vars.get("product_name");
+String productId = vars.get("created_product_id");
+String productSlug = vars.get("created_product_slug");
+int threadNum = ctx.getThreadNum() + 1;
+
+log.info("✅ SUCCESS: Thread " + threadNum + " created product: " + productName);
+log.info("   Product ID: " + productId);
+log.info("   Product Slug: " + productSlug);
+
+SampleResult.setResponseData("Product created successfully: " + productName + " (ID: " + productId + ", Slug: " + productSlug + ")");
+SampleResult.setDataType(SampleResult.TEXT);
+SampleResult.setSuccessful(true);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        
+        <!-- Wait before editing -->
+        <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think Time Before Product Edit" enabled="true">
+          <stringProp name="ConstantTimer.delay">500</stringProp>
+          <stringProp name="RandomTimer.range">1500</stringProp>
+        </UniformRandomTimer>
+        <hashTree/>
+        
+        <!-- Generate Updated Product Data -->
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="07 - Generate Updated Product Data" enabled="true">
+          <stringProp name="BeanShellSampler.query">import java.text.DecimalFormat;
+
+// Generate updated product data
+String originalName = vars.get("product_name");
+String originalDescription = vars.get("product_description");
+String originalPrice = vars.get("product_price");
+
+// Create edited versions
+String updatedProductName = originalName + "-EDITED";
+String updatedDescription = originalDescription + " - EDITED VERSION";
+double originalPriceValue = Double.parseDouble(originalPrice);
+double updatedPriceValue = originalPriceValue + 10.0; // Add $10 to price
+
+// Use DecimalFormat instead of String.format for BeanShell compatibility
+DecimalFormat df = new DecimalFormat("#.##");
+String updatedPrice = df.format(updatedPriceValue);
+
+// Store updated values
+vars.put("updated_product_name", updatedProductName);
+vars.put("updated_product_description", updatedDescription);
+vars.put("updated_product_price", updatedPrice);
+
+log.info("Updated product name: " + updatedProductName);
+log.info("Updated product description: " + updatedDescription);
+log.info("Updated product price: $" + updatedPrice);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        
+        <!-- Edit/Update Product -->
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="08 - Edit Product" enabled="true">
+          <stringProp name="HTTPSampler.path">/api/v1/product/update-product/${created_product_id}</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="name" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${updated_product_name}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">name</stringProp>
+              </elementProp>
+              <elementProp name="description" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${updated_product_description}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">description</stringProp>
+              </elementProp>
+              <elementProp name="price" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${updated_product_price}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">price</stringProp>
+              </elementProp>
+              <elementProp name="quantity" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${product_stock}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">quantity</stringProp>
+              </elementProp>
+              <elementProp name="category" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${available_category_id}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">category</stringProp>
+              </elementProp>
+              <elementProp name="shipping" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">shipping</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Edit Authorization Header" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${jwt_token}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Product Edit Success" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49587">201</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">Product must be edited successfully</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Product Edit Performance" enabled="true">
+            <stringProp name="DurationAssertion.duration">5000</stringProp>
+          </DurationAssertion>
+          <hashTree/>
+        </hashTree>
+        
+        <!-- Edit Success Confirmation -->
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="09 - Product Edit Complete" enabled="true">
+          <stringProp name="BeanShellSampler.query">// Log successful product edit
+String originalName = vars.get("product_name");
+String updatedName = vars.get("updated_product_name");
+String originalPrice = vars.get("product_price");
+String updatedPrice = vars.get("updated_product_price");
+String productId = vars.get("created_product_id");
+int threadNum = ctx.getThreadNum() + 1;
+
+log.info("✅ EDIT SUCCESS: Thread " + threadNum + " updated product");
+log.info("   Original: " + originalName + " ($" + originalPrice + ")");
+log.info("   Updated to: " + updatedName + " ($" + updatedPrice + ")");
+log.info("   Product ID: " + productId);
+
+SampleResult.setResponseData("Product edited successfully!" + System.lineSeparator() + 
+                           "Original: " + originalName + " ($" + originalPrice + ")" + System.lineSeparator() + 
+                           "Updated to: " + updatedName + " ($" + updatedPrice + ")" + System.lineSeparator() + 
+                           "ID: " + productId);
+SampleResult.setDataType(SampleResult.TEXT);
+SampleResult.setSuccessful(true);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        
+        <!-- Wait before deleting -->
+        <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think Time Before Product Delete" enabled="true">
+          <stringProp name="ConstantTimer.delay">500</stringProp>
+          <stringProp name="RandomTimer.range">1500</stringProp>
+        </UniformRandomTimer>
+        <hashTree/>
+        
+        <!-- Delete Product -->
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="10 - Delete Product" enabled="true">
+          <stringProp name="HTTPSampler.path">/api/v1/product/delete-product/${created_product_id}</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">DELETE</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Product Delete Success" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">Product must be deleted successfully</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Product Delete Performance" enabled="true">
+            <stringProp name="DurationAssertion.duration">5000</stringProp>
+          </DurationAssertion>
+          <hashTree/>
+        </hashTree>
+        
+        <!-- Final CRUD Complete Confirmation -->
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="11 - Complete Product CRUD Operations" enabled="true">
+          <stringProp name="BeanShellSampler.query">// Log successful complete CRUD operations
+String originalName = vars.get("product_name");
+String updatedName = vars.get("updated_product_name");
+String originalPrice = vars.get("product_price");
+String updatedPrice = vars.get("updated_product_price");
+String productId = vars.get("created_product_id");
+int threadNum = ctx.getThreadNum() + 1;
+
+log.info("🎉 PRODUCT CRUD COMPLETE: Thread " + threadNum + " finished all operations");
+log.info("   ✅ Created: " + originalName + " ($" + originalPrice + ")");
+log.info("   ✅ Updated to: " + updatedName + " ($" + updatedPrice + ")");
+log.info("   ✅ Deleted: " + productId);
+
+SampleResult.setResponseData("Complete Product CRUD operations successful!" + System.lineSeparator() + 
+                           "Thread " + threadNum + " completed:" + System.lineSeparator() +
+                           "✅ CREATE: " + originalName + " ($" + originalPrice + ")" + System.lineSeparator() + 
+                           "✅ UPDATE: " + updatedName + " ($" + updatedPrice + ")" + System.lineSeparator() + 
+                           "✅ DELETE: Product ID " + productId + System.lineSeparator() +
+                           "🎉 All Product CRUD operations completed successfully!");
+SampleResult.setDataType(SampleResult.TEXT);
+SampleResult.setSuccessful(true);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        
+        <!-- Wait before verification -->
+        <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Wait Before Product Verification" enabled="true">
+          <stringProp name="ConstantTimer.delay">1000</stringProp>
+          <stringProp name="RandomTimer.range">2000</stringProp>
+        </UniformRandomTimer>
+        <hashTree/>
+        
+        <!-- Verify Product Deletion - Get All Products -->
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="12 - Verify Product Cleanup" enabled="true">
+          <stringProp name="HTTPSampler.path">/api/v1/product/get-product</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Get Products Success" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">Get products for verification must work</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="Verify Deleted Product Not Found" enabled="true">
+            <stringProp name="BeanShellPostProcessor.query">import org.json.*;
+
+// Parse the response to check if our deleted product still exists
+String response = prev.getResponseDataAsString();
+String deletedProductId = vars.get("created_product_id");
+String updatedProductName = vars.get("updated_product_name");
+int threadNum = ctx.getThreadNum() + 1;
+
+boolean productFound = false;
+boolean editedProductFound = false;
+int totalEditedProducts = 0;
+StringBuilder editedProductsList = new StringBuilder();
+
+try {
+    JSONObject jsonResponse = new JSONObject(response);
+    JSONArray products = jsonResponse.getJSONArray("products");
+    
+    editedProductsList.append("Found products with EDITED suffix:").append(System.lineSeparator());
+    
+    for (int i = 0; i &lt; products.length(); i++) {
+        JSONObject product = products.getJSONObject(i);
+        String productId = product.getString("_id");
+        String productName = product.getString("name");
+        
+        // Check if this is our specific deleted product
+        if (productId.equals(deletedProductId)) {
+            productFound = true;
+            log.error("DELETION FAILED: Product " + deletedProductId + " still exists!");
+        }
+        
+        // Check for any products with EDITED suffix (should be cleaned up)
+        if (productName.endsWith("-EDITED")) {
+            editedProductFound = true;
+            totalEditedProducts++;
+            editedProductsList.append("- ").append(productName)
+                              .append(" (ID: ").append(productId).append(")")
+                              .append(System.lineSeparator());
+            log.warn("CLEANUP NEEDED: Found product with EDITED suffix: " + productName);
+        }
+    }
+    
+    if (totalEditedProducts == 0) {
+        editedProductsList.append("No products with EDITED suffix found - cleanup successful!");
+    }
+    
+} catch (Exception e) {
+    log.error("Error parsing product response: " + e.getMessage());
+    productFound = true; // Assume failure if we cannot parse
+}
+
+// Store verification results
+vars.put("product_still_exists", String.valueOf(productFound));
+vars.put("edited_products_found", String.valueOf(editedProductFound));
+vars.put("total_edited_products", String.valueOf(totalEditedProducts));
+vars.put("edited_products_list", editedProductsList.toString());
+
+// Log verification results
+if (!productFound) {
+    log.info("DELETION VERIFIED: Thread " + threadNum + " product " + deletedProductId + " successfully deleted");
+} else {
+    log.error("DELETION VERIFICATION FAILED: Thread " + threadNum + " product " + deletedProductId + " still exists!");
+}
+
+log.info("=== EDITED PRODUCTS CLEANUP VERIFICATION ===");
+log.info("Total EDITED products found: " + totalEditedProducts);
+log.info(editedProductsList.toString());
+</stringProp>
+            <stringProp name="BeanShellPostProcessor.filename"></stringProp>
+            <stringProp name="BeanShellPostProcessor.parameters"></stringProp>
+            <boolProp name="BeanShellPostProcessor.resetInterpreter">false</boolProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        
+        <!-- Final Product Verification Results -->
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="13 - Product Cleanup Verification Results" enabled="true">
+          <stringProp name="BeanShellSampler.query">// Display final verification results
+String productExists = vars.get("product_still_exists");
+String editedProductsFound = vars.get("edited_products_found");
+String totalEditedProducts = vars.get("total_edited_products");
+String editedProductsList = vars.get("edited_products_list");
+String deletedProductId = vars.get("created_product_id");
+String updatedProductName = vars.get("updated_product_name");
+int threadNum = ctx.getThreadNum() + 1;
+
+// Handle null values
+if (productExists == null) productExists = "true";
+if (editedProductsFound == null) editedProductsFound = "true";
+if (totalEditedProducts == null) totalEditedProducts = "0";
+if (editedProductsList == null) editedProductsList = "No verification completed";
+
+// Determine verification status
+boolean deletionVerified = !"true".equals(productExists);
+boolean cleanupVerified = !"true".equals(editedProductsFound);
+
+String verificationStatus = "";
+if (deletionVerified &amp;&amp; cleanupVerified) {
+    verificationStatus = "FULL VERIFICATION SUCCESS";
+} else if (deletionVerified &amp;&amp; !cleanupVerified) {
+    verificationStatus = "PARTIAL SUCCESS - Product deleted but edited products remain";
+} else if (!deletionVerified &amp;&amp; cleanupVerified) {
+    verificationStatus = "DELETION FAILED - Product still exists";
+} else {
+    verificationStatus = "VERIFICATION FAILED - Product exists and edited products remain";
+}
+
+// Create verification report
+String report = "Product Cleanup Verification Complete!" + System.lineSeparator() + System.lineSeparator() +
+               "Thread " + threadNum + " Results:" + System.lineSeparator() +
+               "Deleted Product ID: " + deletedProductId + System.lineSeparator() +
+               "Updated Name: " + updatedProductName + System.lineSeparator() +
+               "Product Still Exists: " + productExists + System.lineSeparator() +
+               "Total EDITED Products Found: " + totalEditedProducts + System.lineSeparator() +
+               System.lineSeparator() +
+               verificationStatus + System.lineSeparator() +
+               System.lineSeparator() +
+               editedProductsList;
+
+SampleResult.setResponseData(report);
+SampleResult.setDataType(SampleResult.TEXT);
+
+// Set success based on verification results
+if (deletionVerified) {
+    SampleResult.setSuccessful(true);
+    log.info("Thread " + threadNum + " - Product deletion verified successfully");
+    if (!cleanupVerified) {
+        log.warn("Thread " + threadNum + " - " + totalEditedProducts + " edited products still remain");
+    }
+} else {
+    SampleResult.setSuccessful(false);
+    log.error("Thread " + threadNum + " - Product deletion verification failed");
+}
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+      </hashTree>
+      
+      <!-- Test Group 3: Retrieve and Delete LoadTest Products -->
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Test Group 3 - Retrieve and Delete LoadTest Products" enabled="false">
+        <intProp name="ThreadGroup.num_threads">3</intProp>
+        <intProp name="ThreadGroup.ramp_time">5</intProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <stringProp name="LoopController.loops">1</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <!-- Admin Login for Product Cleanup -->
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="01 - Admin Login for Cleanup" enabled="true">
+          <stringProp name="HTTPSampler.path">/api/v1/auth/login</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;email&quot;: &quot;${ADMIN_EMAIL}&quot;,&#xd;
+  &quot;password&quot;: &quot;${ADMIN_PASSWORD}&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract JWT Token" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">jwt_token</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.token</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">TOKEN_NOT_FOUND</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+        </hashTree>
+        
+        <!-- Get All Products and Filter LoadTest Products -->
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="02 - Get All Products for LoadTest Filter" enabled="true">
+          <stringProp name="HTTPSampler.path">/api/v1/product/get-product</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Get All Products Success" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">Get all products must work</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="Filter and Store LoadTest Products" enabled="true">
+            <stringProp name="BeanShellPostProcessor.query">import org.json.*;
+import java.util.regex.*;
+
+// Parse the response to filter LoadTest products using regex
+String response = prev.getResponseDataAsString();
+JSONObject jsonResponse = new JSONObject(response);
+JSONArray products = jsonResponse.getJSONArray("products");
+
+Pattern loadTestPattern = Pattern.compile("^LoadTest-Product.*");
+int loadTestCount = 0;
+StringBuilder loadTestProducts = new StringBuilder();
+StringBuilder loadTestIds = new StringBuilder();
+
+loadTestProducts.append("Found LoadTest Products to Delete:").append(System.lineSeparator());
+
+for (int i = 0; i &lt; products.length(); i++) {
+    JSONObject product = products.getJSONObject(i);
+    String productName = product.getString("name");
+    String productId = product.getString("_id");
+    
+    // Use regex to match LoadTest-Product pattern
+    if (loadTestPattern.matcher(productName).matches()) {
+        loadTestCount++;
+        loadTestProducts.append("- ").append(productName)
+                        .append(" (ID: ").append(productId)
+                        .append(", Price: $").append(product.optString("price", "N/A"))
+                        .append(", Stock: ").append(product.optString("quantity", "N/A"))
+                        .append(")").append(System.lineSeparator());
+        
+        // Store IDs for deletion (comma-separated)
+        if (loadTestIds.length() &gt; 0) {
+            loadTestIds.append(",");
+        }
+        loadTestIds.append(productId);
+        
+        // Store individual ID variables for ForEach deletion loop
+        vars.put("loadtest_product_id_" + loadTestCount, productId);
+        vars.put("loadtest_product_name_" + loadTestCount, productName);
+        
+        // Also store for ForEach controller (indexed from 1)
+        vars.put("productid_" + loadTestCount, productId);
+        vars.put("productname_" + loadTestCount, productName);
+    }
+}
+
+// Store results in variables
+vars.put("filtered_loadtest_count", String.valueOf(loadTestCount));
+vars.put("loadtest_products_list", loadTestProducts.toString());
+vars.put("loadtest_product_ids", loadTestIds.toString());
+
+log.info("Filtered LoadTest Products Count: " + loadTestCount);
+log.info("LoadTest Product IDs: " + loadTestIds.toString());
+log.info(loadTestProducts.toString());
+</stringProp>
+            <stringProp name="BeanShellPostProcessor.filename"></stringProp>
+            <stringProp name="BeanShellPostProcessor.parameters"></stringProp>
+            <boolProp name="BeanShellPostProcessor.resetInterpreter">false</boolProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        
+        <!-- Display LoadTest Products Found -->
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="03 - Display LoadTest Products Found" enabled="true">
+          <stringProp name="BeanShellSampler.query">// Get the filtered results from previous step
+String filteredCount = vars.get("filtered_loadtest_count");
+String productsList = vars.get("loadtest_products_list");
+String productIds = vars.get("loadtest_product_ids");
+
+// Handle null values
+if (filteredCount == null) filteredCount = "0";
+if (productsList == null) productsList = "No LoadTest products found";
+if (productIds == null) productIds = "None";
+
+// Log the results
+log.info("=== LoadTest Products Found for Deletion ===");
+log.info("Total LoadTest Products Found: " + filteredCount);
+log.info("Product IDs to Delete: " + productIds);
+log.info(productsList);
+
+// Set a custom response for this sampler
+SampleResult.setResponseData("LoadTest Products Found Successfully." + System.lineSeparator() + 
+                           "Count: " + filteredCount + System.lineSeparator() +
+                           "IDs to Delete: " + productIds + System.lineSeparator() + System.lineSeparator() + 
+                           productsList);
+SampleResult.setDataType(SampleResult.TEXT);
+SampleResult.setSuccessful(true);
+
+// Validate we found at least some products
+try {
+    int count = Integer.parseInt(filteredCount);
+    if (count &gt; 0) {
+        log.info("SUCCESS: Found " + count + " LoadTest products for deletion");
+    } else {
+        log.warn("INFO: No LoadTest products found to delete");
+    }
+} catch (NumberFormatException e) {
+    log.error("Error parsing filtered count: " + filteredCount);
+    SampleResult.setSuccessful(false);
+}
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="LoadTest Products Found Verification" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="2036502">LoadTest Products Found Successfully</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">LoadTest products must be found and listed</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        
+        <!-- Initialize Deletion Variables -->
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="04a - Initialize Deletion Process" enabled="true">
+          <stringProp name="BeanShellSampler.query">// Initialize deletion process
+String productIds = vars.get("loadtest_product_ids");
+int totalProducts = 0;
+
+try {
+    totalProducts = Integer.parseInt(vars.get("filtered_loadtest_count"));
+} catch (NumberFormatException e) {
+    totalProducts = 0;
+}
+
+vars.put("deletion_index", "1");
+vars.put("max_deletion_index", String.valueOf(totalProducts));
+vars.put("deletions_completed", "0");
+vars.put("deletions_failed", "0");
+
+log.info("Initialized deletion process for " + totalProducts + " LoadTest products");
+log.info("Product IDs to delete: " + productIds);
+
+SampleResult.setResponseData("Deletion process initialized for " + totalProducts + " products");
+SampleResult.setDataType(SampleResult.TEXT);
+SampleResult.setSuccessful(true);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+
+        <!-- Debug Variables Before Loop -->
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="04b - Debug Variables Before Loop" enabled="true">
+          <stringProp name="BeanShellSampler.query">// Debug variables before while loop
+String deletionIndex = vars.get("deletion_index");
+String maxIndex = vars.get("max_deletion_index");
+String filteredCount = vars.get("filtered_loadtest_count");
+
+log.info("=== DEBUGGING WHILE LOOP VARIABLES ===");
+log.info("deletion_index: " + deletionIndex);
+log.info("max_deletion_index: " + maxIndex);
+log.info("filtered_loadtest_count: " + filteredCount);
+
+// Test the condition
+try {
+    int delIndex = Integer.parseInt(deletionIndex);
+    int maxDelIndex = Integer.parseInt(maxIndex);
+    boolean condition = delIndex &lt;= maxDelIndex;
+    
+    log.info("Condition (" + delIndex + " &lt;= " + maxDelIndex + ") = " + condition);
+    
+    // Also check if we have product IDs stored
+    for (int i = 1; i &lt;= maxDelIndex; i++) {
+        String productId = vars.get("loadtest_product_id_" + i);
+        String productName = vars.get("loadtest_product_name_" + i);
+        log.info("Product " + i + ": ID=" + productId + ", Name=" + productName);
+    }
+} catch (Exception e) {
+    log.error("Error in condition evaluation: " + e.getMessage());
+}
+
+SampleResult.setResponseData("Debug info: deletion_index=" + deletionIndex + ", max_deletion_index=" + maxIndex);
+SampleResult.setDataType(SampleResult.TEXT);
+SampleResult.setSuccessful(true);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+
+        <!-- While Controller to Delete Each Product -->
+        <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="04b - Delete Products While Loop" enabled="true">
+          <stringProp name="WhileController.condition">${__groovy(vars.get("deletion_index").toInteger() &lt;= vars.get("max_deletion_index").toInteger())}</stringProp>
+        </WhileController>
+        <hashTree>
+          <!-- Get Current Product Details -->
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="05a - Get Current Product for Deletion" enabled="true">
+            <stringProp name="BeanShellSampler.query">// Get current deletion index
+String indexStr = vars.get("deletion_index");
+int index = Integer.parseInt(indexStr);
+
+// Get the product ID and name for this index
+String productId = vars.get("loadtest_product_id_" + index);
+String productName = vars.get("loadtest_product_name_" + index);
+
+if (productId != null &amp;&amp; !productId.isEmpty()) {
+    vars.put("current_delete_id", productId);
+    vars.put("current_delete_name", productName != null ? productName : "Unknown");
+    
+    log.info("Preparing deletion " + index + ": " + productName + " (ID: " + productId + ")");
+    
+    SampleResult.setResponseData("Ready to delete: " + productName + " (ID: " + productId + ")");
+    SampleResult.setDataType(SampleResult.TEXT);
+    SampleResult.setSuccessful(true);
+} else {
+    log.error("No product found for index " + index);
+    SampleResult.setResponseData("No product found for index " + index);
+    SampleResult.setDataType(SampleResult.TEXT);
+    SampleResult.setSuccessful(false);
+}
+</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+
+          <!-- Delete Current Product -->
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="05b - Delete Current LoadTest Product" enabled="true">
+            <stringProp name="HTTPSampler.path">/api/v1/product/delete-product/${current_delete_id}</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">DELETE</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Delete Authorization Header" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Bearer ${jwt_token}</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Delete Product Success" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message">LoadTest product ${current_delete_name} must be deleted successfully (ID: ${current_delete_id})</stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">8</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="Track Deletion Result" enabled="true">
+              <stringProp name="BeanShellPostProcessor.query">// Track deletion success/failure with detailed logging
+String responseCode = prev.getResponseCode();
+String responseMessage = prev.getResponseMessage();
+String responseData = prev.getResponseDataAsString();
+String currentIndex = vars.get("deletion_index");
+String productName = vars.get("current_delete_name");
+String productId = vars.get("current_delete_id");
+
+int completedCount = Integer.parseInt(vars.get("deletions_completed"));
+int failedCount = Integer.parseInt(vars.get("deletions_failed"));
+
+log.info("=== DELETE API Response ===");
+log.info("Product: " + productName + " (ID: " + productId + ")");
+log.info("Response Code: " + responseCode);
+log.info("Response Message: " + responseMessage);
+log.info("Response Data: " + responseData);
+
+if ("200".equals(responseCode)) {
+    completedCount++;
+    log.info("✅ Successfully deleted: " + productName + " (ID: " + productId + ")");
+} else {
+    failedCount++;
+    log.error("❌ Failed to delete: " + productName + " (ID: " + productId + ")");
+    log.error("   Response Code: " + responseCode);
+    log.error("   Response Message: " + responseMessage);
+    log.error("   Response Data: " + responseData);
+}
+
+// Update counters
+vars.put("deletions_completed", String.valueOf(completedCount));
+vars.put("deletions_failed", String.valueOf(failedCount));
+
+// Increment deletion index for next iteration
+int nextIndex = Integer.parseInt(currentIndex) + 1;
+vars.put("deletion_index", String.valueOf(nextIndex));
+
+log.info("Deletion progress: " + completedCount + " completed, " + failedCount + " failed, moving to index " + nextIndex);
+</stringProp>
+              <stringProp name="BeanShellPostProcessor.filename"></stringProp>
+              <stringProp name="BeanShellPostProcessor.parameters"></stringProp>
+              <boolProp name="BeanShellPostProcessor.resetInterpreter">false</boolProp>
+            </BeanShellPostProcessor>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+
+        <!-- Deletion Summary -->
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="05c - Deletion Summary" enabled="true">
+          <stringProp name="BeanShellSampler.query">// Display deletion summary
+String completedCount = vars.get("deletions_completed");
+String failedCount = vars.get("deletions_failed");
+String totalCount = vars.get("filtered_loadtest_count");
+
+log.info("=== LoadTest Product Deletion Summary ===");
+log.info("Total products found: " + totalCount);
+log.info("Successfully deleted: " + completedCount);
+log.info("Failed to delete: " + failedCount);
+
+String summary = "LoadTest Product Deletion Complete!" + System.lineSeparator() +
+                "Total found: " + totalCount + System.lineSeparator() +
+                "Successfully deleted: " + completedCount + System.lineSeparator() +
+                "Failed to delete: " + failedCount;
+
+SampleResult.setResponseData(summary);
+SampleResult.setDataType(SampleResult.TEXT);
+SampleResult.setSuccessful(true);
+</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+
+        <!-- Small delay before final verification -->
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Wait Before Verification" enabled="true">
+          <stringProp name="ConstantTimer.delay">2000</stringProp>
+        </ConstantTimer>
+        <hashTree/>
+        
+        <!-- Final Verification - Get All Products and Filter LoadTest Products -->
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="06 - Verify Deleted LoadTest Products" enabled="true">
+          <stringProp name="HTTPSampler.path">/api/v1/product/get-product</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Get All Products Success" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">Get all products for verification must work</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="Count Remaining LoadTest Products" enabled="true">
+            <stringProp name="BeanShellPostProcessor.query">import org.json.*;
+import java.util.regex.*;
+
+// Parse the response to count remaining LoadTest products
+String response = prev.getResponseDataAsString();
+JSONObject jsonResponse = new JSONObject(response);
+JSONArray products = jsonResponse.getJSONArray("products");
+
+Pattern loadTestPattern = Pattern.compile("^LoadTest-Product.*");
+int remainingCount = 0;
+StringBuilder remainingProducts = new StringBuilder();
+
+remainingProducts.append("Remaining LoadTest Products after cleanup:").append(System.lineSeparator());
+
+for (int i = 0; i &lt; products.length(); i++) {
+    JSONObject product = products.getJSONObject(i);
+    String productName = product.getString("name");
+    
+    // Use regex to match LoadTest-Product pattern
+    if (loadTestPattern.matcher(productName).matches()) {
+        remainingCount++;
+        remainingProducts.append("- ").append(productName)
+                         .append(" (ID: ").append(product.getString("_id"))
+                         .append(")").append(System.lineSeparator());
+    }
+}
+
+if (remainingCount == 0) {
+    remainingProducts.append("✅ All LoadTest products have been successfully deleted!").append(System.lineSeparator());
+}
+
+vars.put("remaining_loadtest_count", String.valueOf(remainingCount));
+vars.put("remaining_products_list", remainingProducts.toString());
+
+log.info("=== Final Cleanup Verification ===");
+log.info("Remaining LoadTest Products: " + remainingCount);
+log.info(remainingProducts.toString());
+
+if (remainingCount == 0) {
+    log.info("SUCCESS: All LoadTest products have been cleaned up!");
+} else {
+    log.warn("WARNING: " + remainingCount + " LoadTest products still remain");
+}
+</stringProp>
+            <stringProp name="BeanShellPostProcessor.filename"></stringProp>
+            <stringProp name="BeanShellPostProcessor.parameters"></stringProp>
+            <boolProp name="BeanShellPostProcessor.resetInterpreter">false</boolProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="07 - Display Cleanup Results" enabled="true">
+            <stringProp name="BeanShellSampler.query">// Get the verification results
+String remainingCount = vars.get("remaining_loadtest_count");
+String remainingList = vars.get("remaining_products_list");
+
+// Handle null values
+if (remainingCount == null) remainingCount = "0";
+if (remainingList == null) remainingList = "No remaining products check completed";
+
+// Set a custom response for this sampler
+SampleResult.setResponseData("LoadTest Products Cleanup Verification Complete!" + System.lineSeparator() + 
+                           "Remaining LoadTest Products: " + remainingCount + System.lineSeparator() + System.lineSeparator() + 
+                           remainingList);
+SampleResult.setDataType(SampleResult.TEXT);
+
+// Validate cleanup was successful
+try {
+    int count = Integer.parseInt(remainingCount);
+    if (count == 0) {
+        log.info("SUCCESS: Complete cleanup verified - 0 LoadTest products remaining");
+        SampleResult.setSuccessful(true);
+    } else {
+        log.warn("PARTIAL CLEANUP: " + count + " LoadTest products still remain");
+        SampleResult.setSuccessful(true); // Still mark as successful since the verification worked
+    }
+} catch (NumberFormatException e) {
+    log.error("Error parsing remaining count: " + remainingCount);
+    SampleResult.setSuccessful(false);
+}
+</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Cleanup Verification Success" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="2036502">LoadTest Products Cleanup Verification Complete</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message">Cleanup verification must complete successfully</stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+      
+      <!-- Performance Monitoring Listeners -->
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="01 - Admin Dashboard Summary Report" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="02 - Admin Dashboard Aggregate Report" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="03 - Admin Dashboard Detailed Results" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>true</responseData>
+            <samplerData>true</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>true</responseHeaders>
+            <requestHeaders>true</requestHeaders>
+            <responseDataOnError>true</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

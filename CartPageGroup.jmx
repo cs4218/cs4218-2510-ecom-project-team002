@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Cart and Checkout Load Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments">Cart and Checkout Load Test - Virtual Vault E-commerce</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults">
+        <stringProp name="HTTPSampler.domain">localhost</stringProp>
+        <stringProp name="HTTPSampler.port">6060</stringProp>
+        <stringProp name="HTTPSampler.protocol">http</stringProp>
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Content-Type</stringProp>
+            <stringProp name="Header.value">application/json</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Accept</stringProp>
+            <stringProp name="Header.value">application/json</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+        <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="User Data CSV" enabled="false">
+        <stringProp name="delimiter">,</stringProp>
+        <stringProp name="fileEncoding">UTF-8</stringProp>
+        <stringProp name="filename">login_users.csv</stringProp>
+        <boolProp name="ignoreFirstLine">true</boolProp>
+        <boolProp name="quotedData">false</boolProp>
+        <boolProp name="recycle">true</boolProp>
+        <stringProp name="shareMode">shareMode.all</stringProp>
+        <boolProp name="stopThread">false</boolProp>
+        <stringProp name="variableNames">name,email,password,phone,address,answer</stringProp>
+      </CSVDataSet>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Cart and Checkout Load Test Thread Group" enabled="true">
+        <intProp name="ThreadGroup.num_threads">30</intProp>
+        <intProp name="ThreadGroup.ramp_time">60</intProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <stringProp name="LoopController.loops">2</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="01 - User Login" enabled="true">
+          <stringProp name="HTTPSampler.path">/api/v1/auth/login</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;email&quot;: &quot;david123@gmail.com&quot;,&#xd;
+  &quot;password&quot;: &quot;12345678&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract JWT Token" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">jwt_token</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.token</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">TOKEN_NOT_FOUND</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="Debug JWT Token Extraction" enabled="true">
+            <stringProp name="BeanShellPostProcessor.query"><![CDATA[
+String jwtToken = vars.get("jwt_token");
+String responseData = prev.getResponseDataAsString();
+String responseCode = prev.getResponseCode();
+int threadNum = ctx.getThreadNum() + 1;
+
+log.info("🔑 JWT TOKEN EXTRACTION DEBUG - Thread " + threadNum);
+log.info("   Response Code: " + responseCode);
+log.info("   Response Length: " + (responseData != null ? responseData.length() : 0));
+log.info("   JWT Token Extracted: " + (jwtToken != null && !jwtToken.equals("TOKEN_NOT_FOUND") ? jwtToken.substring(0, Math.min(50, jwtToken.length())) + "..." : "FAILED"));
+log.info("   Token Length: " + (jwtToken != null ? jwtToken.length() : 0));
+
+// Also extract user email for debugging
+String email = vars.get("email");
+log.info("   User Email: " + email);
+
+if (jwtToken == null || jwtToken.equals("TOKEN_NOT_FOUND")) {
+    log.error("⚠️ JWT TOKEN EXTRACTION FAILED - Thread " + threadNum);
+    log.error("   Full Response: " + responseData);
+}
+]]></stringProp>
+            <stringProp name="BeanShellPostProcessor.filename"></stringProp>
+            <stringProp name="BeanShellPostProcessor.parameters"></stringProp>
+            <boolProp name="BeanShellPostProcessor.resetInterpreter">false</boolProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Login Success" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="02 - Get Products">
+          <stringProp name="HTTPSampler.path">/api/v1/product/product-list/1</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract Product IDs and Names">
+            <stringProp name="JSONPostProcessor.referenceNames">product_ids;product_names;product_prices</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.products[*]._id;$.products[*].name;$.products[*].price</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">-1</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">NOTFOUND;NOTFOUND;NOTFOUND</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+        </hashTree>
+        
+        <!-- Cart Management: Initialize Cart -->
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Cart Management Operations" enabled="true"/>
+        <hashTree>
+          <!-- Simulate Cart Initialization (Client-side localStorage simulation) -->
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="03 - Initialize Cart" enabled="true">
+            <stringProp name="BeanShellSampler.query"><![CDATA[// Simulate cart initialization (client-side localStorage simulation)
+int threadNum = ctx.getThreadNum() + 1;
+
+// Create empty cart array for this user session
+vars.put("cart_items", "[]");
+vars.put("cart_count", "0");
+vars.put("cart_total", "0.0");
+
+log.info("🛒 CART INITIALIZED - Thread " + threadNum);
+log.info("   Cart Items: " + vars.get("cart_items"));
+log.info("   Cart Count: " + vars.get("cart_count"));
+
+SampleResult.setResponseData("Cart initialized successfully for user session " + threadNum + System.lineSeparator() + 
+                           "Cart Items: " + vars.get("cart_items") + System.lineSeparator() +
+                           "Cart Count: " + vars.get("cart_count"));
+SampleResult.setDataType(SampleResult.TEXT);
+SampleResult.setSuccessful(true);
+]]></stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+          
+          <!-- Add Multiple Products to Cart -->
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="04 - Add Products to Cart" enabled="true">
+            <stringProp name="BeanShellSampler.query"><![CDATA[// Simulate adding multiple products to cart
+int threadNum = ctx.getThreadNum() + 1;
+
+// Use existing products with sufficient quantity
+String productId1 = vars.get("product_ids_1") != null ? vars.get("product_ids_1") : "68f7b4b79c5879066f739213"; // e2e-update product (quantity: 5)
+String productId2 = vars.get("product_ids_2") != null ? vars.get("product_ids_2") : "68f7b4b79c5879066f739213"; // Same product for simplicity  
+String productId3 = vars.get("product_ids_3") != null ? vars.get("product_ids_3") : "68f7b4b79c5879066f739213"; // Same product
+
+String productName1 = vars.get("product_names_1") != null ? vars.get("product_names_1") : "e2e-update-product";
+String productName2 = vars.get("product_names_2") != null ? vars.get("product_names_2") : "e2e-update-product";
+String productName3 = vars.get("product_names_3") != null ? vars.get("product_names_3") : "e2e-update-product";
+
+// Use actual product prices
+double price1 = 12.34;
+double price2 = 12.34; 
+double price3 = 12.34;
+
+try {
+    if (vars.get("product_prices_1") != null) price1 = Double.parseDouble(vars.get("product_prices_1"));
+    if (vars.get("product_prices_2") != null) price2 = Double.parseDouble(vars.get("product_prices_2"));
+    if (vars.get("product_prices_3") != null) price3 = Double.parseDouble(vars.get("product_prices_3"));
+} catch (NumberFormatException e) {
+    log.warn("Using default prices due to parsing error: " + e.getMessage());
+}
+
+// Create cart items (simulate localStorage cart structure)
+StringBuilder cartItems = new StringBuilder();
+cartItems.append("[");
+cartItems.append("{\"_id\":\"").append(productId1).append("\",\"name\":\"").append(productName1).append("\",\"price\":").append(price1).append(",\"quantity\":2},");
+cartItems.append("{\"_id\":\"").append(productId2).append("\",\"name\":\"").append(productName2).append("\",\"price\":").append(price2).append(",\"quantity\":1},");
+cartItems.append("{\"_id\":\"").append(productId3).append("\",\"name\":\"").append(productName3).append("\",\"price\":").append(price3).append(",\"quantity\":3}");
+cartItems.append("]");
+
+// Calculate totals
+int totalItems = 2 + 1 + 3; // quantities
+double totalPrice = (price1 * 2) + (price2 * 1) + (price3 * 3);
+
+// Round to 2 decimal places to avoid precision errors
+totalPrice = Math.round(totalPrice * 100.0) / 100.0;
+
+// Store cart state
+vars.put("cart_items", cartItems.toString());
+vars.put("cart_count", String.valueOf(totalItems));
+vars.put("cart_total", String.valueOf(totalPrice));
+
+// Store individual product info for removal testing
+vars.put("cart_product_1_id", productId1);
+vars.put("cart_product_1_name", productName1);
+vars.put("cart_product_1_price", String.valueOf(price1));
+vars.put("cart_product_1_quantity", "2");
+
+vars.put("cart_product_2_id", productId2);
+vars.put("cart_product_2_name", productName2);
+vars.put("cart_product_2_price", String.valueOf(price2));
+vars.put("cart_product_2_quantity", "1");
+
+vars.put("cart_product_3_id", productId3);
+vars.put("cart_product_3_name", productName3);
+vars.put("cart_product_3_price", String.valueOf(price3));
+vars.put("cart_product_3_quantity", "3");
+
+log.info("🛒 PRODUCTS ADDED TO CART - Thread " + threadNum);
+log.info("   Product 1: " + productName1 + " x2 ($" + price1 + " each)");
+log.info("   Product 2: " + productName2 + " x1 ($" + price2 + " each)"); 
+log.info("   Product 3: " + productName3 + " x3 ($" + price3 + " each)");
+log.info("   Total Items: " + totalItems);
+log.info("   Total Price: $" + totalPrice);
+
+SampleResult.setResponseData("Products added to cart successfully!" + System.lineSeparator() + 
+                           "Thread " + threadNum + " Cart Status:" + System.lineSeparator() +
+                           "Product 1: " + productName1 + " x2 ($" + price1 + " each)" + System.lineSeparator() +
+                           "Product 2: " + productName2 + " x1 ($" + price2 + " each)" + System.lineSeparator() + 
+                           "Product 3: " + productName3 + " x3 ($" + price3 + " each)" + System.lineSeparator() +
+                           "Total Items: " + totalItems + System.lineSeparator() +
+                           "Total Price: $" + totalPrice);
+SampleResult.setDataType(SampleResult.TEXT);
+SampleResult.setSuccessful(true);
+]]></stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+          
+          <!-- Think Time - User Reviews Cart -->
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think Time - Review Cart" enabled="true">
+            <stringProp name="ConstantTimer.delay">1000</stringProp>
+            <stringProp name="RandomTimer.range">2000</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+          
+          <!-- Remove Item from Cart (Quantity Reduction) -->
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="05 - Reduce Item Quantity in Cart" enabled="true">
+            <stringProp name="BeanShellSampler.query"><![CDATA[// Simulate reducing quantity of first product from 2 to 1
+int threadNum = ctx.getThreadNum() + 1;
+
+String productId = vars.get("cart_product_1_id");
+String productName = vars.get("cart_product_1_name");
+double productPrice = Double.parseDouble(vars.get("cart_product_1_price"));
+int currentQuantity = Integer.parseInt(vars.get("cart_product_1_quantity"));
+int newQuantity = currentQuantity - 1; // Reduce by 1
+
+// Update cart item quantities
+vars.put("cart_product_1_quantity", String.valueOf(newQuantity));
+
+    // Recalculate cart totals
+    int quantity2 = Integer.parseInt(vars.get("cart_product_2_quantity"));
+    int quantity3 = Integer.parseInt(vars.get("cart_product_3_quantity"));
+    double price2 = Double.parseDouble(vars.get("cart_product_2_price"));
+    double price3 = Double.parseDouble(vars.get("cart_product_3_price"));
+
+    int newTotalItems = newQuantity + quantity2 + quantity3;
+    double newTotalPrice = (productPrice * newQuantity) + (price2 * quantity2) + (price3 * quantity3);
+    
+    // Round to 2 decimal places to avoid precision errors
+    newTotalPrice = Math.round(newTotalPrice * 100.0) / 100.0;
+    
+    vars.put("cart_count", String.valueOf(newTotalItems));
+vars.put("cart_total", String.valueOf(newTotalPrice));
+
+log.info("📉 ITEM QUANTITY REDUCED - Thread " + threadNum);
+log.info("   Product: " + productName);
+log.info("   Quantity: " + currentQuantity + " → " + newQuantity);
+log.info("   New Cart Total Items: " + newTotalItems);
+log.info("   New Cart Total Price: $" + newTotalPrice);
+
+SampleResult.setResponseData("Item quantity reduced successfully!" + System.lineSeparator() + 
+                           "Thread " + threadNum + " Action:" + System.lineSeparator() +
+                           "Product: " + productName + System.lineSeparator() +
+                           "Quantity Change: " + currentQuantity + " → " + newQuantity + System.lineSeparator() +
+                           "New Cart Total Items: " + newTotalItems + System.lineSeparator() +
+                           "New Cart Total Price: $" + newTotalPrice);
+SampleResult.setDataType(SampleResult.TEXT);
+SampleResult.setSuccessful(true);
+]]></stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+          
+          <!-- Think Time - User Considers Removal -->
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think Time - Consider Removal" enabled="true">
+            <stringProp name="ConstantTimer.delay">800</stringProp>
+            <stringProp name="RandomTimer.range">1500</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+          
+          <!-- Completely Remove Item from Cart -->
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="06 - Remove Item Completely from Cart" enabled="true">
+            <stringProp name="BeanShellSampler.query"><![CDATA[// Simulate completely removing the second product from cart
+int threadNum = ctx.getThreadNum() + 1;
+
+String removedProductId = vars.get("cart_product_2_id");
+String removedProductName = vars.get("cart_product_2_name");
+double removedPrice = Double.parseDouble(vars.get("cart_product_2_price"));
+int removedQuantity = Integer.parseInt(vars.get("cart_product_2_quantity"));
+
+// Calculate removal impact
+double removedAmount = removedPrice * removedQuantity;
+
+// Update cart totals (remove product 2 completely)
+int quantity1 = Integer.parseInt(vars.get("cart_product_1_quantity"));
+int quantity3 = Integer.parseInt(vars.get("cart_product_3_quantity"));
+double price1 = Double.parseDouble(vars.get("cart_product_1_price"));
+double price3 = Double.parseDouble(vars.get("cart_product_3_price"));
+
+    int newTotalItems = quantity1 + quantity3; // No more product 2
+    double newTotalPrice = (price1 * quantity1) + (price3 * quantity3);
+    
+    // Round to 2 decimal places to avoid precision errors
+    newTotalPrice = Math.round(newTotalPrice * 100.0) / 100.0;
+    
+    vars.put("cart_count", String.valueOf(newTotalItems));
+vars.put("cart_total", String.valueOf(newTotalPrice));
+
+// Mark product 2 as removed
+vars.put("cart_product_2_quantity", "0");
+vars.put("product_2_removed", "true");
+
+// Update cart items JSON (remove product 2)
+String product1Name = vars.get("cart_product_1_name");
+String product3Name = vars.get("cart_product_3_name");
+String product1Id = vars.get("cart_product_1_id");
+String product3Id = vars.get("cart_product_3_id");
+
+StringBuilder updatedCartItems = new StringBuilder();
+updatedCartItems.append("[");
+updatedCartItems.append("{\"_id\":\"").append(product1Id).append("\",\"name\":\"").append(product1Name).append("\",\"price\":").append(price1).append(",\"quantity\":").append(quantity1).append("},");
+updatedCartItems.append("{\"_id\":\"").append(product3Id).append("\",\"name\":\"").append(product3Name).append("\",\"price\":").append(price3).append(",\"quantity\":").append(quantity3).append("}");
+updatedCartItems.append("]");
+
+vars.put("cart_items", updatedCartItems.toString());
+
+log.info("🗑️ ITEM COMPLETELY REMOVED - Thread " + threadNum);
+log.info("   Removed Product: " + removedProductName);
+log.info("   Removed Quantity: " + removedQuantity);
+log.info("   Amount Removed: $" + removedAmount);
+log.info("   New Cart Total Items: " + newTotalItems);
+log.info("   New Cart Total Price: $" + newTotalPrice);
+
+SampleResult.setResponseData("Item completely removed from cart!" + System.lineSeparator() + 
+                           "Thread " + threadNum + " Action:" + System.lineSeparator() +
+                           "Removed Product: " + removedProductName + System.lineSeparator() +
+                           "Removed Quantity: " + removedQuantity + System.lineSeparator() +
+                           "Amount Removed: $" + removedAmount + System.lineSeparator() +
+                           "New Cart Total Items: " + newTotalItems + System.lineSeparator() +
+                           "New Cart Total Price: $" + newTotalPrice + System.lineSeparator() +
+                           "Updated Cart: " + updatedCartItems.toString());
+SampleResult.setDataType(SampleResult.TEXT);
+SampleResult.setSuccessful(true);
+]]></stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+          
+          <!-- Think Time - User Reviews Updated Cart -->
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think Time - Review Updated Cart" enabled="true">
+            <stringProp name="ConstantTimer.delay">1200</stringProp>
+            <stringProp name="RandomTimer.range">2500</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+          
+          <!-- Cart Summary Before Checkout -->
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="07 - Final Cart Summary" enabled="true">
+            <stringProp name="BeanShellSampler.query"><![CDATA[// Display final cart summary before checkout
+int threadNum = ctx.getThreadNum() + 1;
+
+String finalCartItems = vars.get("cart_items");
+String finalCartCount = vars.get("cart_count");
+String finalCartTotal = vars.get("cart_total");
+
+String product1Name = vars.get("cart_product_1_name");
+String product3Name = vars.get("cart_product_3_name");
+int quantity1 = Integer.parseInt(vars.get("cart_product_1_quantity"));
+int quantity3 = Integer.parseInt(vars.get("cart_product_3_quantity"));
+double price1 = Double.parseDouble(vars.get("cart_product_1_price"));
+double price3 = Double.parseDouble(vars.get("cart_product_3_price"));
+
+log.info("🛒 FINAL CART SUMMARY - Thread " + threadNum);
+log.info("   Remaining Items:");
+log.info("   - " + product1Name + " x" + quantity1 + " ($" + price1 + " each)");
+log.info("   - " + product3Name + " x" + quantity3 + " ($" + price3 + " each)");
+log.info("   Total Items: " + finalCartCount);
+log.info("   Total Price: $" + finalCartTotal);
+
+SampleResult.setResponseData("Final Cart Summary - Ready for Checkout!" + System.lineSeparator() + 
+                           "Thread " + threadNum + " Final Cart:" + System.lineSeparator() +
+                           "Remaining Items:" + System.lineSeparator() +
+                           "- " + product1Name + " x" + quantity1 + " ($" + price1 + " each)" + System.lineSeparator() +
+                           "- " + product3Name + " x" + quantity3 + " ($" + price3 + " each)" + System.lineSeparator() +
+                           "Total Items: " + finalCartCount + System.lineSeparator() +
+                           "Total Price: $" + finalCartTotal + System.lineSeparator() +
+                           "Cart JSON: " + finalCartItems);
+SampleResult.setDataType(SampleResult.TEXT);
+SampleResult.setSuccessful(true);
+]]></stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+        </hashTree>
+        
+        <!-- Cart Management Summary -->
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="08 - Complete Cart Management Summary" enabled="true">
+          <stringProp name="BeanShellSampler.query"><![CDATA[// Generate comprehensive cart operations summary
+int threadNum = ctx.getThreadNum() + 1;
+
+String product1Name = vars.get("cart_product_1_name");
+String product2Name = vars.get("cart_product_2_name");
+String product3Name = vars.get("cart_product_3_name");
+
+String initialQuantity1 = "2";
+String finalQuantity1 = vars.get("cart_product_1_quantity");
+String removedProduct = product2Name;
+String remainingQuantity3 = vars.get("cart_product_3_quantity");
+
+String finalTotal = vars.get("cart_total");
+String finalCount = vars.get("cart_count");
+
+log.info("📊 COMPLETE CART MANAGEMENT SUMMARY - Thread " + threadNum);
+log.info("   Cart Operations performed:");
+log.info("   1. ✅ Added 3 products to cart");
+log.info("   2. ✅ Reduced " + product1Name + " quantity: 2 → " + finalQuantity1);
+log.info("   3. ✅ Completely removed: " + removedProduct);
+log.info("   4. ✅ Generated final cart summary");
+log.info("   Final cart state:");
+log.info("   - Total Items: " + finalCount);
+log.info("   - Total Value: $" + finalTotal);
+log.info("   - Ready for checkout workflow");
+
+SampleResult.setResponseData("Complete Cart Management Load Testing Finished!" + System.lineSeparator() + System.lineSeparator() +
+                           "Thread " + threadNum + " - Cart Workflow Summary:" + System.lineSeparator() +
+                           "✅ CART INITIALIZATION: Empty cart created" + System.lineSeparator() +
+                           "✅ ADD PRODUCTS: Added 3 products with different quantities" + System.lineSeparator() +
+                           "✅ REDUCE QUANTITY: " + product1Name + " quantity reduced (2 → " + finalQuantity1 + ")" + System.lineSeparator() +
+                           "✅ REMOVE ITEM: " + removedProduct + " completely removed from cart" + System.lineSeparator() +
+                           "✅ CART SUMMARY: Reviewed final cart state" + System.lineSeparator() + System.lineSeparator() +
+                           "Final Cart State:" + System.lineSeparator() +
+                           "Total Items: " + finalCount + System.lineSeparator() +
+                           "Total Value: $" + finalTotal + System.lineSeparator() +
+                           "Status: Ready for separate payment processing" + System.lineSeparator() + System.lineSeparator() +
+                           "Note: Payment processing is handled by dedicated PaymentPageGroup.jmx" + System.lineSeparator() +
+                           "🎉 All cart management load testing completed successfully!");
+SampleResult.setDataType(SampleResult.TEXT);
+SampleResult.setSuccessful(true);
+]]></stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Wait 1 Second" enabled="true">
+          <stringProp name="ConstantTimer.delay">1000</stringProp>
+        </ConstantTimer>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>true</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>true</responseHeaders>
+              <requestHeaders>true</requestHeaders>
+              <responseDataOnError>true</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

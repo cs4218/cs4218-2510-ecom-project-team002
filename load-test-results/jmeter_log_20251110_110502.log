@@ -1,0 +1,1063 @@
+2025-11-10 11:05:06,225 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2025-11-10 11:05:06,238 INFO o.a.j.JMeter: Loading user properties from: /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/user.properties
+2025-11-10 11:05:06,238 INFO o.a.j.JMeter: Loading system properties from: /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/system.properties
+2025-11-10 11:05:06,238 INFO o.a.j.JMeter: Setting JMeter property: threads=15
+2025-11-10 11:05:06,239 INFO o.a.j.JMeter: Setting JMeter property: rampup=180
+2025-11-10 11:05:06,239 INFO o.a.j.JMeter: Setting JMeter property: duration=600
+2025-11-10 11:05:06,239 INFO o.a.j.JMeter: Setting JMeter property: iterations=2
+2025-11-10 11:05:06,242 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2025-11-10 11:05:06,242 INFO o.a.j.JMeter: Version 5.6.3
+2025-11-10 11:05:06,242 INFO o.a.j.JMeter: java.version=21.0.9
+2025-11-10 11:05:06,242 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2025-11-10 11:05:06,242 INFO o.a.j.JMeter: os.name=Mac OS X
+2025-11-10 11:05:06,242 INFO o.a.j.JMeter: os.arch=aarch64
+2025-11-10 11:05:06,242 INFO o.a.j.JMeter: os.version=26.0.1
+2025-11-10 11:05:06,242 INFO o.a.j.JMeter: file.encoding=UTF-8
+2025-11-10 11:05:06,242 INFO o.a.j.JMeter: java.awt.headless=true
+2025-11-10 11:05:06,242 INFO o.a.j.JMeter: Max memory     =1073741824
+2025-11-10 11:05:06,242 INFO o.a.j.JMeter: Available Processors =8
+2025-11-10 11:05:06,249 INFO o.a.j.JMeter: Default Locale=English (EN)
+2025-11-10 11:05:06,249 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2025-11-10 11:05:06,249 INFO o.a.j.JMeter: JMeterHome=/opt/homebrew/Cellar/jmeter/5.6.3/libexec
+2025-11-10 11:05:06,249 INFO o.a.j.JMeter: user.dir  =/Users/nishenghan/cs4218-2510-ecom-project-team002
+2025-11-10 11:05:06,249 INFO o.a.j.JMeter: PWD       =/Users/nishenghan/cs4218-2510-ecom-project-team002
+2025-11-10 11:05:06,252 INFO o.a.j.JMeter: IP: 127.0.0.1 Name: Nis-MacBook-Air.local FullName: localhost
+2025-11-10 11:05:06,259 INFO o.a.j.JMeter: Setting property 'jmeter.reportgenerator.outputdir' to:'/Users/nishenghan/cs4218-2510-ecom-project-team002/./load-test-results/html_report_20251110_110502'
+2025-11-10 11:05:06,261 INFO o.a.j.s.FileServer: Default base='/Users/nishenghan/cs4218-2510-ecom-project-team002'
+2025-11-10 11:05:06,261 INFO o.a.j.s.FileServer: Set new base='/Users/nishenghan/cs4218-2510-ecom-project-team002'
+2025-11-10 11:05:06,368 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2025-11-10 11:05:06,393 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2025-11-10 11:05:06,394 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2025-11-10 11:05:06,396 INFO o.a.j.s.SaveService: Loading file: PaymentPageGroup.jmx
+2025-11-10 11:05:06,415 INFO o.a.j.p.h.c.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_
+2025-11-10 11:05:06,445 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-11-10 11:05:06,445 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-11-10 11:05:06,445 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-11-10 11:05:06,445 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-11-10 11:05:06,445 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2025-11-10 11:05:06,445 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2025-11-10 11:05:06,478 INFO o.a.j.JMeter: Creating summariser <summary>
+2025-11-10 11:05:06,481 INFO o.a.j.r.d.ReportGenerator: ReportGenerator will use for Parsing the separator: ','
+2025-11-10 11:05:06,481 INFO o.a.j.r.d.ReportGenerator: Will generate report at end of test from  results file: ./load-test-results/jmeter_results_20251110_110502.jtl
+2025-11-10 11:05:06,481 INFO o.a.j.r.d.ReportGenerator: Reading report generator properties from: /opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/reportgenerator.properties
+2025-11-10 11:05:06,481 INFO o.a.j.r.d.ReportGenerator: Merging with JMeter properties
+2025-11-10 11:05:06,483 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.temp_dir' not found, using default value 'temp' instead.
+2025-11-10 11:05:06,484 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.apdex_per_transaction' not found, using default value 'null' instead.
+2025-11-10 11:05:06,484 INFO o.a.j.r.c.ReportGeneratorConfiguration: apdex_per_transaction is empty, not APDEX per transaction customization
+2025-11-10 11:05:06,484 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.sample_filter' not found, using default value 'null' instead.
+2025-11-10 11:05:06,484 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.report_title' not found, using default value 'null' instead.
+2025-11-10 11:05:06,484 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.start_date' not found, using default value 'null' instead.
+2025-11-10 11:05:06,484 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.end_date' not found, using default value 'null' instead.
+2025-11-10 11:05:06,484 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.date_format' not found, using default value 'null' instead.
+2025-11-10 11:05:06,484 INFO o.a.j.r.c.ReportGeneratorConfiguration: Will use date range start date: null, end date: null
+2025-11-10 11:05:06,486 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.totalTPS.exclude_controllers' not found, using default value 'false' instead.
+2025-11-10 11:05:06,486 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.activeThreadsOverTime.exclude_controllers' not found, using default value 'false' instead.
+2025-11-10 11:05:06,486 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.timeVsThreads.exclude_controllers' not found, using default value 'false' instead.
+2025-11-10 11:05:06,486 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimeDistribution.exclude_controllers' not found, using default value 'false' instead.
+2025-11-10 11:05:06,486 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.transactionsPerSecond.exclude_controllers' not found, using default value 'false' instead.
+2025-11-10 11:05:06,486 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentiles.exclude_controllers' not found, using default value 'false' instead.
+2025-11-10 11:05:06,487 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentilesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2025-11-10 11:05:06,487 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2025-11-10 11:05:06,487 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.connectTimeOverTime.exclude_controllers' not found, using default value 'false' instead.
+2025-11-10 11:05:06,487 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.latenciesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2025-11-10 11:05:06,487 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.filters_only_sample_series' not found, using default value 'true' instead.
+2025-11-10 11:05:06,487 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.series_filter' not found, using default value '' instead.
+2025-11-10 11:05:06,487 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.show_controllers_only' not found, using default value 'false' instead.
+2025-11-10 11:05:06,487 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.filters_only_sample_series' not found, using default value 'true' instead.
+2025-11-10 11:05:06,487 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.series_filter' not found, using default value '' instead.
+2025-11-10 11:05:06,487 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.show_controllers_only' not found, using default value 'false' instead.
+2025-11-10 11:05:06,494 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2025-11-10 11:05:06,494 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-11-10 11:05:06,494 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-11-10 11:05:06,497 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2025-11-10 11:05:06,497 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2025-11-10 11:05:06,529 INFO o.a.j.r.ClassFinder: Will scan jar /opt/homebrew/Cellar/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-11-10 11:05:06,641 INFO o.a.j.JMeter: Running test (1762743906641)
+2025-11-10 11:05:06,650 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Payment Page Load Test Thread Group
+2025-11-10 11:05:06,650 INFO o.a.j.e.StandardJMeterEngine: Starting 15 threads for group Payment Page Load Test Thread Group.
+2025-11-10 11:05:06,650 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-11-10 11:05:06,651 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=15 ramp-up=180 delayedStart=false
+2025-11-10 11:05:06,660 INFO o.a.j.t.JMeterThread: Thread started: Payment Page Load Test Thread Group 1-1
+2025-11-10 11:05:06,744 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2025-11-10 11:05:06,744 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2025-11-10 11:05:13,975 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2025-11-10 11:05:13,975 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2025-11-10 11:05:13,975 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2025-11-10 11:05:13,975 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2025-11-10 11:05:13,996 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 1
+2025-11-10 11:05:13,997 INFO o.a.j.u.BeanShellTestElement:    Email: david123@gmail.com
+2025-11-10 11:05:13,997 INFO o.a.j.u.BeanShellTestElement:    Type: Admin
+2025-11-10 11:05:13,998 INFO o.a.j.u.BeanShellTestElement:    Card: 5555555555554444 (Mastercard)
+2025-11-10 11:05:18,665 INFO o.a.j.t.JMeterThread: Thread started: Payment Page Load Test Thread Group 1-2
+2025-11-10 11:05:20,543 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = Nis-MacBook-Air.local
+2025-11-10 11:05:20,547 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2025-11-10 11:05:25,148 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 2
+2025-11-10 11:05:25,149 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest1@test.com
+2025-11-10 11:05:25,149 INFO o.a.j.u.BeanShellTestElement:    Type: LoadTest1
+2025-11-10 11:05:25,150 INFO o.a.j.u.BeanShellTestElement:    Card: 4111111111111111 (Visa)
+2025-11-10 11:05:30,659 INFO o.a.j.t.JMeterThread: Thread started: Payment Page Load Test Thread Group 1-3
+2025-11-10 11:05:32,677 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 1
+2025-11-10 11:05:32,677 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:05:32,677 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:05:32,677 INFO o.a.j.u.BeanShellTestElement:    Quantity: 2
+2025-11-10 11:05:32,677 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $53.47
+2025-11-10 11:05:32,678 INFO o.a.j.r.Summariser: summary +      5 in 00:00:26 =    0.2/s Avg:    41 Min:    10 Max:   138 Err:     0 (0.00%) Active: 3 Started: 3 Finished: 0
+2025-11-10 11:05:35,716 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 3
+2025-11-10 11:05:35,716 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest2@test.com
+2025-11-10 11:05:35,716 INFO o.a.j.u.BeanShellTestElement:    Type: LoadTest2
+2025-11-10 11:05:35,716 INFO o.a.j.u.BeanShellTestElement:    Card: 4111111111111111 (Visa)
+2025-11-10 11:05:42,663 INFO o.a.j.t.JMeterThread: Thread started: Payment Page Load Test Thread Group 1-4
+2025-11-10 11:05:43,545 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 2
+2025-11-10 11:05:43,545 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:05:43,545 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:05:43,545 INFO o.a.j.u.BeanShellTestElement:    Quantity: 3
+2025-11-10 11:05:43,545 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $79.9
+2025-11-10 11:05:43,894 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 1 (Admin)
+2025-11-10 11:05:43,894 INFO o.a.j.u.BeanShellTestElement:    Test Card: 5555555555554444 (Mastercard)
+2025-11-10 11:05:43,895 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:05:43,895 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-valid-nonce
+2025-11-10 11:05:43,895 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $53.47
+2025-11-10 11:05:43,895 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 2 x Test Product
+2025-11-10 11:05:43,896 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2384 chars)
+2025-11-10 11:05:45,724 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 4
+2025-11-10 11:05:45,725 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest3@test.com
+2025-11-10 11:05:45,725 INFO o.a.j.u.BeanShellTestElement:    Type: LoadTest3
+2025-11-10 11:05:45,726 INFO o.a.j.u.BeanShellTestElement:    Card: 5555555555554444 (Mastercard)
+2025-11-10 11:05:52,173 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 3
+2025-11-10 11:05:52,174 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:05:52,174 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:05:52,174 INFO o.a.j.u.BeanShellTestElement:    Quantity: 4
+2025-11-10 11:05:52,174 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $105.93
+2025-11-10 11:05:54,662 INFO o.a.j.t.JMeterThread: Thread started: Payment Page Load Test Thread Group 1-5
+2025-11-10 11:05:56,397 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 1
+2025-11-10 11:05:56,398 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:05:56,398 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:05:56,398 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:05:56,398 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:05:56,398 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:05:56,398 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:05:56,400 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: SUCCESS
+2025-11-10 11:05:56,400 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:05:56,400 INFO o.a.j.u.BeanShellTestElement:    - Card: 5555555555554444 (Mastercard)
+2025-11-10 11:05:56,401 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 2)
+2025-11-10 11:05:56,401 INFO o.a.j.u.BeanShellTestElement:    - Total: $53.47
+2025-11-10 11:05:56,401 INFO o.a.j.u.BeanShellTestElement:    - Order ID: 6911568e22bc9b79f33addfb
+2025-11-10 11:05:58,245 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 2 (LoadTest1)
+2025-11-10 11:05:58,246 INFO o.a.j.u.BeanShellTestElement:    Test Card: 4111111111111111 (Visa)
+2025-11-10 11:05:58,246 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:05:58,246 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-valid-visa-nonce
+2025-11-10 11:05:58,246 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $79.90
+2025-11-10 11:05:58,246 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 3 x Test Product
+2025-11-10 11:05:58,246 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2364 chars)
+2025-11-10 11:05:59,843 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 5
+2025-11-10 11:05:59,843 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest4@test.com
+2025-11-10 11:05:59,843 INFO o.a.j.u.BeanShellTestElement:    Type: LoadTest4
+2025-11-10 11:05:59,844 INFO o.a.j.u.BeanShellTestElement:    Card: 5555555555554444 (Mastercard)
+2025-11-10 11:06:00,883 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 3 (LoadTest2)
+2025-11-10 11:06:00,884 INFO o.a.j.u.BeanShellTestElement:    Test Card: 4111111111111111 (Visa)
+2025-11-10 11:06:00,884 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:06:00,884 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-valid-mastercard-nonce
+2025-11-10 11:06:00,884 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $105.93
+2025-11-10 11:06:00,884 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 4 x Test Product
+2025-11-10 11:06:00,885 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2364 chars)
+2025-11-10 11:06:00,886 INFO o.a.j.r.Summariser: summary +     19 in 00:00:28 =    0.7/s Avg:   361 Min:     3 Max:  1619 Err:     0 (0.00%) Active: 5 Started: 5 Finished: 0
+2025-11-10 11:06:00,887 INFO o.a.j.r.Summariser: summary =     24 in 00:00:54 =    0.4/s Avg:   294 Min:     3 Max:  1619 Err:     0 (0.00%)
+2025-11-10 11:06:01,003 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 1
+2025-11-10 11:06:01,003 INFO o.a.j.u.BeanShellTestElement:    Email: david123@gmail.com
+2025-11-10 11:06:01,003 INFO o.a.j.u.BeanShellTestElement:    Type: Admin
+2025-11-10 11:06:01,003 INFO o.a.j.u.BeanShellTestElement:    Card: 5555555555554444 (Mastercard)
+2025-11-10 11:06:03,120 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 4
+2025-11-10 11:06:03,120 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:06:03,120 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:06:03,120 INFO o.a.j.u.BeanShellTestElement:    Quantity: 5
+2025-11-10 11:06:03,120 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $132.14
+2025-11-10 11:06:06,662 INFO o.a.j.t.JMeterThread: Thread started: Payment Page Load Test Thread Group 1-6
+2025-11-10 11:06:09,216 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 2
+2025-11-10 11:06:09,217 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:06:09,217 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:06:09,217 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:06:09,217 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:06:09,217 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:06:09,217 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:06:09,218 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: SUCCESS
+2025-11-10 11:06:09,218 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:06:09,218 INFO o.a.j.u.BeanShellTestElement:    - Card: 4111111111111111 (Visa)
+2025-11-10 11:06:09,218 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 3)
+2025-11-10 11:06:09,218 INFO o.a.j.u.BeanShellTestElement:    - Total: $79.90
+2025-11-10 11:06:09,218 INFO o.a.j.u.BeanShellTestElement:    - Order ID: 6911569c22bc9b79f33addff
+2025-11-10 11:06:09,872 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 3
+2025-11-10 11:06:09,873 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:06:09,873 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:06:09,873 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:06:09,873 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:06:09,873 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:06:09,873 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:06:09,874 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: SUCCESS
+2025-11-10 11:06:09,874 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:06:09,874 INFO o.a.j.u.BeanShellTestElement:    - Card: 4111111111111111 (Visa)
+2025-11-10 11:06:09,874 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 4)
+2025-11-10 11:06:09,874 INFO o.a.j.u.BeanShellTestElement:    - Total: $105.93
+2025-11-10 11:06:09,874 INFO o.a.j.u.BeanShellTestElement:    - Order ID: 6911569e22bc9b79f33ade02
+2025-11-10 11:06:11,642 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 6
+2025-11-10 11:06:11,643 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest5@test.com
+2025-11-10 11:06:11,643 INFO o.a.j.u.BeanShellTestElement:    Type: LoadTest5
+2025-11-10 11:06:11,643 INFO o.a.j.u.BeanShellTestElement:    Card: 4111111111111111 (Visa)
+2025-11-10 11:06:13,061 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 3
+2025-11-10 11:06:13,063 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest2@test.com
+2025-11-10 11:06:13,063 INFO o.a.j.u.BeanShellTestElement:    Type: LoadTest2
+2025-11-10 11:06:13,064 INFO o.a.j.u.BeanShellTestElement:    Card: 4111111111111111 (Visa)
+2025-11-10 11:06:14,221 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 2
+2025-11-10 11:06:14,221 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest1@test.com
+2025-11-10 11:06:14,221 INFO o.a.j.u.BeanShellTestElement:    Type: LoadTest1
+2025-11-10 11:06:14,221 INFO o.a.j.u.BeanShellTestElement:    Card: 4111111111111111 (Visa)
+2025-11-10 11:06:15,225 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 1
+2025-11-10 11:06:15,225 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:06:15,225 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:06:15,225 INFO o.a.j.u.BeanShellTestElement:    Quantity: 3
+2025-11-10 11:06:15,225 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $80.46
+2025-11-10 11:06:16,485 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 5
+2025-11-10 11:06:16,485 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:06:16,485 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:06:16,485 INFO o.a.j.u.BeanShellTestElement:    Quantity: 6
+2025-11-10 11:06:16,485 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $158.53
+2025-11-10 11:06:17,369 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 4 (LoadTest3)
+2025-11-10 11:06:17,370 INFO o.a.j.u.BeanShellTestElement:    Test Card: 5555555555554444 (Mastercard)
+2025-11-10 11:06:17,370 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:06:17,370 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-paypal-one-time-nonce
+2025-11-10 11:06:17,370 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $132.14
+2025-11-10 11:06:17,370 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 5 x Test Product
+2025-11-10 11:06:17,370 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2364 chars)
+2025-11-10 11:06:18,660 INFO o.a.j.t.JMeterThread: Thread started: Payment Page Load Test Thread Group 1-7
+2025-11-10 11:06:24,561 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 7
+2025-11-10 11:06:24,562 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest6@test.com
+2025-11-10 11:06:24,562 INFO o.a.j.u.BeanShellTestElement:    Type: LoadTest6
+2025-11-10 11:06:24,562 INFO o.a.j.u.BeanShellTestElement:    Card: 5555555555554444 (Mastercard)
+2025-11-10 11:06:25,600 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 3
+2025-11-10 11:06:25,600 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:06:25,601 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:06:25,601 INFO o.a.j.u.BeanShellTestElement:    Quantity: 5
+2025-11-10 11:06:25,601 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $133.19
+2025-11-10 11:06:26,094 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 4
+2025-11-10 11:06:26,095 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:06:26,095 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:06:26,095 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:06:26,095 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:06:26,095 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:06:26,095 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:06:26,096 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: SUCCESS
+2025-11-10 11:06:26,096 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:06:26,096 INFO o.a.j.u.BeanShellTestElement:    - Card: 5555555555554444 (Mastercard)
+2025-11-10 11:06:26,096 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 5)
+2025-11-10 11:06:26,096 INFO o.a.j.u.BeanShellTestElement:    - Total: $132.14
+2025-11-10 11:06:26,096 INFO o.a.j.u.BeanShellTestElement:    - Order ID: 691156af22bc9b79f33ade0c
+2025-11-10 11:06:29,626 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 2
+2025-11-10 11:06:29,627 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:06:29,627 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:06:29,627 INFO o.a.j.u.BeanShellTestElement:    Quantity: 4
+2025-11-10 11:06:29,627 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $106.71
+2025-11-10 11:06:29,735 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 4
+2025-11-10 11:06:29,736 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest3@test.com
+2025-11-10 11:06:29,736 INFO o.a.j.u.BeanShellTestElement:    Type: LoadTest3
+2025-11-10 11:06:29,736 INFO o.a.j.u.BeanShellTestElement:    Card: 5555555555554444 (Mastercard)
+2025-11-10 11:06:29,838 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 6
+2025-11-10 11:06:29,838 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:06:29,838 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:06:29,838 INFO o.a.j.u.BeanShellTestElement:    Quantity: 7
+2025-11-10 11:06:29,838 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $184.79
+2025-11-10 11:06:30,090 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 1 (Admin)
+2025-11-10 11:06:30,090 INFO o.a.j.u.BeanShellTestElement:    Test Card: 5555555555554444 (Mastercard)
+2025-11-10 11:06:30,090 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:06:30,090 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-paypal-one-time-nonce
+2025-11-10 11:06:30,090 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $80.46
+2025-11-10 11:06:30,090 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 3 x Test Product
+2025-11-10 11:06:30,091 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2364 chars)
+2025-11-10 11:06:30,092 INFO o.a.j.r.Summariser: summary +     35 in 00:00:29 =    1.2/s Avg:   230 Min:     2 Max:  1917 Err:     0 (0.00%) Active: 7 Started: 7 Finished: 0
+2025-11-10 11:06:30,092 INFO o.a.j.r.Summariser: summary =     59 in 00:01:23 =    0.7/s Avg:   256 Min:     2 Max:  1917 Err:     0 (0.00%)
+2025-11-10 11:06:30,662 INFO o.a.j.t.JMeterThread: Thread started: Payment Page Load Test Thread Group 1-8
+2025-11-10 11:06:30,898 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 5 (LoadTest4)
+2025-11-10 11:06:30,898 INFO o.a.j.u.BeanShellTestElement:    Test Card: 5555555555554444 (Mastercard)
+2025-11-10 11:06:30,898 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:06:30,898 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-valid-nonce
+2025-11-10 11:06:30,898 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $158.53
+2025-11-10 11:06:30,898 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 6 x Test Product
+2025-11-10 11:06:30,899 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2384 chars)
+2025-11-10 11:06:33,814 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 8
+2025-11-10 11:06:33,814 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest7@test.com
+2025-11-10 11:06:33,815 INFO o.a.j.u.BeanShellTestElement:    Type: LoadTest7
+2025-11-10 11:06:33,815 INFO o.a.j.u.BeanShellTestElement:    Card: 4111111111111111 (Visa)
+2025-11-10 11:06:38,809 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 3 (LoadTest2)
+2025-11-10 11:06:38,809 INFO o.a.j.u.BeanShellTestElement:    Test Card: 4111111111111111 (Visa)
+2025-11-10 11:06:38,809 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:06:38,809 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-valid-visa-nonce
+2025-11-10 11:06:38,809 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $133.19
+2025-11-10 11:06:38,809 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 5 x Test Product
+2025-11-10 11:06:38,810 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2384 chars)
+2025-11-10 11:06:39,653 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 7
+2025-11-10 11:06:39,654 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:06:39,654 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:06:39,654 INFO o.a.j.u.BeanShellTestElement:    Quantity: 8
+2025-11-10 11:06:39,654 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $210.69
+2025-11-10 11:06:42,660 INFO o.a.j.t.JMeterThread: Thread started: Payment Page Load Test Thread Group 1-9
+2025-11-10 11:06:44,152 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 2 (LoadTest1)
+2025-11-10 11:06:44,152 INFO o.a.j.u.BeanShellTestElement:    Test Card: 4111111111111111 (Visa)
+2025-11-10 11:06:44,152 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:06:44,153 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-valid-nonce
+2025-11-10 11:06:44,153 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $106.71
+2025-11-10 11:06:44,153 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 4 x Test Product
+2025-11-10 11:06:44,153 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2364 chars)
+2025-11-10 11:06:45,552 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 1
+2025-11-10 11:06:45,553 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:06:45,553 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:06:45,553 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:06:45,553 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:06:45,553 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:06:45,553 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:06:45,554 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: SUCCESS
+2025-11-10 11:06:45,554 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:06:45,554 INFO o.a.j.u.BeanShellTestElement:    - Card: 5555555555554444 (Mastercard)
+2025-11-10 11:06:45,554 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 3)
+2025-11-10 11:06:45,554 INFO o.a.j.u.BeanShellTestElement:    - Total: $80.46
+2025-11-10 11:06:45,554 INFO o.a.j.u.BeanShellTestElement:    - Order ID: 691156be22bc9b79f33ade15
+2025-11-10 11:06:45,556 INFO o.a.j.t.JMeterThread: Thread is done: Payment Page Load Test Thread Group 1-1
+2025-11-10 11:06:45,556 INFO o.a.j.t.JMeterThread: Thread finished: Payment Page Load Test Thread Group 1-1
+2025-11-10 11:06:45,687 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 5
+2025-11-10 11:06:45,687 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:06:45,687 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:06:45,687 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:06:45,688 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:06:45,688 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:06:45,688 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:06:45,688 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: SUCCESS
+2025-11-10 11:06:45,688 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:06:45,688 INFO o.a.j.u.BeanShellTestElement:    - Card: 5555555555554444 (Mastercard)
+2025-11-10 11:06:45,688 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 6)
+2025-11-10 11:06:45,688 INFO o.a.j.u.BeanShellTestElement:    - Total: $158.53
+2025-11-10 11:06:45,689 INFO o.a.j.u.BeanShellTestElement:    - Order ID: 691156bd22bc9b79f33ade13
+2025-11-10 11:06:46,908 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 6 (LoadTest5)
+2025-11-10 11:06:46,908 INFO o.a.j.u.BeanShellTestElement:    Test Card: 4111111111111111 (Visa)
+2025-11-10 11:06:46,908 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:06:46,908 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-valid-visa-nonce
+2025-11-10 11:06:46,908 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $184.79
+2025-11-10 11:06:46,908 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 7 x Test Product
+2025-11-10 11:06:46,909 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2364 chars)
+2025-11-10 11:06:47,346 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 4
+2025-11-10 11:06:47,346 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:06:47,347 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:06:47,347 INFO o.a.j.u.BeanShellTestElement:    Quantity: 6
+2025-11-10 11:06:47,347 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $159.39
+2025-11-10 11:06:49,607 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 8
+2025-11-10 11:06:49,607 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:06:49,607 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:06:49,607 INFO o.a.j.u.BeanShellTestElement:    Quantity: 9
+2025-11-10 11:06:49,608 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $236.97
+2025-11-10 11:06:50,515 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 3
+2025-11-10 11:06:50,516 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:06:50,516 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:06:50,516 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:06:50,516 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:06:50,516 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:06:50,516 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:06:50,517 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: SUCCESS
+2025-11-10 11:06:50,517 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:06:50,517 INFO o.a.j.u.BeanShellTestElement:    - Card: 4111111111111111 (Visa)
+2025-11-10 11:06:50,517 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 5)
+2025-11-10 11:06:50,517 INFO o.a.j.u.BeanShellTestElement:    - Total: $133.19
+2025-11-10 11:06:50,517 INFO o.a.j.u.BeanShellTestElement:    - Order ID: 691156c722bc9b79f33ade19
+2025-11-10 11:06:50,519 INFO o.a.j.t.JMeterThread: Thread is done: Payment Page Load Test Thread Group 1-3
+2025-11-10 11:06:50,519 INFO o.a.j.t.JMeterThread: Thread finished: Payment Page Load Test Thread Group 1-3
+2025-11-10 11:06:50,547 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 9
+2025-11-10 11:06:50,547 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest8@test.com
+2025-11-10 11:06:50,547 INFO o.a.j.u.BeanShellTestElement:    Type: LoadTest8
+2025-11-10 11:06:50,547 INFO o.a.j.u.BeanShellTestElement:    Card: 5555555555554444 (Mastercard)
+2025-11-10 11:06:52,161 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 5
+2025-11-10 11:06:52,161 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest4@test.com
+2025-11-10 11:06:52,161 INFO o.a.j.u.BeanShellTestElement:    Type: LoadTest4
+2025-11-10 11:06:52,162 INFO o.a.j.u.BeanShellTestElement:    Card: 5555555555554444 (Mastercard)
+2025-11-10 11:06:53,472 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 7 (LoadTest6)
+2025-11-10 11:06:53,472 INFO o.a.j.u.BeanShellTestElement:    Test Card: 5555555555554444 (Mastercard)
+2025-11-10 11:06:53,472 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:06:53,473 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-valid-mastercard-nonce
+2025-11-10 11:06:53,473 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $210.69
+2025-11-10 11:06:53,473 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 8 x Test Product
+2025-11-10 11:06:53,473 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2364 chars)
+2025-11-10 11:06:54,660 INFO o.a.j.t.JMeterThread: Thread started: Payment Page Load Test Thread Group 1-10
+2025-11-10 11:06:57,700 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 4 (LoadTest3)
+2025-11-10 11:06:57,700 INFO o.a.j.u.BeanShellTestElement:    Test Card: 5555555555554444 (Mastercard)
+2025-11-10 11:06:57,701 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:06:57,701 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-valid-mastercard-nonce
+2025-11-10 11:06:57,701 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $159.39
+2025-11-10 11:06:57,701 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 6 x Test Product
+2025-11-10 11:06:57,701 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2364 chars)
+2025-11-10 11:06:58,111 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 6
+2025-11-10 11:06:58,112 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:06:58,112 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:06:58,112 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:06:58,112 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:06:58,112 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:06:58,112 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:06:58,113 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: SUCCESS
+2025-11-10 11:06:58,113 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:06:58,113 INFO o.a.j.u.BeanShellTestElement:    - Card: 4111111111111111 (Visa)
+2025-11-10 11:06:58,113 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 7)
+2025-11-10 11:06:58,113 INFO o.a.j.u.BeanShellTestElement:    - Total: $184.79
+2025-11-10 11:06:58,113 INFO o.a.j.u.BeanShellTestElement:    - Order ID: 691156cb22bc9b79f33ade1b
+2025-11-10 11:06:58,655 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 2
+2025-11-10 11:06:58,656 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:06:58,656 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:06:58,656 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:06:58,656 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:06:58,656 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:06:58,656 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:06:58,656 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: SUCCESS
+2025-11-10 11:06:58,656 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:06:58,656 INFO o.a.j.u.BeanShellTestElement:    - Card: 4111111111111111 (Visa)
+2025-11-10 11:06:58,656 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 4)
+2025-11-10 11:06:58,656 INFO o.a.j.u.BeanShellTestElement:    - Total: $106.71
+2025-11-10 11:06:58,656 INFO o.a.j.u.BeanShellTestElement:    - Order ID: 691156cc22bc9b79f33ade1d
+2025-11-10 11:06:58,658 INFO o.a.j.t.JMeterThread: Thread is done: Payment Page Load Test Thread Group 1-2
+2025-11-10 11:06:58,658 INFO o.a.j.t.JMeterThread: Thread finished: Payment Page Load Test Thread Group 1-2
+2025-11-10 11:07:00,537 INFO o.a.j.r.Summariser: summary +     36 in 00:00:30 =    1.2/s Avg:   515 Min:     2 Max:  2810 Err:     1 (2.78%) Active: 7 Started: 10 Finished: 3
+2025-11-10 11:07:00,537 INFO o.a.j.r.Summariser: summary =     95 in 00:01:54 =    0.8/s Avg:   354 Min:     2 Max:  2810 Err:     1 (1.05%)
+2025-11-10 11:07:01,798 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 10
+2025-11-10 11:07:01,798 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest9@test.com
+2025-11-10 11:07:01,799 INFO o.a.j.u.BeanShellTestElement:    Type: LoadTest9
+2025-11-10 11:07:01,799 INFO o.a.j.u.BeanShellTestElement:    Card: 4111111111111111 (Visa)
+2025-11-10 11:07:03,795 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 6
+2025-11-10 11:07:03,795 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest5@test.com
+2025-11-10 11:07:03,796 INFO o.a.j.u.BeanShellTestElement:    Type: LoadTest5
+2025-11-10 11:07:03,796 INFO o.a.j.u.BeanShellTestElement:    Card: 4111111111111111 (Visa)
+2025-11-10 11:07:03,850 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 9
+2025-11-10 11:07:03,850 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:07:03,850 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:07:03,850 INFO o.a.j.u.BeanShellTestElement:    Quantity: 10
+2025-11-10 11:07:03,850 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $263.63
+2025-11-10 11:07:05,409 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 8 (LoadTest7)
+2025-11-10 11:07:05,410 INFO o.a.j.u.BeanShellTestElement:    Test Card: 4111111111111111 (Visa)
+2025-11-10 11:07:05,410 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:07:05,410 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-paypal-one-time-nonce
+2025-11-10 11:07:05,410 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $236.97
+2025-11-10 11:07:05,410 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 9 x Test Product
+2025-11-10 11:07:05,410 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2364 chars)
+2025-11-10 11:07:06,662 INFO o.a.j.t.JMeterThread: Thread started: Payment Page Load Test Thread Group 1-11
+2025-11-10 11:07:07,688 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 7
+2025-11-10 11:07:07,688 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:07:07,689 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:07:07,689 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:07:07,689 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:07:07,689 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:07:07,689 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:07:07,689 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: FAILED
+2025-11-10 11:07:07,689 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:07:07,689 INFO o.a.j.u.BeanShellTestElement:    - Card: 5555555555554444 (Mastercard)
+2025-11-10 11:07:07,689 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 8)
+2025-11-10 11:07:07,690 INFO o.a.j.u.BeanShellTestElement:    - Total: $210.69
+2025-11-10 11:07:07,690 INFO o.a.j.u.BeanShellTestElement:    - Order ID: NO_ORDER
+2025-11-10 11:07:09,231 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 5
+2025-11-10 11:07:09,232 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:07:09,232 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:07:09,232 INFO o.a.j.u.BeanShellTestElement:    Quantity: 7
+2025-11-10 11:07:09,232 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $185.49
+2025-11-10 11:07:09,369 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 4
+2025-11-10 11:07:09,369 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:07:09,369 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:07:09,369 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:07:09,369 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:07:09,369 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:07:09,369 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:07:09,369 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: SUCCESS
+2025-11-10 11:07:09,369 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:07:09,369 INFO o.a.j.u.BeanShellTestElement:    - Card: 5555555555554444 (Mastercard)
+2025-11-10 11:07:09,369 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 6)
+2025-11-10 11:07:09,370 INFO o.a.j.u.BeanShellTestElement:    - Total: $159.39
+2025-11-10 11:07:09,370 INFO o.a.j.u.BeanShellTestElement:    - Order ID: 691156d822bc9b79f33ade23
+2025-11-10 11:07:09,371 INFO o.a.j.t.JMeterThread: Thread is done: Payment Page Load Test Thread Group 1-4
+2025-11-10 11:07:09,371 INFO o.a.j.t.JMeterThread: Thread finished: Payment Page Load Test Thread Group 1-4
+2025-11-10 11:07:12,321 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 11
+2025-11-10 11:07:12,322 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest10@test.com
+2025-11-10 11:07:12,322 INFO o.a.j.u.BeanShellTestElement:    Type: LoadTest10
+2025-11-10 11:07:12,322 INFO o.a.j.u.BeanShellTestElement:    Card: 5555555555554444 (Mastercard)
+2025-11-10 11:07:14,726 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 7
+2025-11-10 11:07:14,726 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest6@test.com
+2025-11-10 11:07:14,727 INFO o.a.j.u.BeanShellTestElement:    Type: LoadTest6
+2025-11-10 11:07:14,727 INFO o.a.j.u.BeanShellTestElement:    Card: 5555555555554444 (Mastercard)
+2025-11-10 11:07:15,142 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 9 (LoadTest8)
+2025-11-10 11:07:15,143 INFO o.a.j.u.BeanShellTestElement:    Test Card: 5555555555554444 (Mastercard)
+2025-11-10 11:07:15,143 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:07:15,143 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-valid-nonce
+2025-11-10 11:07:15,143 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $263.63
+2025-11-10 11:07:15,143 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 10 x Test Product
+2025-11-10 11:07:15,143 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2364 chars)
+2025-11-10 11:07:15,973 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 10
+2025-11-10 11:07:15,973 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:07:15,973 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:07:15,973 INFO o.a.j.u.BeanShellTestElement:    Quantity: 11
+2025-11-10 11:07:15,974 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $289.6
+2025-11-10 11:07:16,781 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 6
+2025-11-10 11:07:16,781 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:07:16,781 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:07:16,781 INFO o.a.j.u.BeanShellTestElement:    Quantity: 8
+2025-11-10 11:07:16,781 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $211.72
+2025-11-10 11:07:16,944 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 8
+2025-11-10 11:07:16,945 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:07:16,945 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:07:16,945 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:07:16,945 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:07:16,945 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:07:16,945 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:07:16,946 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: FAILED
+2025-11-10 11:07:16,946 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:07:16,946 INFO o.a.j.u.BeanShellTestElement:    - Card: 4111111111111111 (Visa)
+2025-11-10 11:07:16,946 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 9)
+2025-11-10 11:07:16,946 INFO o.a.j.u.BeanShellTestElement:    - Total: $236.97
+2025-11-10 11:07:16,946 INFO o.a.j.u.BeanShellTestElement:    - Order ID: NO_ORDER
+2025-11-10 11:07:18,659 INFO o.a.j.t.JMeterThread: Thread started: Payment Page Load Test Thread Group 1-12
+2025-11-10 11:07:19,936 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 5 (LoadTest4)
+2025-11-10 11:07:19,937 INFO o.a.j.u.BeanShellTestElement:    Test Card: 5555555555554444 (Mastercard)
+2025-11-10 11:07:19,937 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:07:19,937 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-paypal-one-time-nonce
+2025-11-10 11:07:19,937 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $185.49
+2025-11-10 11:07:19,937 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 7 x Test Product
+2025-11-10 11:07:19,937 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2364 chars)
+2025-11-10 11:07:22,130 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 12
+2025-11-10 11:07:22,130 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest11@test.com
+2025-11-10 11:07:22,130 INFO o.a.j.u.BeanShellTestElement:    Type: LoadTest11
+2025-11-10 11:07:22,130 INFO o.a.j.u.BeanShellTestElement:    Card: 4111111111111111 (Visa)
+2025-11-10 11:07:22,152 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 8
+2025-11-10 11:07:22,152 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest7@test.com
+2025-11-10 11:07:22,152 INFO o.a.j.u.BeanShellTestElement:    Type: LoadTest7
+2025-11-10 11:07:22,152 INFO o.a.j.u.BeanShellTestElement:    Card: 4111111111111111 (Visa)
+2025-11-10 11:07:23,056 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 11
+2025-11-10 11:07:23,056 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:07:23,056 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:07:23,056 INFO o.a.j.u.BeanShellTestElement:    Quantity: 12
+2025-11-10 11:07:23,057 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $315.68
+2025-11-10 11:07:24,562 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 9
+2025-11-10 11:07:24,562 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:07:24,562 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:07:24,562 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:07:24,562 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:07:24,562 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:07:24,562 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:07:24,563 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: FAILED
+2025-11-10 11:07:24,563 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:07:24,563 INFO o.a.j.u.BeanShellTestElement:    - Card: 5555555555554444 (Mastercard)
+2025-11-10 11:07:24,563 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 10)
+2025-11-10 11:07:24,563 INFO o.a.j.u.BeanShellTestElement:    - Total: $263.63
+2025-11-10 11:07:24,563 INFO o.a.j.u.BeanShellTestElement:    - Order ID: NO_ORDER
+2025-11-10 11:07:30,539 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 9
+2025-11-10 11:07:30,540 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest8@test.com
+2025-11-10 11:07:30,540 INFO o.a.j.u.BeanShellTestElement:    Type: LoadTest8
+2025-11-10 11:07:30,540 INFO o.a.j.u.BeanShellTestElement:    Card: 5555555555554444 (Mastercard)
+2025-11-10 11:07:30,541 INFO o.a.j.r.Summariser: summary +     39 in 00:00:30 =    1.3/s Avg:   368 Min:     1 Max:  3412 Err:     2 (5.13%) Active: 8 Started: 12 Finished: 4
+2025-11-10 11:07:30,542 INFO o.a.j.r.Summariser: summary =    134 in 00:02:24 =    0.9/s Avg:   358 Min:     1 Max:  3412 Err:     3 (2.24%)
+2025-11-10 11:07:30,659 INFO o.a.j.t.JMeterThread: Thread started: Payment Page Load Test Thread Group 1-13
+2025-11-10 11:07:32,773 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 6 (LoadTest5)
+2025-11-10 11:07:32,774 INFO o.a.j.u.BeanShellTestElement:    Test Card: 4111111111111111 (Visa)
+2025-11-10 11:07:32,774 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:07:32,774 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-valid-nonce
+2025-11-10 11:07:32,774 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $211.72
+2025-11-10 11:07:32,774 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 8 x Test Product
+2025-11-10 11:07:32,774 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2364 chars)
+2025-11-10 11:07:33,781 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 7
+2025-11-10 11:07:33,781 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:07:33,781 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:07:33,781 INFO o.a.j.u.BeanShellTestElement:    Quantity: 9
+2025-11-10 11:07:33,781 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $237.96
+2025-11-10 11:07:34,035 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 13
+2025-11-10 11:07:34,035 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest12@test.com
+2025-11-10 11:07:34,035 INFO o.a.j.u.BeanShellTestElement:    Type: LoadTest12
+2025-11-10 11:07:34,036 INFO o.a.j.u.BeanShellTestElement:    Card: 5555555555554444 (Mastercard)
+2025-11-10 11:07:34,697 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 10 (LoadTest9)
+2025-11-10 11:07:34,697 INFO o.a.j.u.BeanShellTestElement:    Test Card: 4111111111111111 (Visa)
+2025-11-10 11:07:34,698 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:07:34,698 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-valid-visa-nonce
+2025-11-10 11:07:34,698 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $289.60
+2025-11-10 11:07:34,698 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 11 x Test Product
+2025-11-10 11:07:34,698 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2364 chars)
+2025-11-10 11:07:36,047 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 5
+2025-11-10 11:07:36,048 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:07:36,048 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:07:36,048 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:07:36,048 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:07:36,048 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:07:36,048 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:07:36,049 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: SUCCESS
+2025-11-10 11:07:36,049 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:07:36,049 INFO o.a.j.u.BeanShellTestElement:    - Card: 5555555555554444 (Mastercard)
+2025-11-10 11:07:36,049 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 7)
+2025-11-10 11:07:36,049 INFO o.a.j.u.BeanShellTestElement:    - Total: $185.49
+2025-11-10 11:07:36,049 INFO o.a.j.u.BeanShellTestElement:    - Order ID: 691156f022bc9b79f33ade2d
+2025-11-10 11:07:36,052 INFO o.a.j.t.JMeterThread: Thread is done: Payment Page Load Test Thread Group 1-5
+2025-11-10 11:07:36,052 INFO o.a.j.t.JMeterThread: Thread finished: Payment Page Load Test Thread Group 1-5
+2025-11-10 11:07:37,222 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 11 (LoadTest10)
+2025-11-10 11:07:37,223 INFO o.a.j.u.BeanShellTestElement:    Test Card: 5555555555554444 (Mastercard)
+2025-11-10 11:07:37,223 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:07:37,223 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-valid-mastercard-nonce
+2025-11-10 11:07:37,223 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $315.68
+2025-11-10 11:07:37,223 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 12 x Test Product
+2025-11-10 11:07:37,223 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2364 chars)
+2025-11-10 11:07:39,526 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 8
+2025-11-10 11:07:39,526 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:07:39,526 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:07:39,526 INFO o.a.j.u.BeanShellTestElement:    Quantity: 10
+2025-11-10 11:07:39,526 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $264.16
+2025-11-10 11:07:41,555 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 12
+2025-11-10 11:07:41,555 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:07:41,555 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:07:41,555 INFO o.a.j.u.BeanShellTestElement:    Quantity: 13
+2025-11-10 11:07:41,555 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $341.91
+2025-11-10 11:07:42,662 INFO o.a.j.t.JMeterThread: Thread started: Payment Page Load Test Thread Group 1-14
+2025-11-10 11:07:46,088 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 6
+2025-11-10 11:07:46,089 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:07:46,089 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:07:46,089 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:07:46,089 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:07:46,089 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:07:46,089 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:07:46,089 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: FAILED
+2025-11-10 11:07:46,089 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:07:46,089 INFO o.a.j.u.BeanShellTestElement:    - Card: 4111111111111111 (Visa)
+2025-11-10 11:07:46,089 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 8)
+2025-11-10 11:07:46,089 INFO o.a.j.u.BeanShellTestElement:    - Total: $211.72
+2025-11-10 11:07:46,089 INFO o.a.j.u.BeanShellTestElement:    - Order ID: NO_ORDER
+2025-11-10 11:07:46,091 INFO o.a.j.t.JMeterThread: Thread is done: Payment Page Load Test Thread Group 1-6
+2025-11-10 11:07:46,091 INFO o.a.j.t.JMeterThread: Thread finished: Payment Page Load Test Thread Group 1-6
+2025-11-10 11:07:47,599 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 9
+2025-11-10 11:07:47,600 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:07:47,600 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:07:47,600 INFO o.a.j.u.BeanShellTestElement:    Quantity: 11
+2025-11-10 11:07:47,600 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $290.62
+2025-11-10 11:07:48,300 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 10
+2025-11-10 11:07:48,301 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:07:48,301 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:07:48,301 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:07:48,301 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:07:48,301 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:07:48,301 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:07:48,301 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: FAILED
+2025-11-10 11:07:48,301 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:07:48,301 INFO o.a.j.u.BeanShellTestElement:    - Card: 4111111111111111 (Visa)
+2025-11-10 11:07:48,301 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 11)
+2025-11-10 11:07:48,302 INFO o.a.j.u.BeanShellTestElement:    - Total: $289.60
+2025-11-10 11:07:48,302 INFO o.a.j.u.BeanShellTestElement:    - Order ID: NO_ORDER
+2025-11-10 11:07:48,778 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 7 (LoadTest6)
+2025-11-10 11:07:48,778 INFO o.a.j.u.BeanShellTestElement:    Test Card: 5555555555554444 (Mastercard)
+2025-11-10 11:07:48,778 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:07:48,778 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-valid-visa-nonce
+2025-11-10 11:07:48,778 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $237.96
+2025-11-10 11:07:48,778 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 9 x Test Product
+2025-11-10 11:07:48,778 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2364 chars)
+2025-11-10 11:07:48,929 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 14
+2025-11-10 11:07:48,930 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest13@test.com
+2025-11-10 11:07:48,930 INFO o.a.j.u.BeanShellTestElement:    Type: LoadTest13
+2025-11-10 11:07:48,930 INFO o.a.j.u.BeanShellTestElement:    Card: 4111111111111111 (Visa)
+2025-11-10 11:07:51,191 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 8 (LoadTest7)
+2025-11-10 11:07:51,192 INFO o.a.j.u.BeanShellTestElement:    Test Card: 4111111111111111 (Visa)
+2025-11-10 11:07:51,192 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:07:51,192 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-valid-mastercard-nonce
+2025-11-10 11:07:51,192 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $264.16
+2025-11-10 11:07:51,192 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 10 x Test Product
+2025-11-10 11:07:51,192 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2364 chars)
+2025-11-10 11:07:51,416 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 11
+2025-11-10 11:07:51,417 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:07:51,417 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:07:51,417 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:07:51,417 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:07:51,417 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:07:51,417 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:07:51,418 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: FAILED
+2025-11-10 11:07:51,418 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:07:51,418 INFO o.a.j.u.BeanShellTestElement:    - Card: 5555555555554444 (Mastercard)
+2025-11-10 11:07:51,418 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 12)
+2025-11-10 11:07:51,418 INFO o.a.j.u.BeanShellTestElement:    - Total: $315.68
+2025-11-10 11:07:51,418 INFO o.a.j.u.BeanShellTestElement:    - Order ID: NO_ORDER
+2025-11-10 11:07:51,611 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 13
+2025-11-10 11:07:51,611 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:07:51,612 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:07:51,612 INFO o.a.j.u.BeanShellTestElement:    Quantity: 14
+2025-11-10 11:07:51,612 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $368.21
+2025-11-10 11:07:53,668 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 10
+2025-11-10 11:07:53,669 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest9@test.com
+2025-11-10 11:07:53,669 INFO o.a.j.u.BeanShellTestElement:    Type: LoadTest9
+2025-11-10 11:07:53,669 INFO o.a.j.u.BeanShellTestElement:    Card: 4111111111111111 (Visa)
+2025-11-10 11:07:54,658 INFO o.a.j.t.JMeterThread: Thread started: Payment Page Load Test Thread Group 1-15
+2025-11-10 11:07:56,692 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 11
+2025-11-10 11:07:56,692 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest10@test.com
+2025-11-10 11:07:56,692 INFO o.a.j.u.BeanShellTestElement:    Type: LoadTest10
+2025-11-10 11:07:56,692 INFO o.a.j.u.BeanShellTestElement:    Card: 5555555555554444 (Mastercard)
+2025-11-10 11:07:58,612 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 12 (LoadTest11)
+2025-11-10 11:07:58,613 INFO o.a.j.u.BeanShellTestElement:    Test Card: 4111111111111111 (Visa)
+2025-11-10 11:07:58,613 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:07:58,613 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-paypal-one-time-nonce
+2025-11-10 11:07:58,613 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $341.91
+2025-11-10 11:07:58,613 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 13 x Test Product
+2025-11-10 11:07:58,613 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2384 chars)
+2025-11-10 11:08:00,135 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 7
+2025-11-10 11:08:00,135 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:08:00,135 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:08:00,135 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:08:00,135 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:08:00,135 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:08:00,135 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:08:00,136 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: FAILED
+2025-11-10 11:08:00,136 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:08:00,136 INFO o.a.j.u.BeanShellTestElement:    - Card: 5555555555554444 (Mastercard)
+2025-11-10 11:08:00,136 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 9)
+2025-11-10 11:08:00,136 INFO o.a.j.u.BeanShellTestElement:    - Total: $237.96
+2025-11-10 11:08:00,136 INFO o.a.j.u.BeanShellTestElement:    - Order ID: NO_ORDER
+2025-11-10 11:08:00,138 INFO o.a.j.r.Summariser: summary +     38 in 00:00:30 =    1.3/s Avg:   675 Min:     1 Max:  4313 Err:     5 (13.16%) Active: 9 Started: 15 Finished: 6
+2025-11-10 11:08:00,139 INFO o.a.j.r.Summariser: summary =    172 in 00:02:53 =    1.0/s Avg:   428 Min:     1 Max:  4313 Err:     8 (4.65%)
+2025-11-10 11:08:00,139 INFO o.a.j.t.JMeterThread: Thread is done: Payment Page Load Test Thread Group 1-7
+2025-11-10 11:08:00,139 INFO o.a.j.t.JMeterThread: Thread finished: Payment Page Load Test Thread Group 1-7
+2025-11-10 11:08:01,638 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 15
+2025-11-10 11:08:01,638 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest14@test.com
+2025-11-10 11:08:01,638 INFO o.a.j.u.BeanShellTestElement:    Type: LoadTest14
+2025-11-10 11:08:01,638 INFO o.a.j.u.BeanShellTestElement:    Card: 5555555555554444 (Mastercard)
+2025-11-10 11:08:03,085 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 8
+2025-11-10 11:08:03,086 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:08:03,086 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:08:03,086 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:08:03,086 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:08:03,086 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:08:03,086 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:08:03,086 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: FAILED
+2025-11-10 11:08:03,087 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:08:03,087 INFO o.a.j.u.BeanShellTestElement:    - Card: 4111111111111111 (Visa)
+2025-11-10 11:08:03,087 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 10)
+2025-11-10 11:08:03,087 INFO o.a.j.u.BeanShellTestElement:    - Total: $264.16
+2025-11-10 11:08:03,087 INFO o.a.j.u.BeanShellTestElement:    - Order ID: NO_ORDER
+2025-11-10 11:08:03,089 INFO o.a.j.t.JMeterThread: Thread is done: Payment Page Load Test Thread Group 1-8
+2025-11-10 11:08:03,089 INFO o.a.j.t.JMeterThread: Thread finished: Payment Page Load Test Thread Group 1-8
+2025-11-10 11:08:03,653 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 13 (LoadTest12)
+2025-11-10 11:08:03,653 INFO o.a.j.u.BeanShellTestElement:    Test Card: 5555555555554444 (Mastercard)
+2025-11-10 11:08:03,654 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:08:03,654 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-valid-nonce
+2025-11-10 11:08:03,654 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $368.21
+2025-11-10 11:08:03,654 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 14 x Test Product
+2025-11-10 11:08:03,654 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2364 chars)
+2025-11-10 11:08:05,475 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 9 (LoadTest8)
+2025-11-10 11:08:05,475 INFO o.a.j.u.BeanShellTestElement:    Test Card: 5555555555554444 (Mastercard)
+2025-11-10 11:08:05,475 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:08:05,475 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-paypal-one-time-nonce
+2025-11-10 11:08:05,475 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $290.62
+2025-11-10 11:08:05,475 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 11 x Test Product
+2025-11-10 11:08:05,475 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2384 chars)
+2025-11-10 11:08:06,596 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 14
+2025-11-10 11:08:06,597 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:08:06,597 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:08:06,597 INFO o.a.j.u.BeanShellTestElement:    Quantity: 15
+2025-11-10 11:08:06,597 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $394.8
+2025-11-10 11:08:09,582 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 10
+2025-11-10 11:08:09,583 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:08:09,583 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:08:09,583 INFO o.a.j.u.BeanShellTestElement:    Quantity: 12
+2025-11-10 11:08:09,583 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $316.7
+2025-11-10 11:08:10,119 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 12
+2025-11-10 11:08:10,120 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:08:10,120 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:08:10,120 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:08:10,120 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:08:10,120 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:08:10,120 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:08:10,120 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: FAILED
+2025-11-10 11:08:10,121 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:08:10,121 INFO o.a.j.u.BeanShellTestElement:    - Card: 4111111111111111 (Visa)
+2025-11-10 11:08:10,121 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 13)
+2025-11-10 11:08:10,121 INFO o.a.j.u.BeanShellTestElement:    - Total: $341.91
+2025-11-10 11:08:10,121 INFO o.a.j.u.BeanShellTestElement:    - Order ID: NO_ORDER
+2025-11-10 11:08:10,885 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 11
+2025-11-10 11:08:10,885 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:08:10,886 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:08:10,886 INFO o.a.j.u.BeanShellTestElement:    Quantity: 13
+2025-11-10 11:08:10,886 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $342.96
+2025-11-10 11:08:14,083 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 13
+2025-11-10 11:08:14,083 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:08:14,083 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:08:14,083 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:08:14,083 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:08:14,083 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:08:14,083 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:08:14,084 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: FAILED
+2025-11-10 11:08:14,084 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:08:14,084 INFO o.a.j.u.BeanShellTestElement:    - Card: 5555555555554444 (Mastercard)
+2025-11-10 11:08:14,084 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 14)
+2025-11-10 11:08:14,084 INFO o.a.j.u.BeanShellTestElement:    - Total: $368.21
+2025-11-10 11:08:14,084 INFO o.a.j.u.BeanShellTestElement:    - Order ID: NO_ORDER
+2025-11-10 11:08:15,482 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 12
+2025-11-10 11:08:15,485 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest11@test.com
+2025-11-10 11:08:15,485 INFO o.a.j.u.BeanShellTestElement:    Type: LoadTest11
+2025-11-10 11:08:15,485 INFO o.a.j.u.BeanShellTestElement:    Card: 4111111111111111 (Visa)
+2025-11-10 11:08:16,150 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 15
+2025-11-10 11:08:16,151 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:08:16,151 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:08:16,151 INFO o.a.j.u.BeanShellTestElement:    Quantity: 16
+2025-11-10 11:08:16,151 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $421.08
+2025-11-10 11:08:16,346 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 9
+2025-11-10 11:08:16,347 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:08:16,347 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:08:16,347 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:08:16,347 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:08:16,347 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:08:16,347 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:08:16,347 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: FAILED
+2025-11-10 11:08:16,347 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:08:16,347 INFO o.a.j.u.BeanShellTestElement:    - Card: 5555555555554444 (Mastercard)
+2025-11-10 11:08:16,347 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 11)
+2025-11-10 11:08:16,348 INFO o.a.j.u.BeanShellTestElement:    - Total: $290.62
+2025-11-10 11:08:16,348 INFO o.a.j.u.BeanShellTestElement:    - Order ID: NO_ORDER
+2025-11-10 11:08:16,349 INFO o.a.j.t.JMeterThread: Thread is done: Payment Page Load Test Thread Group 1-9
+2025-11-10 11:08:16,349 INFO o.a.j.t.JMeterThread: Thread finished: Payment Page Load Test Thread Group 1-9
+2025-11-10 11:08:19,138 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 13
+2025-11-10 11:08:19,138 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest12@test.com
+2025-11-10 11:08:19,138 INFO o.a.j.u.BeanShellTestElement:    Type: LoadTest12
+2025-11-10 11:08:19,138 INFO o.a.j.u.BeanShellTestElement:    Card: 5555555555554444 (Mastercard)
+2025-11-10 11:08:21,413 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 14 (LoadTest13)
+2025-11-10 11:08:21,414 INFO o.a.j.u.BeanShellTestElement:    Test Card: 4111111111111111 (Visa)
+2025-11-10 11:08:21,414 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:08:21,414 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-valid-visa-nonce
+2025-11-10 11:08:21,414 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $394.80
+2025-11-10 11:08:21,414 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 15 x Test Product
+2025-11-10 11:08:21,414 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2364 chars)
+2025-11-10 11:08:25,183 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 10 (LoadTest9)
+2025-11-10 11:08:25,184 INFO o.a.j.u.BeanShellTestElement:    Test Card: 4111111111111111 (Visa)
+2025-11-10 11:08:25,184 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:08:25,184 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-valid-nonce
+2025-11-10 11:08:25,184 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $316.70
+2025-11-10 11:08:25,184 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 12 x Test Product
+2025-11-10 11:08:25,185 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2384 chars)
+2025-11-10 11:08:26,027 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 11 (LoadTest10)
+2025-11-10 11:08:26,027 INFO o.a.j.u.BeanShellTestElement:    Test Card: 5555555555554444 (Mastercard)
+2025-11-10 11:08:26,027 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:08:26,027 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-valid-visa-nonce
+2025-11-10 11:08:26,027 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $342.96
+2025-11-10 11:08:26,027 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 13 x Test Product
+2025-11-10 11:08:26,027 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2384 chars)
+2025-11-10 11:08:28,085 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 15 (LoadTest14)
+2025-11-10 11:08:28,086 INFO o.a.j.u.BeanShellTestElement:    Test Card: 5555555555554444 (Mastercard)
+2025-11-10 11:08:28,086 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:08:28,086 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-valid-mastercard-nonce
+2025-11-10 11:08:28,086 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $421.08
+2025-11-10 11:08:28,086 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 16 x Test Product
+2025-11-10 11:08:28,086 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2384 chars)
+2025-11-10 11:08:30,285 INFO o.a.j.r.Summariser: summary +     34 in 00:00:30 =    1.1/s Avg:   893 Min:     2 Max:  5210 Err:     4 (11.76%) Active: 6 Started: 15 Finished: 9
+2025-11-10 11:08:30,286 INFO o.a.j.r.Summariser: summary =    206 in 00:03:24 =    1.0/s Avg:   505 Min:     1 Max:  5210 Err:    12 (5.83%)
+2025-11-10 11:08:33,884 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 14
+2025-11-10 11:08:33,885 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:08:33,885 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:08:33,885 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:08:33,885 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:08:33,885 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:08:33,885 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:08:33,885 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: FAILED
+2025-11-10 11:08:33,885 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:08:33,885 INFO o.a.j.u.BeanShellTestElement:    - Card: 4111111111111111 (Visa)
+2025-11-10 11:08:33,885 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 15)
+2025-11-10 11:08:33,885 INFO o.a.j.u.BeanShellTestElement:    - Total: $394.80
+2025-11-10 11:08:33,885 INFO o.a.j.u.BeanShellTestElement:    - Order ID: NO_ORDER
+2025-11-10 11:08:36,809 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 12
+2025-11-10 11:08:36,809 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:08:36,809 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:08:36,809 INFO o.a.j.u.BeanShellTestElement:    Quantity: 14
+2025-11-10 11:08:36,809 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $368.95
+2025-11-10 11:08:37,385 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 13
+2025-11-10 11:08:37,386 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:08:37,386 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:08:37,386 INFO o.a.j.u.BeanShellTestElement:    Quantity: 15
+2025-11-10 11:08:37,386 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $395.44
+2025-11-10 11:08:37,474 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 11
+2025-11-10 11:08:37,474 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:08:37,475 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:08:37,475 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:08:37,475 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:08:37,475 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:08:37,475 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:08:37,475 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: FAILED
+2025-11-10 11:08:37,475 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:08:37,475 INFO o.a.j.u.BeanShellTestElement:    - Card: 5555555555554444 (Mastercard)
+2025-11-10 11:08:37,475 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 13)
+2025-11-10 11:08:37,475 INFO o.a.j.u.BeanShellTestElement:    - Total: $342.96
+2025-11-10 11:08:37,475 INFO o.a.j.u.BeanShellTestElement:    - Order ID: NO_ORDER
+2025-11-10 11:08:37,476 INFO o.a.j.t.JMeterThread: Thread is done: Payment Page Load Test Thread Group 1-11
+2025-11-10 11:08:37,476 INFO o.a.j.t.JMeterThread: Thread finished: Payment Page Load Test Thread Group 1-11
+2025-11-10 11:08:38,259 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 14
+2025-11-10 11:08:38,260 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest13@test.com
+2025-11-10 11:08:38,260 INFO o.a.j.u.BeanShellTestElement:    Type: LoadTest13
+2025-11-10 11:08:38,260 INFO o.a.j.u.BeanShellTestElement:    Card: 4111111111111111 (Visa)
+2025-11-10 11:08:39,703 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 10
+2025-11-10 11:08:39,703 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:08:39,703 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:08:39,704 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:08:39,704 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:08:39,704 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:08:39,704 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:08:39,704 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: FAILED
+2025-11-10 11:08:39,704 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:08:39,704 INFO o.a.j.u.BeanShellTestElement:    - Card: 4111111111111111 (Visa)
+2025-11-10 11:08:39,704 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 12)
+2025-11-10 11:08:39,704 INFO o.a.j.u.BeanShellTestElement:    - Total: $316.70
+2025-11-10 11:08:39,704 INFO o.a.j.u.BeanShellTestElement:    - Order ID: NO_ORDER
+2025-11-10 11:08:39,706 INFO o.a.j.t.JMeterThread: Thread is done: Payment Page Load Test Thread Group 1-10
+2025-11-10 11:08:39,706 INFO o.a.j.t.JMeterThread: Thread finished: Payment Page Load Test Thread Group 1-10
+2025-11-10 11:08:41,126 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 15
+2025-11-10 11:08:41,127 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:08:41,127 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:08:41,127 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:08:41,127 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:08:41,127 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:08:41,127 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:08:41,127 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: FAILED
+2025-11-10 11:08:41,127 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:08:41,127 INFO o.a.j.u.BeanShellTestElement:    - Card: 5555555555554444 (Mastercard)
+2025-11-10 11:08:41,127 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 16)
+2025-11-10 11:08:41,127 INFO o.a.j.u.BeanShellTestElement:    - Total: $421.08
+2025-11-10 11:08:41,127 INFO o.a.j.u.BeanShellTestElement:    - Order ID: NO_ORDER
+2025-11-10 11:08:48,494 INFO o.a.j.u.BeanShellTestElement: 👤 USER SETUP - Thread 15
+2025-11-10 11:08:48,494 INFO o.a.j.u.BeanShellTestElement:    Email: loadtest14@test.com
+2025-11-10 11:08:48,494 INFO o.a.j.u.BeanShellTestElement:    Type: LoadTest14
+2025-11-10 11:08:48,494 INFO o.a.j.u.BeanShellTestElement:    Card: 5555555555554444 (Mastercard)
+2025-11-10 11:08:53,192 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 13 (LoadTest12)
+2025-11-10 11:08:53,193 INFO o.a.j.u.BeanShellTestElement:    Test Card: 5555555555554444 (Mastercard)
+2025-11-10 11:08:53,193 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:08:53,193 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-paypal-one-time-nonce
+2025-11-10 11:08:53,193 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $395.44
+2025-11-10 11:08:53,193 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 15 x Test Product
+2025-11-10 11:08:53,194 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2364 chars)
+2025-11-10 11:08:54,832 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 14
+2025-11-10 11:08:54,833 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:08:54,833 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:08:54,833 INFO o.a.j.u.BeanShellTestElement:    Quantity: 16
+2025-11-10 11:08:54,833 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $421.66
+2025-11-10 11:08:55,321 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 12 (LoadTest11)
+2025-11-10 11:08:55,321 INFO o.a.j.u.BeanShellTestElement:    Test Card: 4111111111111111 (Visa)
+2025-11-10 11:08:55,322 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:08:55,322 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-valid-mastercard-nonce
+2025-11-10 11:08:55,322 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $368.95
+2025-11-10 11:08:55,322 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 14 x Test Product
+2025-11-10 11:08:55,322 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2384 chars)
+2025-11-10 11:09:00,464 INFO o.a.j.r.Summariser: summary +     23 in 00:00:30 =    0.8/s Avg:   532 Min:     1 Max:  4610 Err:     4 (17.39%) Active: 4 Started: 15 Finished: 11
+2025-11-10 11:09:00,464 INFO o.a.j.r.Summariser: summary =    229 in 00:03:54 =    1.0/s Avg:   508 Min:     1 Max:  5210 Err:    16 (6.99%)
+2025-11-10 11:09:01,551 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 13
+2025-11-10 11:09:01,551 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:09:01,551 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:09:01,551 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:09:01,551 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:09:01,551 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:09:01,551 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:09:01,551 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: FAILED
+2025-11-10 11:09:01,551 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:09:01,551 INFO o.a.j.u.BeanShellTestElement:    - Card: 5555555555554444 (Mastercard)
+2025-11-10 11:09:01,551 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 15)
+2025-11-10 11:09:01,551 INFO o.a.j.u.BeanShellTestElement:    - Total: $395.44
+2025-11-10 11:09:01,551 INFO o.a.j.u.BeanShellTestElement:    - Order ID: NO_ORDER
+2025-11-10 11:09:01,552 INFO o.a.j.t.JMeterThread: Thread is done: Payment Page Load Test Thread Group 1-13
+2025-11-10 11:09:01,552 INFO o.a.j.t.JMeterThread: Thread finished: Payment Page Load Test Thread Group 1-13
+2025-11-10 11:09:03,259 INFO o.a.j.u.BeanShellTestElement: 🛒 PAYMENT CART CREATED - Thread 15
+2025-11-10 11:09:03,259 INFO o.a.j.u.BeanShellTestElement:    Product: Test Product (ID: 68f7b4d99c5879066f739404)
+2025-11-10 11:09:03,260 INFO o.a.j.u.BeanShellTestElement:    Unit Price: $25.99
+2025-11-10 11:09:03,260 INFO o.a.j.u.BeanShellTestElement:    Quantity: 17
+2025-11-10 11:09:03,260 INFO o.a.j.u.BeanShellTestElement:    Total Amount: $447.66
+2025-11-10 11:09:10,678 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 12
+2025-11-10 11:09:10,680 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:09:10,680 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:09:10,680 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:09:10,680 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:09:10,680 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:09:10,680 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:09:10,680 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: FAILED
+2025-11-10 11:09:10,680 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:09:10,680 INFO o.a.j.u.BeanShellTestElement:    - Card: 4111111111111111 (Visa)
+2025-11-10 11:09:10,680 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 14)
+2025-11-10 11:09:10,680 INFO o.a.j.u.BeanShellTestElement:    - Total: $368.95
+2025-11-10 11:09:10,681 INFO o.a.j.u.BeanShellTestElement:    - Order ID: NO_ORDER
+2025-11-10 11:09:10,682 INFO o.a.j.t.JMeterThread: Thread is done: Payment Page Load Test Thread Group 1-12
+2025-11-10 11:09:10,682 INFO o.a.j.t.JMeterThread: Thread finished: Payment Page Load Test Thread Group 1-12
+2025-11-10 11:09:11,583 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 14 (LoadTest13)
+2025-11-10 11:09:11,583 INFO o.a.j.u.BeanShellTestElement:    Test Card: 4111111111111111 (Visa)
+2025-11-10 11:09:11,583 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:09:11,584 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-valid-nonce
+2025-11-10 11:09:11,584 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $421.66
+2025-11-10 11:09:11,584 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 16 x Test Product
+2025-11-10 11:09:11,584 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2364 chars)
+2025-11-10 11:09:18,906 INFO o.a.j.u.BeanShellTestElement: 💳 PAYMENT NONCE GENERATED - Thread 15 (LoadTest14)
+2025-11-10 11:09:18,908 INFO o.a.j.u.BeanShellTestElement:    Test Card: 5555555555554444 (Mastercard)
+2025-11-10 11:09:18,908 INFO o.a.j.u.BeanShellTestElement:    Expiry: 12/25, CVV: 123
+2025-11-10 11:09:18,908 INFO o.a.j.u.BeanShellTestElement:    Payment Nonce: fake-valid-visa-nonce
+2025-11-10 11:09:18,908 INFO o.a.j.u.BeanShellTestElement:    Payment Total: $447.66
+2025-11-10 11:09:18,908 INFO o.a.j.u.BeanShellTestElement:    Cart Items: 17 x Test Product
+2025-11-10 11:09:18,908 INFO o.a.j.u.BeanShellTestElement:    Client Token: Present (2364 chars)
+2025-11-10 11:09:23,708 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 14
+2025-11-10 11:09:23,708 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:09:23,708 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:09:23,708 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:09:23,708 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:09:23,708 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:09:23,708 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:09:23,708 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: FAILED
+2025-11-10 11:09:23,708 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:09:23,708 INFO o.a.j.u.BeanShellTestElement:    - Card: 4111111111111111 (Visa)
+2025-11-10 11:09:23,708 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 16)
+2025-11-10 11:09:23,708 INFO o.a.j.u.BeanShellTestElement:    - Total: $421.66
+2025-11-10 11:09:23,709 INFO o.a.j.u.BeanShellTestElement:    - Order ID: NO_ORDER
+2025-11-10 11:09:23,717 INFO o.a.j.t.JMeterThread: Thread is done: Payment Page Load Test Thread Group 1-14
+2025-11-10 11:09:23,717 INFO o.a.j.t.JMeterThread: Thread finished: Payment Page Load Test Thread Group 1-14
+2025-11-10 11:09:33,945 INFO o.a.j.u.BeanShellTestElement: 📊 PAYMENT LOAD TEST SUMMARY - Thread 15
+2025-11-10 11:09:33,946 INFO o.a.j.u.BeanShellTestElement:    Test Operations Performed:
+2025-11-10 11:09:33,946 INFO o.a.j.u.BeanShellTestElement:    1. ✅ Admin login successful
+2025-11-10 11:09:33,946 INFO o.a.j.u.BeanShellTestElement:    2. ✅ Product catalog retrieved
+2025-11-10 11:09:33,946 INFO o.a.j.u.BeanShellTestElement:    3. ✅ Payment cart created
+2025-11-10 11:09:33,946 INFO o.a.j.u.BeanShellTestElement:    4. ✅ Braintree client token obtained
+2025-11-10 11:09:33,946 INFO o.a.j.u.BeanShellTestElement:    5. ✅ Payment nonce generated for Mastercard
+2025-11-10 11:09:33,946 INFO o.a.j.u.BeanShellTestElement:    6. ✅ Payment processed: FAILED
+2025-11-10 11:09:33,946 INFO o.a.j.u.BeanShellTestElement:    Payment Details:
+2025-11-10 11:09:33,946 INFO o.a.j.u.BeanShellTestElement:    - Card: 5555555555554444 (Mastercard)
+2025-11-10 11:09:33,946 INFO o.a.j.u.BeanShellTestElement:    - Product: Test Product (Qty: 17)
+2025-11-10 11:09:33,946 INFO o.a.j.u.BeanShellTestElement:    - Total: $447.66
+2025-11-10 11:09:33,947 INFO o.a.j.u.BeanShellTestElement:    - Order ID: NO_ORDER
+2025-11-10 11:09:33,948 INFO o.a.j.r.Summariser: summary +     11 in 00:00:33 =    0.3/s Avg:  1078 Min:     1 Max:  5207 Err:     3 (27.27%) Active: 1 Started: 15 Finished: 14
+2025-11-10 11:09:33,949 INFO o.a.j.r.Summariser: summary =    240 in 00:04:27 =    0.9/s Avg:   534 Min:     1 Max:  5210 Err:    19 (7.92%)
+2025-11-10 11:09:33,949 INFO o.a.j.t.JMeterThread: Thread is done: Payment Page Load Test Thread Group 1-15
+2025-11-10 11:09:33,949 INFO o.a.j.t.JMeterThread: Thread finished: Payment Page Load Test Thread Group 1-15
+2025-11-10 11:09:33,950 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2025-11-10 11:09:33,952 INFO o.a.j.r.Summariser: summary =    240 in 00:04:27 =    0.9/s Avg:   534 Min:     1 Max:  5210 Err:    19 (7.92%)
+2025-11-10 11:09:33,953 INFO o.a.j.JMeter: Generating Dashboard
+2025-11-10 11:09:33,953 INFO o.a.j.r.d.ReportGenerator: Flushing result collector before report Generation
+2025-11-10 11:09:33,968 INFO o.a.j.r.p.NormalizerSampleConsumer: Using format, 'ms', to parse timeStamp field
+2025-11-10 11:09:34,028 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): beginDate produced 0 samples
+2025-11-10 11:09:34,028 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): endDate produced 0 samples
+2025-11-10 11:09:34,029 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ApdexSummaryConsumer#stopProducing(): apdexSummary produced 0 samples
+2025-11-10 11:09:34,029 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.RequestsSummaryConsumer#stopProducing(): requestsSummary produced 0 samples
+2025-11-10 11:09:34,031 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.StatisticsSummaryConsumer#stopProducing(): statisticsSummary produced 0 samples
+2025-11-10 11:09:34,032 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.Top5ErrorsBySamplerConsumer#stopProducing(): top5ErrorsBySampler produced 0 samples
+2025-11-10 11:09:34,033 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ErrorsSummaryConsumer#stopProducing(): errorsSummary produced 0 samples
+2025-11-10 11:09:34,033 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.HitsPerSecondGraphConsumer#stopProducing(): hitsPerSecond produced 0 samples
+2025-11-10 11:09:34,042 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyVSRequestGraphConsumer#stopProducing(): latencyVsRequest produced 0 samples
+2025-11-10 11:09:34,042 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.SyntheticResponseTimeDistributionGraphConsumer#stopProducing(): syntheticResponseTimeDistribution produced 0 samples
+2025-11-10 11:09:34,042 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.BytesThroughputGraphConsumer#stopProducing(): bytesThroughputOverTime produced 0 samples
+2025-11-10 11:09:34,042 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.CodesPerSecondGraphConsumer#stopProducing(): codesPerSecond produced 0 samples
+2025-11-10 11:09:34,045 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeVSRequestGraphConsumer#stopProducing(): responseTimeVsRequest produced 0 samples
+2025-11-10 11:09:34,045 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): startIntervalControlerFilter produced 1680 samples
+2025-11-10 11:09:34,045 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TotalTPSGraphConsumer#stopProducing(): totalTPS produced 0 samples
+2025-11-10 11:09:34,045 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ActiveThreadsGraphConsumer#stopProducing(): activeThreadsOverTime produced 0 samples
+2025-11-10 11:09:34,045 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TimeVSThreadGraphConsumer#stopProducing(): timeVsThreads produced 0 samples
+2025-11-10 11:09:34,045 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeDistributionGraphConsumer#stopProducing(): responseTimeDistribution produced 0 samples
+2025-11-10 11:09:34,045 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TransactionsPerSecondGraphConsumer#stopProducing(): transactionsPerSecond produced 0 samples
+2025-11-10 11:09:34,045 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesGraphConsumer#stopProducing(): responseTimePercentiles produced 0 samples
+2025-11-10 11:09:34,046 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesOverTimeGraphConsumer#stopProducing(): responseTimePercentilesOverTime produced 0 samples
+2025-11-10 11:09:34,047 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeOverTimeGraphConsumer#stopProducing(): responseTimesOverTime produced 0 samples
+2025-11-10 11:09:34,047 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ConnectTimeOverTimeGraphConsumer#stopProducing(): connectTimeOverTime produced 0 samples
+2025-11-10 11:09:34,047 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyOverTimeGraphConsumer#stopProducing(): latenciesOverTime produced 0 samples
+2025-11-10 11:09:34,047 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): nameFilter produced 3600 samples
+2025-11-10 11:09:34,047 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): dateRangeFilter produced 720 samples
+2025-11-10 11:09:34,047 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.NormalizerSampleConsumer#stopProducing(): normalizer produced 240 samples
+2025-11-10 11:09:34,047 INFO o.a.j.r.p.CsvFileSampleSource: produce(): 240 samples produced in 61ms on channel 0
+2025-11-10 11:09:34,047 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'json' of className:'org.apache.jmeter.report.dashboard.JsonExporter'
+2025-11-10 11:09:34,093 INFO o.a.j.r.d.JsonExporter: Found data for consumer statisticsSummary in context
+2025-11-10 11:09:34,093 INFO o.a.j.r.d.JsonExporter: Creating statistics for overall
+2025-11-10 11:09:34,093 INFO o.a.j.r.d.JsonExporter: Creating statistics for other transactions
+2025-11-10 11:09:34,093 INFO o.a.j.r.d.JsonExporter: Checking output folder
+2025-11-10 11:09:34,093 INFO o.a.j.r.d.JsonExporter: Writing statistics JSON to /Users/nishenghan/cs4218-2510-ecom-project-team002/./load-test-results/html_report_20251110_110502/statistics.json
+2025-11-10 11:09:34,113 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'html' of className:'org.apache.jmeter.report.dashboard.HtmlTemplateExporter'
+2025-11-10 11:09:34,114 INFO o.a.j.r.d.HtmlTemplateExporter: Will generate dashboard in folder: /Users/nishenghan/cs4218-2510-ecom-project-team002/./load-test-results/html_report_20251110_110502
+2025-11-10 11:09:34,169 INFO o.a.j.r.d.HtmlTemplateExporter: Report will be generated in: /Users/nishenghan/cs4218-2510-ecom-project-team002/./load-test-results/html_report_20251110_110502, creating folder structure
+2025-11-10 11:09:34,170 INFO o.a.j.r.d.TemplateVisitor: Copying folder from '/opt/homebrew/Cellar/jmeter/5.6.3/libexec/bin/report-template' to '/Users/nishenghan/cs4218-2510-ecom-project-team002/./load-test-results/html_report_20251110_110502', got message: /Users/nishenghan/cs4218-2510-ecom-project-team002/./load-test-results/html_report_20251110_110502, found non empty folder with following content [/Users/nishenghan/cs4218-2510-ecom-project-team002/./load-test-results/html_report_20251110_110502/statistics.json], will be ignored
+2025-11-10 11:09:34,345 INFO o.a.j.JMeter: Dashboard generated
