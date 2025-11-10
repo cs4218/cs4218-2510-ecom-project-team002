@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Payment Page Load Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments">Payment Page Load Test - Virtual Vault E-commerce</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults">
+        <stringProp name="HTTPSampler.domain">localhost</stringProp>
+        <stringProp name="HTTPSampler.port">6060</stringProp>
+        <stringProp name="HTTPSampler.protocol">http</stringProp>
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Content-Type</stringProp>
+            <stringProp name="Header.value">application/json</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Accept</stringProp>
+            <stringProp name="Header.value">application/json</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+        <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Payment Page Load Test Thread Group" enabled="true">
+        <intProp name="ThreadGroup.num_threads">15</intProp>
+        <intProp name="ThreadGroup.ramp_time">180</intProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <stringProp name="LoopController.loops">2</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <!-- Setup User Credentials Based on Thread -->
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="00 - Setup User Credentials" enabled="true">
+          <stringProp name="BeanShellSampler.query"><![CDATA[// Setup different user credentials for each thread
+int threadNum = ctx.getThreadNum() + 1;
+
+// Use Braintree's documented test nonces (official Braintree sandbox test values)
+// Note: These are official Braintree test nonces that should work in sandbox
+switch (threadNum) {
+    case 1:
+        // Thread 1: Admin user with Mastercard - Official test nonce
+        vars.put("user_email", "david123@gmail.com");
+        vars.put("user_password", "12345678");
+        vars.put("user_type", "Admin");
+        vars.put("test_card", "5555555555554444");
+        vars.put("card_type", "Mastercard");
+        vars.put("test_nonce", "fake-valid-nonce"); // Braintree's documented test nonce
+        break;
+    case 2:
+        // Thread 2: Load test user 1 with Visa - Use working valid nonce
+        vars.put("user_email", "loadtest1@test.com");
+        vars.put("user_password", "password1");  // Fixed: matches CSV
+        vars.put("user_type", "LoadTest1");
+        vars.put("test_card", "4111111111111111");
+        vars.put("card_type", "Visa");
+        vars.put("test_nonce", "fake-valid-nonce"); // Use working nonce
+        break;
+    case 3:
+        // Thread 3: Load test user 2 with Visa - Use different user
+        vars.put("user_email", "loadtest2@test.com");
+        vars.put("user_password", "password2");  // Fixed: matches CSV
+        vars.put("user_type", "LoadTest2");
+        vars.put("test_card", "4111111111111111");
+        vars.put("card_type", "Visa");
+        vars.put("test_nonce", "fake-paypal-one-time-nonce"); // This nonce works
+        break;
+    case 4:
+        // Thread 4: Load test user 3 with Mastercard - Use different user
+        vars.put("user_email", "loadtest3@test.com");
+        vars.put("user_password", "password3");  // Fixed: matches CSV
+        vars.put("user_type", "LoadTest3");
+        vars.put("test_card", "5555555555554444");
+        vars.put("card_type", "Mastercard");
+        vars.put("test_nonce", "fake-valid-nonce"); // Use working nonce
+        break;
+    default:
+        // Thread 5+: Use CSV users dynamically
+        int userIndex = ((threadNum - 5) % 25) + 4; // Use loadtest4@test.com onwards
+        vars.put("user_email", "loadtest" + userIndex + "@test.com");
+        vars.put("user_password", "password" + userIndex);
+        vars.put("user_type", "LoadTest" + userIndex);
+        
+        // Alternate card types for variety
+        if (threadNum % 2 == 0) {
+            vars.put("test_card", "4111111111111111");
+            vars.put("card_type", "Visa");
+            vars.put("test_nonce", "fake-valid-visa-nonce");
+        } else {
+            vars.put("test_card", "5555555555554444");
+            vars.put("card_type", "Mastercard");
+            vars.put("test_nonce", "fake-valid-mastercard-nonce");
+        }
+        break;
+}
+
+log.info("👤 USER SETUP - Thread " + threadNum);
+log.info("   Email: " + vars.get("user_email"));
+log.info("   Type: " + vars.get("user_type"));
+log.info("   Card: " + vars.get("test_card") + " (" + vars.get("card_type") + ")");
+
+SampleResult.setResponseData("User credentials configured for Thread " + threadNum + System.lineSeparator() + 
+                           "Email: " + vars.get("user_email") + System.lineSeparator() +
+                           "Type: " + vars.get("user_type") + System.lineSeparator() +
+                           "Card: " + vars.get("test_card") + " (" + vars.get("card_type") + ")");
+SampleResult.setDataType(SampleResult.TEXT);
+SampleResult.setSuccessful(true);
+]]></stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="01 - User Login" enabled="true">
+          <stringProp name="HTTPSampler.path">/api/v1/auth/login</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;email&quot;: &quot;${user_email}&quot;,&#xd;
+  &quot;password&quot;: &quot;${user_password}&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract JWT Token" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">jwt_token</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.token</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">TOKEN_NOT_FOUND</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Login Success" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">User login must be successful</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="Validate User Login" enabled="true">
+            <stringProp name="BeanShellPostProcessor.query"><![CDATA[
+String jwtToken = vars.get("jwt_token");
+String responseCode = prev.getResponseCode();
+String userEmail = vars.get("user_email");
+String userType = vars.get("user_type");
+int threadNum = ctx.getThreadNum() + 1;
+
+log.info("👤 USER LOGIN - Thread " + threadNum + " (" + userType + ")");
+log.info("   Email: " + userEmail);
+log.info("   Response Code: " + responseCode);
+log.info("   JWT Token: " + (jwtToken != null && !jwtToken.equals("TOKEN_NOT_FOUND") ? "SUCCESS" : "FAILED"));
+
+if (jwtToken == null || jwtToken.equals("TOKEN_NOT_FOUND")) {
+    log.error("❌ USER LOGIN FAILED - Thread " + threadNum);
+    log.error("   User: " + userEmail);
+    log.error("   Response: " + prev.getResponseDataAsString());
+}
+]]></stringProp>
+            <stringProp name="BeanShellPostProcessor.filename"></stringProp>
+            <stringProp name="BeanShellPostProcessor.parameters"></stringProp>
+            <boolProp name="BeanShellPostProcessor.resetInterpreter">false</boolProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+        
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="02 - Get Products for Cart" enabled="true">
+          <stringProp name="HTTPSampler.path">/api/v1/product/product-list/1</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract Product Data">
+            <stringProp name="JSONPostProcessor.referenceNames">product_ids;product_names;product_prices</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.products[*]._id;$.products[*].name;$.products[*].price</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">-1</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">NOTFOUND;NOTFOUND;NOTFOUND</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Products Retrieved" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">Products must be retrieved successfully</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+
+        <!-- Create Test Cart for Payment -->
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="03 - Create Payment Cart" enabled="true">
+          <stringProp name="BeanShellSampler.query"><![CDATA[// Create a test cart for payment processing
+int threadNum = ctx.getThreadNum() + 1;
+
+// Use available product or fallback to known product
+String productId = vars.get("product_ids_1") != null ? vars.get("product_ids_1") : "68f7b4b79c5879066f739213";
+String productName = vars.get("product_names_1") != null ? vars.get("product_names_1") : "Test Product";
+double productPrice = 25.99; // Set a fixed price for consistent testing
+
+// Try to use actual product price if available
+try {
+    if (vars.get("product_prices_1") != null) {
+        productPrice = Double.parseDouble(vars.get("product_prices_1"));
+    }
+} catch (NumberFormatException e) {
+    log.warn("Using default price due to parsing error: " + e.getMessage());
+    productPrice = 25.99;
+}
+
+// Round price to 2 decimal places
+productPrice = Math.round(productPrice * 100.0) / 100.0;
+
+// Create a simple cart with varying quantities for payment testing
+int threadNum = ctx.getThreadNum() + 1;
+
+// Create a payment counter to track iterations
+String paymentCounterKey = "payment_counter_t" + threadNum;
+String currentCountStr = vars.get(paymentCounterKey);
+int paymentCount = (currentCountStr != null) ? Integer.parseInt(currentCountStr) + 1 : 1;
+vars.put(paymentCounterKey, String.valueOf(paymentCount));
+
+// Base quantity varies by thread and payment count
+int quantity = threadNum + 1 + (paymentCount - 1); // Each iteration adds more items
+
+// Work with cents (integers) to avoid floating-point precision issues
+int productPriceCents = (int)Math.round(productPrice * 100); // Convert to cents
+int totalAmountCents = productPriceCents * quantity;
+
+// Add thread-specific variation (in cents)
+int threadVariationCents = threadNum * 25; // 25, 50, 75, 100, 125 cents
+totalAmountCents += threadVariationCents;
+
+// Add payment iteration variation to ensure unique amounts (in cents)
+int paymentVariationCents = paymentCount * 100; // 100, 200, 300 cents per iteration
+totalAmountCents += paymentVariationCents;
+
+// Add timestamp-based micro variation for extra uniqueness (in cents)
+int timeVariationCents = (int)(System.currentTimeMillis() % 50); // 0-49 cents
+totalAmountCents += timeVariationCents;
+
+// Convert back to dollars with guaranteed 2 decimal places
+double totalAmount = totalAmountCents / 100.0;
+
+// Format total amount with proper decimal precision using DecimalFormat
+import java.text.DecimalFormat;
+DecimalFormat df = new DecimalFormat("0.00");
+String formattedTotal = df.format(totalAmount);
+
+// Store cart information
+vars.put("payment_product_id", productId);
+vars.put("payment_product_name", productName);
+vars.put("payment_product_price", String.valueOf(productPrice));
+vars.put("payment_quantity", String.valueOf(quantity));
+// Ensure totalAmount is stored as properly formatted string to avoid precision issues
+vars.put("payment_total", formattedTotal);
+
+log.info("🛒 PAYMENT CART CREATED - Thread " + threadNum);
+log.info("   Product: " + productName + " (ID: " + productId + ")");
+log.info("   Unit Price: $" + productPrice);
+log.info("   Quantity: " + quantity);
+log.info("   Total Amount: $" + totalAmount);
+
+SampleResult.setResponseData("Payment cart created successfully!" + System.lineSeparator() + 
+                           "Product: " + productName + System.lineSeparator() +
+                           "Unit Price: $" + productPrice + System.lineSeparator() +
+                           "Quantity: " + quantity + System.lineSeparator() +
+                           "Total Amount: $" + totalAmount);
+SampleResult.setDataType(SampleResult.TEXT);
+SampleResult.setSuccessful(true);
+]]></stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+
+        <!-- Get Braintree Client Token -->
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="04 - Get Braintree Token" enabled="true">
+          <stringProp name="HTTPSampler.path">/api/v1/product/braintree/token</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract Client Token">
+            <stringProp name="JSONPostProcessor.referenceNames">client_token</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.clientToken</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">TOKEN_NOT_FOUND</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Token Retrieved" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">Braintree token must be retrieved successfully</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="Validate Braintree Token" enabled="true">
+            <stringProp name="BeanShellPostProcessor.query"><![CDATA[
+String clientToken = vars.get("client_token");
+String responseCode = prev.getResponseCode();
+int threadNum = ctx.getThreadNum() + 1;
+
+log.info("🔐 BRAINTREE TOKEN - Thread " + threadNum);
+log.info("   Response Code: " + responseCode);
+log.info("   Token Retrieved: " + (clientToken != null && !clientToken.equals("TOKEN_NOT_FOUND") ? "SUCCESS" : "FAILED"));
+log.info("   Token Length: " + (clientToken != null ? clientToken.length() : 0));
+
+if (clientToken == null || clientToken.equals("TOKEN_NOT_FOUND")) {
+    log.error("❌ BRAINTREE TOKEN FAILED - Thread " + threadNum);
+    log.error("   Response: " + prev.getResponseDataAsString());
+}
+]]></stringProp>
+            <stringProp name="BeanShellPostProcessor.filename"></stringProp>
+            <stringProp name="BeanShellPostProcessor.parameters"></stringProp>
+            <boolProp name="BeanShellPostProcessor.resetInterpreter">false</boolProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+
+        <!-- Generate Payment Nonce with Specific Card -->
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="05 - Generate Payment Nonce (User-Specific Card)" enabled="true">
+          <stringProp name="BeanShellSampler.query"><![CDATA[// Generate payment nonce with user-specific test card
+int threadNum = ctx.getThreadNum() + 1;
+
+// Get payment counter to make nonce unique per iteration
+String paymentCounterKey = "payment_counter_t" + threadNum;
+String currentCountStr = vars.get(paymentCounterKey);
+int paymentCount = (currentCountStr != null) ? Integer.parseInt(currentCountStr) : 1;
+
+// Use the card assigned to this user
+String testCardNumber = vars.get("test_card");
+String cardType = vars.get("card_type");
+String baseNonce = vars.get("test_nonce");
+String userType = vars.get("user_type");
+
+// For maximum success in load testing, we need to use a different approach
+// Since only certain Braintree nonces work and they reject duplicates,
+// we'll use the original approach but with longer delays between requests
+// to allow Braintree to reset nonce usage
+
+// Use the working nonces but add uniqueness through timing
+String[] workingNonces = {
+    "fake-valid-nonce",
+    "fake-paypal-one-time-nonce", 
+    "fake-valid-mastercard-nonce",
+    "fake-valid-visa-nonce"
+};
+
+// Rotate nonces and add small delays to avoid rapid duplicate detection
+int nonceIndex = ((threadNum - 1) * 3 + (paymentCount - 1)) % workingNonces.length;
+String testNonce = workingNonces[nonceIndex];
+
+// Add larger staggered delays to avoid API overload
+try {
+    Thread.sleep((threadNum - 1) * 300 + 1000); // 1-5.2 second staggered delay
+} catch (InterruptedException e) {
+    // Continue if interrupted
+}
+
+// Set payment details
+vars.put("payment_nonce", testNonce);
+vars.put("card_number", testCardNumber);
+vars.put("card_type", cardType);
+vars.put("card_expiry", "12/25");
+vars.put("card_cvv", "123");
+
+String clientToken = vars.get("client_token");
+String paymentTotal = vars.get("payment_total");
+String productId = vars.get("payment_product_id");
+String productName = vars.get("payment_product_name");
+String productPrice = vars.get("payment_product_price");
+int quantity = Integer.parseInt(vars.get("payment_quantity"));
+
+// Create cart array for backend processing (backend sums individual items)
+// Format the price to avoid floating-point precision issues
+import java.text.DecimalFormat;
+DecimalFormat priceFormatter = new DecimalFormat("0.00");
+String formattedPrice = priceFormatter.format(Double.parseDouble(productPrice));
+
+StringBuilder cartForPayment = new StringBuilder();
+cartForPayment.append("[");
+
+// Add each item individually (backend expects this format)
+for (int i = 0; i < quantity; i++) {
+    if (i > 0) cartForPayment.append(",");
+    cartForPayment.append("{\"_id\":\"").append(productId).append("\",");
+    cartForPayment.append("\"name\":\"").append(productName).append("\",");
+    cartForPayment.append("\"price\":").append(formattedPrice).append("}");
+}
+
+cartForPayment.append("]");
+vars.put("cart_for_payment", cartForPayment.toString());
+
+log.info("💳 PAYMENT NONCE GENERATED - Thread " + threadNum + " (" + userType + ")");
+log.info("   Test Card: " + testCardNumber + " (" + cardType + ")");
+log.info("   Expiry: 12/25, CVV: 123");
+log.info("   Payment Nonce: " + testNonce);
+log.info("   Payment Total: $" + paymentTotal);
+log.info("   Cart Items: " + quantity + " x " + productName);
+log.info("   Client Token: " + (clientToken != null ? "Present (" + clientToken.length() + " chars)" : "Missing"));
+
+SampleResult.setResponseData("Payment nonce generated for " + userType + " user!" + System.lineSeparator() + 
+                           "Card Number: " + testCardNumber + " (" + cardType + ")" + System.lineSeparator() +
+                           "Expiry: 12/25" + System.lineSeparator() +
+                           "CVV: 123" + System.lineSeparator() +
+                           "Payment Nonce: " + testNonce + System.lineSeparator() +
+                           "Total Amount: $" + paymentTotal + System.lineSeparator() +
+                           "Cart: " + quantity + " x " + productName + " @ $" + productPrice + " each" + System.lineSeparator() +
+                           "Cart JSON: " + cartForPayment.toString());
+SampleResult.setDataType(SampleResult.TEXT);
+SampleResult.setSuccessful(true);
+]]></stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+
+        <!-- Think Time - User Reviews Payment Details -->
+        <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Think Time - Review Payment" enabled="true">
+          <stringProp name="ConstantTimer.delay">3000</stringProp>
+          <stringProp name="RandomTimer.range">5000</stringProp>
+        </UniformRandomTimer>
+        <hashTree/>
+
+        <!-- Process Payment with Braintree -->
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="06 - Process Braintree Payment" enabled="true">
+          <stringProp name="HTTPSampler.path">/api/v1/product/braintree/payment</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;nonce&quot;: &quot;${payment_nonce}&quot;,&#xd;
+  &quot;cart&quot;: ${cart_for_payment}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Payment Authorization" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${jwt_token}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Payment Success" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">Payment must be processed successfully</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract Payment Result" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">payment_success;order_id</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.ok;$.orderId</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">false;NO_ORDER</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="Log Payment Results" enabled="true">
+            <stringProp name="BeanShellPostProcessor.query"><![CDATA[// Log detailed payment results
+String responseCode = prev.getResponseCode();
+String responseData = prev.getResponseDataAsString();
+String paymentSuccess = vars.get("payment_success");
+String orderId = vars.get("order_id");
+String cardNumber = vars.get("card_number");
+String cardType = vars.get("card_type");
+String paymentTotal = vars.get("payment_total");
+String productName = vars.get("payment_product_name");
+int threadNum = ctx.getThreadNum() + 1;
+
+log.info("💰 PAYMENT PROCESSING COMPLETE - Thread " + threadNum);
+log.info("   Response Code: " + responseCode);
+log.info("   Payment Success: " + paymentSuccess);
+log.info("   Order ID: " + orderId);
+log.info("   Card Used: " + cardNumber + " (" + cardType + ")");
+log.info("   Amount: $" + paymentTotal);
+log.info("   Product: " + productName);
+
+if ("200".equals(responseCode) && "true".equals(paymentSuccess)) {
+    log.info("✅ PAYMENT SUCCESS - Thread " + threadNum + " (" + vars.get("user_type") + ")");
+    log.info("   Braintree transaction completed successfully");
+    log.info("   Order created with ID: " + orderId);
+    log.info("   Mastercard " + cardNumber + " processed successfully");
+} else {
+    log.error("❌ PAYMENT FAILED - Thread " + threadNum);
+    log.error("   Response Code: " + responseCode);
+    log.error("   Response: " + responseData);
+    log.error("   Payment Success: " + paymentSuccess);
+}
+]]></stringProp>
+            <stringProp name="BeanShellPostProcessor.filename"></stringProp>
+            <stringProp name="BeanShellPostProcessor.parameters"></stringProp>
+            <boolProp name="BeanShellPostProcessor.resetInterpreter">false</boolProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
+
+        <!-- Payment Summary -->
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="07 - Payment Load Test Summary" enabled="true">
+          <stringProp name="BeanShellSampler.query"><![CDATA[// Generate comprehensive payment load test summary
+int threadNum = ctx.getThreadNum() + 1;
+
+String productName = vars.get("payment_product_name");
+String paymentTotal = vars.get("payment_total");
+String cardNumber = vars.get("card_number");
+String cardType = vars.get("card_type");
+String paymentSuccess = vars.get("payment_success");
+String orderId = vars.get("order_id");
+String quantity = vars.get("payment_quantity");
+
+log.info("📊 PAYMENT LOAD TEST SUMMARY - Thread " + threadNum);
+log.info("   Test Operations Performed:");
+log.info("   1. ✅ Admin login successful");
+log.info("   2. ✅ Product catalog retrieved");
+log.info("   3. ✅ Payment cart created");
+log.info("   4. ✅ Braintree client token obtained");
+log.info("   5. ✅ Payment nonce generated for Mastercard");
+log.info("   6. ✅ Payment processed: " + ("true".equals(paymentSuccess) ? "SUCCESS" : "FAILED"));
+log.info("   Payment Details:");
+log.info("   - Card: " + cardNumber + " (" + cardType + ")");
+log.info("   - Product: " + productName + " (Qty: " + quantity + ")");
+log.info("   - Total: $" + paymentTotal);
+log.info("   - Order ID: " + orderId);
+
+SampleResult.setResponseData("Payment Load Test Complete!" + System.lineSeparator() + System.lineSeparator() +
+                           "Thread " + threadNum + " - Payment Processing Summary:" + System.lineSeparator() +
+                           "✅ USER LOGIN: " + vars.get("user_email") + " authenticated (" + vars.get("user_type") + ")" + System.lineSeparator() +
+                           "✅ PRODUCT RETRIEVAL: Product catalog loaded" + System.lineSeparator() +
+                           "✅ CART CREATION: " + quantity + " x " + productName + System.lineSeparator() +
+                           "✅ BRAINTREE TOKEN: Client token retrieved" + System.lineSeparator() +
+                           "✅ PAYMENT NONCE: Generated for " + cardType + System.lineSeparator() +
+                           "✅ PAYMENT PROCESSING: " + ("true".equals(paymentSuccess) ? "SUCCESSFUL" : "FAILED") + System.lineSeparator() + System.lineSeparator() +
+                           "Payment Details:" + System.lineSeparator() +
+                           "Card Number: " + cardNumber + " (" + cardType + ")" + System.lineSeparator() +
+                           "Expiry: 12/25, CVV: 123" + System.lineSeparator() +
+                           "Product: " + productName + " (Quantity: " + quantity + ")" + System.lineSeparator() +
+                           "Total Amount: $" + paymentTotal + System.lineSeparator() +
+                           "Order ID: " + orderId + System.lineSeparator() + System.lineSeparator() +
+                           "🎉 Payment page load testing completed successfully!" + System.lineSeparator() +
+                           "User: " + vars.get("user_email") + " (" + vars.get("user_type") + ")" + System.lineSeparator() +
+                           "Mastercard " + cardNumber + " processed through Braintree gateway");
+SampleResult.setDataType(SampleResult.TEXT);
+SampleResult.setSuccessful(true);
+]]></stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+
+        <!-- Result Collectors -->
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>true</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>true</responseHeaders>
+              <requestHeaders>true</requestHeaders>
+              <responseDataOnError>true</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

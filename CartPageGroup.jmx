@@ -40,7 +40,7 @@
         <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
       </CookieManager>
       <hashTree/>
-      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="User Data CSV" enabled="true">
+      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="User Data CSV" enabled="false">
         <stringProp name="delimiter">,</stringProp>
         <stringProp name="fileEncoding">UTF-8</stringProp>
         <stringProp name="filename">login_users.csv</stringProp>
@@ -53,12 +53,12 @@
       </CSVDataSet>
       <hashTree/>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Cart and Checkout Load Test Thread Group" enabled="true">
-        <intProp name="ThreadGroup.num_threads">25</intProp>
-        <intProp name="ThreadGroup.ramp_time">10</intProp>
+        <intProp name="ThreadGroup.num_threads">30</intProp>
+        <intProp name="ThreadGroup.ramp_time">60</intProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
-          <stringProp name="LoopController.loops">1</stringProp>
+          <stringProp name="LoopController.loops">2</stringProp>
           <boolProp name="LoopController.continue_forever">false</boolProp>
         </elementProp>
       </ThreadGroup>
@@ -89,6 +89,33 @@
             <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
             <stringProp name="JSONPostProcessor.defaultValues">TOKEN_NOT_FOUND</stringProp>
           </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="Debug JWT Token Extraction" enabled="true">
+            <stringProp name="BeanShellPostProcessor.query"><![CDATA[
+String jwtToken = vars.get("jwt_token");
+String responseData = prev.getResponseDataAsString();
+String responseCode = prev.getResponseCode();
+int threadNum = ctx.getThreadNum() + 1;
+
+log.info("🔑 JWT TOKEN EXTRACTION DEBUG - Thread " + threadNum);
+log.info("   Response Code: " + responseCode);
+log.info("   Response Length: " + (responseData != null ? responseData.length() : 0));
+log.info("   JWT Token Extracted: " + (jwtToken != null && !jwtToken.equals("TOKEN_NOT_FOUND") ? jwtToken.substring(0, Math.min(50, jwtToken.length())) + "..." : "FAILED"));
+log.info("   Token Length: " + (jwtToken != null ? jwtToken.length() : 0));
+
+// Also extract user email for debugging
+String email = vars.get("email");
+log.info("   User Email: " + email);
+
+if (jwtToken == null || jwtToken.equals("TOKEN_NOT_FOUND")) {
+    log.error("⚠️ JWT TOKEN EXTRACTION FAILED - Thread " + threadNum);
+    log.error("   Full Response: " + responseData);
+}
+]]></stringProp>
+            <stringProp name="BeanShellPostProcessor.filename"></stringProp>
+            <stringProp name="BeanShellPostProcessor.parameters"></stringProp>
+            <boolProp name="BeanShellPostProcessor.resetInterpreter">false</boolProp>
+          </BeanShellPostProcessor>
           <hashTree/>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Login Success" enabled="true">
             <collectionProp name="Asserion.test_strings">
@@ -155,19 +182,19 @@ SampleResult.setSuccessful(true);
             <stringProp name="BeanShellSampler.query"><![CDATA[// Simulate adding multiple products to cart
 int threadNum = ctx.getThreadNum() + 1;
 
-// Get available products (simulate from extracted data)
-String productId1 = vars.get("product_ids_1") != null ? vars.get("product_ids_1") : "66db427fdb0119d9234b27f9"; // Novel
-String productId2 = vars.get("product_ids_2") != null ? vars.get("product_ids_2") : "67a21772a6d9e00ef2ac022a"; // NUS T-Shirt  
-String productId3 = vars.get("product_ids_3") != null ? vars.get("product_ids_3") : "66db427fdb0119d9234b27f9"; // Fallback to Novel
+// Use existing products with sufficient quantity
+String productId1 = vars.get("product_ids_1") != null ? vars.get("product_ids_1") : "68f7b4b79c5879066f739213"; // e2e-update product (quantity: 5)
+String productId2 = vars.get("product_ids_2") != null ? vars.get("product_ids_2") : "68f7b4b79c5879066f739213"; // Same product for simplicity  
+String productId3 = vars.get("product_ids_3") != null ? vars.get("product_ids_3") : "68f7b4b79c5879066f739213"; // Same product
 
-String productName1 = vars.get("product_names_1") != null ? vars.get("product_names_1") : "Novel";
-String productName2 = vars.get("product_names_2") != null ? vars.get("product_names_2") : "NUS T-Shirt";
-String productName3 = vars.get("product_names_3") != null ? vars.get("product_names_3") : "Test Product";
+String productName1 = vars.get("product_names_1") != null ? vars.get("product_names_1") : "e2e-update-product";
+String productName2 = vars.get("product_names_2") != null ? vars.get("product_names_2") : "e2e-update-product";
+String productName3 = vars.get("product_names_3") != null ? vars.get("product_names_3") : "e2e-update-product";
 
-// Default prices if not extracted
-double price1 = 25.0;
-double price2 = 35.0; 
-double price3 = 45.0;
+// Use actual product prices
+double price1 = 12.34;
+double price2 = 12.34; 
+double price3 = 12.34;
 
 try {
     if (vars.get("product_prices_1") != null) price1 = Double.parseDouble(vars.get("product_prices_1"));
@@ -188,6 +215,9 @@ cartItems.append("]");
 // Calculate totals
 int totalItems = 2 + 1 + 3; // quantities
 double totalPrice = (price1 * 2) + (price2 * 1) + (price3 * 3);
+
+// Round to 2 decimal places to avoid precision errors
+totalPrice = Math.round(totalPrice * 100.0) / 100.0;
 
 // Store cart state
 vars.put("cart_items", cartItems.toString());
@@ -254,16 +284,19 @@ int newQuantity = currentQuantity - 1; // Reduce by 1
 // Update cart item quantities
 vars.put("cart_product_1_quantity", String.valueOf(newQuantity));
 
-// Recalculate cart totals
-int quantity2 = Integer.parseInt(vars.get("cart_product_2_quantity"));
-int quantity3 = Integer.parseInt(vars.get("cart_product_3_quantity"));
-double price2 = Double.parseDouble(vars.get("cart_product_2_price"));
-double price3 = Double.parseDouble(vars.get("cart_product_3_price"));
+    // Recalculate cart totals
+    int quantity2 = Integer.parseInt(vars.get("cart_product_2_quantity"));
+    int quantity3 = Integer.parseInt(vars.get("cart_product_3_quantity"));
+    double price2 = Double.parseDouble(vars.get("cart_product_2_price"));
+    double price3 = Double.parseDouble(vars.get("cart_product_3_price"));
 
-int newTotalItems = newQuantity + quantity2 + quantity3;
-double newTotalPrice = (productPrice * newQuantity) + (price2 * quantity2) + (price3 * quantity3);
-
-vars.put("cart_count", String.valueOf(newTotalItems));
+    int newTotalItems = newQuantity + quantity2 + quantity3;
+    double newTotalPrice = (productPrice * newQuantity) + (price2 * quantity2) + (price3 * quantity3);
+    
+    // Round to 2 decimal places to avoid precision errors
+    newTotalPrice = Math.round(newTotalPrice * 100.0) / 100.0;
+    
+    vars.put("cart_count", String.valueOf(newTotalItems));
 vars.put("cart_total", String.valueOf(newTotalPrice));
 
 log.info("📉 ITEM QUANTITY REDUCED - Thread " + threadNum);
@@ -313,10 +346,13 @@ int quantity3 = Integer.parseInt(vars.get("cart_product_3_quantity"));
 double price1 = Double.parseDouble(vars.get("cart_product_1_price"));
 double price3 = Double.parseDouble(vars.get("cart_product_3_price"));
 
-int newTotalItems = quantity1 + quantity3; // No more product 2
-double newTotalPrice = (price1 * quantity1) + (price3 * quantity3);
-
-vars.put("cart_count", String.valueOf(newTotalItems));
+    int newTotalItems = quantity1 + quantity3; // No more product 2
+    double newTotalPrice = (price1 * quantity1) + (price3 * quantity3);
+    
+    // Round to 2 decimal places to avoid precision errors
+    newTotalPrice = Math.round(newTotalPrice * 100.0) / 100.0;
+    
+    vars.put("cart_count", String.valueOf(newTotalItems));
 vars.put("cart_total", String.valueOf(newTotalPrice));
 
 // Mark product 2 as removed
@@ -408,72 +444,9 @@ SampleResult.setSuccessful(true);
           </BeanShellSampler>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="08 - Checkout with Updated Cart">
-          <stringProp name="HTTPSampler.path">/api/v1/product/braintree/payment</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <stringProp name="HTTPSampler.method">POST</stringProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
-            <collectionProp name="Arguments.arguments">
-              <elementProp name="" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&#xd;
-  &quot;nonce&quot;: &quot;fake-valid-nonce&quot;,&#xd;
-  &quot;cart&quot;: ${cart_items}&#xd;
-}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-            </collectionProp>
-          </elementProp>
-        </HTTPSamplerProxy>
-        <hashTree>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Checkout Auth Header">
-            <collectionProp name="HeaderManager.headers">
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">Authorization</stringProp>
-                <stringProp name="Header.value">Bearer ${jwt_token}</stringProp>
-              </elementProp>
-            </collectionProp>
-          </HeaderManager>
-          <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Checkout Success">
-            <collectionProp name="Asserion.test_strings">
-              <stringProp name="49586">200</stringProp>
-            </collectionProp>
-            <stringProp name="Assertion.custom_message">Checkout must be successful with updated cart</stringProp>
-            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
-            <boolProp name="Assertion.assume_success">false</boolProp>
-            <intProp name="Assertion.test_type">8</intProp>
-          </ResponseAssertion>
-          <hashTree/>
-          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="Log Checkout Success" enabled="true">
-            <stringProp name="BeanShellPostProcessor.query"><![CDATA[// Log successful checkout with cart management
-String responseCode = prev.getResponseCode();
-String cartItems = vars.get("cart_items");
-String cartTotal = vars.get("cart_total");
-int threadNum = ctx.getThreadNum() + 1;
-
-if ("200".equals(responseCode)) {
-    log.info("✅ CHECKOUT SUCCESS - Thread " + threadNum);
-    log.info("   Final Cart: " + cartItems);
-    log.info("   Final Total: $" + cartTotal);
-    log.info("   Cart management operations completed successfully");
-} else {
-    log.error("❌ CHECKOUT FAILED - Thread " + threadNum);
-    log.error("   Response Code: " + responseCode);
-    log.error("   Cart: " + cartItems);
-}
-]]></stringProp>
-            <stringProp name="BeanShellPostProcessor.filename"></stringProp>
-            <stringProp name="BeanShellPostProcessor.parameters"></stringProp>
-            <boolProp name="BeanShellPostProcessor.resetInterpreter">false</boolProp>
-          </BeanShellPostProcessor>
-          <hashTree/>
-        </hashTree>
         
-        <!-- Cart Operations Summary -->
-        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="09 - Cart Operations Summary" enabled="true">
+        <!-- Cart Management Summary -->
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="08 - Complete Cart Management Summary" enabled="true">
           <stringProp name="BeanShellSampler.query"><![CDATA[// Generate comprehensive cart operations summary
 int threadNum = ctx.getThreadNum() + 1;
 
@@ -487,25 +460,31 @@ String removedProduct = product2Name;
 String remainingQuantity3 = vars.get("cart_product_3_quantity");
 
 String finalTotal = vars.get("cart_total");
+String finalCount = vars.get("cart_count");
 
-log.info("📊 CART OPERATIONS SUMMARY - Thread " + threadNum);
-log.info("   Operations performed:");
+log.info("📊 COMPLETE CART MANAGEMENT SUMMARY - Thread " + threadNum);
+log.info("   Cart Operations performed:");
 log.info("   1. ✅ Added 3 products to cart");
 log.info("   2. ✅ Reduced " + product1Name + " quantity: 2 → " + finalQuantity1);
 log.info("   3. ✅ Completely removed: " + removedProduct);
-log.info("   4. ✅ Checkout completed with final cart");
-log.info("   Final cart value: $" + finalTotal);
+log.info("   4. ✅ Generated final cart summary");
+log.info("   Final cart state:");
+log.info("   - Total Items: " + finalCount);
+log.info("   - Total Value: $" + finalTotal);
+log.info("   - Ready for checkout workflow");
 
-SampleResult.setResponseData("Cart Load Testing Complete!" + System.lineSeparator() + System.lineSeparator() +
-                           "Thread " + threadNum + " - All Cart Operations Summary:" + System.lineSeparator() +
+SampleResult.setResponseData("Complete Cart Management Load Testing Finished!" + System.lineSeparator() + System.lineSeparator() +
+                           "Thread " + threadNum + " - Cart Workflow Summary:" + System.lineSeparator() +
                            "✅ CART INITIALIZATION: Empty cart created" + System.lineSeparator() +
                            "✅ ADD PRODUCTS: Added 3 products with different quantities" + System.lineSeparator() +
                            "✅ REDUCE QUANTITY: " + product1Name + " quantity reduced (2 → " + finalQuantity1 + ")" + System.lineSeparator() +
                            "✅ REMOVE ITEM: " + removedProduct + " completely removed from cart" + System.lineSeparator() +
-                           "✅ CART SUMMARY: Reviewed final cart before checkout" + System.lineSeparator() +
-                           "✅ CHECKOUT: Successfully completed with updated cart" + System.lineSeparator() + System.lineSeparator() +
-                           "Final Cart Value: $" + finalTotal + System.lineSeparator() +
-                           "Load Testing Scenario: 25 concurrent users performing cart management operations" + System.lineSeparator() +
+                           "✅ CART SUMMARY: Reviewed final cart state" + System.lineSeparator() + System.lineSeparator() +
+                           "Final Cart State:" + System.lineSeparator() +
+                           "Total Items: " + finalCount + System.lineSeparator() +
+                           "Total Value: $" + finalTotal + System.lineSeparator() +
+                           "Status: Ready for separate payment processing" + System.lineSeparator() + System.lineSeparator() +
+                           "Note: Payment processing is handled by dedicated PaymentPageGroup.jmx" + System.lineSeparator() +
                            "🎉 All cart management load testing completed successfully!");
 SampleResult.setDataType(SampleResult.TEXT);
 SampleResult.setSuccessful(true);
